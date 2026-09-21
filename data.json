@@ -4024,11 +4024,11 @@
       "stats": [
         [
           "Price / date",
-          "510 IDR · 2025 Q4 close (Yahoo Finance)"
+          "468 IDR · 21 Sep 2026 (S&P Global)"
         ],
         [
           "Market cap",
-          "~IDR 5.3tn"
+          "IDR 4.83tn"
         ],
         [
           "Shares outstanding",
@@ -4036,19 +4036,19 @@
         ],
         [
           "52-week range",
-          "380 – 620 IDR (approx.)"
+          "396 – 696 IDR"
         ],
         [
           "P/B",
-          "3.6x parent BVPS 176.5"
+          "2.65x (BVPS 176.6, total equity)"
         ],
         [
           "P/E",
-          "39x FY25 EPS 14.0"
+          "36.5x (TTM EPS 12.81; FY25 EPS 13.08)"
         ],
         [
           "Dividend yield",
-          "~2.0% (est.)"
+          "1.5% (TTM DPS 6.98; FY25 DPS 11.4)"
         ]
       ],
       "peersH": [
@@ -4060,21 +4060,15 @@
       "peers": [
         [
           "BPII (holding)",
-          "3.6x",
-          "39x",
-          "7.9%"
+          "2.65x",
+          "36.5x",
+          "1.5%"
         ],
         [
-          "Listed AM peers (avg)",
-          "~2.0x",
-          "~15x",
-          "~10%"
-        ],
-        [
-          "Listed fleet peers (avg)",
-          "~1.2x",
-          "~8x",
-          "~12%"
+          "CASA (financial holding)",
+          "13.27x",
+          "664x",
+          "n/a"
         ]
       ],
       "analystsH": [
@@ -4084,28 +4078,21 @@
       ],
       "analysts": [
         [
-          "Yahoo Finance consensus",
-          "~550",
-          "Hold",
-          "",
-          ""
-        ],
-        [
-          "IDX market data",
-          "n/a",
-          "n/a",
-          "",
-          ""
+          "No public analyst coverage",
+          "—",
+          "—",
+          "—",
+          "BPII is under-researched; retail-driven"
         ]
       ],
       "events": [
         [
           "FY25 results",
-          "Revenue IDR 1,240bn; NI IDR 144bn."
+          "Revenue IDR 1,239.6bn; NI IDR 144.1bn."
         ],
         [
           "1H26 interim",
-          "Revenue IDR 1,556bn; NI IDR 53bn."
+          "Revenue IDR 653.7bn (net basis); NI IDR 53.0bn."
         ]
       ]
     },
@@ -4114,31 +4101,31 @@
       "stats": [
         [
           "Harga / tanggal",
-          "510 IDR · penutupan Q4 2025 (Yahoo Finance)"
+          "468 IDR · 21 Sep 2026 (S&P Global)"
         ],
         [
           "Kapitalisasi pasar",
-          "~Rp5,3 triliun"
+          "IDR 4,83tn"
         ],
         [
           "Saham beredar",
-          "10,31 miliar"
+          "10,31miliar"
         ],
         [
-          "Rentang 52 minggu",
-          "380 – 620 IDR (perkiraan)"
+          "Rentang 52-minggu",
+          "396 – 696 IDR"
         ],
         [
           "P/B",
-          "3,6x BVPS induk 176,5"
+          "2,65x (BVPS 176,6, ekuitas total)"
         ],
         [
           "P/E",
-          "39x EPS FY25 14,0"
+          "36,5x (EPS TTM 12,81; EPS FY25 13,08)"
         ],
         [
-          "Dividend yield",
-          "~2,0% (estimasi)"
+          "Hasil dividen",
+          "1,5% (DPS TTM 6,98; DPS FY25 11,4)"
         ]
       ],
       "peersH": [
@@ -4149,22 +4136,16 @@
       ],
       "peers": [
         [
-          "BPII (induk)",
-          "3,6x",
-          "39x",
-          "7,9%"
+          "BPII (holding)",
+          "2,65x",
+          "36,5x",
+          "1,5%"
         ],
         [
-          "Peer MI (rata2)",
-          "~2,0x",
-          "~15x",
-          "~10%"
-        ],
-        [
-          "Peer armada (rata2)",
-          "~1,2x",
-          "~8x",
-          "~12%"
+          "CASA (holding keuangan)",
+          "13,27x",
+          "664x",
+          "n/a"
         ]
       ],
       "analystsH": [
@@ -4174,28 +4155,21 @@
       ],
       "analysts": [
         [
-          "Konsensus Yahoo Finance",
-          "~550",
-          "Hold",
-          "",
-          ""
-        ],
-        [
-          "Data pasar BEI",
-          "n/a",
-          "n/a",
-          "",
-          ""
+          "Tidak ada cakupan analis publik",
+          "—",
+          "—",
+          "—",
+          "BPII kurang diteliti; didorong ritel"
         ]
       ],
       "events": [
         [
           "Hasil FY25",
-          "Pendapatan Rp1.240 miliar; laba Rp144 miliar."
+          "Pendapatan IDR 1.239,6bn; Laba IDR 144,1bn."
         ],
         [
           "Interim 1H26",
-          "Pendapatan Rp1.556 miliar; laba Rp53 miliar."
+          "Pendapatan IDR 653,7bn (basis neto); Laba IDR 53,0bn."
         ]
       ]
     },
@@ -4203,32 +4177,32 @@
       "statsH": "交易快照",
       "stats": [
         [
-          "价格/日期",
-          "510 盾 · 2025年四季度收盘（Yahoo Finance）"
+          "股价 / 日期",
+          "468 IDR · 2026年9月21日 (S&P Global)"
         ],
         [
           "市值",
-          "约5.3万亿盾"
+          "IDR 4.83tn"
         ],
         [
           "总股本",
-          "103.1亿股"
+          "10.31bn"
         ],
         [
           "52周区间",
-          "380 – 620 盾（约）"
+          "396 – 696 IDR"
         ],
         [
-          "市净率",
-          "3.6x（母公司BVPS 176.5）"
+          "P/B",
+          "2.65x（BVPS 176.6，总权益）"
         ],
         [
-          "市盈率",
-          "39x（FY25 EPS 14.0）"
+          "P/E",
+          "36.5x（TTM EPS 12.81；FY25 EPS 13.08）"
         ],
         [
           "股息率",
-          "约2.0%（估）"
+          "1.5%（TTM DPS 6.98；FY25 DPS 11.4）"
         ]
       ],
       "peersH": [
@@ -4240,21 +4214,15 @@
       "peers": [
         [
           "BPII（控股）",
-          "3.6x",
-          "39x",
-          "7.9%"
+          "2.65x",
+          "36.5x",
+          "1.5%"
         ],
         [
-          "上市资管同业（均）",
-          "约2.0x",
-          "约15x",
-          "约10%"
-        ],
-        [
-          "上市车队同业（均）",
-          "约1.2x",
-          "约8x",
-          "约12%"
+          "CASA（金融控股）",
+          "13.27x",
+          "664x",
+          "n/a"
         ]
       ],
       "analystsH": [
@@ -4264,28 +4232,21 @@
       ],
       "analysts": [
         [
-          "Yahoo Finance 共识",
-          "约550",
-          "持有",
-          "",
-          ""
-        ],
-        [
-          "印尼交易所数据",
-          "n/a",
-          "n/a",
-          "",
-          ""
+          "无公开分析师覆盖",
+          "—",
+          "—",
+          "—",
+          "BPII 研究覆盖少，散户驱动"
         ]
       ],
       "events": [
         [
           "FY25 业绩",
-          "收入1,240十亿盾；净利144十亿盾。"
+          "收入 IDR 1,239.6bn；净利 IDR 144.1bn。"
         ],
         [
           "1H26 中期",
-          "收入1,556十亿盾；净利53十亿盾。"
+          "收入 IDR 653.7bn（净额口径）；净利 IDR 53.0bn。"
         ]
       ]
     }
