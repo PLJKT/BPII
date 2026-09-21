@@ -1093,21 +1093,21 @@
           "l": "ROE (FY25)",
           "v": 7.9,
           "u": "%",
-          "d": "ending equity basis",
+          "d": "based on year-end equity (Dec 2025)",
           "c": "flat"
         },
         {
           "l": "ROA (FY25)",
           "v": 2.1,
           "u": "%",
-          "d": "ending assets basis",
+          "d": "based on year-end assets (Dec 2025)",
           "c": "dn"
         },
         {
           "l": "FCF margin (FY25)",
           "v": -36.8,
           "u": "%",
-          "d": "CFO 282 - capex 738 = -456",
+          "d": "negative: capex exceeded CFO (fleet + insurance investment)",
           "c": "dn"
         },
         {
@@ -1137,21 +1137,21 @@
           "l": "ROE",
           "v": 7.9,
           "u": "%",
-          "d": "ending equity basis",
+          "d": "berdasarkan ekuitas akhir tahun (Des 2025)",
           "c": "flat"
         },
         {
           "l": "ROA",
           "v": 2.1,
           "u": "%",
-          "d": "ending assets basis",
+          "d": "berdasarkan aset akhir tahun (Des 2025)",
           "c": "dn"
         },
         {
           "l": "Margin FCF",
           "v": -36.8,
           "u": "%",
-          "d": "CFO 282 - capex 738 = -456",
+          "d": "negatif: capex > CFO (armada + investasi asuransi)",
           "c": "dn"
         },
         {
@@ -1181,21 +1181,21 @@
           "l": "ROE",
           "v": 7.9,
           "u": "%",
-          "d": "ending equity basis",
+          "d": "按年末（2025.12）权益",
           "c": "flat"
         },
         {
           "l": "ROA",
           "v": 2.1,
           "u": "%",
-          "d": "ending assets basis",
+          "d": "按年末（2025.12）资产",
           "c": "dn"
         },
         {
           "l": "自由现金流率",
           "v": -36.8,
           "u": "%",
-          "d": "CFO 282 - capex 738 = -456",
+          "d": "为负：capex 超 CFO（车队+保险投资）",
           "c": "dn"
         },
         {
