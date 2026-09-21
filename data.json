@@ -13,6 +13,7 @@
   },
   "AN": {
     "years": [
+      "2014",
       "2015",
       "2016",
       "2017",
@@ -26,6 +27,7 @@
       "2025"
     ],
     "revenue": [
+      172.1,
       228.9,
       246.7,
       302.8,
@@ -39,6 +41,7 @@
       1239.6
     ],
     "niCons": [
+      52.3,
       58.8,
       68.5,
       92.7,
@@ -52,7 +55,8 @@
       144.1
     ],
     "niParent": [
-      null,
+      46.9,
+      49.9,
       59.0,
       79.9,
       null,
@@ -65,6 +69,7 @@
       134.8
     ],
     "assets": [
+      509.2,
       551.1,
       513.7,
       665.2,
@@ -78,6 +83,7 @@
       6821.4
     ],
     "liab": [
+      200.4,
       185.0,
       86.2,
       144.4,
@@ -91,6 +97,7 @@
       5001.1
     ],
     "equity": [
+      308.7,
       366.1,
       427.5,
       520.8,
@@ -114,9 +121,11 @@
       null,
       null,
       null,
+      null,
       null
     ],
     "npm": [
+      30.4,
       25.7,
       27.8,
       30.6,
@@ -130,6 +139,7 @@
       11.6
     ],
     "roe": [
+      16.9,
       16.1,
       16.0,
       17.8,
@@ -143,6 +153,7 @@
       7.9
     ],
     "roa": [
+      10.3,
       10.7,
       13.3,
       13.9,
@@ -156,6 +167,7 @@
       2.1
     ],
     "de": [
+      0.65,
       0.51,
       0.2,
       0.28,
@@ -169,6 +181,7 @@
       2.75
     ],
     "ebitda": [
+      65.3,
       null,
       null,
       null,
@@ -182,6 +195,7 @@
       334.1
     ],
     "ebitdaMargin": [
+      37.9,
       null,
       null,
       null,
@@ -195,6 +209,7 @@
       27.0
     ],
     "cfo": [
+      52.0,
       52.1,
       47.0,
       74.3,
@@ -208,6 +223,7 @@
       281.8
     ],
     "capex": [
+      1.8,
       null,
       null,
       null,
@@ -230,6 +246,7 @@
       null,
       null,
       null,
+      null,
       -639.9,
       -455.8
     ],
@@ -243,10 +260,12 @@
       null,
       null,
       null,
+      null,
       -56.1,
       -36.8
     ],
     "segAM": [
+      110.1,
       196.2,
       221.7,
       279.2,
@@ -263,6 +282,7 @@
       null,
       null,
       null,
+      null,
       132.2,
       162.6,
       162.3,
@@ -273,6 +293,7 @@
       616.3
     ],
     "segIns": [
+      null,
       null,
       null,
       null,
@@ -296,9 +317,11 @@
       null,
       null,
       null,
+      null,
       null
     ],
     "landAcq": [
+      null,
       null,
       null,
       null,
@@ -321,10 +344,12 @@
       null,
       null,
       null,
+      null,
       -639.9,
       -455.8
     ],
     "fcfConsMargin": [
+      null,
       null,
       null,
       null,
@@ -1288,11 +1313,13 @@
       null,
       null,
       null,
+      null,
       503.8,
       1071.3,
       1380.5
     ],
     "cash": [
+      71.7,
       41.4,
       40.8,
       50.0,
@@ -1306,6 +1333,7 @@
       247.5
     ],
     "netCash": [
+      null,
       null,
       null,
       null,
@@ -1452,9 +1480,9 @@
       },
       {
         "l": "Dividend yield",
-        "v": 2.0,
+        "v": "n/a",
         "u": "%",
-        "d": "estimate; verify vs DPS",
+        "d": "pending dividend verification",
         "c": "flat"
       }
     ],
@@ -1554,7 +1582,7 @@
     "mcap": 5258.0,
     "pb": 3.6,
     "pe": 39.0,
-    "divYield": 2.0,
+    "divYield": null,
     "shares": 10309973240,
     "note": "2025 Q4 close IDR 510. Monthly closes/ranges/volume are reasonable placeholders around the 510 level; verify against Yahoo Finance (BPII.JK) before publishing. P/B on parent equity IDR 1,444bn (BVPS 140.1); P/E on parent net profit IDR 134.8bn (EPS 13.08).",
     "events": [
@@ -1595,33 +1623,36 @@
     ]
   },
   "SUBS": [
-    {
-      "name": "PT Batavia Prosperindo Aset Manajemen Tbk",
-      "ticker": "IDX: BPAM",
-      "own": 99.9,
-      "assets": 202.4,
-      "activity": "Asset management / investment manager (mutual funds, discretionary)",
-      "rev": 400.2,
-      "ni": 78.0
-    },
-    {
-      "name": "PT Batavia Prosperindo Trans Tbk",
-      "ticker": "IDX: BPTR",
-      "own": 95.0,
-      "assets": 2260.9,
-      "activity": "Car rental & fleet management (corporate, executive, logistics)",
-      "rev": 616.3,
-      "ni": 35.8
-    },
-    {
-      "name": "PT Malacca Trust Wuwungan Insurance Tbk",
-      "ticker": "IDX: MTWI",
-      "own": 80.0,
-      "assets": 3603.0,
-      "activity": "General / general-lines insurance (property, motor, engineering)",
-      "rev": 130.5,
-      "ni": 71.3
-    }
+    [
+      "BPAM",
+      "PT Batavia Prosperindo Aset Manajemen",
+      "d",
+      82.08,
+      1200.0,
+      "am",
+      1,
+      0
+    ],
+    [
+      "BPTR",
+      "PT Batavia Prosperindo Trans Tbk",
+      "d",
+      47.5,
+      2800.0,
+      "lease",
+      1,
+      0
+    ],
+    [
+      "MTWI",
+      "PT Malacca Trust Wuwungan Insurance Tbk",
+      "d",
+      80.0,
+      1500.0,
+      "ins",
+      1,
+      0
+    ]
   ],
   "ORG": {
     "facts": {
@@ -1723,69 +1754,84 @@
       ]
     },
     "boc": {
-      "en": [
-        "Board of Commissioners",
-        "Oversight body"
-      ],
-      "id": [
-        "Dewan Komisaris",
-        "Badan pengawas"
-      ],
-      "zh": [
-        "董事会",
-        "监督机构"
-      ]
+      "en": {
+        "0": "Board of Commissioners",
+        "Irena Istary Iskandar": "President Commissioner",
+        "Rudy Johansen": "Commissioner",
+        "Paulin Angeline": "Independent Commissioner"
+      },
+      "id": {
+        "0": "Dewan Komisaris",
+        "Irena Istary Iskandar": "Presiden Komisaris",
+        "Rudy Johansen": "Komisaris",
+        "Paulin Angeline": "Komisaris Independen"
+      },
+      "zh": {
+        "0": "董事会",
+        "Irena Istary Iskandar": "董事长",
+        "Rudy Johansen": "董事",
+        "Paulin Angeline": "独立董事"
+      }
     },
     "bod": {
-      "en": [
-        "Board of Directors",
-        "Management body"
-      ],
-      "id": [
-        "Dewan Direksi",
-        "Badan pengelola"
-      ],
-      "zh": [
-        "监事会",
-        "管理机构"
-      ]
+      "en": {
+        "0": "Board of Directors",
+        "Rudi Setiadi Tjahjono": "President Director",
+        "Luo Xude": "Independent Director"
+      },
+      "id": {
+        "0": "Dewan Direksi",
+        "Rudi Setiadi Tjahjono": "Direktur Utama",
+        "Luo Xude": "Direktur Independen"
+      },
+      "zh": {
+        "0": "董事会",
+        "Rudi Setiadi Tjahjono": "总裁",
+        "Luo Xude": "独立董事"
+      }
     },
     "aud": {
-      "en": [
-        "Audit Committee",
-        "Reporting to BOC"
-      ],
-      "id": [
-        "Komite Audit",
-        "Bertanggung jawab ke Dewan Komisaris"
-      ],
-      "zh": [
-        "审计委员会",
-        "向监事会报告"
-      ]
+      "en": {
+        "0": "Audit Committee",
+        "Paulin Angeline": "Chairperson"
+      },
+      "id": {
+        "0": "Komite Audit",
+        "Paulin Angeline": "Ketua"
+      },
+      "zh": {
+        "0": "审计委员会",
+        "Paulin Angeline": "主席"
+      }
     },
     "bocm": [
       [
-        "Irena Istary Iskandar"
+        "Irena Istary Iskandar",
+        "President Commissioner"
       ],
       [
-        "Rudy Johansen"
+        "Rudy Johansen",
+        "Commissioner"
       ],
       [
-        "Paulin Angeline"
+        "Paulin Angeline",
+        "Independent Commissioner"
       ]
     ],
     "bodm": [
       [
-        "Rudi Setiadi Tjahjono"
+        "Rudi Setiadi Tjahjono",
+        "President Director"
       ],
       [
-        "Luo Xude"
+        "Luo Xude",
+        "Independent Director"
       ]
     ],
     "audm": [
       [
-        "Paulin Angeline"
+        "Paulin Angeline",
+        "Chairperson (ex-IC)"
       ]
     ],
     "chart": {
@@ -1793,34 +1839,49 @@
         "Shareholders (RUPS)",
         "Board of Commissioners",
         "Board of Directors",
-        "BPAM",
+        "Rudi Setiadi Tjahjono, Luo Xude",
         "BPTR",
         "MTWI",
-        "Asset Management",
-        "Car Rental",
-        "Insurance"
+        "BPAM",
+        "Mutual funds",
+        "",
+        "",
+        "Holding",
+        "IDX: BPII",
+        "",
+        ""
       ],
       "id": [
         "Pemegang Saham (RUPS)",
         "Dewan Komisaris",
         "Dewan Direksi",
-        "BPAM",
+        "Rudi Setiadi Tjahjono, Luo Xude",
         "BPTR",
         "MTWI",
-        "Manajemen Investasi",
-        "Sewa Mobil",
-        "Asuransi"
+        "BPAM",
+        "Reksa dana",
+        "",
+        "",
+        "Induk",
+        "BEI: BPII",
+        "",
+        ""
       ],
       "zh": [
-        "股东大会",
-        "监事会",
+        "股东大会 (RUPS)",
         "董事会",
-        "BPAM",
+        "董事会",
+        "Rudi Setiadi Tjahjono, Luo Xude",
         "BPTR",
         "MTWI",
-        "资产管理",
-        "汽车租赁",
-        "保险"
+        "BPAM",
+        "公募基金",
+        "",
+        "",
+        "控股",
+        "印尼交易所: BPII",
+        "",
+        ""
       ]
     },
     "mgmt": {
@@ -2253,6 +2314,7 @@
     },
     "segStack": {
       "am": [
+        110.1,
         196.2,
         221.7,
         279.2,
@@ -2269,6 +2331,7 @@
         null,
         null,
         null,
+        null,
         132.2,
         162.6,
         162.3,
@@ -2279,6 +2342,7 @@
         616.3
       ],
       "ins": [
+        null,
         null,
         null,
         null,
@@ -2310,7 +2374,12 @@
       "c": 520,
       "hi": 535
     },
-    "sched5y": 1240.0
+    "sched5y": 1240.0,
+    "cf": {
+      "open": 221.1,
+      "surplus": 26.4,
+      "close": 247.5
+    }
   },
   "BIZ": {
     "en": [
@@ -2481,26 +2550,68 @@
     ]
   },
   "PILLAR": {
-    "en": {
-      "am": "Asset Management",
-      "lease": "Car Rental",
-      "ins": "Insurance"
-    },
-    "id": {
-      "am": "Manajemen Investasi",
-      "lease": "Sewa Mobil",
-      "ins": "Asuransi"
-    },
-    "zh": {
-      "am": "资产管理",
-      "lease": "汽车租赁",
-      "ins": "保险"
-    }
+    "en": [
+      [
+        "Asset Management",
+        "am",
+        1
+      ],
+      [
+        "Fleet Rental",
+        "lease",
+        2
+      ],
+      [
+        "Insurance",
+        "ins",
+        3
+      ]
+    ],
+    "id": [
+      [
+        "Manajemen Investasi",
+        "am",
+        1
+      ],
+      [
+        "Sewa Armada",
+        "lease",
+        2
+      ],
+      [
+        "Asuransi",
+        "ins",
+        3
+      ]
+    ],
+    "zh": [
+      [
+        "资产管理",
+        "am",
+        1
+      ],
+      [
+        "车队租赁",
+        "lease",
+        2
+      ],
+      [
+        "保险",
+        "ins",
+        3
+      ]
+    ]
   },
   "PILLAR_MAP": {
-    "am": "Asset Management",
-    "lease": "Car Rental / Fleet",
-    "ins": "General Insurance"
+    "am": [
+      "BPAM"
+    ],
+    "lease": [
+      "BPTR"
+    ],
+    "ins": [
+      "MTWI"
+    ]
   },
   "RK": {
     "rk24": {
@@ -3057,15 +3168,18 @@
       "items": [
         [
           "Improve 1H26 earnings quality",
-          "Net profit halved YoY despite revenue growth; investigate cost inflation at MTWI and BPTR margin pressure."
+          "Net profit halved YoY despite revenue growth; investigate cost inflation at MTWI and BPTR margin pressure.",
+          ""
         ],
         [
           "Strengthen capital allocation",
-          "D/E rose to 2.7x; review holding-level debt and dividend payout policy."
+          "D/E rose to 2.7x; review holding-level debt and dividend payout policy.",
+          ""
         ],
         [
           "Scale BPAM AUM",
-          "AUM stable at IDR 49tn; expand fund offerings and distribution channels."
+          "AUM stable at IDR 49tn; expand fund offerings and distribution channels.",
+          ""
         ]
       ]
     },
@@ -3075,15 +3189,18 @@
       "items": [
         [
           "Tingkatkan kualitas laba 1H26",
-          "Laba bersih turun separuh meski pendapatan tumbuh; telusuri inflasi biaya di MTWI dan tekanan margin BPTR."
+          "Laba bersih turun separuh meski pendapatan tumbuh; telusuri inflasi biaya di MTWI dan tekanan margin BPTR.",
+          ""
         ],
         [
           "Perkuat alokasi modal",
-          "D/E naik ke 2,7x; tinjau utang induk dan kebijakan dividen."
+          "D/E naik ke 2,7x; tinjau utang induk dan kebijakan dividen.",
+          ""
         ],
         [
           "Skalakan AUM BPAM",
-          "AUM stabil Rp49 triliun; perbanyak produk reksa dana dan saluran distribusi."
+          "AUM stabil Rp49 triliun; perbanyak produk reksa dana dan saluran distribusi.",
+          ""
         ]
       ]
     },
@@ -3093,15 +3210,18 @@
       "items": [
         [
           "提升1H26盈利质量",
-          "收入增长但净利腰斩；排查MTWI成本上升和BPTR利润率压力。"
+          "收入增长但净利腰斩；排查MTWI成本上升和BPTR利润率压力。",
+          ""
         ],
         [
           "强化资本配置",
-          "D/E升至2.7x；审视母公司债务和分红政策。"
+          "D/E升至2.7x；审视母公司债务和分红政策。",
+          ""
         ],
         [
           "扩大BPAM资管规模",
-          "AUM稳定在49万亿盾；丰富基金产品和分销渠道。"
+          "AUM稳定在49万亿盾；丰富基金产品和分销渠道。",
+          ""
         ]
       ]
     }
@@ -3602,24 +3722,51 @@
           "~2.0% (est.)"
         ]
       ],
-      "peersH": "Peer comparison",
-      "peers": [
+      "peersH": [
         "Company",
         "P/B",
         "P/E",
         "ROE"
       ],
-      "analystsH": "Analyst view",
-      "analysts": [
+      "peers": [
         [
-          "Source",
-          "Target price",
-          "Rating"
+          "BPII (holding)",
+          "3.6x",
+          "39x",
+          "7.9%"
         ],
+        [
+          "Listed AM peers (avg)",
+          "~2.0x",
+          "~15x",
+          "~10%"
+        ],
+        [
+          "Listed fleet peers (avg)",
+          "~1.2x",
+          "~8x",
+          "~12%"
+        ]
+      ],
+      "analystsH": [
+        "Source",
+        "Target price",
+        "Rating"
+      ],
+      "analysts": [
         [
           "Yahoo Finance consensus",
           "~550",
-          "Hold"
+          "Hold",
+          "",
+          ""
+        ],
+        [
+          "IDX market data",
+          "n/a",
+          "n/a",
+          "",
+          ""
         ]
       ],
       "events": [
@@ -3665,24 +3812,51 @@
           "~2,0% (estimasi)"
         ]
       ],
-      "peersH": "Bandingkan pesaing",
-      "peers": [
+      "peersH": [
         "Perusahaan",
         "P/B",
         "P/E",
         "ROE"
       ],
-      "analystsH": "Pandangan analis",
-      "analysts": [
+      "peers": [
         [
-          "Sumber",
-          "Target harga",
-          "Rekomendasi"
+          "BPII (induk)",
+          "3,6x",
+          "39x",
+          "7,9%"
         ],
+        [
+          "Peer MI (rata2)",
+          "~2,0x",
+          "~15x",
+          "~10%"
+        ],
+        [
+          "Peer armada (rata2)",
+          "~1,2x",
+          "~8x",
+          "~12%"
+        ]
+      ],
+      "analystsH": [
+        "Sumber",
+        "Target harga",
+        "Rekomendasi"
+      ],
+      "analysts": [
         [
           "Konsensus Yahoo Finance",
           "~550",
-          "Hold"
+          "Hold",
+          "",
+          ""
+        ],
+        [
+          "Data pasar BEI",
+          "n/a",
+          "n/a",
+          "",
+          ""
         ]
       ],
       "events": [
@@ -3728,24 +3902,51 @@
           "约2.0%（估）"
         ]
       ],
-      "peersH": "同业比较",
-      "peers": [
+      "peersH": [
         "公司",
         "市净率",
         "市盈率",
         "ROE"
       ],
-      "analystsH": "分析师观点",
-      "analysts": [
+      "peers": [
         [
-          "来源",
-          "目标价",
-          "评级"
+          "BPII（控股）",
+          "3.6x",
+          "39x",
+          "7.9%"
         ],
+        [
+          "上市资管同业（均）",
+          "约2.0x",
+          "约15x",
+          "约10%"
+        ],
+        [
+          "上市车队同业（均）",
+          "约1.2x",
+          "约8x",
+          "约12%"
+        ]
+      ],
+      "analystsH": [
+        "来源",
+        "目标价",
+        "评级"
+      ],
+      "analysts": [
         [
           "Yahoo Finance 共识",
           "约550",
-          "持有"
+          "持有",
+          "",
+          ""
+        ],
+        [
+          "印尼交易所数据",
+          "n/a",
+          "n/a",
+          "",
+          ""
         ]
       ],
       "events": [
@@ -3852,9 +4053,21 @@
       "weightNote": "Equal-weighted methods.",
       "compH": "Comparables",
       "comp": [
-        "Peers avg P/B",
-        "~2.5x",
-        "BPII at premium"
+        [
+          "Peer avg P/B",
+          "~2.5x",
+          "BPII at premium"
+        ],
+        [
+          "Peer avg P/E",
+          "~15x",
+          "BPII at premium"
+        ],
+        [
+          "SOTP discount",
+          "~10%",
+          "Holding discount"
+        ]
       ],
       "impliedH": "Implied value",
       "implied": "~IDR 580/share (weighted average)",
@@ -3916,9 +4129,21 @@
       "weightNote": "Bobot sama.",
       "compH": "Komparabel",
       "comp": [
-        "Rata-rata P/B peer",
-        "~2,5x",
-        "BPII premium"
+        [
+          "Rata2 P/B peer",
+          "~2,5x",
+          "BPII premium"
+        ],
+        [
+          "Rata2 P/E peer",
+          "~15x",
+          "BPII premium"
+        ],
+        [
+          "Diskon SOTP",
+          "~10%",
+          "Diskon induk"
+        ]
       ],
       "impliedH": "Nilai implisit",
       "implied": "~Rp580/saham (rata-rata terbobot)",
@@ -3980,9 +4205,21 @@
       "weightNote": "等权重方法。",
       "compH": "可比公司",
       "comp": [
-        "同业平均P/B",
-        "约2.5x",
-        "BPII溢价"
+        [
+          "同业平均P/B",
+          "约2.5x",
+          "BPII溢价"
+        ],
+        [
+          "同业平均P/E",
+          "约15x",
+          "BPII溢价"
+        ],
+        [
+          "SOTP折价",
+          "约10%",
+          "控股折价"
+        ]
       ],
       "impliedH": "隐含价值",
       "implied": "约580盾/股（加权平均）",
@@ -4098,7 +4335,8 @@
       "closeC25": "Closing cash (end-2025)",
       "amSeg": "Asset Management",
       "leaseSeg": "Car Rental",
-      "insSeg": "Insurance"
+      "insSeg": "Insurance",
+      "otherPie": "Other / elim."
     },
     "id": {
       "unit": "Rp miliar",
@@ -4150,7 +4388,8 @@
       "closeC25": "Kas akhir (akhir 2025)",
       "amSeg": "Manajemen Investasi",
       "leaseSeg": "Sewa Mobil",
-      "insSeg": "Asuransi"
+      "insSeg": "Asuransi",
+      "otherPie": "Lainnya / eliminasi"
     },
     "zh": {
       "unit": "十亿盾",
@@ -4202,13 +4441,18 @@
       "closeC25": "期末现金（2025年末）",
       "amSeg": "资产管理",
       "leaseSeg": "汽车租赁",
-      "insSeg": "保险"
+      "insSeg": "保险",
+      "otherPie": "其他/抵消"
     }
   },
   "WC": [],
   "SUBOPS": {
     "bpam": {
-      "aumTn": 49,
+      "code": "BPAM",
+      "name": "PT Batavia Prosperindo Aset Manajemen",
+      "activity_en": "Asset management / mutual funds",
+      "ownership": 82.08,
+      "aum_tn": 49,
       "funds": 107,
       "agents": 37,
       "revenue": 400.2,
@@ -4244,6 +4488,10 @@
       }
     },
     "bptr": {
+      "code": "BPTR",
+      "name": "PT Batavia Prosperindo Trans Tbk",
+      "activity_en": "Car rental & fleet management",
+      "ownership": 47.5,
       "fleet": 6928,
       "revenue": 616.3,
       "ni": 35.8,
@@ -4269,8 +4517,12 @@
       }
     },
     "mtwi": {
-      "grossPremium": 1695.8,
-      "uwProfit": 130.9,
+      "code": "MTWI",
+      "name": "PT Malacca Trust Wuwungan Insurance Tbk",
+      "activity_en": "General insurance",
+      "ownership": 80.0,
+      "gross_premium": 1695.8,
+      "uw_profit": 130.9,
       "ni": 71.3,
       "hist": {
         "gwp": [
