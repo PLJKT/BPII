@@ -1249,7 +1249,7 @@ function tlHtml(){
   return h;
 }
 function ownHtml(){
-  var rows = OWN[LANG], h = '', max = 67.3, cols = ['', 'hl', 'hl2'];
+  var rows = OWN[LANG], h = '', max = 86.15, cols = ['', 'hl', 'hl2'];
   for (var i = 0; i < rows.length; i++) {
     var w = Math.round(rows[i][1] / max * 100);
     h += '<div class="own-row"><span class="nm">' + esc(rows[i][0]) + '</span><span class="bar"><i class="' + cols[rows[i][2]] + '" style="width:' + w + '%"></i></span><span class="vv">' + fmtN(rows[i][1]) + '%</span></div>';
@@ -1311,7 +1311,7 @@ function memberNames(members){
 function orgGovHtml(){
   var o = ORG;
   return '<div class="org">'
-    + '<div class="org-box dark"><b>' + esc(o.chart[LANG][0]) + '</b><span>GMS · RUPS</span></div>'
+    + '<div class="org-box dark"><b>' + esc(o.chart[LANG][0]) + '</b></div>'
     + '<div class="org-line"></div>'
     + '<div class="org-row">'
     + '<div class="org-col">'
