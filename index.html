@@ -1184,7 +1184,7 @@ function buildOpt(id){
     return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(['P/B (x)','P/S (x)']), yAxis:baseY('x'),
       series:[
         {name:N('bpii'), type:'bar', data:FY.bpiiPBPS, itemStyle:{color:C.green}, barMaxWidth:30, label:{show:true, position:'top', fontSize:11, color:'#1F5E40', formatter:lblFmt()}},
-        {name:'BPTR (BBLI)', type:'bar', data:FY.peerPBPS, itemStyle:{color:C.blue}, barMaxWidth:30, label:{show:true, position:'top', fontSize:11, color:'#2E6FB0', formatter:lblFmt()}}]};
+        {name:'CASA', type:'bar', data:FY.peerPBPS, itemStyle:{color:C.blue}, barMaxWidth:30, label:{show:true, position:'top', fontSize:11, color:'#2E6FB0', formatter:lblFmt()}}]};
   }
   /* ---- 估值测算页 ---- */
   if (id === 'vi-1') {
