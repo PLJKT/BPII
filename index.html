@@ -1155,12 +1155,13 @@ function buildOpt(id){
   }
   /* ---- 分部与资产页 ---- */
   if (id === 'seg-1') {
-    var s1yrs = AN.years.slice(-5);
-    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(s1yrs), yAxis:baseY(U),
+    var sk = FY.segStack;
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY(U),
       series:[
-        {name:CT('amSeg'), type:'bar', data:AN.segAM, itemStyle:{color:C.green}, barMaxWidth:16},
-        {name:CT('leaseSeg'), type:'bar', data:AN.segLease, itemStyle:{color:C.blue}, barMaxWidth:16},
-        {name:CT('insSeg'), type:'bar', data:AN.segIns, itemStyle:{color:C.amber}, barMaxWidth:16}]};
+        {name:CT('amSeg'), type:'bar', stack:'S', data:sk.am, itemStyle:{color:C.green}, barMaxWidth:20},
+        {name:CT('leaseSeg'), type:'bar', stack:'S', data:sk.lease, itemStyle:{color:C.blue}, barMaxWidth:20},
+        {name:CT('insSeg'), type:'bar', stack:'S', data:sk.ins, itemStyle:{color:C.amber}, barMaxWidth:20},
+        {name:CT('cfSeg'), type:'bar', stack:'S', data:sk.cf, itemStyle:{color:C.clay}, barMaxWidth:20}]};
   }
   if (id === 'seg-2') {
     var li2 = (AN.segIns && AN.segIns.length) ? AN.segIns[AN.segIns.length-1] : 0;
