@@ -1541,7 +1541,83 @@
         "value": 23.2
       }
     ],
-    "liabTotal25": 5001.1
+    "liabTotal25": 5001.1,
+    "liabByYear": {
+      "years": [
+        "2023",
+        "2024",
+        "2025",
+        "1H26"
+      ],
+      "rows": {
+        "Insurance contract liab (RC+ICL)": [
+          1313.0,
+          1961.9,
+          3109.6,
+          2142.6
+        ],
+        "Bank loans": [
+          503.8,
+          1071.3,
+          1380.5,
+          1351.1
+        ],
+        "Consumer financing payables": [
+          483.2,
+          408.3,
+          229.4,
+          127.7
+        ],
+        "Lease liabilities": [
+          10.0,
+          10.2,
+          8.4,
+          9.1
+        ],
+        "Other payables": [
+          67.8,
+          132.5,
+          120.3,
+          194.1
+        ],
+        "Accrued expenses": [
+          20.8,
+          20.2,
+          31.5,
+          34.1
+        ],
+        "Taxes payable": [
+          15.0,
+          20.7,
+          19.2,
+          11.0
+        ],
+        "Employee benefits": [
+          37.4,
+          34.0,
+          34.4,
+          34.6
+        ],
+        "Deferred tax": [
+          11.1,
+          17.2,
+          23.2,
+          26.9
+        ],
+        "Other (customer/claims/commission/deposits/contract)": [
+          69.9,
+          62.2,
+          44.4,
+          49.0
+        ],
+        "TOTAL LIABILITIES": [
+          2532.1,
+          3738.5,
+          5001.1,
+          3980.2
+        ]
+      }
+    }
   },
   "VAL": {
     "kpi": [
