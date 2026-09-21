@@ -508,7 +508,7 @@ en: {
   org_mgmt_note:'Functions shown as published in the organization chart.',
   tbl_entity:'Entity', tbl_biz:'Principal activity', tbl_via:'Via', tbl_own:'Ownership', tbl_assets:'Assets (IDR bn)', tbl_status:'Status', tbl_name:'Name', tbl_func:'Function',
   debt_h:'Debt details & solvency', debt_d:'Debt by lender, maturity profile and debt-servicing analysis per the latest reports.',
-  c_d1_t:'Debt by lender', c_d1_s:'Total interest-bearing debt, IDR bn; average cost of debt',
+  c_d1_t:'Debt by lender — 1H2026 (30 Jun)', c_d1_s:'Interest-bearing debt only, IDR bn; excludes insurance reserves ~3,109bn',
   c_d2_t:'Debt maturity profile', c_d2_s:'Principal due by year, IDR bn',
   c_d3_t:'Solvency trend', c_d3_s:'EBITDA/interest; net debt/EBITDA',
   c_d4_t:'Cash vs total debt', c_d4_s:'Cash & equivalents vs total debt, IDR bn',
@@ -614,7 +614,7 @@ id: {
   org_mgmt_note:'Fungsi ditampilkan sebagaimana dipublikasikan pada bagan organisasi.',
   tbl_entity:'Entitas', tbl_biz:'Kegiatan utama', tbl_via:'Melalui', tbl_own:'Kepemilikan', tbl_assets:'Aset (Rp miliar)', tbl_status:'Status', tbl_name:'Nama', tbl_func:'Fungsi',
   debt_h:'Rincian utang & solvabilitas', debt_d:'Utang per kreditur, profil jatuh tempo dan analisis pelayanan utang per laporan terbaru.',
-  c_d1_t:'Utang per kreditur', c_d1_s:'Total utang berbunga, Rp miliar; biaya utang rata-rata',
+  c_d1_t:'Utang per kreditur — 1H2026 (30 Jun)', c_d1_s:'Hanya utang berbunga, Rp miliar; tidak termasuk cadangan asuransi ~3.109 miliar',
   c_d2_t:'Profil jatuh tempo utang', c_d2_s:'Pokok jatuh tempo per tahun, Rp miliar',
   c_d3_t:'Tren solvabilitas', c_d3_s:'EBITDA/bunga; utang bersih/EBITDA',
   c_d4_t:'Kas vs total utang', c_d4_s:'Kas & setara kas vs total utang, Rp miliar',
@@ -720,7 +720,7 @@ zh: {
   org_mgmt_note:'职能以组织结构图公布口径为准。',
   tbl_entity:'主体', tbl_biz:'主营业务', tbl_via:'持股路径', tbl_own:'持股', tbl_assets:'资产（十亿盾）', tbl_status:'状态', tbl_name:'姓名', tbl_func:'职能',
   debt_h:'债务明细与偿债能力', debt_d:'按债权人/期限的债务明细与偿债分析，依据最新报告。',
-  c_d1_t:'债权人构成', c_d1_s:'总有息债务，十亿盾；平均资金成本',
+  c_d1_t:'债权人构成 — 1H2026（6/30）', c_d1_s:'仅有息负债，十亿盾；不含保险准备金约 3,109',
   c_d2_t:'债务到期结构', c_d2_s:'各年到期本金，十亿盾',
   c_d3_t:'偿债能力趋势', c_d3_s:'EBITDA/利息；净负债/EBITDA',
   c_d4_t:'现金 vs 总债务', c_d4_s:'现金及等价物 vs 总债务，十亿盾',
@@ -1100,10 +1100,15 @@ function buildOpt(id){
   }
   if (id === 'd-1') {
     var dl = DEBT.lenders26, dc = [], dv = [], dcol = [C.green, C.amber, C.blue, C.purple, C.soft];
-    for (var di = 0; di < dl.length; di++) { dc.push(N(dl[di].n)); dv.push({value:dl[di].v, itemStyle:{color:dcol[dl[di].c - 1]}}); }
-    return {tooltip:baseTooltip(), grid:{left:132, right:70, top:8, bottom:24},
+    for (var di = 0; di < dl.length; di++) {
+      var shortName = dl[di].n.replace(/BPTR fleet \+ corporate bank loans/, 'Corporate bank loans')
+        .replace(/Consumer-financing payables/, 'Consumer finance')
+        .replace(/Lease liabilities/, 'Lease');
+      dc.push(shortName); dv.push({value:dl[di].v, itemStyle:{color:dcol[dl[di].c]}});
+    }
+    return {tooltip:baseTooltip(), grid:{left:140, right:70, top:8, bottom:24},
       xAxis:{type:'value', axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT},
-      yAxis:{type:'category', data:dc, axisLabel:{color:'#16241C', fontSize:11}},
+      yAxis:{type:'category', data:dc, axisLabel:{color:'#16241C', fontSize:11, width:120, overflow:'truncate'}},
       series:[{type:'bar', data:dv, label:{show:true, position:'right', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:22}]};
   }
   if (id === 'd-2') {
