@@ -1120,12 +1120,13 @@ function buildOpt(id){
         {name:CT('nd'), type:'line', data:nd, smooth:true, symbolSize:6, lineStyle:{width:2, color:C.red}, itemStyle:{color:C.red}}]};
   }
   if (id === 'd-4') {
-    return {tooltip:baseTooltip(), grid:baseGrid(), xAxis:baseX([N('sched'), N('totD')]), yAxis:baseY(U),
-      series:[{type:'bar', data:[
-        {value:FY.sched5y, itemStyle:{color:C.teal}},
-        {value:FY.totD26, itemStyle:{color:C.amber}}
-      ], label:{show:true, position:'top', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:64,
-        markLine:{silent:true, symbol:'none', lineStyle:{color:C.green, width:2}, data:[{yAxis:FY.cash26, label:{formatter:N('cash') + ' ' + fmtN(FY.cash26), fontSize:11, color:C.green, position:'insideEndTop'}}]}}]};
+    var cy = ['2021','2022','2023','2024','2025','1H26'];
+    var cash = [361.4, 221.1, 247.5, 361.4, 247.5, 242.5];
+    var debt = [790, 840, 997.0, 1489.8, 1618.3, 1487.9];
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(cy), yAxis:baseY('IDR bn'),
+      series:[
+        {name:N('cash'), type:'bar', data:cash, itemStyle:{color:C.green}, barMaxWidth:28},
+        {name:N('totD'), type:'bar', data:debt, itemStyle:{color:C.amber}, barMaxWidth:28}]};
   }
   /* ---- 分部与资产页 ---- */
   if (id === 'seg-1') {
