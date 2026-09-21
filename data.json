@@ -1380,34 +1380,34 @@
     ],
     "lenders26": [
       {
-        "n": "Bank loans (BPTR fleet + corporate)",
+        "n": "BPTR fleet + corporate bank loans",
         "v": 1351.1,
-        "c": 1
+        "c": 0
       },
       {
         "n": "Consumer-financing payables",
         "v": 127.7,
-        "c": 2
+        "c": 1
       },
       {
         "n": "Lease liabilities",
         "v": 9.1,
-        "c": 3
+        "c": 2
       }
     ],
     "maturityYears": [
-      "2H26",
+      "1H26",
       "2027",
       "2028",
       "2029",
       "2030+"
     ],
     "maturityTot": [
-      400.0,
-      350.0,
-      300.0,
-      200.0,
-      101.1
+      1488.8,
+      0,
+      0,
+      0,
+      0
     ],
     "cashDebt": {
       "years": [
@@ -1431,12 +1431,12 @@
     },
     "table": [
       {
-        "n": "Bank loans (fleet & corporate)",
+        "n": "Bank loans (BPTR fleet + corporate)",
         "d25": 1380.5,
         "d26": 1351.1,
         "r": "floating / commercial",
-        "m": "revolving & tenor",
-        "c": "BPTR fleet financing + holding company",
+        "m": "Revolving & tenor",
+        "c": "BPTR fleet + holding",
         "st": "current"
       },
       {
@@ -1444,19 +1444,49 @@
         "d25": 229.4,
         "d26": 127.7,
         "r": "n/a",
-        "m": "short-term",
-        "c": "residual from legacy financing unit",
-        "st": "run-off"
+        "m": "Short-term",
+        "c": "Residual from divested unit",
+        "st": "current"
       },
       {
         "n": "Lease liabilities",
         "d25": 8.4,
         "d26": 9.1,
         "r": "n/a",
-        "m": "various",
-        "c": "office & equipment leases",
+        "m": "Standard",
+        "c": "Vehicle leases",
         "st": "current"
+      },
+      {
+        "n": "Total",
+        "d25": 1618.3,
+        "d26": 1488.8,
+        "r": "",
+        "m": "",
+        "c": "",
+        "st": ""
       }
+    ],
+    "maturityMandiri": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "maturityINA": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "maturityOCBC": [
+      0,
+      0,
+      0,
+      0,
+      0
     ]
   },
   "VAL": {
