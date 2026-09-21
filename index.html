@@ -1299,7 +1299,7 @@ function hldTableHtml(){
 function memberLines(members, roles){
   var h = '';
   for (var i = 0; i < members.length; i++) {
-    h += '<span style="display:block;margin-top:3px;font-size:11.5px;line-height:1.35">' + esc(members[i][0]) + ' · ' + esc(members[i][1] || '') + '</span>';
+    h += '<span style="display:block;margin-top:3px;font-size:11.5px;line-height:1.35">' + esc(members[i][0]) + '</span>';
   }
   return h;
 }
