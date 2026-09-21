@@ -388,56 +388,56 @@
           "l": "FY2025 Revenue",
           "v": 1239.6,
           "u": "IDR bn",
-          "d": "+8% YoY",
+          "d": "+8% YoY (vs 1,146.0 FY24)",
           "c": "up"
         },
         {
           "l": "FY2025 Consolidated net profit",
           "v": 144.1,
           "u": "IDR bn",
-          "d": "-17% YoY",
+          "d": "-17% YoY (vs 174.0 FY24)",
           "c": "dn"
         },
         {
           "l": "FY2025 Attributable to parent",
           "v": 134.8,
           "u": "IDR bn",
-          "d": "-7% YoY",
+          "d": "-7% YoY (vs 145.3 FY24)",
           "c": "dn"
         },
         {
           "l": "FY2025 EBITDA",
           "v": 334.1,
           "u": "IDR bn",
-          "d": "~flat YoY",
+          "d": "~flat (vs 331.5 FY24)",
           "c": "flat"
         },
         {
           "l": "Total assets (Dec 2025)",
           "v": 6821.4,
           "u": "IDR bn",
-          "d": "+21% YoY",
+          "d": "+21% YoY (vs 5,629)",
           "c": "up"
         },
         {
           "l": "ROE (FY2025)",
           "v": 7.9,
           "u": "%",
-          "d": "FY2025 ending equity",
+          "d": "vs 9.9% FY24",
           "c": "flat"
         },
         {
           "l": "ROA (FY2025)",
           "v": 2.1,
           "u": "%",
-          "d": "FY2025 ending assets",
+          "d": "vs 3.1% FY24",
           "c": "flat"
         },
         {
           "l": "Liab/Equity (Dec 2025)",
           "v": 2.7,
           "u": "x",
-          "d": "up from 2.2x (2024)",
+          "d": "vs 2.2x FY24",
           "c": "dn"
         }
       ],
@@ -446,56 +446,56 @@
           "l": "Pendapatan FY2025",
           "v": 1239.6,
           "u": "IDR bn",
-          "d": "+8% YoY",
+          "d": "+8% YoY (vs 1.146,0 FY24)",
           "c": "up"
         },
         {
           "l": "Laba bersih konsolidasi FY2025",
           "v": 144.1,
           "u": "IDR bn",
-          "d": "-17% YoY",
+          "d": "-17% YoY (vs 174,0 FY24)",
           "c": "dn"
         },
         {
           "l": "Diatribusikan ke pemilik FY2025",
           "v": 134.8,
           "u": "IDR bn",
-          "d": "-7% YoY",
+          "d": "-7% YoY (vs 145,3 FY24)",
           "c": "dn"
         },
         {
           "l": "EBITDA FY2025",
           "v": 334.1,
           "u": "IDR bn",
-          "d": "~flat YoY",
+          "d": "~datar (vs 331,5 FY24)",
           "c": "flat"
         },
         {
           "l": "Total aset (Des 2025)",
           "v": 6821.4,
           "u": "IDR bn",
-          "d": "+21% YoY",
+          "d": "+21% YoY (vs 5.629)",
           "c": "up"
         },
         {
           "l": "ROE (FY2025)",
           "v": 7.9,
           "u": "%",
-          "d": "FY2025 ending equity",
+          "d": "vs 9,9% FY24",
           "c": "flat"
         },
         {
           "l": "ROA (FY2025)",
           "v": 2.1,
           "u": "%",
-          "d": "FY2025 ending assets",
+          "d": "vs 3,1% FY24",
           "c": "flat"
         },
         {
           "l": "Liab/Ekuitas (Des 2025)",
           "v": 2.7,
           "u": "x",
-          "d": "up from 2.2x (2024)",
+          "d": "vs 2,2x FY24",
           "c": "dn"
         }
       ],
@@ -504,56 +504,56 @@
           "l": "FY2025 收入",
           "v": 1239.6,
           "u": "IDR bn",
-          "d": "+8% YoY",
+          "d": "+8% YoY（FY24 为 1,146.0）",
           "c": "up"
         },
         {
           "l": "FY2025 合并净利",
           "v": 144.1,
           "u": "IDR bn",
-          "d": "-17% YoY",
+          "d": "-17% YoY（FY24 为 174.0）",
           "c": "dn"
         },
         {
           "l": "FY2025 归母净利",
           "v": 134.8,
           "u": "IDR bn",
-          "d": "-7% YoY",
+          "d": "-7% YoY（FY24 为 145.3）",
           "c": "dn"
         },
         {
           "l": "FY2025 EBITDA",
           "v": 334.1,
           "u": "IDR bn",
-          "d": "~flat YoY",
+          "d": "基本持平（FY24 为 331.5）",
           "c": "flat"
         },
         {
           "l": "总资产（2025年末）",
           "v": 6821.4,
           "u": "IDR bn",
-          "d": "+21% YoY",
+          "d": "+21% YoY（vs 5,629）",
           "c": "up"
         },
         {
           "l": "ROE（FY2025）",
           "v": 7.9,
           "u": "%",
-          "d": "FY2025 ending equity",
+          "d": "FY24 为 9.9%",
           "c": "flat"
         },
         {
           "l": "ROA（FY2025）",
           "v": 2.1,
           "u": "%",
-          "d": "FY2025 ending assets",
+          "d": "FY24 为 3.1%",
           "c": "flat"
         },
         {
           "l": "负债/权益（2025年末）",
           "v": 2.7,
           "u": "x",
-          "d": "up from 2.2x (2024)",
+          "d": "FY24 为 2.2x",
           "c": "dn"
         }
       ]
