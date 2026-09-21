@@ -322,6 +322,7 @@ footer a{color:var(--green)}
   <h3 class="block-h" data-i18n="wc_h"></h3>
   <div class="charts">
     <div class="chart-card"><h3 data-i18n="c_wc1_t"></h3><div class="sub" data-i18n="c_wc1_s"></div><div class="chart" id="d-5"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_d6_t"></h3><div class="sub" data-i18n="c_d6_s"></div><div class="chart" id="d-6"></div></div>
   </div>
   <div id="wc-table"></div>
   <h3 class="block-h" data-i18n="debt_table_h"></h3>
@@ -445,6 +446,8 @@ en: {
   t_overview:'Overview', t_fy2024:'FY2024', t_fy2025:'FY2025', t_fy2026:'1H2026', t_debt:'Debt & Solvency', t_landbank:'Segments & Assets', t_valuation:'Valuation', t_vali:'Valuation Illustration', t_risk:'Risk & Direction', t_holding:'Holding Structure', t_org:'Organization',
   wc_h:'Working capital & receivables quality',
   c_wc1_t:'Trade receivables & DSO',
+  c_d6_t:'Liability structure 2023–1H26',
+  c_d6_s:'Stacked by category, IDR bn; insurance reserves offset by investments',
   c_wc1_s:'Net trade receivables bars vs DSO (days, right axis). Receivables and collection quality across subsidiaries.',
   wch_item:'Item (IDR bn)', wch_26:'1H2026', wch_25:'FY2025', wch_24:'FY2024',
   wcr_gross:'Trade receivables, gross (3rd party)', wcr_net:'Trade receivables, net (current)',
@@ -959,6 +962,33 @@ function buildOpt(id){
       series:[
         {name:'Trade receivables (net)', type:'bar', data:ar, itemStyle:{color:C.blue}, barMaxWidth:34},
         {name:'DSO', type:'line', yAxisIndex:1, data:dso.map(function(x){return Math.round(x);}), smooth:true, symbolSize:6, lineStyle:{width:2.5,color:C.amber}, itemStyle:{color:C.amber}}]};
+  }
+  if (id === 'd-6') {
+    var ly = ['2023','2024','2025','1H26'];
+    var ins = [1313.0, 1961.9, 3109.6, 2142.6];
+    var bank = [503.8, 1071.3, 1380.5, 1351.1];
+    var cf = [483.2, 408.3, 229.4, 127.7];
+    var lease = [10.0, 10.2, 8.4, 9.1];
+    var other = [222.1, 286.2, 273.2, 349.7];
+    var totals = [2532.1, 3738.5, 5001.1, 3980.2];
+    return {
+      tooltip:{trigger:'axis', axisPointer:{type:'shadow'}, confine:true, formatter:function(params){
+        var y = params[0].name, h = y + '<br/>', tot = 0;
+        params.forEach(function(p){ h += p.marker + p.seriesName + ': ' + fmtN(p.value) + ' bn (' + (p.value/totals[p.dataIndex]*100).toFixed(1) + '%)<br/>'; tot += p.value; });
+        return h + '<b>Total: ' + fmtN(tot) + ' bn</b>';
+      }},
+      legend:{bottom:0, textStyle:{color:AX.color, fontSize:11}, itemWidth:12},
+      grid:{left:48, right:20, top:30, bottom:44},
+      xAxis:baseX(ly),
+      yAxis:baseY('IDR bn'),
+      series:[
+        {name:'Insurance contract liab', type:'bar', stack:'L', data:ins, itemStyle:{color:C.green2}, barMaxWidth:48},
+        {name:'Bank loans', type:'bar', stack:'L', data:bank, itemStyle:{color:C.blue}, barMaxWidth:48},
+        {name:'Consumer finance', type:'bar', stack:'L', data:cf, itemStyle:{color:C.amber}, barMaxWidth:48},
+        {name:'Lease', type:'bar', stack:'L', data:lease, itemStyle:{color:C.purple}, barMaxWidth:48},
+        {name:'Other operating', type:'bar', stack:'L', data:other, itemStyle:{color:C.soft}, barMaxWidth:48,
+         label:{show:true, position:'top', fontSize:11, fontWeight:'bold', color:'#16241C',
+           formatter:function(p){ return fmtN(totals[p.dataIndex]); }}}]};
   }
   if (id === 'f24-1') {
     var s = FY.seg24b, arr = [];
@@ -1605,7 +1635,7 @@ function renderStatics(){
 
 /* ================= 路由与图表生命周期 ================= */
 var CH = {};
-var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6','o7'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-1','d-2','d-3','d-4','d-5'], segments:['seg-1','seg-2'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], vali:['vi-1'], risk:[], holding:[], org:[]};
+var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6','o7'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-1','d-2','d-3','d-4','d-5','d-6'], segments:['seg-1','seg-2'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], vali:['vi-1'], risk:[], holding:[], org:[]};
 
 function exportCSV(){
   var page = document.querySelector('.page.active');
