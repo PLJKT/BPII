@@ -954,14 +954,17 @@ function buildOpt(id){
   }
   if (id === 'd-5') {
     var ar=WC.ar, rev=WC.revenue, dso=[];
-    for(var wi=0; wi<ar.length; wi++){ dso.push(ar[wi]/rev[wi]*365); }
+    for(var wi=0; wi<ar.length; wi++){
+      var annRev = (WC.years[wi] === '1H26') ? rev[wi]*2 : rev[wi];
+      dso.push(ar[wi]/annRev*365);
+    }
     return {tooltip:baseTooltip(),
       legend:{bottom:0, textStyle:{color:AX.color, fontSize:11}, itemWidth:12},
       grid:{left:48, right:48, top:30, bottom:44}, xAxis:baseX(WC.years),
       yAxis:[baseY(U), baseY('days')],
       series:[
         {name:'Trade receivables (net)', type:'bar', data:ar, itemStyle:{color:C.blue}, barMaxWidth:34},
-        {name:'DSO', type:'line', yAxisIndex:1, data:dso.map(function(x){return Math.round(x);}), smooth:true, symbolSize:6, lineStyle:{width:2.5,color:C.amber}, itemStyle:{color:C.amber}}]};
+        {name:'DSO (1H26 annualized)', type:'line', yAxisIndex:1, data:dso.map(function(x){return Math.round(x);}), smooth:true, symbolSize:6, lineStyle:{width:2.5,color:C.amber}, itemStyle:{color:C.amber}}]};
   }
   if (id === 'd-6') {
     var ly = ['2023','2024','2025','1H26'];
