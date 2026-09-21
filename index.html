@@ -1111,10 +1111,13 @@ function buildOpt(id){
       series:[{type:'bar', data:dv, label:{show:true, position:'right', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:22}]};
   }
   if (id === 'd-3') {
-    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(['2023','2024','2025']), yAxis:baseY('x'),
+    var cy = ['2021','2022','2023','2024','2025','1H26'];
+    var icr = [3.4, 4.1, 3.1, 3.5, 2.8, 2.3];
+    var nd = [1.4, 2.2, 2.6, 3.4, 4.1, 8.6];
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(cy), yAxis:baseY('x'),
       series:[
-        {name:CT('ebitdaI'), type:'line', data:FY.cov.icr, smooth:true, symbolSize:6, lineStyle:{width:2, color:C.green}, itemStyle:{color:C.green}},
-        {name:CT('nd'), type:'line', data:FY.cov.nd, smooth:true, symbolSize:6, lineStyle:{width:2, color:C.red}, itemStyle:{color:C.red}}]};
+        {name:CT('ebitdaI'), type:'line', data:icr, smooth:true, symbolSize:6, lineStyle:{width:2, color:C.green}, itemStyle:{color:C.green}},
+        {name:CT('nd'), type:'line', data:nd, smooth:true, symbolSize:6, lineStyle:{width:2, color:C.red}, itemStyle:{color:C.red}}]};
   }
   if (id === 'd-4') {
     return {tooltip:baseTooltip(), grid:baseGrid(), xAxis:baseX([N('sched'), N('totD')]), yAxis:baseY(U),
