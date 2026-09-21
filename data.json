@@ -1210,112 +1210,112 @@
     "val": {
       "en": [
         {
-          "l": "Price (18 Sep 2026)",
-          "v": 180,
+          "l": "Price (21 Sep 2026)",
+          "v": 468,
           "u": "IDR",
-          "d": "-1.0 (-0.6%) on day",
-          "c": "dn"
+          "d": "+8.0 (+1.7%) on day",
+          "c": "up"
         },
         {
           "l": "Market cap",
-          "v": 3.7,
+          "v": 4.83,
           "u": "IDR tn",
-          "d": "3.76T at 180 (S&P)",
+          "d": "10.31bn shares × 468",
           "c": "flat"
         },
         {
           "l": "P/B",
-          "v": 0.5,
+          "v": 2.65,
           "u": "x",
-          "d": "0.46x total equity (audited)",
+          "d": "BVPS 176.6 (total equity)",
           "c": "flat"
         },
         {
-          "l": "P/E (FY25 EPS 20.55)",
-          "v": 8.8,
+          "l": "P/E (TTM EPS 12.81)",
+          "v": 36.5,
           "u": "x",
-          "d": "audited EPS; TTM n/a",
+          "d": "TTM; FY25 EPS 13.08",
           "c": "flat"
         },
         {
           "l": "Dividend yield",
-          "v": 1.1,
+          "v": 1.5,
           "u": "%",
-          "d": "DPS 2.03 (FY25)",
+          "d": "TTM DPS 6.98; FY25 DPS 11.4",
           "c": "flat"
         }
       ],
       "id": [
         {
-          "l": "Harga (18 Sep 2026)",
-          "v": 180,
+          "l": "Harga (21 Sep 2026)",
+          "v": 468,
           "u": "IDR",
-          "d": "-1,0 (-0,6%) hari ini",
-          "c": "dn"
+          "d": "+8,0 (+1,7%) hari ini",
+          "c": "up"
         },
         {
           "l": "Kapitalisasi pasar",
-          "v": 3.7,
+          "v": 4.83,
           "u": "IDR tn",
-          "d": "3,76T pada 180 (S&P)",
+          "d": "10,31miliar lembar × 468",
           "c": "flat"
         },
         {
           "l": "P/B",
-          "v": 0.5,
+          "v": 2.65,
           "u": "x",
-          "d": "0,46x ekuitas total (audit)",
+          "d": "BVPS 176,6 (ekuitas total)",
           "c": "flat"
         },
         {
-          "l": "P/E (EPS FY25 20,55)",
-          "v": 8.8,
+          "l": "P/E (EPS TTM 12,81)",
+          "v": 36.5,
           "u": "x",
-          "d": "EPS audit; TTM n/a",
+          "d": "TTM; EPS FY25 13,08",
           "c": "flat"
         },
         {
           "l": "Hasil dividen",
-          "v": 1.1,
+          "v": 1.5,
           "u": "%",
-          "d": "DPS 2,03 (FY25)",
+          "d": "DPS TTM 6,98; DPS FY25 11,4",
           "c": "flat"
         }
       ],
       "zh": [
         {
-          "l": "股价（2026年9月18日）",
-          "v": 180,
+          "l": "股价（2026年9月21日）",
+          "v": 468,
           "u": "IDR",
-          "d": "当日 -1.0 (-0.6%)",
-          "c": "dn"
+          "d": "当日 +8.0 (+1.7%)",
+          "c": "up"
         },
         {
           "l": "市值",
-          "v": 3.7,
+          "v": 4.83,
           "u": "IDR tn",
-          "d": "180 价对应 3.76T (S&P)",
+          "d": "103.1亿股 × 468",
           "c": "flat"
         },
         {
           "l": "P/B",
-          "v": 0.5,
+          "v": 2.65,
           "u": "x",
-          "d": "0.46x 总权益（审计）",
+          "d": "BVPS 176.6（总权益）",
           "c": "flat"
         },
         {
-          "l": "P/E（FY25 EPS 20.55）",
-          "v": 8.8,
+          "l": "P/E（TTM EPS 12.81）",
+          "v": 36.5,
           "u": "x",
-          "d": "审计 EPS；TTM n/a",
+          "d": "TTM；FY25 EPS 13.08",
           "c": "flat"
         },
         {
           "l": "股息率",
-          "v": 1.1,
+          "v": 1.5,
           "u": "%",
-          "d": "DPS 2.03 (FY25)",
+          "d": "TTM DPS 6.98；FY25 DPS 11.4",
           "c": "flat"
         }
       ]
