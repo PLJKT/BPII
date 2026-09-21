@@ -3742,12 +3742,12 @@
   "DTXT": {
     "en": {
       "h": [
-        "Instrumen",
-        "31 Des 2025",
+        "Instrument",
+        "31 Dec 2025",
         "30 Jun 2026",
-        "Suku bunga",
-        "Jatuh tempo",
-        "Agunan",
+        "Interest rate",
+        "Maturity",
+        "Collateral",
         "Status"
       ],
       "tbl": [
