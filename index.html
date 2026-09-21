@@ -340,10 +340,7 @@ footer a{color:var(--green)}
     <div class="panel"><h3 data-i18n="val_stats_t"></h3><div id="val-stats"></div></div>
     <div class="panel"><h3 data-i18n="val_peers_t"></h3><div id="val-peers"></div><div class="risk-note" data-i18n="val_peers_note"></div></div>
   </div>
-  <div class="two-col">
-    <div class="panel"><h3 data-i18n="val_analysts_t"></h3><div id="val-analysts"></div></div>
-    <div class="panel"><h3 data-i18n="val_events_t"></h3><ul class="events" id="val-events"></ul></div>
-  </div>
+  <div class="panel"><h3 data-i18n="val_events_t"></h3><ul class="events" id="val-events"></ul></div>
 </section>
 
 <!-- ===== 视图：估值测算 ===== -->
@@ -1601,7 +1598,6 @@ function renderStatics(){
   document.getElementById('k-val').innerHTML = kpiHtml(KP.val[LANG]);
   document.getElementById('val-stats').innerHTML = valStatsHtml();
   document.getElementById('val-peers').innerHTML = valPeersHtml();
-  document.getElementById('val-analysts').innerHTML = valAnalystsHtml();
   document.getElementById('val-events').innerHTML = eventsHtml(VTXT[LANG].events);
   var btns = document.querySelectorAll('.langs button');
   for (var x = 0; x < btns.length; x++) { btns[x].classList.toggle('active', btns[x].getAttribute('data-lang') === LANG); }
