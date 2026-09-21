@@ -1617,6 +1617,64 @@
           3980.2
         ]
       }
+    },
+    "cov": {
+      "years": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "1H26"
+      ],
+      "icr": [
+        3.39,
+        4.07,
+        3.05,
+        3.47,
+        2.75,
+        2.25
+      ],
+      "nd": [
+        1.43,
+        2.21,
+        2.6,
+        3.4,
+        4.1,
+        8.63
+      ],
+      "interest": [
+        88.2,
+        68.8,
+        94.3,
+        95.6,
+        121.5,
+        64.0
+      ],
+      "debt": [
+        790.0,
+        840.0,
+        997.0,
+        1489.8,
+        1618.3,
+        1487.9
+      ],
+      "cash": [
+        361.4,
+        221.1,
+        247.5,
+        361.4,
+        247.5,
+        242.5
+      ],
+      "ebitda": [
+        298.9,
+        280.0,
+        288.0,
+        331.5,
+        334.1,
+        144.3
+      ]
     }
   },
   "VAL": {
@@ -4719,7 +4777,61 @@
       "cfSeg": "消费金融 (BPF)"
     }
   },
-  "WC": [],
+  "WC": {
+    "note": "BPII financial holding: receivables mix = operating lease (BPTR) + customer receivables (MTWI) + AM fee receivables. Aging subset below is BPTR lease only (Note 7), does not foot to total net AR.",
+    "rows": [
+      {
+        "item": "Trade receivables, gross (3rd party)",
+        "h26": 746.6,
+        "fy25": 548.8
+      },
+      {
+        "item": "Trade receivables, net (current)",
+        "h26": 721.7,
+        "fy25": 521.2
+      },
+      {
+        "item": "Allowance for impairment",
+        "h26": 24.9,
+        "fy25": 16.3
+      },
+      {
+        "item": "BPTR lease AR - not yet due",
+        "h26": null,
+        "fy25": 49.9
+      },
+      {
+        "item": "BPTR lease AR - >90 days past due",
+        "h26": null,
+        "fy25": 16.1
+      },
+      {
+        "item": "BPTR lease AR - ECL allowance",
+        "h26": null,
+        "fy25": 24.5
+      },
+      {
+        "item": "Receivables days (DSO, net AR/revenue)",
+        "h26": 100,
+        "fy25": 153
+      },
+      {
+        "item": "Trade payables",
+        "h26": 133.0,
+        "fy25": 151.7
+      },
+      {
+        "item": "Customer security deposits",
+        "h26": 317.0,
+        "fy25": 316.2
+      },
+      {
+        "item": "Receivables written off in year",
+        "h26": null,
+        "fy25": 0.14
+      }
+    ]
+  },
   "SUBOPS": {
     "bpam": {
       "code": "BPAM",
