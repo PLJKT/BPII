@@ -1680,11 +1680,11 @@
   "VAL": {
     "kpi": [
       {
-        "l": "Price (2025 Q4 close)",
-        "v": 510,
+        "l": "Price (2026-09-21)",
+        "v": 468,
         "u": "IDR",
-        "d": "2025 Q4 close (BPII.JK)",
-        "c": "flat"
+        "d": "+0 (+0.0%) on day",
+        "c": "up"
       },
       {
         "l": "52-week range",
@@ -1695,23 +1695,23 @@
       },
       {
         "l": "Market cap",
-        "v": 5.3,
+        "v": 4.8,
         "u": "IDR tn",
-        "d": "510 x 10.31bn shares",
+        "d": "4.83T at 468",
         "c": "flat"
       },
       {
         "l": "P/B",
-        "v": 3.6,
+        "v": 2.7,
         "u": "x",
-        "d": "parent BVPS 140.1",
+        "d": "2.65x parent BVPS 176.5",
         "c": "flat"
       },
       {
         "l": "P/E (FY25 EPS 13.08)",
-        "v": 39.0,
+        "v": 33.4,
         "u": "x",
-        "d": "FY25 parent NI 134.8bn",
+        "d": "33.4x on FY25 EPS 14.0",
         "c": "flat"
       },
       {
@@ -1748,7 +1748,7 @@
       520,
       510,
       515,
-      510
+      468
     ],
     "range": [
       [
@@ -1838,7 +1838,7 @@
     "stats": [
       [
         "Price / date",
-        "510 IDR · 2025 Q4 close"
+        "468.0 IDR · 2026-09-21 (Yahoo Finance)"
       ],
       [
         "Shares outstanding",
@@ -2533,7 +2533,7 @@
         2.7
       ]
     },
-    "refPrice": 510,
+    "refPrice": 468,
     "h26rev": {
       "h25": [
         1379.6,
