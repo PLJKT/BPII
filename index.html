@@ -211,7 +211,6 @@ footer a{color:var(--green)}
     <a class="tab" href="#profit" data-page="profit" data-i18n="t_prof"></a>
     <a class="tab" href="#debt" data-page="debt" data-i18n="t_debt"></a>
     <a class="tab" href="#valuation" data-page="valuation" data-i18n="t_valuation"></a>
-    <a class="tab" href="#vali" data-page="vali" data-i18n="t_vali"></a>
     <a class="tab" href="#risk" data-page="risk" data-i18n="t_risk"></a>
     <a class="tab" href="#holding" data-page="holding" data-i18n="t_holding"></a>
     <a class="tab" href="#org" data-page="org" data-i18n="t_org"></a>
@@ -348,21 +347,6 @@ footer a{color:var(--green)}
 </section>
 
 <!-- ===== 视图：估值测算 ===== -->
-<section class="page" id="vali">
-  <h2 class="page-h" data-i18n="t_vali"></h2>
-  <p class="page-d" id="vali-sub"></p>
-  <div class="risk-note" id="vali-disc"></div>
-  <div class="charts">
-    <div class="chart-card"><h3 id="vali-chart-h"></h3><div class="sub" id="vali-chart-s"></div><div class="chart" id="vi-1"></div></div>
-  </div>
-  <div id="vali-inputs"></div>
-  <div id="vali-methods"></div>
-  <div id="vali-comp"></div>
-  <div id="vali-implied"></div>
-  <div id="vali-keyp"></div>
-  <div id="vali-key"></div>
-</section>
-
 <!-- ===== 视图：风险与方向 ===== -->
 <section class="page" id="risk">
   <h2 class="page-h" data-i18n="rkall_h"></h2>
@@ -1619,21 +1603,6 @@ function renderStatics(){
   document.getElementById('val-peers').innerHTML = valPeersHtml();
   document.getElementById('val-analysts').innerHTML = valAnalystsHtml();
   document.getElementById('val-events').innerHTML = eventsHtml(VTXT[LANG].events);
-  var VI = VALI[LANG];
-  document.getElementById('vali-sub').innerHTML = esc(VI.sub);
-  document.getElementById('vali-disc').innerHTML = esc(VI.disc);
-  document.getElementById('vali-chart-h').innerHTML = esc(VI.methodH);
-  document.getElementById('vali-chart-s').innerHTML = esc(VI.weightNote);
-  document.getElementById('vali-inputs').innerHTML = kvTable(VI.inputsH, VI.inputs, ['42%','58%'], VLL[LANG][5]);
-  document.getElementById('vali-methods').innerHTML = kvTable(VI.methodH, VI.methods, ['21%','30%','15%','16%','18%'], VLL[LANG][3]);
-  document.getElementById('vali-comp').innerHTML = kvTable(VI.compH, VI.comp, ['17%','15%','14%','15%','39%'], VLL[LANG][4]);
-  document.getElementById('vali-implied').innerHTML = kvTable(VI.impliedH, VI.implied, ['56%','44%'], VLL[LANG][5]);
-  var VKP = KEYP[LANG];
-  document.getElementById('vali-keyp').innerHTML = '<p class="page-d">' + esc(VKP.sub) + '</p>' + kvTable(VKP.h, VKP.rows, ['26%','38%','36%'], VKP.hd);
-  var vk = '<ul class="events">';
-  for (var vki = 0; vki < VI.key.length; vki++) { vk += '<li>' + esc(VI.key[vki]) + '</li>'; }
-  vk += '</ul>';
-  document.getElementById('vali-key').innerHTML = '<h3 class="block-h">' + esc(VI.keyH) + '</h3>' + vk;
   var btns = document.querySelectorAll('.langs button');
   for (var x = 0; x < btns.length; x++) { btns[x].classList.toggle('active', btns[x].getAttribute('data-lang') === LANG); }
   for (var k in CH) { if (CH.hasOwnProperty(k)) { CH[k].setOption(buildOpt(k), true); } }
@@ -1642,7 +1611,7 @@ function renderStatics(){
 
 /* ================= 路由与图表生命周期 ================= */
 var CH = {};
-var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6','o7'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-6','d-1','d-3','d-4','d-5'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], vali:['vi-1'], risk:[], holding:[], org:[]};
+var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6','o7'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-6','d-1','d-3','d-4','d-5'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], risk:[], holding:[], org:[]};
 
 function exportCSV(){
   var page = document.querySelector('.page.active');
