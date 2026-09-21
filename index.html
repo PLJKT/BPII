@@ -226,6 +226,7 @@ footer a{color:var(--green)}
 <!-- ===== 视图：总览 ===== -->
 <section class="page active" id="overview">
   <div class="phase" id="phases"></div>
+  <div class="kpis" id="ov-kpis-h26" style="margin-bottom:8px"></div>
   <div class="kpis" id="ov-kpis"></div>
   <div class="charts">
     <div class="chart-card"><h3 data-i18n="c_o1_t"></h3><div class="sub" data-i18n="c_o1_s"></div><div class="chart" id="o1"></div></div>
@@ -1470,17 +1471,28 @@ function renderStatics(){
   var els2 = document.querySelectorAll('[data-i18n-html]');
   for (var j = 0; j < els2.length; j++) { els2[j].innerHTML = T(els2[j].getAttribute('data-i18n-html')); }
   renderPhases();
+  var H26KPI = {
+    en: [
+      {l:'1H2026 Revenue', v:1556.3, u:'IDR bn', d:'vs 1H25 1,379.6', c:'up'},
+      {l:'Consolidated net profit', v:53.0, u:'IDR bn', d:'vs 1H25 108.0', c:'down'},
+      {l:'Attributable to parent', v:42.8, u:'IDR bn', d:'vs 1H25 91.2', c:'down'},
+      {l:'EBITDA', v:144.3, u:'IDR bn', d:'1H2026 interim', c:''}
+    ],
+    id: [
+      {l:'Pendapatan 1H26', v:1556.3, u:'Rp miliar', d:'vs 1H25 1.379,6', c:'up'},
+      {l:'Laba bersih konsolidasi', v:53.0, u:'Rp miliar', d:'vs 1H25 108,0', c:'down'},
+      {l:'Diatribusikan ke pemilik', v:42.8, u:'Rp miliar', d:'vs 1H25 91,2', c:'down'},
+      {l:'EBITDA', v:144.3, u:'Rp miliar', d:'Interim 1H26', c:''}
+    ],
+    zh: [
+      {l:'1H2026 收入', v:1556.3, u:'十亿盾', d:'vs 1H25 1,379.6', c:'up'},
+      {l:'合并净利', v:53.0, u:'十亿盾', d:'vs 1H25 108.0', c:'down'},
+      {l:'归母净利', v:42.8, u:'十亿盾', d:'vs 1H25 91.2', c:'down'},
+      {l:'EBITDA', v:144.3, u:'十亿盾', d:'1H2026 中期', c:''}
+    ]
+  };
+  document.getElementById('ov-kpis-h26').innerHTML = kpiHtml(H26KPI[LANG]);
   document.getElementById('ov-kpis').innerHTML = kpiHtml(KP.ov[LANG]);
-  var h26 = '<div style="margin-top:14px;padding:10px 14px;background:#f0f5f2;border-left:3px solid #1a3a2a;border-radius:0 6px 6px 0;font-size:12px;display:flex;gap:20px;flex-wrap:wrap">';
-  if (LANG === 'en') {
-    h26 += '<span><b>1H2026 Revenue:</b> 1,556.3 IDR bn</span><span><b>1H2026 Net profit:</b> 53.0 IDR bn</span><span><b>1H2026 EBITDA:</b> 144.3 IDR bn</span>';
-  } else if (LANG === 'id') {
-    h26 += '<span><b>Pendapatan 1H26:</b> 1.556,3 Rp miliar</span><span><b>Laba bersih 1H26:</b> 53,0 Rp miliar</span><span><b>EBITDA 1H26:</b> 144,3 Rp miliar</span>';
-  } else {
-    h26 += '<span><b>1H26 收入：</b>1,556.3 十亿盾</span><span><b>1H26 净利：</b>53.0 十亿盾</span><span><b>1H26 EBITDA：</b>144.3 十亿盾</span>';
-  }
-  h26 += '</div>';
-  document.getElementById('ov-kpis').insertAdjacentHTML('afterend', h26);
   document.getElementById('k24').innerHTML = kpiHtml(KP.k24[LANG]);
   document.getElementById('k25').innerHTML = kpiHtml(KP.k25[LANG]);
   document.getElementById('k26').innerHTML = kpiHtml(KP.k26[LANG]);
