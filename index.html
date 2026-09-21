@@ -467,12 +467,12 @@ en: {
   ph2:'Phase <b>portfolio build-out</b>: fleet and insurance scaled',
   ph3:'Phase <b>holding maturity</b>: diversified three-engine earnings',
   ph4:'Phase <b>current</b>: recurring fee and premium income',
-  c_o1_t:'Revenue (2014–2025)', c_o1_s:'Consolidated revenue, IDR bn',
-  c_o2_t:'Net profit: consolidated vs parent', c_o2_s:'',
+  c_o1_t:'Revenue 2014–2025 + 1H2026', c_o1_s:'Consolidated revenue, IDR bn',
+  c_o2_t:'Net profit 2014–2025 + 1H26: consolidated vs parent', c_o2_s:'',
   c_o3_t:'Margins & leverage trend', c_o3_s:'Pre-tax margin / net margin / ROE / Debt-to-equity · 2021 & earlier incl. BPF; from 2022 continuing operations',
   c_o4_t:'Segment revenue: Asset Management · Fleet · Insurance', c_o4_s:'2021–2025, IDR bn; three operating subsidiaries',
   c_o5_t:'Segment Revenue', c_o5_s:'3 segments',
-  c_o6_t:'EBITDA (2014–2025)', c_o6_s:'EBITDA trend, IDR bn',
+  c_o6_t:'EBITDA 2014–2025 + 1H2026', c_o6_s:'EBITDA trend, IDR bn',
   c_f24_1_t:'Revenue mix (FY2024)', c_f24_1_s:'Asset management / Fleet rental / Insurance',
   c_f24_2_t:'P&L snapshot (FY2024)', c_f24_2_s:'Revenue · EBITDA · NP cons. · NP parent (IDR bn)',
   c_f24_3_t:'Balance sheet (31 Dec 2024)', c_f24_3_s:'Assets · Liabilities · Equity (IDR bn)',
@@ -573,12 +573,12 @@ id: {
   ph2:'Fase <b>bangun portofolio</b>: armada & asuransi berkembang',
   ph3:'Fase <b>grup matang</b>: laba tiga mesin terdiversifikasi',
   ph4:'Fase <b>kini</b>: pendapatan fee & premium berulang',
-  c_o1_t:'Pendapatan (2014–2025)', c_o1_s:'Pendapatan konsolidasi, Rp miliar',
+  c_o1_t:'Pendapatan 2014–2025 + 1H2026', c_o1_s:'Pendapatan konsolidasi, Rp miliar',
   c_o2_t:'Laba bersih: konsolidasi vs entitas induk', c_o2_s:'',
   c_o3_t:'Tren margin & leverage', c_o3_s:'Margin kotor / margin bersih / ROE / Utang÷Ekuitas',
   c_o4_t:'Pendapatan segmen: Manajemen Investasi · Sewa Kendaraan · Asuransi', c_o4_s:'2021–2025, Rp miliar; tiga anak usaha',
   c_o5_t:'Penjualan Pemasaran', c_o5_s:'3 segments',
-  c_o6_t:'EBITDA (2014–2025)', c_o6_s:'Tren EBITDA, Rp miliar',
+  c_o6_t:'EBITDA 2014–2025 + 1H2026', c_o6_s:'Tren EBITDA, Rp miliar',
   c_f24_1_t:'Komposisi pendapatan (FY2024)', c_f24_1_s:'Manajemen investasi / Sewa armada / Asuransi',
   c_f24_2_t:'Ringkasan L/R (FY2024)', c_f24_2_s:'Pendapatan · EBITDA · Laba kons. · Laba induk (Rp miliar)',
   c_f24_3_t:'Neraca (31 Des 2024)', c_f24_3_s:'Aset · Liabilitas · Ekuitas (Rp miliar)',
@@ -680,7 +680,7 @@ zh: {
   ph3:'阶段 <b>控股成熟</b>：三引擎盈利多元化',
   ph4:'阶段 <b>当前</b>：经常性费用与保费收入',
   c_o1_t:'营收（2014–2025）', c_o1_s:'合并收入，十亿盾',
-  c_o2_t:'净利润：合并 vs 归母', c_o2_s:'',
+  c_o2_t:'净利润 2014–2025 + 1H26：合并 vs 归母', c_o2_s:'',
   c_o3_t:'利润率与杠杆趋势', c_o3_s:'毛利率 / 净利率 / ROE / 负债÷权益',
   c_o4_t:'分部收入：资产管理 · 车队 · 保险', c_o4_s:'2021–2025，十亿盾；三家运营子公司',
   c_o5_t:'营销销售', c_o5_s:'不适用',
@@ -1474,21 +1474,21 @@ function renderStatics(){
   var H26KPI = {
     en: [
       {l:'1H2026 Revenue (net basis)', v:653.7, u:'IDR bn', d:'vs 1H25 617.4', c:'up'},
-      {l:'Consolidated net profit', v:53.0, u:'IDR bn', d:'vs 1H25 108.0', c:'down'},
-      {l:'Attributable to parent', v:42.8, u:'IDR bn', d:'vs 1H25 91.2', c:'down'},
-      {l:'EBITDA', v:144.3, u:'IDR bn', d:'1H2026 interim', c:''}
+      {l:'1H2026 Consolidated net profit', v:53.0, u:'IDR bn', d:'vs 1H25 108.0', c:'down'},
+      {l:'1H2026 Attributable to parent', v:42.8, u:'IDR bn', d:'vs 1H25 91.2', c:'down'},
+      {l:'1H2026 EBITDA', v:144.3, u:'IDR bn', d:'interim', c:''}
     ],
     id: [
       {l:'Pendapatan 1H26 (netto)', v:653.7, u:'Rp miliar', d:'vs 1H25 617,4', c:'up'},
-      {l:'Laba bersih konsolidasi', v:53.0, u:'Rp miliar', d:'vs 1H25 108,0', c:'down'},
-      {l:'Diatribusikan ke pemilik', v:42.8, u:'Rp miliar', d:'vs 1H25 91,2', c:'down'},
-      {l:'EBITDA', v:144.3, u:'Rp miliar', d:'Interim 1H26', c:''}
+      {l:'Laba bersih 1H2026', v:53.0, u:'Rp miliar', d:'vs 1H25 108,0', c:'down'},
+      {l:'Diatribusikan ke pemilik 1H26', v:42.8, u:'Rp miliar', d:'vs 1H25 91,2', c:'down'},
+      {l:'EBITDA 1H2026', v:144.3, u:'Rp miliar', d:'interim', c:''}
     ],
     zh: [
       {l:'1H2026 收入（净额口径）', v:653.7, u:'十亿盾', d:'vs 1H25 617.4', c:'up'},
-      {l:'合并净利', v:53.0, u:'十亿盾', d:'vs 1H25 108.0', c:'down'},
-      {l:'归母净利', v:42.8, u:'十亿盾', d:'vs 1H25 91.2', c:'down'},
-      {l:'EBITDA', v:144.3, u:'十亿盾', d:'1H2026 中期', c:''}
+      {l:'1H2026 合并净利', v:53.0, u:'十亿盾', d:'vs 1H25 108.0', c:'down'},
+      {l:'1H2026 归母净利', v:42.8, u:'十亿盾', d:'vs 1H25 91.2', c:'down'},
+      {l:'1H2026 EBITDA', v:144.3, u:'十亿盾', d:'中期', c:''}
     ]
   };
   document.getElementById('ov-kpis-h26').innerHTML = kpiHtml(H26KPI[LANG]);

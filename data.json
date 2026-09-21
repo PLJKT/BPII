@@ -389,49 +389,49 @@
           "c": "up"
         },
         {
-          "l": "Consolidated net profit",
+          "l": "FY2025 Consolidated net profit",
           "v": 144.1,
           "u": "IDR bn",
           "d": "-17% YoY",
           "c": "dn"
         },
         {
-          "l": "Attributable to parent",
+          "l": "FY2025 Attributable to parent",
           "v": 134.8,
           "u": "IDR bn",
           "d": "-7% YoY",
           "c": "dn"
         },
         {
-          "l": "EBITDA",
+          "l": "FY2025 EBITDA",
           "v": 334.1,
           "u": "IDR bn",
           "d": "~flat YoY",
           "c": "flat"
         },
         {
-          "l": "Total assets",
+          "l": "Total assets (Dec 2025)",
           "v": 6821.4,
           "u": "IDR bn",
           "d": "+21% YoY",
           "c": "up"
         },
         {
-          "l": "ROE",
+          "l": "ROE (FY2025)",
           "v": 7.9,
           "u": "%",
           "d": "FY2025 ending equity",
           "c": "flat"
         },
         {
-          "l": "ROA",
+          "l": "ROA (FY2025)",
           "v": 2.1,
           "u": "%",
           "d": "FY2025 ending assets",
           "c": "flat"
         },
         {
-          "l": "Liab/Equity",
+          "l": "Liab/Equity (Dec 2025)",
           "v": 2.7,
           "u": "x",
           "d": "up from 2.2x (2024)",
@@ -447,49 +447,49 @@
           "c": "up"
         },
         {
-          "l": "Laba bersih konsolidasi",
+          "l": "Laba bersih konsolidasi FY2025",
           "v": 144.1,
           "u": "IDR bn",
           "d": "-17% YoY",
           "c": "dn"
         },
         {
-          "l": "Laba entitas induk",
+          "l": "Diatribusikan ke pemilik FY2025",
           "v": 134.8,
           "u": "IDR bn",
           "d": "-7% YoY",
           "c": "dn"
         },
         {
-          "l": "EBITDA",
+          "l": "EBITDA FY2025",
           "v": 334.1,
           "u": "IDR bn",
           "d": "~flat YoY",
           "c": "flat"
         },
         {
-          "l": "Total aset",
+          "l": "Total aset (Des 2025)",
           "v": 6821.4,
           "u": "IDR bn",
           "d": "+21% YoY",
           "c": "up"
         },
         {
-          "l": "ROE",
+          "l": "ROE (FY2025)",
           "v": 7.9,
           "u": "%",
           "d": "FY2025 ending equity",
           "c": "flat"
         },
         {
-          "l": "ROA",
+          "l": "ROA (FY2025)",
           "v": 2.1,
           "u": "%",
           "d": "FY2025 ending assets",
           "c": "flat"
         },
         {
-          "l": "Kewajiban/Ekuitas",
+          "l": "Liab/Ekuitas (Des 2025)",
           "v": 2.7,
           "u": "x",
           "d": "up from 2.2x (2024)",
@@ -498,56 +498,56 @@
       ],
       "zh": [
         {
-          "l": "2025 营收",
+          "l": "FY2025 收入",
           "v": 1239.6,
           "u": "IDR bn",
           "d": "+8% YoY",
           "c": "up"
         },
         {
-          "l": "合并净利",
+          "l": "FY2025 合并净利",
           "v": 144.1,
           "u": "IDR bn",
           "d": "-17% YoY",
           "c": "dn"
         },
         {
-          "l": "归母净利",
+          "l": "FY2025 归母净利",
           "v": 134.8,
           "u": "IDR bn",
           "d": "-7% YoY",
           "c": "dn"
         },
         {
-          "l": "EBITDA",
+          "l": "FY2025 EBITDA",
           "v": 334.1,
           "u": "IDR bn",
           "d": "~flat YoY",
           "c": "flat"
         },
         {
-          "l": "总资产",
+          "l": "总资产（2025年末）",
           "v": 6821.4,
           "u": "IDR bn",
           "d": "+21% YoY",
           "c": "up"
         },
         {
-          "l": "ROE",
+          "l": "ROE（FY2025）",
           "v": 7.9,
           "u": "%",
           "d": "FY2025 ending equity",
           "c": "flat"
         },
         {
-          "l": "ROA",
+          "l": "ROA（FY2025）",
           "v": 2.1,
           "u": "%",
           "d": "FY2025 ending assets",
           "c": "flat"
         },
         {
-          "l": "负债权益比",
+          "l": "负债/权益（2025年末）",
           "v": 2.7,
           "u": "x",
           "d": "up from 2.2x (2024)",
