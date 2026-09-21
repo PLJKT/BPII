@@ -1171,7 +1171,7 @@ function buildOpt(id){
              {type:'value', gridIndex:1, name:'M sh', nameTextStyle:{color:AX.color, fontSize:10}, axisLabel:{color:AX.color, fontSize:10}, splitLine:{show:false}}],
       series:[
         {name:'BPII', type:'line', xAxisIndex:0, yAxisIndex:0, data:VAL.close, smooth:true, symbolSize:6, lineStyle:{width:2, color:C.green}, itemStyle:{color:C.green},
-          markLine:{silent:true, symbol:'none', lineStyle:{color:C.red, type:'dashed', width:1.5}, data:[{yAxis:FY.refPrice, label:{formatter:fmtN(FY.refPrice) + ' (18 Sep)', fontSize:10, color:C.red, position:'insideEndTop'}}]},
+          markLine:{silent:true, symbol:'none', lineStyle:{color:C.red, type:'dashed', width:1.5}, data:[{yAxis:FY.refPrice, label:{formatter:fmtN(FY.refPrice) + ' (' + VAL.months[VAL.months.length-1] + ')', fontSize:10, color:C.red, position:'insideEndTop'}}]},
           markPoint:{symbol:'circle', symbolSize:9, label:{fontSize:10, color:'#fff', position:'top'}, data:[
             {coord:[FY.vjan.m, FY.vjan.c], value:String(FY.vjan.hi), itemStyle:{color:C.amber}},
             {coord:[FY.vjun.m, FY.vjun.c], value:String(FY.vjun.hi), itemStyle:{color:C.clay}}
