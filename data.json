@@ -2365,13 +2365,13 @@
         null,
         null,
         null,
-        null,
-        12.5,
-        -5.9,
-        37.8,
-        117.3,
-        130.5,
-        33.7
+        358.2,
+        369.6,
+        641.1,
+        787.2,
+        1441.2,
+        1695.8,
+        936.3
       ],
       "cf": [
         null,
@@ -2447,6 +2447,21 @@
         null,
         null,
         null
+      ],
+      "insRev": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        358.2,
+        369.6,
+        641.1,
+        787.2,
+        1441.2,
+        1695.8,
+        936.3
       ]
     },
     "bpiiPBPS": [
@@ -4429,7 +4444,8 @@
       "amSeg": "Asset Management",
       "leaseSeg": "Car Rental",
       "insSeg": "Insurance",
-      "otherPie": "Other / elim."
+      "otherPie": "Other / elim.",
+      "cfSeg": "Consumer Finance (BPF)"
     },
     "id": {
       "unit": "Rp miliar",
@@ -4482,7 +4498,8 @@
       "amSeg": "Manajemen Investasi",
       "leaseSeg": "Sewa Mobil",
       "insSeg": "Asuransi",
-      "otherPie": "Lainnya / eliminasi"
+      "otherPie": "Lainnya / eliminasi",
+      "cfSeg": "Pembiayaan Konsumen (BPF)"
     },
     "zh": {
       "unit": "十亿盾",
@@ -4535,7 +4552,8 @@
       "amSeg": "资产管理",
       "leaseSeg": "汽车租赁",
       "insSeg": "保险",
-      "otherPie": "其他/抵消"
+      "otherPie": "其他/抵消",
+      "cfSeg": "消费金融 (BPF)"
     }
   },
   "WC": [],
