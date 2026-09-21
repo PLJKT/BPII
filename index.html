@@ -237,6 +237,8 @@ footer a{color:var(--green)}
     <div class="chart-card"><h3 data-i18n="c_o3_t"></h3><div class="sub" data-i18n="c_o3_s"></div><div class="chart" id="o3"></div></div>
     <div class="chart-card"><h3 data-i18n="c_o4_t"></h3><div class="sub" data-i18n="c_o4_s"></div><div class="chart" id="o4"></div></div>
     <div class="chart-card"><h3 data-i18n="c_o6_t"></h3><div class="sub" data-i18n="c_o6_s"></div><div class="chart" id="o6"></div></div>
+<div class="chart-card" style="grid-column:1/-1"><h3>Segment net profit 2014–2025 + 1H26</h3><div class="sub">IDR bn; subsidiary net profit from segment note</div><div class="chart" id="o7"></div></div>
+<div class="chart-card" style="grid-column:1/-1"><h3>Segment net profit 2014–2025 + 1H26</h3><div class="sub">IDR bn; subsidiary-level net profit from segment note</div><div class="chart" id="o7"></div></div>
   </div>
 </section>
 
@@ -895,6 +897,25 @@ function buildOpt(id){
     for (var k = 0; k < d3.length; k++) { if (d3[k] !== null) { cats.push(AN.years[k]); vals.push(d3[k]); } }
     return {tooltip:baseTooltip(), grid:baseGrid(), xAxis:baseX(cats), yAxis:baseY(U),
       series:[{type:'bar', data:vals, itemStyle:{color:C.green2, borderRadius:[3,3,0,0]}, label:{show:true, position:'top', fontSize:10, color:'#5C6B61', formatter:lblFmt()}, barMaxWidth:40}]};
+  }
+  if (id === 'o7') {
+    return {
+      tooltip:{trigger:'axis', axisPointer:{type:'shadow'}, formatter:function(params){
+        var total=0; params.forEach(function(p){ if(p.value!=null && p.value>0) total+=p.value; });
+        var s=params[0].axisValue+'<br/>';
+        params.forEach(function(p){ if(p.value!=null){ var pct=total>0?(p.value/total*100).toFixed(1):'-'; s+=p.marker+p.seriesName+': '+fmtN(p.value)+' ('+pct+'%)<br/>'; } });
+        return s;
+      }},
+      legend:{bottom:0, textStyle:{fontSize:11}},
+      grid:{left:50,right:20,top:30,bottom:40},
+      xAxis:{type:'category', data:AN.years, axisLabel:{fontSize:10}},
+      yAxis:{type:'value', name:'IDR bn', nameTextStyle:{fontSize:10}},
+      series:[
+        {name:CT('amSeg'), type:'bar', stack:'np', data:FY.segStack.npAm, itemStyle:{color:C.green}},
+        {name:CT('leaseSeg'), type:'bar', stack:'np', data:FY.segStack.npLease, itemStyle:{color:C.blue}},
+        {name:CT('insSeg'), type:'bar', stack:'np', data:FY.segStack.npIns, itemStyle:{color:C.amber}},
+        {name:CT('cfSeg'), type:'bar', stack:'np', data:FY.segStack.npCf, itemStyle:{color:C.red}}
+      ]};
   }
   if (id === 'p-1') {
     return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY('%'),
@@ -1579,7 +1600,7 @@ function renderStatics(){
 
 /* ================= 路由与图表生命周期 ================= */
 var CH = {};
-var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-1','d-2','d-3','d-4','d-5'], segments:['seg-1','seg-2'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], vali:['vi-1'], risk:[], holding:[], org:[]};
+var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6','o7'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-1','d-2','d-3','d-4','d-5'], segments:['seg-1','seg-2'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], vali:['vi-1'], risk:[], holding:[], org:[]};
 
 function exportCSV(){
   var page = document.querySelector('.page.active');
