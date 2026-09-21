@@ -210,7 +210,6 @@ footer a{color:var(--green)}
     <a class="tab active" href="#overview" data-page="overview" data-i18n="t_overview"></a>
     <a class="tab" href="#profit" data-page="profit" data-i18n="t_prof"></a>
     <a class="tab" href="#debt" data-page="debt" data-i18n="t_debt"></a>
-    <a class="tab" href="#segments" data-page="segments" data-i18n="t_landbank"></a>
     <a class="tab" href="#valuation" data-page="valuation" data-i18n="t_valuation"></a>
     <a class="tab" href="#vali" data-page="vali" data-i18n="t_vali"></a>
     <a class="tab" href="#risk" data-page="risk" data-i18n="t_risk"></a>
@@ -329,19 +328,6 @@ footer a{color:var(--green)}
 </section>
 
 <!-- ===== 视图：分部与资产 ===== -->
-<section class="page" id="segments">
-  <h2 class="page-h" data-i18n="lb_h"></h2>
-  <p class="page-d" data-i18n="lb_d"></p>
-  <div class="kpis" id="k-seg"></div>
-  <div class="charts">
-    <div class="chart-card"><h3 data-i18n="c_lb1_t"></h3><div class="sub" data-i18n="c_lb1_s"></div><div class="chart" id="seg-1"></div></div>
-    <div class="chart-card"><h3 data-i18n="c_lb2_t"></h3><div class="sub" data-i18n="c_lb2_s"></div><div class="chart" id="seg-2"></div></div>
-  </div>
-  <h3 class="block-h" data-i18n="lb_table_h"></h3>
-  <div id="seg-sub-table"></div>
-  <div class="panel"><h3 data-i18n="lb_note_h"></h3><div class="risk-note" data-i18n="lb_note"></div></div>
-</section>
-
 <!-- ===== 视图：估值与股价 ===== -->
 <section class="page" id="valuation">
   <h2 class="page-h" data-i18n="val_h"></h2>
@@ -1628,9 +1614,6 @@ function renderStatics(){
   document.getElementById('debt-table').innerHTML = debtTableHtml();
   document.getElementById('wc-table').innerHTML = wcTableHtml();
   document.getElementById('debt-risk').innerHTML = debtRiskHtml();
-  document.getElementById('k-seg').innerHTML = segKpisHtml();
-  document.getElementById('seg-sub-table').innerHTML = subopsTableHtml();
-  document.getElementById('seg-tbl').innerHTML = segTableHtml();
   document.getElementById('k-val').innerHTML = kpiHtml(KP.val[LANG]);
   document.getElementById('val-stats').innerHTML = valStatsHtml();
   document.getElementById('val-peers').innerHTML = valPeersHtml();
@@ -1659,7 +1642,7 @@ function renderStatics(){
 
 /* ================= 路由与图表生命周期 ================= */
 var CH = {};
-var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6','o7'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-6','d-1','d-3','d-4','d-5'], segments:['seg-1','seg-2'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], vali:['vi-1'], risk:[], holding:[], org:[]};
+var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6','o7'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-6','d-1','d-3','d-4','d-5'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], vali:['vi-1'], risk:[], holding:[], org:[]};
 
 function exportCSV(){
   var page = document.querySelector('.page.active');
