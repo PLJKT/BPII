@@ -1478,7 +1478,70 @@
       0,
       0,
       0
-    ]
+    ],
+    "liabBreakdown25": [
+      {
+        "name": "Bank loans / 银行贷款 (Utang bank)",
+        "value": 1380.5
+      },
+      {
+        "name": "Payables to customers / 客户应付款 (Utang nasabah)",
+        "value": 29.0
+      },
+      {
+        "name": "Claims payables / 应付赔款 (Utang klaim)",
+        "value": 0.1
+      },
+      {
+        "name": "Commissions payables / 应付佣金 (Utang komisi)",
+        "value": 0.9
+      },
+      {
+        "name": "Insurance contract liab - remaining coverage / 保险合同负债-剩余保障 (PSAK 117)",
+        "value": 2000.8
+      },
+      {
+        "name": "Insurance contract liab - incurred claims / 保险合同负债-已发生赔款 (PSAK 117)",
+        "value": 1108.8
+      },
+      {
+        "name": "Other payables / 其他应付款 (Utang lain-lain)",
+        "value": 120.3
+      },
+      {
+        "name": "Accrued expenses / 应计费用 (Beban akrual)",
+        "value": 31.5
+      },
+      {
+        "name": "Customer security deposits / 客户保证金 (Uang jaminan pelanggan)",
+        "value": 4.9
+      },
+      {
+        "name": "Contract liabilities / 合同负债 (Liabilitas kontrak)",
+        "value": 9.5
+      },
+      {
+        "name": "Taxes payable / 应交税金 (Utang pajak)",
+        "value": 19.2
+      },
+      {
+        "name": "Consumer financing payables / 消费金融应付款 (Utang pembiayaan konsumen)",
+        "value": 229.4
+      },
+      {
+        "name": "Lease liabilities / 租赁负债 (Liabilitas sewa)",
+        "value": 8.4
+      },
+      {
+        "name": "Employee benefits liabilities / 员工福利负债 (Liabilitas imbalan kerja)",
+        "value": 34.4
+      },
+      {
+        "name": "Deferred tax liabilities / 递延所得税负债 (Liabilitas pajak tangguhan)",
+        "value": 23.2
+      }
+    ],
+    "liabTotal25": 5001.1
   },
   "VAL": {
     "kpi": [
