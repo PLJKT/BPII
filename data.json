@@ -294,7 +294,8 @@
       473.4,
       421.1,
       409.7,
-      400.2
+      400.2,
+      219.2
     ],
     "segLease": [
       null,
@@ -308,7 +309,8 @@
       330.5,
       438.5,
       538.5,
-      616.3
+      616.3,
+      346.0
     ],
     "segIns": [
       null,
@@ -322,7 +324,8 @@
       null,
       37.8,
       117.3,
-      130.5
+      130.5,
+      33.7
     ],
     "msales": [
       null,
@@ -830,9 +833,9 @@
       "en": [
         {
           "l": "Revenue (1H26)",
-          "v": 1556.3,
+          "v": 653.7,
           "u": "IDR bn",
-          "d": "+13% YoY vs 1H25",
+          "d": "+6% YoY vs 1H25 (net basis)",
           "c": "up"
         },
         {
@@ -867,9 +870,9 @@
       "id": [
         {
           "l": "Pendapatan (1H26)",
-          "v": 1556.3,
+          "v": 653.7,
           "u": "IDR bn",
-          "d": "+13% YoY vs 1H25",
+          "d": "+6% YoY vs 1H25 (dasar neto)",
           "c": "up"
         },
         {
@@ -1820,7 +1823,7 @@
     "pe": 39.0,
     "divYield": null,
     "shares": 10309973240,
-    "note": "2025 Q4 close IDR 510. Monthly closes/ranges/volume are reasonable placeholders around the 510 level; verify against Yahoo Finance (BPII.JK) before publishing. P/B on parent equity IDR 1,444bn (BVPS 140.1); P/E on parent net profit IDR 134.8bn (EPS 13.08).",
+    "note": "Price 468 IDR (21 Sep 2026). Monthly data from S&P Global Market Intelligence. P/B on parent equity IDR 1,444bn (BVPS 140.1); P/E on parent net profit IDR 134.8bn (EPS 13.08).",
     "events": [
       [
         "2024",
@@ -2511,9 +2514,9 @@
       ]
     ],
     "pl24": {
-      "rev": 1139.8,
+      "rev": 1146.0,
       "ebitda": 331.5,
-      "np": 168.1,
+      "np": 174.0,
       "npP": 145.3
     },
     "pl25": {
@@ -2523,7 +2526,7 @@
       "npP": 134.8
     },
     "bs24": {
-      "assets": 5490.2,
+      "assets": 5629.0,
       "liab": 3738.5,
       "equity": 1751.7
     },
@@ -2534,8 +2537,8 @@
     },
     "bs26": {
       "cash": 242.5,
-      "debt": 1351.1,
-      "netDebt": 1108.6
+      "debt": 1487.9,
+      "netDebt": 1245.4
     },
     "cf24": {
       "open": 361.4,
@@ -2571,16 +2574,16 @@
     "refPrice": 468,
     "h26rev": {
       "h25": [
-        1379.6,
-        847.5,
+        617.4,
+        198.4,
         288.7,
-        198.4
+        85.3
       ],
       "h26": [
-        1556.3,
-        936.3,
+        653.7,
+        219.2,
         346.0,
-        219.2
+        33.7
       ]
     },
     "segStack": {
@@ -2743,7 +2746,25 @@
       "open": 221.1,
       "surplus": 26.4,
       "close": 247.5
-    }
+    },
+    "seg24b": [
+      [
+        "amPie",
+        409.7
+      ],
+      [
+        "leasePie",
+        538.5
+      ],
+      [
+        "insPie",
+        117.3
+      ],
+      [
+        "otherPie",
+        74.3
+      ]
+    ]
   },
   "BIZ": {
     "en": [
@@ -2819,7 +2840,7 @@
         ],
         [
           "2025",
-          "Q4 close IDR 510; market cap ~IDR 5.3tn."
+          "FY25 results: Revenue 1,239.6bn; NI 144.1bn."
         ]
       ],
       "id": [
@@ -2847,7 +2868,7 @@
         ],
         [
           "2025",
-          "四季度收盘 510 盾；市值约 5.3 万亿盾。"
+          "FY25 业绩：收入 1,239.6bn；净利 144.1bn。"
         ]
       ]
     },
@@ -2855,7 +2876,7 @@
       "en": [
         [
           "1H26",
-          "Interim revenue IDR 1,556.3bn vs IDR 1,379.6bn 1H25 (+13% YoY)."
+          "Interim revenue IDR 653.7bn (net) vs IDR 617.4bn 1H25 (+6% YoY)."
         ],
         [
           "1H26",
@@ -2869,7 +2890,7 @@
       "id": [
         [
           "1H26",
-          "Pendapatan interim Rp1.556,3 miliar vs Rp1.379,6 miliar 1H25 (+13% YoY)."
+          "Pendapatan interim Rp653,7 (neto) miliar vs Rp617,4 miliar 1H25 (+6% YoY)."
         ],
         [
           "1H26",
@@ -2883,7 +2904,7 @@
       "zh": [
         [
           "1H26",
-          "中期收入 1,556.3 十亿盾，去年同期 1,379.6 十亿盾（同比+13%）。"
+          "中期收入 653.7 (net) 十亿盾，去年同期 1,379.6 十亿盾（同比+13%）。"
         ],
         [
           "1H26",
