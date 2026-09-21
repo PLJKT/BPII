@@ -1864,7 +1864,7 @@
       "PT Batavia Prosperindo Aset Manajemen",
       "d",
       82.08,
-      1200.0,
+      202.4,
       "am",
       1,
       0
@@ -1873,8 +1873,8 @@
       "BPTR",
       "PT Batavia Prosperindo Trans Tbk",
       "d",
-      47.5,
-      2800.0,
+      67.4,
+      2260.9,
       "lease",
       1,
       0
@@ -1883,8 +1883,8 @@
       "MTWI",
       "PT Malacca Trust Wuwungan Insurance Tbk",
       "d",
-      80.0,
-      1500.0,
+      85.9,
+      3603.0,
       "ins",
       1,
       0
@@ -2043,31 +2043,39 @@
     "bocm": [
       [
         "Irena Istary Iskandar",
-        "President Commissioner"
-      ],
-      [
-        "Rudy Johansen",
-        "Commissioner"
+        0
       ],
       [
         "Paulin Angeline",
-        "Independent Commissioner"
+        1
+      ],
+      [
+        "Rudy Johansen",
+        1
       ]
     ],
     "bodm": [
       [
         "Rudi Setiadi Tjahjono",
-        "President Director"
+        0
       ],
       [
         "Luo Xude",
-        "Independent Director"
+        1
       ]
     ],
     "audm": [
       [
         "Paulin Angeline",
-        "Chairperson (ex-IC)"
+        0
+      ],
+      [
+        "M. Nur Alam",
+        1
+      ],
+      [
+        "Yenni",
+        1
       ]
     ],
     "chart": {
@@ -2123,32 +2131,44 @@
     "mgmt": {
       "en": [
         [
-          "President Director",
-          "Rudi Setiadi Tjahjono"
+          "Rudi Setiadi Tjahjono",
+          "President Director"
         ],
         [
-          "Independent Director",
-          "Luo Xude"
+          "Luo Xude",
+          "Director"
+        ],
+        [
+          "Jenny Sutio",
+          "Corporate Secretary"
         ]
       ],
       "id": [
         [
-          "Direktur Utama",
-          "Rudi Setiadi Tjahjono"
+          "Rudi Setiadi Tjahjono",
+          "Direktur Utama"
         ],
         [
-          "Direktur Independen",
-          "Luo Xude"
+          "Luo Xude",
+          "Direktur"
+        ],
+        [
+          "Jenny Sutio",
+          "Sekretaris Perusahaan"
         ]
       ],
       "zh": [
         [
-          "董事总经理",
-          "Rudi Setiadi Tjahjono"
+          "Rudi Setiadi Tjahjono",
+          "总裁"
         ],
         [
-          "独立董事",
-          "Luo Xude"
+          "Luo Xude",
+          "董事"
+        ],
+        [
+          "Jenny Sutio",
+          "公司秘书"
         ]
       ]
     }
@@ -2292,38 +2312,53 @@
   "OWN": {
     "en": [
       [
-        "Public float (IDX)",
-        "~49%",
-        "Retail and institutional shareholders on IDX"
+        "Malacca Trust Pte Ltd",
+        86.15,
+        1
       ],
       [
-        "Founding/family group",
-        "~51%",
-        "Controlling interest held by the founding group"
+        "Public (free float)",
+        9.72,
+        0
+      ],
+      [
+        "Treasury shares",
+        4.13,
+        2
       ]
     ],
     "id": [
       [
-        "Masyarakat (BEI)",
-        "~49%",
-        "Pemegang saham ritel dan institusi di BEI"
+        "Malacca Trust Pte Ltd",
+        86.15,
+        1
       ],
       [
-        "Grup pendiri",
-        "~51%",
-        "Kepemilikan pengendali oleh grup pendiri"
+        "Masyarakat (free float)",
+        9.72,
+        0
+      ],
+      [
+        "Saham treasury",
+        4.13,
+        2
       ]
     ],
     "zh": [
       [
-        "公众流通股（印尼交易所）",
-        "~49%",
-        "散户和机构投资者"
+        "Malacca Trust Pte Ltd",
+        86.15,
+        1
       ],
       [
-        "创始/家族集团",
-        "~51%",
-        "创始集团控股"
+        "公众（流通股）",
+        9.72,
+        0
+      ],
+      [
+        "库存股",
+        4.13,
+        2
       ]
     ]
   },
@@ -2943,332 +2978,79 @@
     ]
   },
   "RK": {
-    "rk24": {
-      "en": [
-        [
-          "ROE",
-          "9.9%",
-          1,
-          2,
-          "Solid but below 15% threshold"
-        ],
-        [
-          "D/E ratio",
-          "2.2x",
-          1,
-          2,
-          "Elevated for a holding group"
-        ],
-        [
-          "Net margin",
-          "15.2%",
-          0,
-          2,
-          "Healthy insurance/AM mix"
-        ]
-      ],
-      "id": [
-        [
-          "ROE",
-          "9,9%",
-          1,
-          2,
-          "Kuat tapi di bawah ambang 15%"
-        ],
-        [
-          "Rasio D/E",
-          "2,2x",
-          1,
-          2,
-          "Tinggi untuk grup induk"
-        ],
-        [
-          "Margin bersih",
-          "15,2%",
-          0,
-          2,
-          "Sehat dari bauran asuransi/AM"
-        ]
-      ],
-      "zh": [
-        [
-          "净资产收益率",
-          "9.9%",
-          1,
-          2,
-          "稳健但低于15%门槛"
-        ],
-        [
-          "负债权益比",
-          "2.2x",
-          1,
-          2,
-          "控股集团中偏高"
-        ],
-        [
-          "净利率",
-          "15.2%",
-          0,
-          2,
-          "保险/资管组合健康"
-        ]
-      ]
-    },
-    "rk25": {
-      "en": [
-        [
-          "ROE",
-          "7.9%",
-          1,
-          2,
-          "Declined from 9.9% in 2024"
-        ],
-        [
-          "D/E ratio",
-          "2.7x",
-          2,
-          2,
-          "Rising leverage"
-        ],
-        [
-          "Net margin",
-          "11.6%",
-          1,
-          2,
-          "Compressed from 15.2%"
-        ],
-        [
-          "FCF margin",
-          "−36.8%",
-          2,
-          2,
-          "Negative FCF driven by capex"
-        ]
-      ],
-      "id": [
-        [
-          "ROE",
-          "7,9%",
-          1,
-          2,
-          "Turun dari 9,9% di 2024"
-        ],
-        [
-          "Rasio D/E",
-          "2,7x",
-          2,
-          2,
-          "Leverase meningkat"
-        ],
-        [
-          "Margin bersih",
-          "11,6%",
-          1,
-          2,
-          "Terkompresi dari 15,2%"
-        ],
-        [
-          "Margin FCF",
-          "−36,8%",
-          2,
-          2,
-          "FCF negatif akibat capex"
-        ]
-      ],
-      "zh": [
-        [
-          "净资产收益率",
-          "7.9%",
-          1,
-          2,
-          "较2024年9.9%下降"
-        ],
-        [
-          "负债权益比",
-          "2.7x",
-          2,
-          2,
-          "杠杆上升"
-        ],
-        [
-          "净利率",
-          "11.6%",
-          1,
-          2,
-          "从15.2%收窄"
-        ],
-        [
-          "自由现金流率",
-          "−36.8%",
-          2,
-          2,
-          "资本开支导致负FCF"
-        ]
-      ]
-    },
-    "rk26": {
-      "en": [
-        [
-          "1H26 revenue growth",
-          "+13% YoY",
-          0,
-          2,
-          "Top-line momentum maintained"
-        ],
-        [
-          "1H26 net profit",
-          "IDR 53.0bn",
-          2,
-          2,
-          "Down sharply from IDR 108.0bn 1H25"
-        ],
-        [
-          "Equity",
-          "IDR 1,852.5bn",
-          0,
-          2,
-          "Stable vs year-end 2025"
-        ]
-      ],
-      "id": [
-        [
-          "Pertumbuhan pendapatan 1H26",
-          "+13% YoY",
-          0,
-          2,
-          "Momentum pendapatan terjaga"
-        ],
-        [
-          "Laba bersih 1H26",
-          "Rp53,0 miliar",
-          2,
-          2,
-          "Turun tajam dari Rp108,0 miliar 1H25"
-        ],
-        [
-          "Ekuitas",
-          "Rp1.852,5 miliar",
-          0,
-          2,
-          "Stabil vs akhir 2025"
-        ]
-      ],
-      "zh": [
-        [
-          "1H26 收入增长",
-          "+13% 同比",
-          0,
-          2,
-          "收入势头保持"
-        ],
-        [
-          "1H26 净利润",
-          "53.0 十亿盾",
-          2,
-          2,
-          "较去年同期108.0十亿盾大幅下降"
-        ],
-        [
-          "权益",
-          "1,852.5 十亿盾",
-          0,
-          2,
-          "较2025年末稳定"
-        ]
-      ]
-    },
-    "rk-all": {
-      "en": [
-        [
-          "Concentration",
-          "3 subsidiaries",
-          1,
-          2,
-          "Revenue diversified across AM, fleet, insurance"
-        ],
-        [
-          "Regulatory",
-          "OJK supervision",
-          0,
-          2,
-          "All three subsidiaries regulated"
-        ],
-        [
-          "FX exposure",
-          "Minimal",
-          0,
-          2,
-          "Predominantly IDR-denominated"
-        ],
-        [
-          "Dividend track",
-          "Consistent",
-          1,
-          2,
-          "Parent distributes subsidiary dividends"
-        ]
-      ],
-      "id": [
-        [
-          "Konsentrasi",
-          "3 anak usaha",
-          1,
-          2,
-          "Pendapatan terdiversifikasi AM, armada, asuransi"
-        ],
-        [
-          "Regulasi",
-          "Pengawasan OJK",
-          0,
-          2,
-          "Ketiga anak usaha teregulasi"
-        ],
-        [
-          "Eksposur FX",
-          "Minimal",
-          0,
-          2,
-          "Mayoritas dalam Rupiah"
-        ],
-        [
-          "Rekam jejak dividen",
-          "Konsisten",
-          1,
-          2,
-          "Induk menyalurkan dividen anak usaha"
-        ]
-      ],
-      "zh": [
-        [
-          "业务集中度",
-          "3家子公司",
-          1,
-          2,
-          "收入分散于资管、车队、保险"
-        ],
-        [
-          "监管",
-          "OJK 监管",
-          0,
-          2,
-          "三家子公司均受监管"
-        ],
-        [
-          "汇率风险",
-          "极小",
-          0,
-          2,
-          "主要以印尼盾计价"
-        ],
-        [
-          "分红记录",
-          "稳定",
-          1,
-          2,
-          "母公司收取子公司分红"
-        ]
-      ]
-    }
+    "note": "Risk indicators per subsidiary, FY2025. Green=healthy, amber=watch, red=elevated.",
+    "rows": [
+      {
+        "kpi": "BPTR fleet / 车队规模",
+        "val": "6,928 units (vs 7,249 in 2024, 5,563 in 2023)",
+        "flag": "amber"
+      },
+      {
+        "kpi": "BPTR revenue",
+        "val": "619.5 IDR bn (vs 542.0 / 441.5)",
+        "flag": "green"
+      },
+      {
+        "kpi": "BPTR ROA on assets",
+        "val": "~27% (down from ~30% on fleet expansion)",
+        "flag": "amber"
+      },
+      {
+        "kpi": "BPTR utilization (UIO)",
+        "val": "declined in 2025 on deliberate client selectivity",
+        "flag": "amber"
+      },
+      {
+        "kpi": "BPTR main risks",
+        "val": "Floating-rate bank debt (SIBOR+spread); new-vehicle cost inflation; accident/turnover; fleet pledged as collateral",
+        "flag": "amber"
+      },
+      {
+        "kpi": "MTWI gross written premium",
+        "val": "1,695.8 IDR bn (insurance service revenue CAGR +47% 2023-2025)",
+        "flag": "green"
+      },
+      {
+        "kpi": "MTWI net underwriting result",
+        "val": "+130.9 IDR bn underwriting profit",
+        "flag": "green"
+      },
+      {
+        "kpi": "MTWI solvency (RBC)",
+        "val": "~350% historical (2017=352%); FY2025 standalone RBC not extracted",
+        "flag": "amber"
+      },
+      {
+        "kpi": "MTWI product mix",
+        "val": "Diversified: property, motor, engineering, marine cargo/hull, health, personal accident",
+        "flag": "green"
+      },
+      {
+        "kpi": "MTWI PSAK 117 transition",
+        "val": "Adopted 2023; insurance contract liabilities 3,109.6 bn on balance sheet; equity hit recorded in OCI",
+        "flag": "amber"
+      },
+      {
+        "kpi": "MTWI main risks",
+        "val": "Large claim volatility; reinsurance retention; investment yield on insurance float",
+        "flag": "amber"
+      },
+      {
+        "kpi": "BPAM AUM",
+        "val": "49 IDR tn; 107 funds; 37 agents",
+        "flag": "green"
+      },
+      {
+        "kpi": "BPAM fee rate",
+        "val": "~0.8% (fee income 400 bn / AUM 49 tn)",
+        "flag": "green"
+      },
+      {
+        "kpi": "BPII group leverage",
+        "val": "D/E 2.7x; interest coverage 2.8x; net debt/EBITDA rising",
+        "flag": "amber"
+      }
+    ]
   },
   "SEG": {
     "years": [
@@ -4870,7 +4652,7 @@
       "code": "BPTR",
       "name": "PT Batavia Prosperindo Trans Tbk",
       "activity_en": "Car rental & fleet management",
-      "ownership": 47.5,
+      "ownership": 67.4,
       "fleet": 6928,
       "revenue": 616.3,
       "ni": 35.8,
@@ -4899,7 +4681,7 @@
       "code": "MTWI",
       "name": "PT Malacca Trust Wuwungan Insurance Tbk",
       "activity_en": "General insurance",
-      "ownership": 80.0,
+      "ownership": 85.9,
       "gross_premium": 1695.8,
       "uw_profit": 130.9,
       "ni": 71.3,
