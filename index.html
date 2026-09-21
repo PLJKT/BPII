@@ -237,7 +237,7 @@ footer a{color:var(--green)}
     <div class="chart-card"><h3 data-i18n="c_o3_t"></h3><div class="sub" data-i18n="c_o3_s"></div><div class="chart" id="o3"></div></div>
     <div class="chart-card"><h3 data-i18n="c_o4_t"></h3><div class="sub" data-i18n="c_o4_s"></div><div class="chart" id="o4"></div></div>
     <div class="chart-card"><h3 data-i18n="c_o6_t"></h3><div class="sub" data-i18n="c_o6_s"></div><div class="chart" id="o6"></div></div>
-<div class="chart-card" style="grid-column:1/-1"><h3>Segment net profit 2014–2025 + 1H26</h3><div class="sub">IDR bn; subsidiary net profit from segment note</div><div class="chart" id="o7"></div></div>
+<div class="chart-card"><h3>Segment net profit 2014–2025 + 1H26</h3><div class="sub">IDR bn; subsidiary net profit from segment note</div><div class="chart" id="o7"></div></div>
 <div class="chart-card" style="grid-column:1/-1"><h3>Segment net profit 2014–2025 + 1H26</h3><div class="sub">IDR bn; subsidiary-level net profit from segment note</div><div class="chart" id="o7"></div></div>
   </div>
 </section>
@@ -885,7 +885,14 @@ function buildOpt(id){
         {name:CT('de'), type:'line', data:AN.de, smooth:true, symbolSize:5, lineStyle:{width:2, color:C.red}, itemStyle:{color:C.red}}]};
   }
   if (id === 'o4') {
-    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY(U),
+    return {
+      tooltip:{trigger:'axis', axisPointer:{type:'shadow'}, formatter:function(params){
+        var total=0; params.forEach(function(p){ if(p.value!=null && p.value>0) total+=p.value; });
+        var s=params[0].axisValue+'<br/>';
+        params.forEach(function(p){ if(p.value!=null){ var pct=total>0?(p.value/total*100).toFixed(1):'-'; s+=p.marker+p.seriesName+': '+fmtN(p.value)+' '+U+' ('+pct+'%)<br/>'; } });
+        return s;
+      }},
+      legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY(U),
       series:[
         {name:CT('amSeg'), type:'bar', stack:'s', data:FY.segStack.am, itemStyle:{color:C.green}, barMaxWidth:40},
         {name:CT('leaseSeg'), type:'bar', stack:'s', data:FY.segStack.lease, itemStyle:{color:C.blue}, barMaxWidth:40},
@@ -903,18 +910,15 @@ function buildOpt(id){
       tooltip:{trigger:'axis', axisPointer:{type:'shadow'}, formatter:function(params){
         var total=0; params.forEach(function(p){ if(p.value!=null && p.value>0) total+=p.value; });
         var s=params[0].axisValue+'<br/>';
-        params.forEach(function(p){ if(p.value!=null){ var pct=total>0?(p.value/total*100).toFixed(1):'-'; s+=p.marker+p.seriesName+': '+fmtN(p.value)+' ('+pct+'%)<br/>'; } });
+        params.forEach(function(p){ if(p.value!=null){ var pct=total>0?(p.value/total*100).toFixed(1):'-'; s+=p.marker+p.seriesName+': '+fmtN(p.value)+' '+U+' ('+pct+'%)<br/>'; } });
         return s;
       }},
-      legend:{bottom:0, textStyle:{fontSize:11}},
-      grid:{left:50,right:20,top:30,bottom:40},
-      xAxis:{type:'category', data:AN.years, axisLabel:{fontSize:10}},
-      yAxis:{type:'value', name:'IDR bn', nameTextStyle:{fontSize:10}},
+      legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY(U),
       series:[
-        {name:CT('amSeg'), type:'bar', stack:'np', data:FY.segStack.npAm, itemStyle:{color:C.green}},
-        {name:CT('leaseSeg'), type:'bar', stack:'np', data:FY.segStack.npLease, itemStyle:{color:C.blue}},
-        {name:CT('insSeg'), type:'bar', stack:'np', data:FY.segStack.npIns, itemStyle:{color:C.amber}},
-        {name:CT('cfSeg'), type:'bar', stack:'np', data:FY.segStack.npCf, itemStyle:{color:C.red}}
+        {name:CT('amSeg'), type:'bar', stack:'np', data:FY.segStack.npAm, itemStyle:{color:C.green}, barMaxWidth:40},
+        {name:CT('leaseSeg'), type:'bar', stack:'np', data:FY.segStack.npLease, itemStyle:{color:C.blue}, barMaxWidth:40},
+        {name:CT('insSeg'), type:'bar', stack:'np', data:FY.segStack.npIns, itemStyle:{color:C.amber}, barMaxWidth:40},
+        {name:CT('cfSeg'), type:'bar', stack:'np', data:FY.segStack.npCf, itemStyle:{color:C.red}, barMaxWidth:40}
       ]};
   }
   if (id === 'p-1') {
