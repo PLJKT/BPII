@@ -1475,13 +1475,13 @@ function wcTableHtml(){
   var rows = [
     [T('wcr_gross'), '746.6', '548.8'],
     [T('wcr_net'), '721.7', '521.2'],
-    [T('wcr_allow'), '16.3', '16.3'],
-    [T('wcr_duen'), 'n/a', '468.5'],
-    [T('wcr_over6'), '28.9', '20.9'],
-    [T('wcr_dso'), '54 d', '37 d'],
+    [T('wcr_allow'), '24.9', '16.3'],
+    [T('wcr_duen'), 'n/a', '49.9'],
+    [T('wcr_over6'), '28.9', '16.1'],
+    [T('wcr_dso'), '202 d (ann.)', '153 d'],
     [T('wcr_ap'), '133.0', '151.7'],
     [T('wcr_dep'), '317.0', '316.2'],
-    [T('wcr_woff'), '0.0', '0.0']
+    [T('wcr_woff'), '0.0', '0.14']
   ];
   var h = '<div class="g-table-wrap"><table class="g-table"><colgroup><col style="width:52%"><col style="width:24%"><col style="width:24%"></colgroup><thead><tr><th>'+T('wch_item')+'</th><th>'+T('wch_26')+'</th><th>'+T('wch_25')+'</th></tr></thead><tbody>';
   for(var i=0;i<rows.length;i++){ h += '<tr><td class="b">'+rows[i][0]+'</td><td>'+rows[i][1]+'</td><td>'+rows[i][2]+'</td></tr>'; }
