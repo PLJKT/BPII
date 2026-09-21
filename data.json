@@ -1429,42 +1429,35 @@
         1351.1
       ]
     },
-    "table": {
-      "note": "Fleet vehicles are bank-financed and pledged as collateral (Note 12); only immaterial PSAK 73 right-of-use leases remain on balance sheet (8.4).",
-      "rows": [
-        {
-          "instrument": "Bank loans (fleet & corporate) / 银行贷款",
-          "dec25": 1380.5,
-          "jun26": 1351.1,
-          "rate": "floating / SIBOR+spread",
-          "maturity": "Revolving & tenor",
-          "collateral": "BPTR fleet + holding",
-          "status": "Current"
-        },
-        {
-          "instrument": "Consumer-financing payables / 消费金融应付款",
-          "dec25": 229.4,
-          "jun26": 127.7,
-          "rate": "n/a",
-          "maturity": "Short-term",
-          "collateral": "Residual from divested BPF unit",
-          "status": "Current"
-        },
-        {
-          "instrument": "Lease liabilities / 租赁负债",
-          "dec25": 8.4,
-          "jun26": 9.1,
-          "rate": "n/a",
-          "maturity": "Standard",
-          "collateral": "Vehicle/office leases (PSAK 73)",
-          "status": "Current"
-        }
-      ],
-      "total": {
-        "dec25": 1618.3,
-        "jun26": 1487.9
+    "table": [
+      {
+        "n": "Bank loans (fleet & corporate)",
+        "d25": 1380.5,
+        "d26": 1351.1,
+        "r": "floating / commercial",
+        "m": "Revolving & tenor",
+        "c": "BPTR fleet + holding",
+        "st": "current"
+      },
+      {
+        "n": "Consumer-financing payables",
+        "d25": 229.4,
+        "d26": 127.7,
+        "r": "n/a",
+        "m": "Short-term",
+        "c": "Residual from divested unit",
+        "st": "current"
+      },
+      {
+        "n": "Lease liabilities",
+        "d25": 8.4,
+        "d26": 9.1,
+        "r": "n/a",
+        "m": "Standard",
+        "c": "Vehicle/office leases",
+        "st": "current"
       }
-    },
+    ],
     "maturityMandiri": [
       0,
       0,
