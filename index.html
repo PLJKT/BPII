@@ -314,13 +314,11 @@ footer a{color:var(--green)}
   <p class="page-d" data-i18n="debt_d"></p>
   <div class="kpis" id="k-debt"></div>
   <div class="charts">
-    <div class="chart-card"><h3 data-i18n="c_d6_t"></h3><div class="sub" data-i18n="c_d6_s"></div><div class="chart" id="d-6"></div></div>
     <div class="chart-card"><h3 data-i18n="c_d1_t"></h3><div class="sub" data-i18n="c_d1_s"></div><div class="chart" id="d-1"></div></div>
     <div class="chart-card"><h3 data-i18n="c_d3_t"></h3><div class="sub" data-i18n="c_d3_s"></div><div class="chart" id="d-3"></div></div>
     <div class="chart-card"><h3 data-i18n="c_d4_t"></h3><div class="sub" data-i18n="c_d4_s"></div><div class="chart" id="d-4"></div></div>
   </div>
-  <h3 class="block-h" data-i18n="wc_h"></h3>
-  <div class="charts">
+    <div class="charts">
     <div class="chart-card"><h3 data-i18n="c_wc1_t"></h3><div class="sub" data-i18n="c_wc1_s"></div><div class="chart" id="d-5"></div></div>
     <div class="chart-card"><h3 data-i18n="c_d6_t"></h3><div class="sub" data-i18n="c_d6_s"></div><div class="chart" id="d-6"></div></div>
   </div>
@@ -1639,7 +1637,7 @@ function renderStatics(){
 
 /* ================= 路由与图表生命周期 ================= */
 var CH = {};
-var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6','o7'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-1','d-3','d-4','d-5','d-6'], segments:['seg-1','seg-2'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], vali:['vi-1'], risk:[], holding:[], org:[]};
+var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6','o7'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-1','d-3','d-4','d-5'], segments:['seg-1','seg-2'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], vali:['vi-1'], risk:[], holding:[], org:[]};
 
 function exportCSV(){
   var page = document.querySelector('.page.active');
