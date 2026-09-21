@@ -1210,112 +1210,112 @@
     "val": {
       "en": [
         {
-          "l": "Price (2025 Q4 close)",
-          "v": 510,
+          "l": "Price (18 Sep 2026)",
+          "v": 180,
           "u": "IDR",
-          "d": "2025 Q4 close",
-          "c": "flat"
+          "d": "-1.0 (-0.6%) on day",
+          "c": "dn"
         },
         {
           "l": "Market cap",
-          "v": 5.3,
+          "v": 3.7,
           "u": "IDR tn",
-          "d": "510 x 10.31bn shares",
+          "d": "3.76T at 180 (S&P)",
           "c": "flat"
         },
         {
           "l": "P/B",
-          "v": 3.6,
+          "v": 0.5,
           "u": "x",
-          "d": "on parent equity 1,444bn",
+          "d": "0.46x total equity (audited)",
           "c": "flat"
         },
         {
-          "l": "P/E (FY25 parent EPS 13.08)",
-          "v": 39.0,
+          "l": "P/E (FY25 EPS 20.55)",
+          "v": 8.8,
           "u": "x",
-          "d": "on parent NI 134.8bn",
+          "d": "audited EPS; TTM n/a",
           "c": "flat"
         },
         {
           "l": "Dividend yield",
-          "v": 2.0,
+          "v": 1.1,
           "u": "%",
-          "d": "estimate; verify vs DPS",
+          "d": "DPS 2.03 (FY25)",
           "c": "flat"
         }
       ],
       "id": [
         {
-          "l": "Harga (penutupan Q4 2025)",
-          "v": 510,
+          "l": "Harga (18 Sep 2026)",
+          "v": 180,
           "u": "IDR",
-          "d": "2025 Q4 close",
-          "c": "flat"
+          "d": "-1,0 (-0,6%) hari ini",
+          "c": "dn"
         },
         {
           "l": "Kapitalisasi pasar",
-          "v": 5.3,
+          "v": 3.7,
           "u": "IDR tn",
-          "d": "510 x 10.31bn shares",
+          "d": "3,76T pada 180 (S&P)",
           "c": "flat"
         },
         {
           "l": "P/B",
-          "v": 3.6,
+          "v": 0.5,
           "u": "x",
-          "d": "on parent equity 1,444bn",
+          "d": "0,46x ekuitas total (audit)",
           "c": "flat"
         },
         {
-          "l": "P/E",
-          "v": 39.0,
+          "l": "P/E (EPS FY25 20,55)",
+          "v": 8.8,
           "u": "x",
-          "d": "on parent NI 134.8bn",
+          "d": "EPS audit; TTM n/a",
           "c": "flat"
         },
         {
-          "l": "Dividend yield",
-          "v": 2.0,
+          "l": "Hasil dividen",
+          "v": 1.1,
           "u": "%",
-          "d": "estimate; verify vs DPS",
+          "d": "DPS 2,03 (FY25)",
           "c": "flat"
         }
       ],
       "zh": [
         {
-          "l": "股价（2025 Q4 收盘）",
-          "v": 510,
+          "l": "股价（2026年9月18日）",
+          "v": 180,
           "u": "IDR",
-          "d": "2025 Q4 close",
-          "c": "flat"
+          "d": "当日 -1.0 (-0.6%)",
+          "c": "dn"
         },
         {
           "l": "市值",
-          "v": 5.3,
+          "v": 3.7,
           "u": "IDR tn",
-          "d": "510 x 10.31bn shares",
+          "d": "180 价对应 3.76T (S&P)",
           "c": "flat"
         },
         {
-          "l": "市净率",
-          "v": 3.6,
+          "l": "P/B",
+          "v": 0.5,
           "u": "x",
-          "d": "on parent equity 1,444bn",
+          "d": "0.46x 总权益（审计）",
           "c": "flat"
         },
         {
-          "l": "市盈率",
-          "v": 39.0,
+          "l": "P/E（FY25 EPS 20.55）",
+          "v": 8.8,
           "u": "x",
-          "d": "on parent NI 134.8bn",
+          "d": "审计 EPS；TTM n/a",
           "c": "flat"
         },
         {
           "l": "股息率",
-          "v": 2.0,
+          "v": 1.1,
           "u": "%",
-          "d": "estimate; verify vs DPS",
+          "d": "DPS 2.03 (FY25)",
           "c": "flat"
         }
       ]
