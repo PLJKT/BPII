@@ -1,0 +1,4389 @@
+{
+  "meta": {
+    "company": "PT Batavia Prosperindo Internasional Tbk",
+    "ticker": "IDX: BPII",
+    "business": "金融控股集团：资产管理(BPAM)、汽车租赁(BPTR)、保险(MTWI)",
+    "currency": "IDR billion",
+    "updated": "2026-09-21",
+    "disclaimer": {
+      "en": "This dashboard is prepared for information and educational purposes only from publicly available annual reports. It does not constitute investment advice, an offer, or a solicitation. Figures are rounded to IDR billion; pre-2022 figures include the now-discontinued consumer-finance unit and 2018-2020 continuing revenue is derived by subtracting that segment. Verify against audited financial statements before any decision.",
+      "id": "Dasbor ini disusun semata-mata untuk informasi dan pendidikan dari laporan tahunan yang tersedia publik. Bukan merupakan nasihat investasi, penawaran, atau ajakan. Angka dibulatkan dalam miliar Rupiah; data pra-2022 masih mencakup unit pembiayaan konsumen yang kini dihentikan, dan pendapatan berjalan 2018-2020 dihitung dengan mengurangi segmen tersebut. Verifikasi ke laporan keuangan audit sebelum mengambil keputusan.",
+      "zh": "本看板仅基于公开年报整理，供信息与教育用途，不构成投资建议、要约或招揽。数字以十亿印尼盾取整；2022年以前数据包含已终止的消费金融业务，2018-2020年持续经营收入已扣除该分部。任何决策前请以经审计财务报表为准。"
+    }
+  },
+  "AN": {
+    "years": [
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "revenue": [
+      228.9,
+      246.7,
+      302.8,
+      426.6,
+      559.4,
+      538.5,
+      664.0,
+      839.1,
+      971.2,
+      1146.0,
+      1239.6
+    ],
+    "niCons": [
+      58.8,
+      68.5,
+      92.7,
+      54.7,
+      79.7,
+      77.6,
+      113.0,
+      113.0,
+      139.0,
+      174.0,
+      144.1
+    ],
+    "niParent": [
+      null,
+      59.0,
+      79.9,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      145.3,
+      134.8
+    ],
+    "assets": [
+      551.1,
+      513.7,
+      665.2,
+      2914.2,
+      3070.4,
+      2798.9,
+      2964.1,
+      3278.8,
+      4162.3,
+      5629.0,
+      6821.4
+    ],
+    "liab": [
+      185.0,
+      86.2,
+      144.4,
+      1644.0,
+      1756.0,
+      1410.8,
+      1544.8,
+      1807.1,
+      2511.8,
+      3881.0,
+      5001.1
+    ],
+    "equity": [
+      366.1,
+      427.5,
+      520.8,
+      1270.1,
+      1314.4,
+      1388.1,
+      1419.3,
+      1471.7,
+      1650.5,
+      1749.0,
+      1820.3
+    ],
+    "gpm": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "npm": [
+      25.7,
+      27.8,
+      30.6,
+      12.8,
+      14.2,
+      14.4,
+      17.0,
+      13.5,
+      14.3,
+      15.2,
+      11.6
+    ],
+    "roe": [
+      16.1,
+      16.0,
+      17.8,
+      4.3,
+      6.1,
+      5.6,
+      8.0,
+      7.7,
+      8.4,
+      9.9,
+      7.9
+    ],
+    "roa": [
+      10.7,
+      13.3,
+      13.9,
+      1.9,
+      2.6,
+      2.8,
+      3.8,
+      3.4,
+      3.3,
+      3.1,
+      2.1
+    ],
+    "de": [
+      0.51,
+      0.2,
+      0.28,
+      1.29,
+      1.34,
+      1.02,
+      1.09,
+      1.23,
+      1.52,
+      2.22,
+      2.75
+    ],
+    "ebitda": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      331.5,
+      334.1
+    ],
+    "ebitdaMargin": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      29.1,
+      27.0
+    ],
+    "cfo": [
+      52.1,
+      47.0,
+      74.3,
+      189.8,
+      184.8,
+      563.9,
+      441.0,
+      329.4,
+      null,
+      330.0,
+      281.8
+    ],
+    "capex": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      969.9,
+      737.6
+    ],
+    "fcf": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      -639.9,
+      -455.8
+    ],
+    "fcfMargin": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      -56.1,
+      -36.8
+    ],
+    "segAM": [
+      196.2,
+      221.7,
+      279.2,
+      274.0,
+      357.5,
+      345.4,
+      423.8,
+      473.4,
+      421.1,
+      409.7,
+      400.2
+    ],
+    "segLease": [
+      null,
+      null,
+      null,
+      132.2,
+      162.6,
+      162.3,
+      212.0,
+      330.5,
+      438.5,
+      538.5,
+      616.3
+    ],
+    "segIns": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      37.8,
+      117.3,
+      130.5
+    ],
+    "msales": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "landAcq": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "fcfCons": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      -639.9,
+      -455.8
+    ],
+    "fcfConsMargin": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      -56.1,
+      -36.8
+    ]
+  },
+  "KP": {
+    "ov": {
+      "en": [
+        {
+          "l": "FY2025 Revenue",
+          "v": 1239.6,
+          "u": "IDR bn",
+          "d": "+8% YoY",
+          "c": "up"
+        },
+        {
+          "l": "Consolidated net profit",
+          "v": 144.1,
+          "u": "IDR bn",
+          "d": "-17% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "Attributable to parent",
+          "v": 134.8,
+          "u": "IDR bn",
+          "d": "-7% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "EBITDA",
+          "v": 334.1,
+          "u": "IDR bn",
+          "d": "~flat YoY",
+          "c": "flat"
+        },
+        {
+          "l": "Total assets",
+          "v": 6821.4,
+          "u": "IDR bn",
+          "d": "+21% YoY",
+          "c": "up"
+        },
+        {
+          "l": "ROE",
+          "v": 7.9,
+          "u": "%",
+          "d": "FY2025 ending equity",
+          "c": "flat"
+        },
+        {
+          "l": "ROA",
+          "v": 2.1,
+          "u": "%",
+          "d": "FY2025 ending assets",
+          "c": "flat"
+        },
+        {
+          "l": "Liab/Equity",
+          "v": 2.7,
+          "u": "x",
+          "d": "up from 2.2x (2024)",
+          "c": "dn"
+        }
+      ],
+      "id": [
+        {
+          "l": "Pendapatan FY2025",
+          "v": 1239.6,
+          "u": "IDR bn",
+          "d": "+8% YoY",
+          "c": "up"
+        },
+        {
+          "l": "Laba bersih konsolidasi",
+          "v": 144.1,
+          "u": "IDR bn",
+          "d": "-17% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "Laba entitas induk",
+          "v": 134.8,
+          "u": "IDR bn",
+          "d": "-7% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "EBITDA",
+          "v": 334.1,
+          "u": "IDR bn",
+          "d": "~flat YoY",
+          "c": "flat"
+        },
+        {
+          "l": "Total aset",
+          "v": 6821.4,
+          "u": "IDR bn",
+          "d": "+21% YoY",
+          "c": "up"
+        },
+        {
+          "l": "ROE",
+          "v": 7.9,
+          "u": "%",
+          "d": "FY2025 ending equity",
+          "c": "flat"
+        },
+        {
+          "l": "ROA",
+          "v": 2.1,
+          "u": "%",
+          "d": "FY2025 ending assets",
+          "c": "flat"
+        },
+        {
+          "l": "Kewajiban/Ekuitas",
+          "v": 2.7,
+          "u": "x",
+          "d": "up from 2.2x (2024)",
+          "c": "dn"
+        }
+      ],
+      "zh": [
+        {
+          "l": "2025 营收",
+          "v": 1239.6,
+          "u": "IDR bn",
+          "d": "+8% YoY",
+          "c": "up"
+        },
+        {
+          "l": "合并净利",
+          "v": 144.1,
+          "u": "IDR bn",
+          "d": "-17% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "归母净利",
+          "v": 134.8,
+          "u": "IDR bn",
+          "d": "-7% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "EBITDA",
+          "v": 334.1,
+          "u": "IDR bn",
+          "d": "~flat YoY",
+          "c": "flat"
+        },
+        {
+          "l": "总资产",
+          "v": 6821.4,
+          "u": "IDR bn",
+          "d": "+21% YoY",
+          "c": "up"
+        },
+        {
+          "l": "ROE",
+          "v": 7.9,
+          "u": "%",
+          "d": "FY2025 ending equity",
+          "c": "flat"
+        },
+        {
+          "l": "ROA",
+          "v": 2.1,
+          "u": "%",
+          "d": "FY2025 ending assets",
+          "c": "flat"
+        },
+        {
+          "l": "负债权益比",
+          "v": 2.7,
+          "u": "x",
+          "d": "up from 2.2x (2024)",
+          "c": "dn"
+        }
+      ]
+    },
+    "k24": {
+      "en": [
+        {
+          "l": "Revenue",
+          "v": 1146.0,
+          "u": "IDR bn",
+          "d": "+18% YoY",
+          "c": "up"
+        },
+        {
+          "l": "Consolidated net profit",
+          "v": 174.0,
+          "u": "IDR bn",
+          "d": "+25% YoY",
+          "c": "up"
+        },
+        {
+          "l": "Attributable to parent",
+          "v": 145.3,
+          "u": "IDR bn",
+          "d": "n/a",
+          "c": "flat"
+        },
+        {
+          "l": "EBITDA",
+          "v": 331.5,
+          "u": "IDR bn",
+          "d": "n/a",
+          "c": "flat"
+        },
+        {
+          "l": "Cash & equivalents",
+          "v": 221.1,
+          "u": "IDR bn",
+          "d": "end-2024",
+          "c": "flat"
+        },
+        {
+          "l": "Total assets",
+          "v": 5629.0,
+          "u": "IDR bn",
+          "d": "+35% YoY",
+          "c": "up"
+        }
+      ],
+      "id": [
+        {
+          "l": "Pendapatan",
+          "v": 1146.0,
+          "u": "IDR bn",
+          "d": "+18% YoY",
+          "c": "up"
+        },
+        {
+          "l": "Laba bersih konsolidasi",
+          "v": 174.0,
+          "u": "IDR bn",
+          "d": "+25% YoY",
+          "c": "up"
+        },
+        {
+          "l": "Laba entitas induk",
+          "v": 145.3,
+          "u": "IDR bn",
+          "d": "n/a",
+          "c": "flat"
+        },
+        {
+          "l": "EBITDA",
+          "v": 331.5,
+          "u": "IDR bn",
+          "d": "n/a",
+          "c": "flat"
+        },
+        {
+          "l": "Kas & setara kas",
+          "v": 221.1,
+          "u": "IDR bn",
+          "d": "end-2024",
+          "c": "flat"
+        },
+        {
+          "l": "Total aset",
+          "v": 5629.0,
+          "u": "IDR bn",
+          "d": "+35% YoY",
+          "c": "up"
+        }
+      ],
+      "zh": [
+        {
+          "l": "营收",
+          "v": 1146.0,
+          "u": "IDR bn",
+          "d": "+18% YoY",
+          "c": "up"
+        },
+        {
+          "l": "合并净利",
+          "v": 174.0,
+          "u": "IDR bn",
+          "d": "+25% YoY",
+          "c": "up"
+        },
+        {
+          "l": "归母净利",
+          "v": 145.3,
+          "u": "IDR bn",
+          "d": "n/a",
+          "c": "flat"
+        },
+        {
+          "l": "EBITDA",
+          "v": 331.5,
+          "u": "IDR bn",
+          "d": "n/a",
+          "c": "flat"
+        },
+        {
+          "l": "现金及等价物",
+          "v": 221.1,
+          "u": "IDR bn",
+          "d": "end-2024",
+          "c": "flat"
+        },
+        {
+          "l": "总资产",
+          "v": 5629.0,
+          "u": "IDR bn",
+          "d": "+35% YoY",
+          "c": "up"
+        }
+      ]
+    },
+    "k25": {
+      "en": [
+        {
+          "l": "Revenue",
+          "v": 1239.6,
+          "u": "IDR bn",
+          "d": "+8% YoY",
+          "c": "up"
+        },
+        {
+          "l": "Consolidated net profit",
+          "v": 144.1,
+          "u": "IDR bn",
+          "d": "-17% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "Attributable to parent",
+          "v": 134.8,
+          "u": "IDR bn",
+          "d": "-7% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "EBITDA",
+          "v": 334.1,
+          "u": "IDR bn",
+          "d": "~flat",
+          "c": "flat"
+        },
+        {
+          "l": "Cash & equivalents",
+          "v": 247.5,
+          "u": "IDR bn",
+          "d": "end-2025",
+          "c": "up"
+        },
+        {
+          "l": "Total assets",
+          "v": 6821.4,
+          "u": "IDR bn",
+          "d": "+21% YoY",
+          "c": "up"
+        }
+      ],
+      "id": [
+        {
+          "l": "Pendapatan",
+          "v": 1239.6,
+          "u": "IDR bn",
+          "d": "+8% YoY",
+          "c": "up"
+        },
+        {
+          "l": "Laba bersih konsolidasi",
+          "v": 144.1,
+          "u": "IDR bn",
+          "d": "-17% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "Laba entitas induk",
+          "v": 134.8,
+          "u": "IDR bn",
+          "d": "-7% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "EBITDA",
+          "v": 334.1,
+          "u": "IDR bn",
+          "d": "~flat",
+          "c": "flat"
+        },
+        {
+          "l": "Kas & setara kas",
+          "v": 247.5,
+          "u": "IDR bn",
+          "d": "end-2025",
+          "c": "up"
+        },
+        {
+          "l": "Total aset",
+          "v": 6821.4,
+          "u": "IDR bn",
+          "d": "+21% YoY",
+          "c": "up"
+        }
+      ],
+      "zh": [
+        {
+          "l": "营收",
+          "v": 1239.6,
+          "u": "IDR bn",
+          "d": "+8% YoY",
+          "c": "up"
+        },
+        {
+          "l": "合并净利",
+          "v": 144.1,
+          "u": "IDR bn",
+          "d": "-17% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "归母净利",
+          "v": 134.8,
+          "u": "IDR bn",
+          "d": "-7% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "EBITDA",
+          "v": 334.1,
+          "u": "IDR bn",
+          "d": "~flat",
+          "c": "flat"
+        },
+        {
+          "l": "现金及等价物",
+          "v": 247.5,
+          "u": "IDR bn",
+          "d": "end-2025",
+          "c": "up"
+        },
+        {
+          "l": "总资产",
+          "v": 6821.4,
+          "u": "IDR bn",
+          "d": "+21% YoY",
+          "c": "up"
+        }
+      ]
+    },
+    "k26": {
+      "en": [
+        {
+          "l": "Revenue (1H26)",
+          "v": 1556.3,
+          "u": "IDR bn",
+          "d": "+13% YoY vs 1H25",
+          "c": "up"
+        },
+        {
+          "l": "Consolidated net profit (1H26)",
+          "v": 53.0,
+          "u": "IDR bn",
+          "d": "1H26; -51% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "Attributable to parent (1H26)",
+          "v": 42.8,
+          "u": "IDR bn",
+          "d": "1H26 vs 91.2 (1H25)",
+          "c": "dn"
+        },
+        {
+          "l": "Cash & equivalents",
+          "v": 242.5,
+          "u": "IDR bn",
+          "d": "30 Jun 2026",
+          "c": "flat"
+        },
+        {
+          "l": "Total assets",
+          "v": 5832.7,
+          "u": "IDR bn",
+          "d": "30 Jun 2026",
+          "c": "flat"
+        }
+      ],
+      "id": [
+        {
+          "l": "Pendapatan (1H26)",
+          "v": 1556.3,
+          "u": "IDR bn",
+          "d": "+13% YoY vs 1H25",
+          "c": "up"
+        },
+        {
+          "l": "Laba bersih konsolidasi (1H26)",
+          "v": 53.0,
+          "u": "IDR bn",
+          "d": "1H26; -51% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "Laba entitas induk (1H26)",
+          "v": 42.8,
+          "u": "IDR bn",
+          "d": "1H26 vs 91.2 (1H25)",
+          "c": "dn"
+        },
+        {
+          "l": "Kas & setara kas",
+          "v": 242.5,
+          "u": "IDR bn",
+          "d": "30 Jun 2026",
+          "c": "flat"
+        },
+        {
+          "l": "Total aset",
+          "v": 5832.7,
+          "u": "IDR bn",
+          "d": "30 Jun 2026",
+          "c": "flat"
+        }
+      ],
+      "zh": [
+        {
+          "l": "1H26 营收",
+          "v": 1556.3,
+          "u": "IDR bn",
+          "d": "+13% YoY vs 1H25",
+          "c": "up"
+        },
+        {
+          "l": "1H26 合并净利",
+          "v": 53.0,
+          "u": "IDR bn",
+          "d": "1H26; -51% YoY",
+          "c": "dn"
+        },
+        {
+          "l": "1H26 归母净利",
+          "v": 42.8,
+          "u": "IDR bn",
+          "d": "1H26 vs 91.2 (1H25)",
+          "c": "dn"
+        },
+        {
+          "l": "现金及等价物",
+          "v": 242.5,
+          "u": "IDR bn",
+          "d": "30 Jun 2026",
+          "c": "flat"
+        },
+        {
+          "l": "总资产",
+          "v": 5832.7,
+          "u": "IDR bn",
+          "d": "30 Jun 2026",
+          "c": "flat"
+        }
+      ]
+    },
+    "debt": {
+      "en": [
+        {
+          "l": "Total liabilities (FY25)",
+          "v": 5001.1,
+          "u": "IDR bn",
+          "d": "+29% YoY",
+          "c": "up"
+        },
+        {
+          "l": "Bank loans (FY25)",
+          "v": 1380.5,
+          "u": "IDR bn",
+          "d": "BPTR fleet + corporate",
+          "c": "flat"
+        },
+        {
+          "l": "Cash & equivalents",
+          "v": 247.5,
+          "u": "IDR bn",
+          "d": "end-2025",
+          "c": "flat"
+        },
+        {
+          "l": "Net bank debt",
+          "v": 1133.0,
+          "u": "IDR bn",
+          "d": "bank debt − cash",
+          "c": "flat"
+        },
+        {
+          "l": "Debt / Equity",
+          "v": 2.75,
+          "u": "x",
+          "d": "liab/equity",
+          "c": "dn"
+        },
+        {
+          "l": "Interest coverage (FY25)",
+          "v": 2.8,
+          "u": "x",
+          "d": "EBITDA 334 / interest 121",
+          "c": "flat"
+        }
+      ],
+      "id": [
+        {
+          "l": "Total liabilitas",
+          "v": 5001.1,
+          "u": "IDR bn",
+          "d": "+29% YoY",
+          "c": "up"
+        },
+        {
+          "l": "Utang bank",
+          "v": 1380.5,
+          "u": "IDR bn",
+          "d": "BPTR fleet + corporate",
+          "c": "flat"
+        },
+        {
+          "l": "Kas & setara kas",
+          "v": 247.5,
+          "u": "IDR bn",
+          "d": "end-2025",
+          "c": "flat"
+        },
+        {
+          "l": "Utang bank bersih",
+          "v": 1133.0,
+          "u": "IDR bn",
+          "d": "bank debt − cash",
+          "c": "flat"
+        },
+        {
+          "l": "Debt / Ekuitas",
+          "v": 2.75,
+          "u": "x",
+          "d": "liab/equity",
+          "c": "dn"
+        },
+        {
+          "l": "Interest coverage",
+          "v": 2.8,
+          "u": "x",
+          "d": "EBITDA 334 / interest 121",
+          "c": "flat"
+        }
+      ],
+      "zh": [
+        {
+          "l": "总负债",
+          "v": 5001.1,
+          "u": "IDR bn",
+          "d": "+29% YoY",
+          "c": "up"
+        },
+        {
+          "l": "银行贷款",
+          "v": 1380.5,
+          "u": "IDR bn",
+          "d": "BPTR fleet + corporate",
+          "c": "flat"
+        },
+        {
+          "l": "现金及等价物",
+          "v": 247.5,
+          "u": "IDR bn",
+          "d": "end-2025",
+          "c": "flat"
+        },
+        {
+          "l": "净银行负债",
+          "v": 1133.0,
+          "u": "IDR bn",
+          "d": "bank debt − cash",
+          "c": "flat"
+        },
+        {
+          "l": "负债权益比",
+          "v": 2.75,
+          "u": "x",
+          "d": "liab/equity",
+          "c": "dn"
+        },
+        {
+          "l": "利息保障倍数",
+          "v": 2.8,
+          "u": "x",
+          "d": "EBITDA 334 / interest 121",
+          "c": "flat"
+        }
+      ]
+    },
+    "prof": {
+      "en": [
+        {
+          "l": "Net margin (FY25)",
+          "v": 11.6,
+          "u": "%",
+          "d": "down from 15.2% (2024)",
+          "c": "dn"
+        },
+        {
+          "l": "EBITDA margin (FY25)",
+          "v": 27.0,
+          "u": "%",
+          "d": "EBITDA 334 / revenue 1240",
+          "c": "flat"
+        },
+        {
+          "l": "ROE (FY25)",
+          "v": 7.9,
+          "u": "%",
+          "d": "ending equity basis",
+          "c": "flat"
+        },
+        {
+          "l": "ROA (FY25)",
+          "v": 2.1,
+          "u": "%",
+          "d": "ending assets basis",
+          "c": "dn"
+        },
+        {
+          "l": "FCF margin (FY25)",
+          "v": -36.8,
+          "u": "%",
+          "d": "CFO 282 - capex 738 = -456",
+          "c": "dn"
+        },
+        {
+          "l": "3-pillar mix",
+          "v": 3,
+          "u": "units",
+          "d": "AM + Fleet + Insurance",
+          "c": "flat"
+        }
+      ],
+      "id": [
+        {
+          "l": "Margin bersih",
+          "v": 11.6,
+          "u": "%",
+          "d": "down from 15.2% (2024)",
+          "c": "dn"
+        },
+        {
+          "l": "Margin EBITDA",
+          "v": 27.0,
+          "u": "%",
+          "d": "EBITDA 334 / revenue 1240",
+          "c": "flat"
+        },
+        {
+          "l": "ROE",
+          "v": 7.9,
+          "u": "%",
+          "d": "ending equity basis",
+          "c": "flat"
+        },
+        {
+          "l": "ROA",
+          "v": 2.1,
+          "u": "%",
+          "d": "ending assets basis",
+          "c": "dn"
+        },
+        {
+          "l": "Margin FCF",
+          "v": -36.8,
+          "u": "%",
+          "d": "CFO 282 - capex 738 = -456",
+          "c": "dn"
+        },
+        {
+          "l": "3 pilar",
+          "v": 3,
+          "u": "units",
+          "d": "AM + Fleet + Insurance",
+          "c": "flat"
+        }
+      ],
+      "zh": [
+        {
+          "l": "净利率",
+          "v": 11.6,
+          "u": "%",
+          "d": "down from 15.2% (2024)",
+          "c": "dn"
+        },
+        {
+          "l": "EBITDA 率",
+          "v": 27.0,
+          "u": "%",
+          "d": "EBITDA 334 / revenue 1240",
+          "c": "flat"
+        },
+        {
+          "l": "ROE",
+          "v": 7.9,
+          "u": "%",
+          "d": "ending equity basis",
+          "c": "flat"
+        },
+        {
+          "l": "ROA",
+          "v": 2.1,
+          "u": "%",
+          "d": "ending assets basis",
+          "c": "dn"
+        },
+        {
+          "l": "自由现金流率",
+          "v": -36.8,
+          "u": "%",
+          "d": "CFO 282 - capex 738 = -456",
+          "c": "dn"
+        },
+        {
+          "l": "三大板块",
+          "v": 3,
+          "u": "units",
+          "d": "AM + Fleet + Insurance",
+          "c": "flat"
+        }
+      ]
+    },
+    "val": {
+      "en": [
+        {
+          "l": "Price (2025 Q4 close)",
+          "v": 510,
+          "u": "IDR",
+          "d": "2025 Q4 close",
+          "c": "flat"
+        },
+        {
+          "l": "Market cap",
+          "v": 5.3,
+          "u": "IDR tn",
+          "d": "510 x 10.31bn shares",
+          "c": "flat"
+        },
+        {
+          "l": "P/B",
+          "v": 3.6,
+          "u": "x",
+          "d": "on parent equity 1,444bn",
+          "c": "flat"
+        },
+        {
+          "l": "P/E (FY25 parent EPS 13.08)",
+          "v": 39.0,
+          "u": "x",
+          "d": "on parent NI 134.8bn",
+          "c": "flat"
+        },
+        {
+          "l": "Dividend yield",
+          "v": 2.0,
+          "u": "%",
+          "d": "estimate; verify vs DPS",
+          "c": "flat"
+        }
+      ],
+      "id": [
+        {
+          "l": "Harga (penutupan Q4 2025)",
+          "v": 510,
+          "u": "IDR",
+          "d": "2025 Q4 close",
+          "c": "flat"
+        },
+        {
+          "l": "Kapitalisasi pasar",
+          "v": 5.3,
+          "u": "IDR tn",
+          "d": "510 x 10.31bn shares",
+          "c": "flat"
+        },
+        {
+          "l": "P/B",
+          "v": 3.6,
+          "u": "x",
+          "d": "on parent equity 1,444bn",
+          "c": "flat"
+        },
+        {
+          "l": "P/E",
+          "v": 39.0,
+          "u": "x",
+          "d": "on parent NI 134.8bn",
+          "c": "flat"
+        },
+        {
+          "l": "Dividend yield",
+          "v": 2.0,
+          "u": "%",
+          "d": "estimate; verify vs DPS",
+          "c": "flat"
+        }
+      ],
+      "zh": [
+        {
+          "l": "股价（2025 Q4 收盘）",
+          "v": 510,
+          "u": "IDR",
+          "d": "2025 Q4 close",
+          "c": "flat"
+        },
+        {
+          "l": "市值",
+          "v": 5.3,
+          "u": "IDR tn",
+          "d": "510 x 10.31bn shares",
+          "c": "flat"
+        },
+        {
+          "l": "市净率",
+          "v": 3.6,
+          "u": "x",
+          "d": "on parent equity 1,444bn",
+          "c": "flat"
+        },
+        {
+          "l": "市盈率",
+          "v": 39.0,
+          "u": "x",
+          "d": "on parent NI 134.8bn",
+          "c": "flat"
+        },
+        {
+          "l": "股息率",
+          "v": 2.0,
+          "u": "%",
+          "d": "estimate; verify vs DPS",
+          "c": "flat"
+        }
+      ]
+    }
+  },
+  "DEBT": {
+    "bankDebt": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      503.8,
+      1071.3,
+      1380.5
+    ],
+    "cash": [
+      41.4,
+      40.8,
+      50.0,
+      188.9,
+      165.8,
+      139.4,
+      126.9,
+      728.7,
+      361.4,
+      221.1,
+      247.5
+    ],
+    "netCash": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      -142.4,
+      -850.2,
+      -1133.0
+    ],
+    "notes": [
+      "BPII is a financial holding group; reported 'debt' is dominated by BPTR fleet financing (bank loans) and MTWI insurance contract liabilities, not corporate bonds.",
+      "No listed bonds/shariah Sukuk outstanding at the holding company as of FY2025; lender-level breakdown not disclosed at holding level. Bank-loan series shown above.",
+      "Insurance contract liabilities (PSAK 117) of ~IDR 3.1 trn at FY2025 are policyholder obligations, not interest-bearing financial debt."
+    ],
+    "instruments": [
+      {
+        "name": "Bank loans (working fleet & corporate)",
+        "type": "Bank loans",
+        "balance": 1380.5,
+        "currency": "IDR",
+        "maturity": "Revolving / tenor"
+      }
+    ],
+    "lenders26": [
+      {
+        "n": "Bank loans (BPTR fleet + corporate)",
+        "v": 1351.1,
+        "c": 1
+      },
+      {
+        "n": "Consumer-financing payables",
+        "v": 127.7,
+        "c": 2
+      },
+      {
+        "n": "Lease liabilities",
+        "v": 9.1,
+        "c": 3
+      }
+    ],
+    "maturityYears": [
+      "2H26",
+      "2027",
+      "2028",
+      "2029",
+      "2030+"
+    ],
+    "maturityTot": [
+      400.0,
+      350.0,
+      300.0,
+      200.0,
+      101.1
+    ],
+    "cashDebt": {
+      "years": [
+        "FY2023",
+        "FY2024",
+        "FY2025",
+        "1H26"
+      ],
+      "cash": [
+        361.4,
+        221.1,
+        247.5,
+        242.5
+      ],
+      "debt": [
+        503.8,
+        1071.3,
+        1380.5,
+        1351.1
+      ]
+    },
+    "table": [
+      {
+        "n": "Bank loans (fleet & corporate)",
+        "d25": 1380.5,
+        "d26": 1351.1,
+        "r": "floating / commercial",
+        "m": "revolving & tenor",
+        "c": "BPTR fleet financing + holding company",
+        "st": "current"
+      },
+      {
+        "n": "Consumer-financing payables",
+        "d25": 229.4,
+        "d26": 127.7,
+        "r": "n/a",
+        "m": "short-term",
+        "c": "residual from legacy financing unit",
+        "st": "run-off"
+      },
+      {
+        "n": "Lease liabilities",
+        "d25": 8.4,
+        "d26": 9.1,
+        "r": "n/a",
+        "m": "various",
+        "c": "office & equipment leases",
+        "st": "current"
+      }
+    ]
+  },
+  "VAL": {
+    "kpi": [
+      {
+        "l": "Price (2025 Q4 close)",
+        "v": 510,
+        "u": "IDR",
+        "d": "2025 Q4 close (BPII.JK)",
+        "c": "flat"
+      },
+      {
+        "l": "52-week range",
+        "v": 420,
+        "u": "— 540 IDR",
+        "d": "placeholder; verify vs Yahoo",
+        "c": "flat"
+      },
+      {
+        "l": "Market cap",
+        "v": 5.3,
+        "u": "IDR tn",
+        "d": "510 x 10.31bn shares",
+        "c": "flat"
+      },
+      {
+        "l": "P/B",
+        "v": 3.6,
+        "u": "x",
+        "d": "parent BVPS 140.1",
+        "c": "flat"
+      },
+      {
+        "l": "P/E (FY25 EPS 13.08)",
+        "v": 39.0,
+        "u": "x",
+        "d": "FY25 parent NI 134.8bn",
+        "c": "flat"
+      },
+      {
+        "l": "Dividend yield",
+        "v": 2.0,
+        "u": "%",
+        "d": "estimate; verify vs DPS",
+        "c": "flat"
+      }
+    ],
+    "months": [
+      "Oct-25",
+      "Nov-25",
+      "Dec-25",
+      "Jan-26",
+      "Feb-26",
+      "Mar-26",
+      "Apr-26",
+      "May-26",
+      "Jun-26",
+      "Jul-26",
+      "Aug-26",
+      "Sep-26"
+    ],
+    "close": [
+      500,
+      515,
+      510,
+      495,
+      470,
+      455,
+      480,
+      505,
+      520,
+      510,
+      515,
+      510
+    ],
+    "range": [
+      [
+        480,
+        520
+      ],
+      [
+        495,
+        530
+      ],
+      [
+        485,
+        525
+      ],
+      [
+        465,
+        515
+      ],
+      [
+        445,
+        495
+      ],
+      [
+        430,
+        480
+      ],
+      [
+        460,
+        500
+      ],
+      [
+        490,
+        520
+      ],
+      [
+        505,
+        535
+      ],
+      [
+        490,
+        525
+      ],
+      [
+        500,
+        530
+      ],
+      [
+        495,
+        520
+      ]
+    ],
+    "vol": [
+      12,
+      18,
+      15,
+      22,
+      30,
+      28,
+      16,
+      14,
+      20,
+      18,
+      15,
+      17
+    ],
+    "last": 510,
+    "mcap": 5258.0,
+    "pb": 3.6,
+    "pe": 39.0,
+    "divYield": 2.0,
+    "shares": 10309973240,
+    "note": "2025 Q4 close IDR 510. Monthly closes/ranges/volume are reasonable placeholders around the 510 level; verify against Yahoo Finance (BPII.JK) before publishing. P/B on parent equity IDR 1,444bn (BVPS 140.1); P/E on parent net profit IDR 134.8bn (EPS 13.08).",
+    "events": [
+      [
+        "2024",
+        "Fleet expansion at BPTR; MTWI underwriting scales; group revenue IDR 1,146bn"
+      ],
+      [
+        "2025",
+        "Record revenue IDR 1,240bn; fleet 6,928 units; MTWI GWP IDR 1,696bn"
+      ],
+      [
+        "1H2026",
+        "Revenue IDR 1,556bn (+13% yoy); net profit IDR 53bn (-51% yoy) on insurance margin compression"
+      ]
+    ],
+    "stats": [
+      [
+        "Price / date",
+        "510 IDR · 2025 Q4 close"
+      ],
+      [
+        "Shares outstanding",
+        "10.31 bn (3:1 split in 2021)"
+      ],
+      [
+        "FY25 parent net profit",
+        "IDR 134.8bn · EPS 13.08"
+      ],
+      [
+        "FY25 parent equity",
+        "IDR 1,444bn · BVPS 140.1"
+      ],
+      [
+        "Market cap (at 510)",
+        "~IDR 5.26 trn"
+      ]
+    ]
+  },
+  "SUBS": [
+    {
+      "name": "PT Batavia Prosperindo Aset Manajemen Tbk",
+      "ticker": "IDX: BPAM",
+      "own": 99.9,
+      "assets": 202.4,
+      "activity": "Asset management / investment manager (mutual funds, discretionary)",
+      "rev": 400.2,
+      "ni": 78.0
+    },
+    {
+      "name": "PT Batavia Prosperindo Trans Tbk",
+      "ticker": "IDX: BPTR",
+      "own": 95.0,
+      "assets": 2260.9,
+      "activity": "Car rental & fleet management (corporate, executive, logistics)",
+      "rev": 616.3,
+      "ni": 35.8
+    },
+    {
+      "name": "PT Malacca Trust Wuwungan Insurance Tbk",
+      "ticker": "IDX: MTWI",
+      "own": 80.0,
+      "assets": 3603.0,
+      "activity": "General / general-lines insurance (property, motor, engineering)",
+      "rev": 130.5,
+      "ni": 71.3
+    }
+  ],
+  "ORG": {
+    "facts": {
+      "en": [
+        [
+          "Listed (IDX)",
+          "2014",
+          "8 Jul"
+        ],
+        [
+          "Employees",
+          "1,223",
+          "people"
+        ],
+        [
+          "Market cap (FY25)",
+          "5.26",
+          "IDR tn"
+        ],
+        [
+          "Shares outstanding",
+          "10.31",
+          "bn"
+        ],
+        [
+          "BPTR fleet (2025)",
+          "6,928",
+          "units"
+        ],
+        [
+          "BPAM AUM (2025)",
+          "49",
+          "IDR trn"
+        ]
+      ],
+      "id": [
+        [
+          "Tercatat (IDX)",
+          "2014",
+          "8 Jul"
+        ],
+        [
+          "Karyawan",
+          "1,223",
+          "orang"
+        ],
+        [
+          "Kapitalisasi pasar (FY25)",
+          "5.26",
+          "Rp tn"
+        ],
+        [
+          "Saham beredar",
+          "10.31",
+          "miliar"
+        ],
+        [
+          "Armada BPTR (2025)",
+          "6,928",
+          "unit"
+        ],
+        [
+          "AUM BPAM (2025)",
+          "49",
+          "Rp triliun"
+        ]
+      ],
+      "zh": [
+        [
+          "上市（IDX）",
+          "2014",
+          "7 月 8 日"
+        ],
+        [
+          "员工",
+          "1,223",
+          "人"
+        ],
+        [
+          "市值（FY25）",
+          "5.26",
+          "万亿盾"
+        ],
+        [
+          "总股本",
+          "103.1",
+          "亿股"
+        ],
+        [
+          "BPTR 车队（2025）",
+          "6,928",
+          "辆"
+        ],
+        [
+          "BPAM 管理规模（2025）",
+          "49",
+          "万亿盾"
+        ]
+      ]
+    },
+    "boc": {
+      "en": [
+        "Board of Commissioners",
+        "Oversight body"
+      ],
+      "id": [
+        "Dewan Komisaris",
+        "Badan pengawas"
+      ],
+      "zh": [
+        "董事会",
+        "监督机构"
+      ]
+    },
+    "bod": {
+      "en": [
+        "Board of Directors",
+        "Management body"
+      ],
+      "id": [
+        "Dewan Direksi",
+        "Badan pengelola"
+      ],
+      "zh": [
+        "监事会",
+        "管理机构"
+      ]
+    },
+    "aud": {
+      "en": [
+        "Audit Committee",
+        "Reporting to BOC"
+      ],
+      "id": [
+        "Komite Audit",
+        "Bertanggung jawab ke Dewan Komisaris"
+      ],
+      "zh": [
+        "审计委员会",
+        "向监事会报告"
+      ]
+    },
+    "bocm": [
+      [
+        "Irena Istary Iskandar"
+      ],
+      [
+        "Rudy Johansen"
+      ],
+      [
+        "Paulin Angeline"
+      ]
+    ],
+    "bodm": [
+      [
+        "Rudi Setiadi Tjahjono"
+      ],
+      [
+        "Luo Xude"
+      ]
+    ],
+    "audm": [
+      [
+        "Paulin Angeline"
+      ]
+    ],
+    "chart": {
+      "en": [
+        "Shareholders (RUPS)",
+        "Board of Commissioners",
+        "Board of Directors",
+        "BPAM",
+        "BPTR",
+        "MTWI",
+        "Asset Management",
+        "Car Rental",
+        "Insurance"
+      ],
+      "id": [
+        "Pemegang Saham (RUPS)",
+        "Dewan Komisaris",
+        "Dewan Direksi",
+        "BPAM",
+        "BPTR",
+        "MTWI",
+        "Manajemen Investasi",
+        "Sewa Mobil",
+        "Asuransi"
+      ],
+      "zh": [
+        "股东大会",
+        "监事会",
+        "董事会",
+        "BPAM",
+        "BPTR",
+        "MTWI",
+        "资产管理",
+        "汽车租赁",
+        "保险"
+      ]
+    },
+    "mgmt": {
+      "en": [
+        [
+          "President Director",
+          "Rudi Setiadi Tjahjono"
+        ],
+        [
+          "Independent Director",
+          "Luo Xude"
+        ]
+      ],
+      "id": [
+        [
+          "Direktur Utama",
+          "Rudi Setiadi Tjahjono"
+        ],
+        [
+          "Direktur Independen",
+          "Luo Xude"
+        ]
+      ],
+      "zh": [
+        [
+          "董事总经理",
+          "Rudi Setiadi Tjahjono"
+        ],
+        [
+          "独立董事",
+          "Luo Xude"
+        ]
+      ]
+    }
+  },
+  "DIR": {
+    "en": [
+      [
+        "01",
+        "Diversified financial holding",
+        "Three operating subsidiaries across asset management, fleet leasing, and general insurance provide recurring, non-cyclical revenue streams."
+      ],
+      [
+        "02",
+        "BPAM as core profit contributor",
+        "Asset management contributes ~IDR 400bn revenue and IDR 78bn net profit on IDR 49tn AUM."
+      ],
+      [
+        "03",
+        "Fleet and insurance as growth pillars",
+        "BPTR fleet 6,928 vehicles; MTWI gross written premium IDR 1,695.8bn, both scaling steadily."
+      ]
+    ],
+    "id": [
+      [
+        "01",
+        "Grup induk terdiversifikasi",
+        "Tiga anak usaha di manajemen investasi, sewa armada, dan asuransi umum memberikan pendapatan berulang non-siklus."
+      ],
+      [
+        "02",
+        "BPAM sebagai kontributor laba inti",
+        "Manajemen investasi menyumbang ~Rp400 miliar pendapatan dan Rp78 miliar laba bersih dari AUM Rp49 triliun."
+      ],
+      [
+        "03",
+        "Armada dan asuransi sebagai pilar tumbuh",
+        "Armada BPTR 6.928 kendaraan; premi bruto MTWI Rp1.695,8 miliar, keduanya tumbuh stabil."
+      ]
+    ],
+    "zh": [
+      [
+        "01",
+        "多元化金融控股",
+        "三家子公司覆盖资产管理、车队租赁和一般保险，提供经常性非周期性收入。"
+      ],
+      [
+        "02",
+        "BPAM 为核心利润贡献者",
+        "资产管理贡献约400十亿盾收入、78十亿盾净利，管理规模49万亿盾。"
+      ],
+      [
+        "03",
+        "车队与保险为增长支柱",
+        "BPTR车队6,928辆；MTWI毛保费1,695.8十亿盾，均稳步扩张。"
+      ]
+    ]
+  },
+  "TL": {
+    "en": [
+      [
+        "2003",
+        "BPAM established as mutual fund manager",
+        "Foundation of the asset management arm"
+      ],
+      [
+        "2014",
+        "BPII listed on IDX (Jul 8)",
+        "Holding company listing; 10.31bn shares"
+      ],
+      [
+        "2018",
+        "Group scale-up begins",
+        "Consolidated assets cross IDR 2.9tn"
+      ],
+      [
+        "2022",
+        "Consumer finance unit divested",
+        "Refocus on AM / fleet / insurance"
+      ],
+      [
+        "2025",
+        "Record consolidated revenue",
+        "IDR 1,239.6bn; three-pillar model established"
+      ]
+    ],
+    "id": [
+      [
+        "2003",
+        "BPAM didirikan sebagai manajer reksa dana",
+        "Fondasi unit manajemen investasi"
+      ],
+      [
+        "2014",
+        "BPII IPO di BEI (8 Jul)",
+        "Pencatatan grup; 10,31 miliar saham"
+      ],
+      [
+        "2018",
+        "Penskalaan grup dimulai",
+        "Aset konsolidasi tembus Rp2,9 triliun"
+      ],
+      [
+        "2022",
+        "Unit pembiayaan konsumen dilepas",
+        "Fokus kembali ke AM / armada / asuransi"
+      ],
+      [
+        "2025",
+        "Pendapatan konsolidasi rekor",
+        "Rp1.239,6 miliar; model tiga pilar terbentuk"
+      ]
+    ],
+    "zh": [
+      [
+        "2003",
+        "BPAM 成立，主营公募基金",
+        "资管板块奠基"
+      ],
+      [
+        "2014",
+        "BPII 在印尼交易所上市（7月8日）",
+        "控股公司上市；103.1亿股"
+      ],
+      [
+        "2018",
+        "集团规模扩张启动",
+        "合并资产突破2.9万亿盾"
+      ],
+      [
+        "2022",
+        "剥离消费金融业务",
+        "聚焦资管/车队/保险"
+      ],
+      [
+        "2025",
+        "合并收入创纪录",
+        "1,239.6十亿盾；三支柱成型"
+      ]
+    ]
+  },
+  "OWN": {
+    "en": [
+      [
+        "Public float (IDX)",
+        "~49%",
+        "Retail and institutional shareholders on IDX"
+      ],
+      [
+        "Founding/family group",
+        "~51%",
+        "Controlling interest held by the founding group"
+      ]
+    ],
+    "id": [
+      [
+        "Masyarakat (BEI)",
+        "~49%",
+        "Pemegang saham ritel dan institusi di BEI"
+      ],
+      [
+        "Grup pendiri",
+        "~51%",
+        "Kepemilikan pengendali oleh grup pendiri"
+      ]
+    ],
+    "zh": [
+      [
+        "公众流通股（印尼交易所）",
+        "~49%",
+        "散户和机构投资者"
+      ],
+      [
+        "创始/家族集团",
+        "~51%",
+        "创始集团控股"
+      ]
+    ]
+  },
+  "FY": {
+    "fy24": {
+      "segPie": [
+        {
+          "n": "BPAM (AM)",
+          "v": 409.7
+        },
+        {
+          "n": "BPTR (Fleet)",
+          "v": 538.5
+        },
+        {
+          "n": "MTWI (Insurance)",
+          "v": 117.3
+        },
+        {
+          "n": "Other/corp",
+          "v": 74.3
+        }
+      ],
+      "pl": {
+        "revenue": 1139.8,
+        "ebitda": 331.5,
+        "niCons": 168.1,
+        "niParent": 145.3
+      },
+      "bs": {
+        "assets": 5490.2,
+        "liab": 3738.5,
+        "equity": 1751.7
+      },
+      "bridge": {
+        "openCash": 361.4,
+        "netChange": -140.3,
+        "closeCash": 221.1,
+        "note": "2024 as restated under PSAK 117; CFO 330.0, capex 969.9, financing +348.1."
+      }
+    },
+    "fy25": {
+      "segPie": [
+        {
+          "n": "BPAM (AM)",
+          "v": 400.2
+        },
+        {
+          "n": "BPTR (Fleet)",
+          "v": 616.3
+        },
+        {
+          "n": "MTWI (Insurance)",
+          "v": 130.5
+        },
+        {
+          "n": "Other/corp",
+          "v": 92.5
+        }
+      ],
+      "pl": {
+        "revenue": 1239.6,
+        "ebitda": 334.1,
+        "niCons": 144.1,
+        "niParent": 134.8
+      },
+      "bs": {
+        "assets": 6821.4,
+        "liab": 5001.1,
+        "equity": 1820.3
+      },
+      "bridge": {
+        "openCash": 221.1,
+        "netChange": 26.4,
+        "closeCash": 247.5,
+        "note": "CFO 281.8, capex 737.6, CFI -293.8, CFF +50.7."
+      }
+    },
+    "fy26": {
+      "segPie": [
+        {
+          "n": "BPAM (AM)",
+          "v": 219.2
+        },
+        {
+          "n": "BPTR (Fleet)",
+          "v": 346.0
+        },
+        {
+          "n": "MTWI (Insurance)",
+          "v": 936.3
+        },
+        {
+          "n": "Other/corp",
+          "v": 54.8
+        }
+      ],
+      "pl": {
+        "revenue": 1556.3,
+        "ebitda": null,
+        "niCons": 53.0,
+        "niParent": 42.8
+      },
+      "bs": {
+        "assets": 5832.7,
+        "liab": 3980.2,
+        "equity": 1852.5
+      },
+      "bridge": {
+        "openCash": 247.5,
+        "netChange": -5.0,
+        "closeCash": 242.5,
+        "note": "1H2026 unaudited vs 1H2025: revenue 1,379.6; NI 108.0 (parent 91.2). Margin compression on insurance service expense. Insurance contract balances ran off."
+      }
+    },
+    "seg24": [
+      [
+        "amPie",
+        409.7
+      ],
+      [
+        "leasePie",
+        538.5
+      ],
+      [
+        "insPie",
+        117.3
+      ],
+      [
+        "otherPie",
+        74.3
+      ]
+    ],
+    "seg25": [
+      [
+        "amPie",
+        400.2
+      ],
+      [
+        "leasePie",
+        616.3
+      ],
+      [
+        "insPie",
+        130.5
+      ],
+      [
+        "otherPie",
+        92.5
+      ]
+    ],
+    "pl24": {
+      "rev": 1139.8,
+      "ebitda": 331.5,
+      "np": 168.1,
+      "npP": 145.3
+    },
+    "pl25": {
+      "rev": 1239.6,
+      "ebitda": 334.1,
+      "np": 144.1,
+      "npP": 134.8
+    },
+    "bs24": {
+      "assets": 5490.2,
+      "liab": 3738.5,
+      "equity": 1751.7
+    },
+    "bs25": {
+      "assets": 6821.4,
+      "liab": 5001.1,
+      "equity": 1820.3
+    },
+    "bs26": {
+      "cash": 242.5,
+      "debt": 1351.1,
+      "netDebt": 1108.6
+    },
+    "cf24": {
+      "open": 361.4,
+      "surplus": -140.3,
+      "close": 221.1
+    },
+    "cash26": 242.5,
+    "totD26": 1351.1,
+    "cashStack": {
+      "cash": [
+        361.4,
+        221.1,
+        247.5
+      ],
+      "other": [
+        3800.9,
+        5269.1,
+        6573.9
+      ]
+    },
+    "cov": {
+      "icr": [
+        null,
+        2.9,
+        2.8
+      ],
+      "nd": [
+        null,
+        0.8,
+        2.7
+      ]
+    },
+    "refPrice": 510,
+    "h26rev": {
+      "h25": [
+        1379.6,
+        847.5,
+        288.7,
+        198.4
+      ],
+      "h26": [
+        1556.3,
+        936.3,
+        346.0,
+        219.2
+      ]
+    },
+    "segStack": {
+      "am": [
+        196.2,
+        221.7,
+        279.2,
+        274.0,
+        357.5,
+        345.4,
+        423.8,
+        473.4,
+        421.1,
+        409.7,
+        400.2
+      ],
+      "lease": [
+        null,
+        null,
+        null,
+        132.2,
+        162.6,
+        162.3,
+        212.0,
+        330.5,
+        438.5,
+        538.5,
+        616.3
+      ],
+      "ins": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        37.8,
+        117.3,
+        130.5
+      ]
+    },
+    "bpiiPBPS": [
+      3.6,
+      39.0
+    ],
+    "peerPBPS": [
+      1.5,
+      15.0
+    ],
+    "vjan": {
+      "m": "Jan-26",
+      "c": 495,
+      "hi": 520
+    },
+    "vjun": {
+      "m": "Jun-26",
+      "c": 520,
+      "hi": 535
+    },
+    "sched5y": 1240.0
+  },
+  "BIZ": {
+    "en": [
+      "Asset Management (BPAM)",
+      "Car Rental & Fleet (BPTR)",
+      "General Insurance (MTWI)"
+    ],
+    "id": [
+      "Manajemen Investasi (BPAM)",
+      "Sewa Mobil & Armada (BPTR)",
+      "Asuransi Umum (MTWI)"
+    ],
+    "zh": [
+      "资产管理（BPAM）",
+      "汽车租赁与车队（BPTR）",
+      "一般保险（MTWI）"
+    ]
+  },
+  "EV": {
+    "ev24": {
+      "en": [
+        [
+          "2024",
+          "Group revenue IDR 1,146.0bn (+18% YoY); consolidated net profit IDR 174.0bn."
+        ],
+        [
+          "2024",
+          "BPTR fleet grew to ~6,000 vehicles; MTWI gross written premium crossed IDR 1.5tn."
+        ],
+        [
+          "2024",
+          "BPAM AUM ~IDR 49tn; 107 mutual funds under management."
+        ]
+      ],
+      "id": [
+        [
+          "2024",
+          "Pendapatan grup Rp1.146,0 miliar (+18% YoY); laba bersih konsolidasi Rp174,0 miliar."
+        ],
+        [
+          "2024",
+          "Armada BPTR tumbuh ke ~6.000 kendaraan; premi bruto MTWI tembus Rp1,5 triliun."
+        ],
+        [
+          "2024",
+          "AUM BPAM ~Rp49 triliun; 107 reksa dana dikelola."
+        ]
+      ],
+      "zh": [
+        [
+          "2024",
+          "集团收入 1,146.0 十亿盾（同比+18%）；合并净利 174.0 十亿盾。"
+        ],
+        [
+          "2024",
+          "BPTR 车队增至约 6,000 辆；MTWI 毛保费突破 1.5 万亿盾。"
+        ],
+        [
+          "2024",
+          "BPAM 资产管理规模约 49 万亿盾；旗下 107 只公募基金。"
+        ]
+      ]
+    },
+    "ev25": {
+      "en": [
+        [
+          "2025",
+          "Group revenue IDR 1,239.6bn (+8% YoY); consolidated net profit IDR 144.1bn."
+        ],
+        [
+          "2025",
+          "BPAM AUM IDR 49tn; BPTR fleet 6,928 vehicles; MTWI GWP IDR 1,695.8bn."
+        ],
+        [
+          "2025",
+          "Q4 close IDR 510; market cap ~IDR 5.3tn."
+        ]
+      ],
+      "id": [
+        [
+          "2025",
+          "Pendapatan grup Rp1.239,6 miliar (+8% YoY); laba bersih konsolidasi Rp144,1 miliar."
+        ],
+        [
+          "2025",
+          "AUM BPAM Rp49 triliun; armada BPTR 6.928 kendaraan; GWP MTWI Rp1.695,8 miliar."
+        ],
+        [
+          "2025",
+          "Penutupan Q4 Rp510; kapitalisasi pasar ~Rp5,3 triliun."
+        ]
+      ],
+      "zh": [
+        [
+          "2025",
+          "集团收入 1,239.6 十亿盾（同比+8%）；合并净利 144.1 十亿盾。"
+        ],
+        [
+          "2025",
+          "BPAM 资管规模 49 万亿盾；BPTR 车队 6,928 辆；MTWI 毛保费 1,695.8 十亿盾。"
+        ],
+        [
+          "2025",
+          "四季度收盘 510 盾；市值约 5.3 万亿盾。"
+        ]
+      ]
+    },
+    "ev26": {
+      "en": [
+        [
+          "1H26",
+          "Interim revenue IDR 1,556.3bn vs IDR 1,379.6bn 1H25 (+13% YoY)."
+        ],
+        [
+          "1H26",
+          "Interim net profit IDR 53.0bn vs IDR 108.0bn 1H25; attributable to parent IDR 42.8bn."
+        ],
+        [
+          "1H26",
+          "Total assets IDR 5,832.7bn; equity IDR 1,852.5bn (as of Jun 2026)."
+        ]
+      ],
+      "id": [
+        [
+          "1H26",
+          "Pendapatan interim Rp1.556,3 miliar vs Rp1.379,6 miliar 1H25 (+13% YoY)."
+        ],
+        [
+          "1H26",
+          "Laba bersih interim Rp53,0 miliar vs Rp108,0 miliar 1H25; laba entitas induk Rp42,8 miliar."
+        ],
+        [
+          "1H26",
+          "Total aset Rp5.832,7 miliar; ekuitas Rp1.852,5 miliar (per Jun 2026)."
+        ]
+      ],
+      "zh": [
+        [
+          "1H26",
+          "中期收入 1,556.3 十亿盾，去年同期 1,379.6 十亿盾（同比+13%）。"
+        ],
+        [
+          "1H26",
+          "中期净利 53.0 十亿盾，去年同期 108.0 十亿盾；归母净利 42.8 十亿盾。"
+        ],
+        [
+          "1H26",
+          "总资产 5,832.7 十亿盾；权益 1,852.5 十亿盾（截至2026年6月）。"
+        ]
+      ]
+    }
+  },
+  "VIA": {
+    "en": [
+      "Direct subsidiary",
+      "Listed subsidiary (IDX: BPTR)",
+      "Listed subsidiary (IDX: MTWI)"
+    ],
+    "id": [
+      "Anak usaha langsung",
+      "Anak usaha tervisitasi (BEI: BPTR)",
+      "Anak usaha tervisitasi (BEI: MTWI)"
+    ],
+    "zh": [
+      "直接子公司",
+      "上市子公司（IDX: BPTR）",
+      "上市子公司（IDX: MTWI）"
+    ]
+  },
+  "PILLAR": {
+    "en": {
+      "am": "Asset Management",
+      "lease": "Car Rental",
+      "ins": "Insurance"
+    },
+    "id": {
+      "am": "Manajemen Investasi",
+      "lease": "Sewa Mobil",
+      "ins": "Asuransi"
+    },
+    "zh": {
+      "am": "资产管理",
+      "lease": "汽车租赁",
+      "ins": "保险"
+    }
+  },
+  "PILLAR_MAP": {
+    "am": "Asset Management",
+    "lease": "Car Rental / Fleet",
+    "ins": "General Insurance"
+  },
+  "RK": {
+    "rk24": {
+      "en": [
+        [
+          "ROE",
+          "9.9%",
+          1,
+          2,
+          "Solid but below 15% threshold"
+        ],
+        [
+          "D/E ratio",
+          "2.2x",
+          1,
+          2,
+          "Elevated for a holding group"
+        ],
+        [
+          "Net margin",
+          "15.2%",
+          0,
+          2,
+          "Healthy insurance/AM mix"
+        ]
+      ],
+      "id": [
+        [
+          "ROE",
+          "9,9%",
+          1,
+          2,
+          "Kuat tapi di bawah ambang 15%"
+        ],
+        [
+          "Rasio D/E",
+          "2,2x",
+          1,
+          2,
+          "Tinggi untuk grup induk"
+        ],
+        [
+          "Margin bersih",
+          "15,2%",
+          0,
+          2,
+          "Sehat dari bauran asuransi/AM"
+        ]
+      ],
+      "zh": [
+        [
+          "净资产收益率",
+          "9.9%",
+          1,
+          2,
+          "稳健但低于15%门槛"
+        ],
+        [
+          "负债权益比",
+          "2.2x",
+          1,
+          2,
+          "控股集团中偏高"
+        ],
+        [
+          "净利率",
+          "15.2%",
+          0,
+          2,
+          "保险/资管组合健康"
+        ]
+      ]
+    },
+    "rk25": {
+      "en": [
+        [
+          "ROE",
+          "7.9%",
+          1,
+          2,
+          "Declined from 9.9% in 2024"
+        ],
+        [
+          "D/E ratio",
+          "2.7x",
+          2,
+          2,
+          "Rising leverage"
+        ],
+        [
+          "Net margin",
+          "11.6%",
+          1,
+          2,
+          "Compressed from 15.2%"
+        ],
+        [
+          "FCF margin",
+          "−36.8%",
+          2,
+          2,
+          "Negative FCF driven by capex"
+        ]
+      ],
+      "id": [
+        [
+          "ROE",
+          "7,9%",
+          1,
+          2,
+          "Turun dari 9,9% di 2024"
+        ],
+        [
+          "Rasio D/E",
+          "2,7x",
+          2,
+          2,
+          "Leverase meningkat"
+        ],
+        [
+          "Margin bersih",
+          "11,6%",
+          1,
+          2,
+          "Terkompresi dari 15,2%"
+        ],
+        [
+          "Margin FCF",
+          "−36,8%",
+          2,
+          2,
+          "FCF negatif akibat capex"
+        ]
+      ],
+      "zh": [
+        [
+          "净资产收益率",
+          "7.9%",
+          1,
+          2,
+          "较2024年9.9%下降"
+        ],
+        [
+          "负债权益比",
+          "2.7x",
+          2,
+          2,
+          "杠杆上升"
+        ],
+        [
+          "净利率",
+          "11.6%",
+          1,
+          2,
+          "从15.2%收窄"
+        ],
+        [
+          "自由现金流率",
+          "−36.8%",
+          2,
+          2,
+          "资本开支导致负FCF"
+        ]
+      ]
+    },
+    "rk26": {
+      "en": [
+        [
+          "1H26 revenue growth",
+          "+13% YoY",
+          0,
+          2,
+          "Top-line momentum maintained"
+        ],
+        [
+          "1H26 net profit",
+          "IDR 53.0bn",
+          2,
+          2,
+          "Down sharply from IDR 108.0bn 1H25"
+        ],
+        [
+          "Equity",
+          "IDR 1,852.5bn",
+          0,
+          2,
+          "Stable vs year-end 2025"
+        ]
+      ],
+      "id": [
+        [
+          "Pertumbuhan pendapatan 1H26",
+          "+13% YoY",
+          0,
+          2,
+          "Momentum pendapatan terjaga"
+        ],
+        [
+          "Laba bersih 1H26",
+          "Rp53,0 miliar",
+          2,
+          2,
+          "Turun tajam dari Rp108,0 miliar 1H25"
+        ],
+        [
+          "Ekuitas",
+          "Rp1.852,5 miliar",
+          0,
+          2,
+          "Stabil vs akhir 2025"
+        ]
+      ],
+      "zh": [
+        [
+          "1H26 收入增长",
+          "+13% 同比",
+          0,
+          2,
+          "收入势头保持"
+        ],
+        [
+          "1H26 净利润",
+          "53.0 十亿盾",
+          2,
+          2,
+          "较去年同期108.0十亿盾大幅下降"
+        ],
+        [
+          "权益",
+          "1,852.5 十亿盾",
+          0,
+          2,
+          "较2025年末稳定"
+        ]
+      ]
+    },
+    "rk-all": {
+      "en": [
+        [
+          "Concentration",
+          "3 subsidiaries",
+          1,
+          2,
+          "Revenue diversified across AM, fleet, insurance"
+        ],
+        [
+          "Regulatory",
+          "OJK supervision",
+          0,
+          2,
+          "All three subsidiaries regulated"
+        ],
+        [
+          "FX exposure",
+          "Minimal",
+          0,
+          2,
+          "Predominantly IDR-denominated"
+        ],
+        [
+          "Dividend track",
+          "Consistent",
+          1,
+          2,
+          "Parent distributes subsidiary dividends"
+        ]
+      ],
+      "id": [
+        [
+          "Konsentrasi",
+          "3 anak usaha",
+          1,
+          2,
+          "Pendapatan terdiversifikasi AM, armada, asuransi"
+        ],
+        [
+          "Regulasi",
+          "Pengawasan OJK",
+          0,
+          2,
+          "Ketiga anak usaha teregulasi"
+        ],
+        [
+          "Eksposur FX",
+          "Minimal",
+          0,
+          2,
+          "Mayoritas dalam Rupiah"
+        ],
+        [
+          "Rekam jejak dividen",
+          "Konsisten",
+          1,
+          2,
+          "Induk menyalurkan dividen anak usaha"
+        ]
+      ],
+      "zh": [
+        [
+          "业务集中度",
+          "3家子公司",
+          1,
+          2,
+          "收入分散于资管、车队、保险"
+        ],
+        [
+          "监管",
+          "OJK 监管",
+          0,
+          2,
+          "三家子公司均受监管"
+        ],
+        [
+          "汇率风险",
+          "极小",
+          0,
+          2,
+          "主要以印尼盾计价"
+        ],
+        [
+          "分红记录",
+          "稳定",
+          1,
+          2,
+          "母公司收取子公司分红"
+        ]
+      ]
+    }
+  },
+  "SEG": {
+    "years": [
+      "2024",
+      "2025"
+    ],
+    "rows": [
+      {
+        "key": "am",
+        "ownpct": "100",
+        "rev": [
+          409.7,
+          400.2
+        ],
+        "gpm": [
+          45.0,
+          44.0
+        ],
+        "net": [
+          78.0,
+          78.0
+        ]
+      },
+      {
+        "key": "lease",
+        "ownpct": "~70",
+        "rev": [
+          538.5,
+          616.3
+        ],
+        "gpm": [
+          18.0,
+          17.5
+        ],
+        "net": [
+          30.0,
+          35.8
+        ]
+      },
+      {
+        "key": "ins",
+        "ownpct": "~80",
+        "rev": [
+          117.3,
+          130.5
+        ],
+        "gpm": [
+          8.0,
+          9.0
+        ],
+        "net": [
+          65.0,
+          71.3
+        ]
+      }
+    ],
+    "labels": {
+      "en": {
+        "am": "Asset Management (BPAM)",
+        "lease": "Car Rental (BPTR)",
+        "ins": "Insurance (MTWI)"
+      },
+      "id": {
+        "am": "Manajemen Investasi (BPAM)",
+        "lease": "Sewa Mobil (BPTR)",
+        "ins": "Asuransi (MTWI)"
+      },
+      "zh": {
+        "am": "资产管理（BPAM）",
+        "lease": "汽车租赁（BPTR）",
+        "ins": "保险（MTWI）"
+      }
+    },
+    "note25": "Segment revenue from audited segment note. Insurance revenue = net insurance-service revenue (after reinsurance ceding), not gross written premium.",
+    "total": {
+      "rev": [
+        1146.0,
+        1239.6
+      ],
+      "gpm": [
+        25.0,
+        24.0
+      ],
+      "net": [
+        174.0,
+        144.1
+      ]
+    }
+  },
+  "GLOS": {
+    "terms": [
+      {
+        "p": "AUM",
+        "x": "Assets Under Management — total client money managed by BPAM (in IDR trillion)."
+      },
+      {
+        "p": "BPAM",
+        "x": "PT Batavia Prosperindo Aset Manajemen — BPII asset management / mutual fund subsidiary."
+      },
+      {
+        "p": "BPTR",
+        "x": "PT Batavia Prosperindo Trans Tbk — BPII listed car rental / fleet management subsidiary (IDX: BPTR)."
+      },
+      {
+        "p": "MTWI",
+        "x": "PT Malacca Trust Wuwungan Insurance Tbk — BPII listed general insurance subsidiary (IDX: MTWI)."
+      },
+      {
+        "p": "GWP",
+        "x": "Gross Written Premium — total insurance premium written before reinsurance ceding."
+      },
+      {
+        "p": "ROE",
+        "x": "Return on Equity — net profit divided by average shareholders equity, expressed as a percentage."
+      },
+      {
+        "p": "ROA",
+        "x": "Return on Assets — net profit divided by average total assets."
+      },
+      {
+        "p": "D/E",
+        "x": "Debt-to-Equity ratio — total liabilities divided by total equity."
+      },
+      {
+        "p": "EBITDA",
+        "x": "Earnings Before Interest, Tax, Depreciation and Amortisation — core operating profitability measure."
+      },
+      {
+        "p": "FCF",
+        "x": "Free Cash Flow — operating cash flow minus capital expenditure."
+      },
+      {
+        "p": "OJK",
+        "x": "Otoritas Jasa Keuangan — Indonesia Financial Services Authority, regulator of all three subsidiaries."
+      },
+      {
+        "p": "SOTP",
+        "x": "Sum-of-the-parts valuation — valuing each subsidiary separately and summing."
+      },
+      {
+        "p": "BVPS",
+        "x": "Book Value Per Share — total equity divided by shares outstanding."
+      },
+      {
+        "p": "EPS",
+        "x": "Earnings Per Share — net profit attributable to parent divided by shares outstanding."
+      }
+    ]
+  },
+  "SOURCES": [
+    [
+      "Annual Reports (local PDFs)",
+      [
+        [
+          "2014.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "ARFY2015.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "2016.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "2017.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "ARFY2018.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "ARFY2019.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "ARFY2020.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "AR-SRFY2021.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "AR-SR 2022.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "AR & SR 2023 PT BPI-Low.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "AR & SR 2024 PT Batavia Prosperindo Internasional Tbk.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "BPII - AR SR 2025.pdf",
+          "https://www.idx.co.id"
+        ],
+        [
+          "FINAL BPI KONSOL JUNI 2026.pdf (1H2026 interim)",
+          "https://www.idx.co.id"
+        ]
+      ]
+    ],
+    [
+      "Market / IR",
+      [
+        [
+          "Indonesia Stock Exchange (IDX)",
+          "https://www.idx.co.id"
+        ],
+        [
+          "Yahoo Finance – BPII.JK",
+          "https://finance.yahoo.com/quote/BPII.JK"
+        ]
+      ]
+    ]
+  ],
+  "TOP3": {
+    "en": {
+      "h": "Top 3 improvement actions",
+      "sub": "Data-driven priorities for the holding group.",
+      "items": [
+        [
+          "Improve 1H26 earnings quality",
+          "Net profit halved YoY despite revenue growth; investigate cost inflation at MTWI and BPTR margin pressure."
+        ],
+        [
+          "Strengthen capital allocation",
+          "D/E rose to 2.7x; review holding-level debt and dividend payout policy."
+        ],
+        [
+          "Scale BPAM AUM",
+          "AUM stable at IDR 49tn; expand fund offerings and distribution channels."
+        ]
+      ]
+    },
+    "id": {
+      "h": "3 tindakan prioritas",
+      "sub": "Prioritas berbasis data untuk grup induk.",
+      "items": [
+        [
+          "Tingkatkan kualitas laba 1H26",
+          "Laba bersih turun separuh meski pendapatan tumbuh; telusuri inflasi biaya di MTWI dan tekanan margin BPTR."
+        ],
+        [
+          "Perkuat alokasi modal",
+          "D/E naik ke 2,7x; tinjau utang induk dan kebijakan dividen."
+        ],
+        [
+          "Skalakan AUM BPAM",
+          "AUM stabil Rp49 triliun; perbanyak produk reksa dana dan saluran distribusi."
+        ]
+      ]
+    },
+    "zh": {
+      "h": "三大改进重点",
+      "sub": "基于数据的集团优先事项。",
+      "items": [
+        [
+          "提升1H26盈利质量",
+          "收入增长但净利腰斩；排查MTWI成本上升和BPTR利润率压力。"
+        ],
+        [
+          "强化资本配置",
+          "D/E升至2.7x；审视母公司债务和分红政策。"
+        ],
+        [
+          "扩大BPAM资管规模",
+          "AUM稳定在49万亿盾；丰富基金产品和分销渠道。"
+        ]
+      ]
+    }
+  },
+  "OPP": {
+    "en": {
+      "h": "Market opportunities",
+      "sub": "Sector tailwinds for the three subsidiaries.",
+      "items": [
+        [
+          "Indonesian mutual fund market",
+          "Low penetration vs ASEAN peers; growing retail investor base via digital platforms."
+        ],
+        [
+          "EV fleet transition",
+          "BPTR positioned as corporate fleet electrification partner."
+        ],
+        [
+          "Islamic insurance growth",
+          "MTWI can tap sharia-compliant insurance demand."
+        ]
+      ]
+    },
+    "id": {
+      "h": "Peluang pasar",
+      "sub": "Angin sektor untuk ketiga anak usaha.",
+      "items": [
+        [
+          "Pasar reksa dana Indonesia",
+          "Penetrasi rendah vs ASEAN; basis investor ritel tumbuh via platform digital."
+        ],
+        [
+          "Transisi armada EV",
+          "BPTR posisikan diri sebagai mitra elektrifikasi armada korporasi."
+        ],
+        [
+          "Pertumbuhan asuransi syariah",
+          "MTWI manfaatkan permintaan asuransi syariah."
+        ]
+      ]
+    },
+    "zh": {
+      "h": "市场机遇",
+      "sub": "三家子公司的行业顺风。",
+      "items": [
+        [
+          "印尼公募基金市场",
+          "渗透率低于东盟同业；数字平台推动散户增长。"
+        ],
+        [
+          "电动车车队转型",
+          "BPTR定位企业车队电动化合作伙伴。"
+        ],
+        [
+          "伊斯兰保险增长",
+          "MTWI可把握伊斯兰保险需求。"
+        ]
+      ]
+    }
+  },
+  "DEC": {
+    "en": {
+      "h": "Snapshot: 1H26 vs FY25 vs FY24",
+      "cols": [
+        "Metric",
+        "1H26",
+        "FY2025",
+        "FY2024"
+      ],
+      "rows": [
+        [
+          "Revenue (IDR bn)",
+          "1,556.3",
+          "1,239.6",
+          "1,146.0"
+        ],
+        [
+          "Net profit (IDR bn)",
+          "53.0",
+          "144.1",
+          "174.0"
+        ],
+        [
+          "Total assets (IDR bn)",
+          "5,832.7",
+          "6,821.4",
+          "5,629.0"
+        ],
+        [
+          "Equity (IDR bn)",
+          "1,852.5",
+          "1,820.3",
+          "1,749.0"
+        ],
+        [
+          "ROE (%)",
+          "—",
+          "7.9",
+          "9.9"
+        ]
+      ],
+      "note": "1H26 interim is unaudited."
+    },
+    "id": {
+      "h": "Snapshot: 1H26 vs FY25 vs FY24",
+      "cols": [
+        "Metrik",
+        "1H26",
+        "FY2025",
+        "FY2024"
+      ],
+      "rows": [
+        [
+          "Pendapatan (Rp miliar)",
+          "1.556,3",
+          "1.239,6",
+          "1.146,0"
+        ],
+        [
+          "Laba bersih (Rp miliar)",
+          "53,0",
+          "144,1",
+          "174,0"
+        ],
+        [
+          "Total aset (Rp miliar)",
+          "5.832,7",
+          "6.821,4",
+          "5.629,0"
+        ],
+        [
+          "Ekuitas (Rp miliar)",
+          "1.852,5",
+          "1.820,3",
+          "1.749,0"
+        ],
+        [
+          "ROE (%)",
+          "—",
+          "7,9",
+          "9,9"
+        ]
+      ],
+      "note": "Interim 1H26 belum diaudit."
+    },
+    "zh": {
+      "h": "对比：1H26 vs FY25 vs FY24",
+      "cols": [
+        "指标",
+        "1H26",
+        "FY2025",
+        "FY2024"
+      ],
+      "rows": [
+        [
+          "收入（十亿盾）",
+          "1,556.3",
+          "1,239.6",
+          "1,146.0"
+        ],
+        [
+          "净利润（十亿盾）",
+          "53.0",
+          "144.1",
+          "174.0"
+        ],
+        [
+          "总资产（十亿盾）",
+          "5,832.7",
+          "6,821.4",
+          "5,629.0"
+        ],
+        [
+          "权益（十亿盾）",
+          "1,852.5",
+          "1,820.3",
+          "1,749.0"
+        ],
+        [
+          "ROE (%)",
+          "—",
+          "7.9",
+          "9.9"
+        ]
+      ],
+      "note": "1H26 中期未经审计。"
+    }
+  },
+  "DTXT": {
+    "en": {
+      "h": [
+        "Instrumen",
+        "31 Des 2025",
+        "30 Jun 2026",
+        "Suku bunga",
+        "Jatuh tempo",
+        "Agunan",
+        "Status"
+      ],
+      "tbl": [
+        [
+          "Bank loans (fleet & corporate)",
+          "Revolving & tenor",
+          "BPTR fleet + holding",
+          "Current"
+        ],
+        [
+          "Consumer-financing payables",
+          "Short-term",
+          "Residual from divested unit",
+          "Current"
+        ],
+        [
+          "Lease liabilities",
+          "Standard",
+          "Vehicle leases",
+          "Current"
+        ]
+      ],
+      "total": [
+        "Total",
+        "1,717.9",
+        "1,488.8",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "note": "Holding company-level debt is limited; most leverage sits at subsidiaries (BPTR fleet financing, MTWI insurance reserves).",
+      "ratings": [
+        [
+          "Agency",
+          "Rating",
+          "Outlook",
+          "Date"
+        ],
+        [
+          "OJK (regulatory)",
+          "Supervised",
+          "Stable",
+          "2025"
+        ],
+        [
+          "Peers (listed financial)",
+          "BBB- equiv.",
+          "Stable",
+          "2025"
+        ]
+      ],
+      "refi": [
+        [
+          "1H26",
+          "No refinancing events; bank loans renewed on existing terms."
+        ]
+      ],
+      "risk": [
+        [
+          "Total liabilities / Equity",
+          "2.75x (FY25)",
+          1
+        ],
+        [
+          "Cash / Total debt",
+          "0.15x",
+          1
+        ],
+        [
+          "EBITDA / Interest",
+          "2.8x",
+          1
+        ],
+        [
+          "Net debt / EBITDA",
+          "3.4x",
+          2
+        ],
+        [
+          "Subsidiary-level leverage",
+          "BPTR fleet loans; MTWI technical reserves",
+          1
+        ]
+      ]
+    },
+    "id": {
+      "h": [
+        "Instrumen",
+        "31 Des 2025",
+        "30 Jun 2026",
+        "Suku bunga",
+        "Jatuh tempo",
+        "Agunan",
+        "Status"
+      ],
+      "tbl": [
+        [
+          "Pinjaman bank (armada & korporasi)",
+          "Revolving & tenor",
+          "Armada BPTR + induk",
+          "Berjalan"
+        ],
+        [
+          "Utang pembiayaan konsumen",
+          "Jangka pendek",
+          "Sisa unit yang dilepas",
+          "Berjalan"
+        ],
+        [
+          "Liabilitas sewa",
+          "Standar",
+          "Sewa kendaraan",
+          "Berjalan"
+        ]
+      ],
+      "total": [
+        "Total",
+        "1.717,9",
+        "1.488,8",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "note": "Utang tingkat induk terbatas; sebagian besar leverage ada di anak usaha (pembiayaan armada BPTR, cadangan teknis MTWI).",
+      "ratings": [
+        [
+          "Lembaga",
+          "Peringkat",
+          "Prospek",
+          "Tahun"
+        ],
+        [
+          "OJK (regulasi)",
+          "Dibawah pengawasan",
+          "Stabil",
+          "2025"
+        ]
+      ],
+      "refi": [
+        [
+          "1H26",
+          "Tidak ada refinancing; pinjaman bank diperbarui dengan syarat sama."
+        ]
+      ],
+      "risk": [
+        [
+          "Total liab / Ekuitas",
+          "2,75x (FY25)",
+          1
+        ],
+        [
+          "Kas / Total utang",
+          "0,15x",
+          1
+        ],
+        [
+          "EBITDA / Bunga",
+          "2,8x",
+          1
+        ],
+        [
+          "Utang bersih / EBITDA",
+          "3,4x",
+          2
+        ]
+      ]
+    },
+    "zh": {
+      "h": [
+        "工具",
+        "2025年12月31日",
+        "2026年6月30日",
+        "利率",
+        "到期",
+        "抵押",
+        "状态"
+      ],
+      "tbl": [
+        [
+          "银行贷款（车队及公司）",
+          "循环及定期",
+          "BPTR车队+母公司",
+          "存续"
+        ],
+        [
+          "消费金融应付款",
+          "短期",
+          "已剥离业务余额",
+          "存续"
+        ],
+        [
+          "租赁负债",
+          "标准",
+          "车辆租赁",
+          "存续"
+        ]
+      ],
+      "total": [
+        "合计",
+        "1,717.9",
+        "1,488.8",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "note": "母公司层面债务有限；杠杆主要在子公司（BPTR车队融资、MTWI技术准备金）。",
+      "ratings": [
+        [
+          "机构",
+          "评级",
+          "展望",
+          "年份"
+        ],
+        [
+          "OJK（监管）",
+          "受监管",
+          "稳定",
+          "2025"
+        ]
+      ],
+      "refi": [
+        [
+          "1H26",
+          "无再融资事件；银行贷款按现有条款续作。"
+        ]
+      ],
+      "risk": [
+        [
+          "总负债/权益",
+          "2.75x（FY25）",
+          1
+        ],
+        [
+          "现金/总债务",
+          "0.15x",
+          1
+        ],
+        [
+          "EBITDA/利息",
+          "2.8x",
+          1
+        ],
+        [
+          "净负债/EBITDA",
+          "3.4x",
+          2
+        ]
+      ]
+    }
+  },
+  "LTXT": {
+    "en": {
+      "h": "Segments & Assets",
+      "loc": "Operating subsidiaries",
+      "total": "Group"
+    },
+    "id": {
+      "h": "Segmen & Aset",
+      "loc": "Anak usaha operasional",
+      "total": "Grup"
+    },
+    "zh": {
+      "h": "分部资产",
+      "loc": "运营子公司",
+      "total": "集团"
+    }
+  },
+  "VTXT": {
+    "en": {
+      "statsH": "Trading snapshot",
+      "stats": [
+        [
+          "Price / date",
+          "510 IDR · 2025 Q4 close (Yahoo Finance)"
+        ],
+        [
+          "Market cap",
+          "~IDR 5.3tn"
+        ],
+        [
+          "Shares outstanding",
+          "10.31bn"
+        ],
+        [
+          "52-week range",
+          "380 – 620 IDR (approx.)"
+        ],
+        [
+          "P/B",
+          "3.6x parent BVPS 176.5"
+        ],
+        [
+          "P/E",
+          "39x FY25 EPS 14.0"
+        ],
+        [
+          "Dividend yield",
+          "~2.0% (est.)"
+        ]
+      ],
+      "peersH": "Peer comparison",
+      "peers": [
+        "Company",
+        "P/B",
+        "P/E",
+        "ROE"
+      ],
+      "analystsH": "Analyst view",
+      "analysts": [
+        [
+          "Source",
+          "Target price",
+          "Rating"
+        ],
+        [
+          "Yahoo Finance consensus",
+          "~550",
+          "Hold"
+        ]
+      ],
+      "events": [
+        [
+          "FY25 results",
+          "Revenue IDR 1,240bn; NI IDR 144bn."
+        ],
+        [
+          "1H26 interim",
+          "Revenue IDR 1,556bn; NI IDR 53bn."
+        ]
+      ]
+    },
+    "id": {
+      "statsH": "Snapshot perdagangan",
+      "stats": [
+        [
+          "Harga / tanggal",
+          "510 IDR · penutupan Q4 2025 (Yahoo Finance)"
+        ],
+        [
+          "Kapitalisasi pasar",
+          "~Rp5,3 triliun"
+        ],
+        [
+          "Saham beredar",
+          "10,31 miliar"
+        ],
+        [
+          "Rentang 52 minggu",
+          "380 – 620 IDR (perkiraan)"
+        ],
+        [
+          "P/B",
+          "3,6x BVPS induk 176,5"
+        ],
+        [
+          "P/E",
+          "39x EPS FY25 14,0"
+        ],
+        [
+          "Dividend yield",
+          "~2,0% (estimasi)"
+        ]
+      ],
+      "peersH": "Bandingkan pesaing",
+      "peers": [
+        "Perusahaan",
+        "P/B",
+        "P/E",
+        "ROE"
+      ],
+      "analystsH": "Pandangan analis",
+      "analysts": [
+        [
+          "Sumber",
+          "Target harga",
+          "Rekomendasi"
+        ],
+        [
+          "Konsensus Yahoo Finance",
+          "~550",
+          "Hold"
+        ]
+      ],
+      "events": [
+        [
+          "Hasil FY25",
+          "Pendapatan Rp1.240 miliar; laba Rp144 miliar."
+        ],
+        [
+          "Interim 1H26",
+          "Pendapatan Rp1.556 miliar; laba Rp53 miliar."
+        ]
+      ]
+    },
+    "zh": {
+      "statsH": "交易快照",
+      "stats": [
+        [
+          "价格/日期",
+          "510 盾 · 2025年四季度收盘（Yahoo Finance）"
+        ],
+        [
+          "市值",
+          "约5.3万亿盾"
+        ],
+        [
+          "总股本",
+          "103.1亿股"
+        ],
+        [
+          "52周区间",
+          "380 – 620 盾（约）"
+        ],
+        [
+          "市净率",
+          "3.6x（母公司BVPS 176.5）"
+        ],
+        [
+          "市盈率",
+          "39x（FY25 EPS 14.0）"
+        ],
+        [
+          "股息率",
+          "约2.0%（估）"
+        ]
+      ],
+      "peersH": "同业比较",
+      "peers": [
+        "公司",
+        "市净率",
+        "市盈率",
+        "ROE"
+      ],
+      "analystsH": "分析师观点",
+      "analysts": [
+        [
+          "来源",
+          "目标价",
+          "评级"
+        ],
+        [
+          "Yahoo Finance 共识",
+          "约550",
+          "持有"
+        ]
+      ],
+      "events": [
+        [
+          "FY25 业绩",
+          "收入1,240十亿盾；净利144十亿盾。"
+        ],
+        [
+          "1H26 中期",
+          "收入1,556十亿盾；净利53十亿盾。"
+        ]
+      ]
+    }
+  },
+  "NXT": {
+    "en": {
+      "book": "N/A — financial holding, no land bank",
+      "mlo": "N/A",
+      "mhi": "N/A",
+      "cash": "IDR 247.5bn (FY25)",
+      "totD": "IDR 1,488.8bn (1H26)",
+      "sched": "See debt schedule",
+      "bpii": "BPII holding company",
+      "bptr": "BPTR (listed fleet)",
+      "mtwi": "MTWI (listed insurance)",
+      "bpam": "BPAM (asset management)"
+    },
+    "id": {
+      "book": "Tidak tersedia — grup induk keuangan, tanpa bank tanah",
+      "mlo": "N/A",
+      "mhi": "N/A",
+      "cash": "Rp247,5 miliar (FY25)",
+      "totD": "Rp1.488,8 miliar (1H26)",
+      "sched": "Lihat jadwal utang",
+      "bpii": "BPII induk",
+      "bptr": "BPTR (armada tervisitasi)",
+      "mtwi": "MTWI (asuransi tervisitasi)",
+      "bpam": "BPAM (manajemen investasi)"
+    },
+    "zh": {
+      "book": "不适用——金融控股集团，无土地储备",
+      "mlo": "不适用",
+      "mhi": "不适用",
+      "cash": "247.5 十亿盾（FY25）",
+      "totD": "1,488.8 十亿盾（1H26）",
+      "sched": "见债务明细",
+      "bpii": "BPII 母公司",
+      "bptr": "BPTR（上市车队）",
+      "mtwi": "MTWI（上市保险）",
+      "bpam": "BPAM（资产管理）"
+    }
+  },
+  "VALI": {
+    "en": {
+      "h": "Valuation Illustration",
+      "sub": "Multi-method SOTP for BPII",
+      "disc": "Illustrative only; not investment advice.",
+      "inputsH": "Key inputs",
+      "inputs": [
+        [
+          "Parent equity",
+          "IDR 1,820bn"
+        ],
+        [
+          "Parent shares",
+          "10.31bn"
+        ],
+        [
+          "Parent BVPS",
+          "IDR 176.5"
+        ],
+        [
+          "FY25 parent EPS",
+          "IDR 14.0"
+        ]
+      ],
+      "methodH": "Methods",
+      "methods": [
+        [
+          "Method",
+          "Input",
+          "Value/share",
+          "vs price 510"
+        ],
+        [
+          "P/B",
+          "3.6x BVPS",
+          "~635",
+          "+25%"
+        ],
+        [
+          "P/E",
+          "39x EPS",
+          "~546",
+          "+7%"
+        ],
+        [
+          "SOTP (sum-of-parts)",
+          "Sum of subsidiary valuations",
+          "~580",
+          "+14%"
+        ]
+      ],
+      "weightNote": "Equal-weighted methods.",
+      "compH": "Comparables",
+      "comp": [
+        "Peers avg P/B",
+        "~2.5x",
+        "BPII at premium"
+      ],
+      "impliedH": "Implied value",
+      "implied": "~IDR 580/share (weighted average)",
+      "keyH": "Key takeaway",
+      "key": [
+        "BPII trades at premium to book; SOTP suggests modest upside."
+      ]
+    },
+    "id": {
+      "h": "Ilustrasi Valuasi",
+      "sub": "SOTP multi-metode untuk BPII",
+      "disc": "Ilustratif saja; bukan nasihat investasi.",
+      "inputsH": "Input utama",
+      "inputs": [
+        [
+          "Ekuitas induk",
+          "Rp1.820 miliar"
+        ],
+        [
+          "Saham induk",
+          "10,31 miliar"
+        ],
+        [
+          "BVPS induk",
+          "Rp176,5"
+        ],
+        [
+          "EPS induk FY25",
+          "Rp14,0"
+        ]
+      ],
+      "methodH": "Metode",
+      "methods": [
+        [
+          "Metode",
+          "Input",
+          "Nilai/saham",
+          "vs harga 510"
+        ],
+        [
+          "P/B",
+          "3,6x BVPS",
+          "~635",
+          "+25%"
+        ],
+        [
+          "P/E",
+          "39x EPS",
+          "~546",
+          "+7%"
+        ],
+        [
+          "SOTP",
+          "Jumlah valuasi anak usaha",
+          "~580",
+          "+14%"
+        ]
+      ],
+      "weightNote": "Bobot sama.",
+      "compH": "Komparabel",
+      "comp": [
+        "Rata-rata P/B peer",
+        "~2,5x",
+        "BPII premium"
+      ],
+      "impliedH": "Nilai implisit",
+      "implied": "~Rp580/saham (rata-rata terbobot)",
+      "keyH": "Kesimpulan",
+      "key": [
+        "BPII diperdagangkan di atas nilai buku; SOTP menunjukkan upside moderat."
+      ]
+    },
+    "zh": {
+      "h": "估值示意",
+      "sub": "BPII 多方法分部加总估值",
+      "disc": "仅为示意，不构成投资建议。",
+      "inputsH": "关键输入",
+      "inputs": [
+        [
+          "母公司权益",
+          "1,820 十亿盾"
+        ],
+        [
+          "母公司股本",
+          "103.1 亿股"
+        ],
+        [
+          "母公司每股净资产",
+          "176.5 盾"
+        ],
+        [
+          "FY25 母公司EPS",
+          "14.0 盾"
+        ]
+      ],
+      "methodH": "估值方法",
+      "methods": [
+        [
+          "方法",
+          "输入",
+          "每股价值",
+          "对比510盾"
+        ],
+        [
+          "市净率",
+          "3.6x BVPS",
+          "约635",
+          "+25%"
+        ],
+        [
+          "市盈率",
+          "39x EPS",
+          "约546",
+          "+7%"
+        ],
+        [
+          "SOTP",
+          "子公司估值加总",
+          "约580",
+          "+14%"
+        ]
+      ],
+      "weightNote": "等权重方法。",
+      "compH": "可比公司",
+      "comp": [
+        "同业平均P/B",
+        "约2.5x",
+        "BPII溢价"
+      ],
+      "impliedH": "隐含价值",
+      "implied": "约580盾/股（加权平均）",
+      "keyH": "要点",
+      "key": [
+        "BPII 交易高于净资产；SOTP显示温和上行空间。"
+      ]
+    }
+  },
+  "LIQ": {
+    "en": {
+      "h": "Liquidation value",
+      "sub": "N/A for financial holding",
+      "disc": "",
+      "hd": [],
+      "rows": [],
+      "note": "BPII is a financial holding group with no land bank assets."
+    },
+    "id": {
+      "h": "Nilai likuidasi",
+      "sub": "Tidak berlaku untuk grup induk keuangan",
+      "disc": "",
+      "hd": [],
+      "rows": [],
+      "note": "BPII adalah grup induk keuangan tanpa aset bank tanah."
+    },
+    "zh": {
+      "h": "清算价值",
+      "sub": "金融控股集团不适用",
+      "disc": "",
+      "hd": [],
+      "rows": [],
+      "note": "BPII为金融控股集团，无土地储备资产。"
+    }
+  },
+  "LBV": {
+    "en": {
+      "h": "Land bank value per share",
+      "sub": "N/A",
+      "disc": "",
+      "hd": [],
+      "rows": [],
+      "note": "Not applicable to BPII.",
+      "disc2": ""
+    },
+    "id": {
+      "h": "Nilai bank tanah per saham",
+      "sub": "Tidak berlaku",
+      "disc": "",
+      "hd": [],
+      "rows": [],
+      "note": "Tidak berlaku untuk BPII.",
+      "disc2": ""
+    },
+    "zh": {
+      "h": "每股土地储备价值",
+      "sub": "不适用",
+      "disc": "",
+      "hd": [],
+      "rows": [],
+      "note": "BPII不适用。",
+      "disc2": ""
+    }
+  },
+  "CHT": {
+    "en": {
+      "unit": "IDR bn",
+      "cons": "Consolidated",
+      "parent": "Parent",
+      "gM": "Gross margin",
+      "nM": "Net margin",
+      "roe": "ROE",
+      "roa": "ROA",
+      "de": "D/E",
+      "segAM": "Asset Management",
+      "segLease": "Car Rental",
+      "segIns": "Insurance",
+      "cash": "Cash",
+      "other": "Other",
+      "ebitdaI": "EBITDA",
+      "nd": "Net debt",
+      "openC": "Opening cash",
+      "consS": "Net change",
+      "closeC": "Closing cash",
+      "totR": "Total revenue",
+      "amPie": "AM",
+      "leasePie": "Lease",
+      "insPie": "Insurance",
+      "rePie": "Revenue",
+      "ebitdaPie": "EBITDA",
+      "npPie": "Net profit",
+      "ta": "Total assets",
+      "tl": "Total liabilities",
+      "te": "Total equity",
+      "op": "Operating profit",
+      "no": "Net profit",
+      "revL": "Revenue",
+      "ebitdaL": "EBITDA",
+      "npL": "Net profit",
+      "npPL": "Attributable to parent",
+      "assetsL": "Assets",
+      "liabL": "Liabilities",
+      "equityL": "Equity",
+      "cashL": "Cash",
+      "debtL": "Debt",
+      "netDebtL": "Net debt",
+      "msalesL": "N/A",
+      "openC24": "Opening cash (end-2023)",
+      "consS24": "Consolidated result 2024",
+      "closeC24": "Closing cash (end-2024)",
+      "openC25": "Opening cash (end-2024)",
+      "consS25": "Consolidated result 2025",
+      "closeC25": "Closing cash (end-2025)",
+      "amSeg": "Asset Management",
+      "leaseSeg": "Car Rental",
+      "insSeg": "Insurance"
+    },
+    "id": {
+      "unit": "Rp miliar",
+      "cons": "Konsolidasi",
+      "parent": "Induk",
+      "gM": "Margin kotor",
+      "nM": "Margin bersih",
+      "roe": "ROE",
+      "roa": "ROA",
+      "de": "D/E",
+      "segAM": "Manajemen Investasi",
+      "segLease": "Sewa Mobil",
+      "segIns": "Asuransi",
+      "cash": "Kas",
+      "other": "Lainnya",
+      "ebitdaI": "EBITDA",
+      "nd": "Utang bersih",
+      "openC": "Kas awal",
+      "consS": "Perubahan bersih",
+      "closeC": "Kas akhir",
+      "totR": "Total pendapatan",
+      "amPie": "MI",
+      "leasePie": "Sewa",
+      "insPie": "Asuransi",
+      "rePie": "Pendapatan",
+      "ebitdaPie": "EBITDA",
+      "npPie": "Laba bersih",
+      "ta": "Total aset",
+      "tl": "Total liabilitas",
+      "te": "Total ekuitas",
+      "op": "Laba operasi",
+      "no": "Laba bersih",
+      "revL": "Pendapatan",
+      "ebitdaL": "EBITDA",
+      "npL": "Laba bersih",
+      "npPL": "Laba entitas induk",
+      "assetsL": "Aset",
+      "liabL": "Liabilitas",
+      "equityL": "Ekuitas",
+      "cashL": "Kas",
+      "debtL": "Utang",
+      "netDebtL": "Utang bersih",
+      "msalesL": "N/A",
+      "openC24": "Kas awal (akhir 2023)",
+      "consS24": "Hasil konsolidasi 2024",
+      "closeC24": "Kas akhir (akhir 2024)",
+      "openC25": "Kas awal (akhir 2024)",
+      "consS25": "Hasil konsolidasi 2025",
+      "closeC25": "Kas akhir (akhir 2025)",
+      "amSeg": "Manajemen Investasi",
+      "leaseSeg": "Sewa Mobil",
+      "insSeg": "Asuransi"
+    },
+    "zh": {
+      "unit": "十亿盾",
+      "cons": "合并",
+      "parent": "母公司",
+      "gM": "毛利率",
+      "nM": "净利率",
+      "roe": "净资产收益率",
+      "roa": "总资产收益率",
+      "de": "负债权益比",
+      "segAM": "资产管理",
+      "segLease": "汽车租赁",
+      "segIns": "保险",
+      "cash": "现金",
+      "other": "其他",
+      "ebitdaI": "EBITDA",
+      "nd": "净负债",
+      "openC": "期初现金",
+      "consS": "净变动",
+      "closeC": "期末现金",
+      "totR": "总收入",
+      "amPie": "资管",
+      "leasePie": "租赁",
+      "insPie": "保险",
+      "rePie": "收入",
+      "ebitdaPie": "EBITDA",
+      "npPie": "净利润",
+      "ta": "总资产",
+      "tl": "总负债",
+      "te": "总权益",
+      "op": "营业利润",
+      "no": "净利润",
+      "revL": "收入",
+      "ebitdaL": "EBITDA",
+      "npL": "净利润",
+      "npPL": "归母净利润",
+      "assetsL": "资产",
+      "liabL": "负债",
+      "equityL": "权益",
+      "cashL": "现金",
+      "debtL": "债务",
+      "netDebtL": "净负债",
+      "msalesL": "不适用",
+      "openC24": "期初现金（2023年末）",
+      "consS24": "2024年合并变动",
+      "closeC24": "期末现金（2024年末）",
+      "openC25": "期初现金（2024年末）",
+      "consS25": "2025年合并变动",
+      "closeC25": "期末现金（2025年末）",
+      "amSeg": "资产管理",
+      "leaseSeg": "汽车租赁",
+      "insSeg": "保险"
+    }
+  },
+  "WC": [],
+  "SUBOPS": {
+    "bpam": {
+      "aumTn": 49,
+      "funds": 107,
+      "agents": 37,
+      "revenue": 400.2,
+      "ni": 78.0,
+      "hist": {
+        "aumTn": [
+          21.9,
+          29.1,
+          38.6,
+          41.7,
+          49.9,
+          49.2,
+          43.3
+        ],
+        "agents": [
+          16,
+          18,
+          19,
+          21,
+          24,
+          27,
+          29
+        ],
+        "funds": [
+          87,
+          107,
+          117,
+          123,
+          139,
+          127,
+          114
+        ]
+      }
+    },
+    "bptr": {
+      "fleet": 6928,
+      "revenue": 616.3,
+      "ni": 35.8,
+      "hist": {
+        "fleet": [
+          null,
+          null,
+          null,
+          2565,
+          2648,
+          2792,
+          3643
+        ],
+        "revenue": [
+          null,
+          null,
+          null,
+          132.2,
+          162.6,
+          162.3,
+          212.0
+        ]
+      }
+    },
+    "mtwi": {
+      "grossPremium": 1695.8,
+      "uwProfit": 130.9,
+      "ni": 71.3,
+      "hist": {
+        "gwp": [
+          252.5,
+          332.8,
+          358.2,
+          369.6
+        ]
+      }
+    },
+    "note": "BPAM AUM/funds/agents and BPTR fleet are subsidiary-level operating data; MTWI GWP is gross written premium (subsidiary), distinct from consolidated net insurance-service revenue of IDR 130.5bn."
+  },
+  "SEPG": [
+    {
+      "seg": "Asset Management (BPAM)",
+      "rev": 400.2,
+      "profit": 66.9,
+      "margin": 16.7
+    },
+    {
+      "seg": "Car Rental / Fleet (BPTR)",
+      "rev": 616.3,
+      "profit": 18.1,
+      "margin": 2.9
+    },
+    {
+      "seg": "General Insurance (MTWI)",
+      "rev": 130.5,
+      "profit": 30.6,
+      "margin": 23.4
+    }
+  ],
+  "KEYP": {
+    "en": {
+      "h": "Key performance highlights",
+      "sub": "FY2025 consolidated",
+      "rows": [
+        [
+          "Revenue CAGR 2021-25",
+          "16.9%"
+        ],
+        [
+          "Segment diversification",
+          "AM / Fleet / Insurance"
+        ],
+        [
+          "ROE trend",
+          "8.0% → 7.9%"
+        ],
+        [
+          "Asset growth",
+          "+21% YoY (FY25)"
+        ]
+      ],
+      "hd": [
+        "Metric",
+        "Value"
+      ]
+    },
+    "id": {
+      "h": "Sorotan kinerja utama",
+      "sub": "Konsolidasi FY2025",
+      "rows": [
+        [
+          "CAGR pendapatan 2021-25",
+          "16,9%"
+        ],
+        [
+          "Diversifikasi segmen",
+          "AM / Armada / Asuransi"
+        ],
+        [
+          "Tren ROE",
+          "8,0% → 7,9%"
+        ],
+        [
+          "Pertumbuhan aset",
+          "+21% YoY (FY25)"
+        ]
+      ],
+      "hd": [
+        "Metrik",
+        "Nilai"
+      ]
+    },
+    "zh": {
+      "h": "关键业绩亮点",
+      "sub": "FY2025 合并",
+      "rows": [
+        [
+          "收入CAGR 2021-25",
+          "16.9%"
+        ],
+        [
+          "分部多元化",
+          "资管/车队/保险"
+        ],
+        [
+          "ROE趋势",
+          "8.0% → 7.9%"
+        ],
+        [
+          "资产增长",
+          "+21% 同比（FY25）"
+        ]
+      ],
+      "hd": [
+        "指标",
+        "数值"
+      ]
+    }
+  },
+  "CON": {
+    "note": "Financial holding – no land bank; LIQ/LBV empty by design. Pre-2022 CFO includes divested consumer-finance unit. 2018-2020 continuing revenue/NI derived by subtracting BPF segment from reported consolidated."
+  }
+}

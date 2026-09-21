@@ -1,0 +1,1797 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BPII Dashboard — PT Batavia Prosperindo Internasional Tbk</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F5E40'/%3E%3Ctext x='32' y='46' font-size='38' text-anchor='middle' fill='%23F1F4EE' font-family='Arial' font-weight='700'%3EB%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#16241C; --paper:#EFF2EC; --card:#FFFFFF; --line:#DCE3D9;
+  --green:#1F5E40; --green2:#4A8B66; --teal:#3E7D6B; --amber:#C07A2D; --clay:#B04A2E;
+  --muted:#5C6B61; --ok:#2E7D4F; --warn:#C07A2D; --high:#B04A2E; --soft:#E4E9E0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{font-family:"Segoe UI","Microsoft YaHei",system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:14px}
+header{background:var(--ink);color:#EDF2EC;padding:16px 22px 14px}
+.hd-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.hd-title{display:flex;align-items:center;gap:12px}
+.logo{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:9px;background:var(--green);color:#EDF2EC;font-size:22px;font-weight:800}
+.hd-title h1{font-size:20px;font-weight:700;letter-spacing:.3px}
+.hd-title p{font-size:12px;color:#AFC2B4;margin-top:1px}
+.hd-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.hd-meta{font-size:11px;color:#AFC2B4;text-align:right;line-height:1.6}
+.langs{display:inline-flex;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:8px;overflow:hidden}
+.langs button{border:none;background:transparent;color:#C9D8CE;font-size:12px;padding:5px 13px;cursor:pointer;font-family:inherit}
+.langs button+button{border-left:1px solid rgba(255,255,255,.22)}
+.langs button.active{background:var(--green);color:#fff;font-weight:600}
+nav.tabs{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.tabs-inner{max-width:1180px;margin:0 auto;display:flex;gap:2px;overflow-x:auto;padding:0 12px}
+a.tab{display:inline-block;padding:11px 15px;font-size:13.5px;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+a.tab:hover{color:var(--green)}
+a.tab.active{color:var(--green);border-bottom-color:var(--green);font-weight:600}
+main{max-width:1180px;margin:0 auto;padding:18px 22px 34px}
+.page{display:none}
+.page.active{display:block}
+.page-h{font-size:17px;font-weight:700;margin-bottom:4px}
+.page-d{font-size:12.5px;color:var(--muted);margin-bottom:14px}
+.block-h{font-size:15px;font-weight:600;margin:6px 0 10px}
+.phase{display:flex;gap:8px;flex-wrap:wrap;margin:2px 0 16px}
+.chip{font-size:12px;color:var(--muted);border:1px solid var(--line);background:#fff;border-radius:14px;padding:3px 12px}
+.chip b{color:var(--green)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:11px;margin-bottom:18px}
+.kpis:has(> :nth-child(4):last-child){grid-template-columns:repeat(4,minmax(0,1fr))}
+.kpis:has(> :nth-child(6):last-child){grid-template-columns:repeat(6,minmax(0,1fr))}
+.kpis:has(> :nth-child(8):last-child){grid-template-columns:repeat(8,minmax(0,1fr))}
+@media(max-width:1199px){
+  .kpis:has(> :nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpis:has(> :nth-child(6):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}
+  .kpis:has(> :nth-child(8):last-child){grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:699px){
+  .kpis:has(> :nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpis:has(> :nth-child(6):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpis:has(> :nth-child(8):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:11px 13px}
+.kpi .lbl{font-size:12px;color:var(--muted)}
+.kpi .val{font-size:23px;font-weight:700;font-variant-numeric:tabular-nums;margin:2px 0 1px;line-height:1.2}
+.kpi .val small{font-size:12px;font-weight:500;color:var(--muted)}
+.kpi .del{font-size:12px;font-variant-numeric:tabular-nums}
+.up{color:var(--ok)}.dn{color:var(--high)}.flat{color:var(--muted)}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:18px}
+.chart-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px 8px}
+.chart-card h3{font-size:14px;font-weight:600;margin-bottom:2px}
+.chart-card .sub{font-size:11px;color:var(--muted);margin-bottom:6px}
+.chart{width:100%;height:300px}
+#v-1{height:430px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:18px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:13px 15px}
+.panel h3{font-size:14px;font-weight:600;margin-bottom:8px}
+.panel h3 .hint{font-weight:400;font-size:11px;color:var(--muted)}
+ul.events{list-style:none}
+ul.events li{display:flex;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:13px}
+ul.events li:last-child{border-bottom:none}
+ul.events .d{flex:none;width:76px;color:var(--green);font-weight:600;font-variant-numeric:tabular-nums;font-size:12px;padding-top:1px}
+.risk-row{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.risk-row:last-child{border-bottom:none}
+.risk-row .nm{flex:1 1 34%;min-width:120px}
+.risk-row .vv{flex:1 1 22%;font-weight:600;font-variant-numeric:tabular-nums;min-width:90px}
+.risk-row .bar{flex:1 1 22%;height:7px;background:var(--soft);border-radius:4px;overflow:hidden;min-width:60px}
+.risk-row .bar i{display:block;height:100%}
+.badge{flex:none;font-size:11px;font-weight:600;border-radius:10px;padding:1px 9px;min-width:44px;text-align:center}
+.lv-low{background:#DDEBDD;color:#1F5E40}
+.lv-mid{background:#F3E3C8;color:#8A5A14}
+.lv-high{background:#F0D5CC;color:#8F3520}
+.risk-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
+.dir-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:11px;margin-bottom:18px}
+.dir{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.dir .n{font-size:11px;font-weight:700;color:var(--green);letter-spacing:.5px}
+.dir h4{font-size:14px;margin:3px 0 4px}
+.dir p{font-size:12.5px;color:var(--muted)}
+.tl{--date:66px;--axis:26px;--gap:12px;display:grid;grid-template-columns:var(--date) var(--axis) 1fr;column-gap:var(--gap);position:relative}
+.tl::before{content:"";position:absolute;left:calc(var(--date) + var(--gap) + var(--axis)/2 - 1px);top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl .yr{font-weight:700;color:var(--green);text-align:right;padding-top:2px;font-size:15px}
+.tl .dot{width:13px;height:13px;border-radius:50%;background:var(--green);justify-self:center;margin-top:5px;position:relative;z-index:1}
+.tl .ev{margin-bottom:13px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13px}
+.tl .ev b{color:var(--green)}
+.tl .ev .m{color:var(--muted);font-size:12px;margin-top:2px}
+/* ===== 股权结构页 ===== */
+.own-bars{display:flex;flex-direction:column;gap:9px;margin-bottom:18px}
+.own-row{display:flex;align-items:center;gap:12px;font-size:13px}
+.own-row .nm{flex:0 0 240px;color:var(--muted)}
+.own-row .bar{flex:1;height:14px;background:var(--soft);border-radius:7px;overflow:hidden}
+.own-row .bar i{display:block;height:100%;background:var(--green)}
+.own-row .bar i.hl{background:var(--teal)}
+.own-row .bar i.hl2{background:var(--green2)}
+.own-row .vv{flex:0 0 90px;font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.hld{display:flex;flex-direction:column;align-items:center;margin-bottom:18px}
+.hld-top{border:1px solid var(--ink);background:var(--ink);color:#EDF2EC;border-radius:9px;padding:9px 22px;text-align:center;min-width:260px}
+.hld-top b{font-size:15px;display:block}
+.hld-top span{font-size:11.5px;color:#AFC2B4}
+.hld-line{width:2px;height:20px;background:var(--line)}
+.hld-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%;position:relative}
+.hld-pillars::before{content:"";position:absolute;top:-20px;left:16%;right:16%;height:2px;background:var(--line)}
+.hld-pillar{border:1px solid var(--line);border-radius:8px;background:#fff;padding:10px 10px 8px}
+.hld-pillar h4{font-size:13px;margin-bottom:2px}
+.hld-pillar .hld-kind{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hld-ents{display:flex;flex-direction:column;gap:6px}
+.hld-ent{display:flex;justify-content:space-between;align-items:baseline;gap:6px;font-size:12.5px;padding:5px 8px;border:1px solid #E6EBE4;border-radius:6px;background:#FAFBF8;line-height:1.3}
+.hld-ent .nm{font-weight:600}
+.hld-ent .sub{font-size:11px;color:var(--muted);display:block}
+.hld-ent .p{flex:none;font-weight:700;color:var(--green);font-variant-numeric:tabular-nums}
+.hld-ent.jv{border-color:#EAD9BC}
+.hld-ent.jv .p{color:var(--amber)}
+.hld-more{font-size:11.5px;color:var(--muted);margin-top:7px}
+/* ===== 公司治理/组织页 ===== */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:18px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:11px 13px}
+.fact .lbl{font-size:11.5px;color:var(--muted)}
+.fact .val{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px;line-height:1.25}
+.fact .val small{font-size:11.5px;font-weight:500;color:var(--muted)}
+.org{display:flex;flex-direction:column;align-items:center}
+.org-box{border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 18px;text-align:center;min-width:230px}
+.org-box b{display:block;font-size:13.5px;line-height:1.35}
+.org-box span{font-size:11.5px;color:var(--muted)}
+.org-box.dark{background:var(--ink);border-color:var(--ink)}
+.org-box.dark b{color:#EDF2EC}
+.org-box.dark span{color:#AFC2B4}
+.org-box.green{background:var(--green);border-color:var(--green)}
+.org-box.green b{color:#fff}
+.org-box.green span{color:#D6E4DA}
+.org-line{width:2px;height:16px;background:var(--line);flex:none}
+.org-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;width:100%;position:relative;padding-top:16px}
+.org-row::before{content:"";position:absolute;top:0;left:12%;right:12%;height:2px;background:var(--line)}
+.org-col{display:flex;flex-direction:column;align-items:center;flex:1 1 150px;max-width:230px}
+.org-col .vline{width:2px;height:14px;background:var(--line);flex:none}
+.g-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:12.5px;table-layout:fixed;margin-bottom:18px}
+.g-table th{background:var(--ink);color:#EDF2EC;padding:7px 9px;text-align:left;font-weight:600;font-size:12px;overflow-wrap:break-word;word-break:break-word}
+.g-table td{padding:6px 9px;border-top:1px solid var(--line);font-variant-numeric:tabular-nums;vertical-align:top;overflow-wrap:break-word;word-break:break-word}
+.g-table .gterm{white-space:normal}
+.g-table tr:nth-child(even) td{background:#F7F9F5}
+.g-table td.b{font-weight:700}
+.g-table td.p{text-align:right;color:var(--green);font-weight:600}
+.g-table td.amber{color:var(--amber);font-weight:600}
+.g-table .gname{color:var(--muted);font-size:11.5px;font-weight:600;background:#EFF2EC}
+.g-table-wrap{width:100%;overflow-x:auto;margin-bottom:18px}
+.g-table-wrap .g-table{margin-bottom:0;min-width:640px}
+footer{max-width:1180px;margin:0 auto;padding:6px 22px 30px;font-size:11px;color:var(--muted);line-height:1.7}
+footer a{color:var(--green)}
+.ft-ver{margin-top:8px;font-weight:600;color:var(--ink)}
+.ft-log{margin-top:4px;font-weight:400}
+.ft-log summary{cursor:pointer;color:var(--green);display:inline}
+.ft-log ul{margin:6px 0 0 18px;padding:0}
+.ft-log li{margin:2px 0}
+.hl-driver{border-left:3px solid var(--green);margin-top:14px}
+.hl-driver p{margin:6px 0 0}
+#csvBtn{position:fixed;right:16px;bottom:16px;z-index:99;background:var(--ink);color:#EDF2EC;border:none;border-radius:20px;padding:8px 14px;font-size:12px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#csvBtn:hover{background:var(--green)}
+@media(max-width:900px){
+  .charts,.two-col{grid-template-columns:1fr}
+  .chart{height:280px}
+  .hd-right,.hd-meta{text-align:left;align-items:flex-start}
+  main{padding:14px 14px 30px}
+  .hld-pillars{grid-template-columns:1fr}
+  .hld-pillars::before{display:none}
+  .own-row .nm{flex-basis:150px}
+}
+/* ===== 术语悬停解释 ===== */
+.gterm{border-bottom:1px dotted rgba(31,94,64,.55);cursor:help;white-space:nowrap}
+.gterm.gterm-long{white-space:normal}
+.gterm-q{display:inline-block;margin-left:1px;width:1.1em;height:1.1em;line-height:1.15em;text-align:center;border-radius:50%;background:rgba(176,74,46,.13);color:var(--high);font-size:.62em;font-weight:800;vertical-align:super;cursor:help}
+.gterm-tip{position:fixed;z-index:3000;max-width:320px;background:var(--ink);color:#F2F5F1;font-size:12px;line-height:1.55;padding:8px 10px;border-radius:6px;box-shadow:0 8px 22px rgba(0,0,0,.3);display:none;pointer-events:auto;word-wrap:break-word}
+.gterm-tip::before{content:"";position:absolute;left:12px;bottom:-5px;width:10px;height:10px;background:var(--ink);transform:rotate(45deg)}
+.tab{font-weight:600}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="hd-inner">
+    <div class="hd-title">
+      <span class="logo">B</span>
+      <div><h1 data-i18n="app_title"></h1><p data-i18n="app_sub"></p></div>
+    </div>
+    <div class="hd-right">
+            <div class="langs" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-label="English">EN</button>
+        <button type="button" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+        <button type="button" data-lang="zh" aria-label="中文">中文</button>
+      </div>
+    </div>
+  </div>
+</header>
+<nav class="tabs" id="tabs" role="navigation" aria-label="Sections">
+  <div class="tabs-inner">
+    <a class="tab active" href="#overview" data-page="overview" data-i18n="t_overview"></a>
+    <a class="tab" href="#profit" data-page="profit" data-i18n="t_prof"></a>
+    <a class="tab" href="#debt" data-page="debt" data-i18n="t_debt"></a>
+    <a class="tab" href="#segments" data-page="segments" data-i18n="t_landbank"></a>
+    <a class="tab" href="#valuation" data-page="valuation" data-i18n="t_valuation"></a>
+    <a class="tab" href="#vali" data-page="vali" data-i18n="t_vali"></a>
+    <a class="tab" href="#risk" data-page="risk" data-i18n="t_risk"></a>
+    <a class="tab" href="#holding" data-page="holding" data-i18n="t_holding"></a>
+    <a class="tab" href="#org" data-page="org" data-i18n="t_org"></a>
+    <a class="tab" href="#fy2026" data-page="fy2026" data-i18n="t_fy2026"></a>
+    <a class="tab" href="#fy2025" data-page="fy2025" data-i18n="t_fy2025"></a>
+    <a class="tab" href="#fy2024" data-page="fy2024" data-i18n="t_fy2024"></a>
+  </div>
+</nav>
+<main>
+
+<!-- ===== 视图：总览 ===== -->
+<section class="page active" id="overview">
+  <div class="phase" id="phases"></div>
+  <div class="kpis" id="ov-kpis"></div>
+  <div class="charts">
+    <div class="chart-card"><h3 data-i18n="c_o1_t"></h3><div class="sub" data-i18n="c_o1_s"></div><div class="chart" id="o1"></div></div>
+    <div class="chart-card">
+  <h3 data-i18n="c_o2_t"></h3>
+  <div class="chart" id="o2"></div>
+</div>
+    <div class="chart-card"><h3 data-i18n="c_o3_t"></h3><div class="sub" data-i18n="c_o3_s"></div><div class="chart" id="o3"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_o4_t"></h3><div class="sub" data-i18n="c_o4_s"></div><div class="chart" id="o4"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_o6_t"></h3><div class="sub" data-i18n="c_o6_s"></div><div class="chart" id="o6"></div></div>
+  </div>
+</section>
+
+<!-- ===== 视图：盈利能力 ===== -->
+<section class="page" id="profit">
+  <h2 class="page-h" data-i18n="prof_h"></h2>
+  <p class="page-d" data-i18n="prof_d"></p>
+  <div class="kpis" id="k-prof"></div>
+  <div class="charts">
+    <div class="chart-card"><h3 data-i18n="c_p1_t"></h3><div class="sub" data-i18n="c_p1_s"></div><div class="chart" id="p-1"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_p2_t"></h3><div class="sub" data-i18n="c_p2_s"></div><div class="chart" id="p-2"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_p3_t"></h3><div class="sub" data-i18n="c_p3_s"></div><div class="chart" id="p-3"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_p4_t"></h3><div class="sub" data-i18n="c_p4_s"></div><div class="chart" id="p-4"></div></div>
+  </div>
+  <div class="panel">
+    <h3 data-i18n="seg_h"></h3>
+    <div class="table-wrap" id="seg-tbl"></div>
+    <div data-i18n-html="seg_note" style="margin-top:8px"></div>
+  </div>
+</section>
+
+<!-- ===== 视图：2024 年报 ===== -->
+<section class="page" id="fy2024">
+  <div class="kpis" id="k24"></div>
+  <div class="charts">
+    <div class="chart-card"><h3 data-i18n="c_f24_1_t"></h3><div class="sub" data-i18n="c_f24_1_s"></div><div class="chart" id="f24-1"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_f24_2_t"></h3><div class="sub" data-i18n="c_f24_2_s"></div><div class="chart" id="f24-2"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_f24_3_t"></h3><div class="sub" data-i18n="c_f24_3_s"></div><div class="chart" id="f24-3"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_f24_4_t"></h3><div class="sub" data-i18n="c_f24_4_s"></div><div class="chart" id="f24-4"></div></div>
+  </div>
+  <div class="two-col">
+    <div class="panel"><h3 data-i18n="ev24_t"></h3><ul class="events" id="ev24"></ul></div>
+    <div class="panel"><h3 data-i18n="rk24_t"></h3><div id="rk24"></div><div class="risk-note" data-i18n="note24"></div></div>
+  </div>
+  <div class="panel hl-driver"><h3 data-i18n="g24_t"></h3><p class="page-d" data-i18n="g24"></p></div>
+</section>
+
+<!-- ===== 视图：2025 年报 ===== -->
+<section class="page" id="fy2025">
+  <div class="kpis" id="k25"></div>
+  <div class="charts">
+    <div class="chart-card"><h3 data-i18n="c_f25_1_t"></h3><div class="sub" data-i18n="c_f25_1_s"></div><div class="chart" id="f25-1"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_f25_2_t"></h3><div class="sub" data-i18n="c_f25_2_s"></div><div class="chart" id="f25-2"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_f25_3_t"></h3><div class="sub" data-i18n="c_f25_3_s"></div><div class="chart" id="f25-3"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_f25_4_t"></h3><div class="sub" data-i18n="c_f25_4_s"></div><div class="chart" id="f25-4"></div></div>
+  </div>
+  <div class="two-col">
+    <div class="panel"><h3 data-i18n="ev25_t"></h3><ul class="events" id="ev25"></ul></div>
+    <div class="panel"><h3 data-i18n="rk25_t"></h3><div id="rk25"></div><div class="risk-note" data-i18n="note25"></div></div>
+  </div>
+  <div class="panel hl-driver"><h3 data-i18n="g25_t"></h3><p class="page-d" data-i18n="g25"></p></div>
+</section>
+
+<!-- ===== 视图：2026 中报 ===== -->
+<section class="page" id="fy2026">
+  <div class="kpis" id="k26"></div>
+  <div class="charts">
+    <div class="chart-card"><h3 data-i18n="c_f26_1_t"></h3><div class="sub" data-i18n="c_f26_1_s"></div><div class="chart" id="f26-1"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_f26_2_t"></h3><div class="sub" data-i18n="c_f26_2_s"></div><div class="chart" id="f26-2"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_f26_3_t"></h3><div class="sub" data-i18n="c_f26_3_s"></div><div class="chart" id="f26-3"></div></div>
+  </div>
+  <div class="two-col">
+    <div class="panel"><h3 data-i18n="ev26_t"></h3><ul class="events" id="ev26"></ul></div>
+    <div class="panel"><h3 data-i18n="rk26_t"></h3><div id="rk26"></div><div class="risk-note" data-i18n="note26"></div></div>
+  </div>
+  <div class="panel hl-driver"><h3 data-i18n="g26_t"></h3><p class="page-d" data-i18n="g26"></p></div>
+</section>
+
+<!-- ===== 视图：债务与偿债能力 ===== -->
+<section class="page" id="debt">
+  <h2 class="page-h" data-i18n="debt_h"></h2>
+  <p class="page-d" data-i18n="debt_d"></p>
+  <div class="kpis" id="k-debt"></div>
+  <div class="charts">
+    <div class="chart-card"><h3 data-i18n="c_d1_t"></h3><div class="sub" data-i18n="c_d1_s"></div><div class="chart" id="d-1"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_d2_t"></h3><div class="sub" data-i18n="c_d2_s"></div><div class="chart" id="d-2"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_d3_t"></h3><div class="sub" data-i18n="c_d3_s"></div><div class="chart" id="d-3"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_d4_t"></h3><div class="sub" data-i18n="c_d4_s"></div><div class="chart" id="d-4"></div></div>
+  </div>
+  <h3 class="block-h" data-i18n="wc_h"></h3>
+  <div class="charts">
+    <div class="chart-card"><h3 data-i18n="c_wc1_t"></h3><div class="sub" data-i18n="c_wc1_s"></div><div class="chart" id="d-5"></div></div>
+  </div>
+  <div id="wc-table"></div>
+  <h3 class="block-h" data-i18n="debt_table_h"></h3>
+  <div id="debt-table"></div>
+  <div class="two-col">
+    <div class="panel"><h3 data-i18n="debt_rate_h"></h3><div id="debt-rate"></div></div>
+    <div class="panel"><h3 data-i18n="debt_refi_h"></h3><ul class="events" id="debt-refi"></ul><div class="risk-note" data-i18n="debt_refi_note"></div></div>
+  </div>
+  <div class="panel" style="margin-top:2px"><h3 data-i18n="debt_risk_t"></h3><div id="debt-risk"></div><div class="risk-note" data-i18n="debt_note"></div></div>
+</section>
+
+<!-- ===== 视图：分部与资产 ===== -->
+<section class="page" id="segments">
+  <h2 class="page-h" data-i18n="lb_h"></h2>
+  <p class="page-d" data-i18n="lb_d"></p>
+  <div class="kpis" id="k-seg"></div>
+  <div class="charts">
+    <div class="chart-card"><h3 data-i18n="c_lb1_t"></h3><div class="sub" data-i18n="c_lb1_s"></div><div class="chart" id="seg-1"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_lb2_t"></h3><div class="sub" data-i18n="c_lb2_s"></div><div class="chart" id="seg-2"></div></div>
+  </div>
+  <h3 class="block-h" data-i18n="lb_table_h"></h3>
+  <div id="seg-sub-table"></div>
+  <div class="panel"><h3 data-i18n="lb_note_h"></h3><div class="risk-note" data-i18n="lb_note"></div></div>
+</section>
+
+<!-- ===== 视图：估值与股价 ===== -->
+<section class="page" id="valuation">
+  <h2 class="page-h" data-i18n="val_h"></h2>
+  <p class="page-d" data-i18n="val_d"></p>
+  <div class="kpis" id="k-val"></div>
+  <div class="charts">
+    <div class="chart-card"><h3 data-i18n="c_v1_t"></h3><div class="sub" data-i18n="c_v1_s"></div><div class="chart" id="v-1"></div></div>
+    <div class="chart-card"><h3 data-i18n="c_v2_t"></h3><div class="sub" data-i18n="c_v2_s"></div><div class="chart" id="v-2"></div></div>
+  </div>
+  <div class="two-col">
+    <div class="panel"><h3 data-i18n="val_stats_t"></h3><div id="val-stats"></div></div>
+    <div class="panel"><h3 data-i18n="val_peers_t"></h3><div id="val-peers"></div><div class="risk-note" data-i18n="val_peers_note"></div></div>
+  </div>
+  <div class="two-col">
+    <div class="panel"><h3 data-i18n="val_analysts_t"></h3><div id="val-analysts"></div></div>
+    <div class="panel"><h3 data-i18n="val_events_t"></h3><ul class="events" id="val-events"></ul></div>
+  </div>
+</section>
+
+<!-- ===== 视图：估值测算 ===== -->
+<section class="page" id="vali">
+  <h2 class="page-h" data-i18n="t_vali"></h2>
+  <p class="page-d" id="vali-sub"></p>
+  <div class="risk-note" id="vali-disc"></div>
+  <div class="charts">
+    <div class="chart-card"><h3 id="vali-chart-h"></h3><div class="sub" id="vali-chart-s"></div><div class="chart" id="vi-1"></div></div>
+  </div>
+  <div id="vali-inputs"></div>
+  <div id="vali-methods"></div>
+  <div id="vali-comp"></div>
+  <div id="vali-implied"></div>
+  <div id="vali-keyp"></div>
+  <div id="vali-key"></div>
+</section>
+
+<!-- ===== 视图：风险与方向 ===== -->
+<section class="page" id="risk">
+  <h2 class="page-h" data-i18n="rkall_h"></h2>
+  <p class="page-d" data-i18n="rkall_d"></p>
+  <div class="panel" style="margin-bottom:20px" id="rk-all"></div>
+  <h2 class="page-h" id="top3-h"></h2>
+  <p class="page-d" id="top3-sub"></p>
+  <div class="panel" style="margin-bottom:20px" id="top3"></div>
+  <h2 class="page-h" id="opp-h"></h2>
+  <p class="page-d" id="opp-sub"></p>
+  <div class="panel" style="margin-bottom:20px" id="opp"></div>
+  <h2 class="page-h" data-i18n="dir_h"></h2>
+  <div class="dir-grid" id="dirs"></div>
+  <h2 class="page-h" data-i18n="tl_h"></h2>
+  <div class="tl" id="tl"></div>
+</section>
+
+<!-- ===== 视图：股权结构 ===== -->
+<section class="page" id="holding">
+  <h2 class="page-h" data-i18n="hld_h"></h2>
+  <p class="page-d" data-i18n="hld_d"></p>
+  <h3 class="block-h" data-i18n="hld_own_h"></h3>
+  <div class="own-bars" id="own-bars"></div>
+  <h3 class="block-h" data-i18n="hld_group_h"></h3>
+  <div class="hld" id="hld"></div>
+  <h3 class="block-h" data-i18n="hld_table_h"></h3>
+  <div id="hld-table"></div>
+</section>
+
+<!-- ===== 视图：公司治理与组织 ===== -->
+<section class="page" id="org">
+  <h2 class="page-h" data-i18n="org_h"></h2>
+  <p class="page-d" data-i18n="org_d"></p>
+  <h3 class="block-h" data-i18n="org_facts_h"></h3>
+  <div class="facts" id="org-facts"></div>
+  <h3 class="block-h" data-i18n="org_gov_h"></h3>
+  <div class="org" id="org-gov"></div>
+  <h3 class="block-h" data-i18n="org_chart_h"></h3>
+  <div class="org" id="org-chart"></div>
+  <h3 class="block-h" data-i18n="org_mgmt_h"></h3>
+  <div id="org-mgmt"></div>
+</section>
+
+</main>
+<footer>
+  <div data-i18n="ft_src"></div>
+  <div data-i18n="ft_note"></div>
+</footer>
+
+<script>
+/* ================================================================
+   数据与多语言文案层（EN 默认 / ID 印尼文 / ZH 中文）
+   单位：十亿印尼盾（IDR bn / Rp miliar / 十亿盾），数字最多保留 1 位小数
+   ================================================================ */
+var I18N = {
+en: {
+  app_title:'BPII Financial & Operations Dashboard',
+  app_sub:'PT Batavia Prosperindo Internasional Tbk (IDX: BPII) · Financial Holding Group · Asset Management · Fleet · Insurance',
+  meta_src:'Source: company annual reports, interim financials, investor disclosures and IDX announcements',
+  meta_asof:'Data as of 2026-09-21 · Unit: IDR billion unless otherwise stated',
+  t_overview:'Overview', t_fy2024:'FY2024', t_fy2025:'FY2025', t_fy2026:'1H2026', t_debt:'Debt & Solvency', t_landbank:'Segments & Assets', t_valuation:'Valuation', t_vali:'Valuation Illustration', t_risk:'Risk & Direction', t_holding:'Holding Structure', t_org:'Organization',
+  wc_h:'Working capital & receivables quality',
+  c_wc1_t:'Trade receivables & DSO',
+  c_wc1_s:'Net trade receivables bars vs DSO (days, right axis). Receivables and collection quality across subsidiaries.',
+  wch_item:'Item (IDR bn)', wch_26:'1H2026', wch_25:'FY2025', wch_24:'FY2024',
+  wcr_gross:'Trade receivables, gross (3rd party)', wcr_net:'Trade receivables, net (current)',
+  wcr_allow:'Allowance for impairment', wcr_duen:'Not yet due', wcr_over6:'Over 6 months',
+  wcr_dso:'Receivables days (DSO)', wcr_ap:'Trade payables', wcr_dep:'Customer security deposits',
+  wcr_woff:'Receivables written off in year',
+  wc_note:'Source: audited financial statements. Receivables quality and DSO reflect the mix between asset management, fleet rental and insurance premiums.',
+  t_prof:'Profitability',
+  prof_h:'Profitability analysis (2015-2025)',
+  prof_d:'Profitability ladder of a financial holding group: gross to EBITDA to net margin, returns on equity and assets, and cash conversion across asset management, fleet rental and insurance.',
+  c_p1_t:'Margin trend (2015-2025)',
+  c_p1_s:'Gross / EBITDA / net margin, %.',
+  c_p2_t:'ROE vs ROA',
+  c_p2_s:'Return on equity vs return on assets, %.',
+  c_p3_t:'EBITDA vs net profit',
+  c_p3_s:'EBITDA bars and consolidated net profit line, IDR bn.',
+  c_p4_t:'Revenue vs gross margin',
+  c_p4_s:'Revenue bars with gross-margin overlay (dual axis).',
+  seg_h:'Segment P&L by business (FY2024 vs FY2025)',
+  seg_note:'<span style="color:#666;font-size:12px">Note: segment results are shown pre-elimination; inter-segment items are removed in consolidation. The group operates three subsidiaries: BPAM (asset management), BPTR (fleet rental) and MTWI (insurance).</span>',
+  seg_s:'',
+  ph1:'Phase <b>scale-up</b>: asset management AUM expanding',
+  ph2:'Phase <b>portfolio build-out</b>: fleet and insurance scaled',
+  ph3:'Phase <b>holding maturity</b>: diversified three-engine earnings',
+  ph4:'Phase <b>current</b>: recurring fee and premium income',
+  c_o1_t:'Revenue (2015–2025)', c_o1_s:'Consolidated revenue, IDR bn',
+  c_o2_t:'Net profit: consolidated vs parent', c_o2_s:'',
+  c_o3_t:'Margins & leverage trend', c_o3_s:'Gross margin / net margin / ROE / Debt-to-equity',
+  c_o4_t:'Segment revenue: Asset Management · Fleet · Insurance', c_o4_s:'2021–2025, IDR bn; three operating subsidiaries',
+  c_o5_t:'Segment Revenue', c_o5_s:'3 segments',
+  c_o6_t:'EBITDA (2015–2025)', c_o6_s:'EBITDA trend, IDR bn',
+  c_f24_1_t:'Revenue mix (FY2024)', c_f24_1_s:'Asset management / Fleet rental / Insurance',
+  c_f24_2_t:'P&L snapshot (FY2024)', c_f24_2_s:'Revenue · EBITDA · NP cons. · NP parent (IDR bn)',
+  c_f24_3_t:'Balance sheet (31 Dec 2024)', c_f24_3_s:'Assets · Liabilities · Equity (IDR bn)',
+  c_f24_4_t:'Cash bridge (2024)', c_f24_4_s:'Opening + net change = closing cash (IDR bn)',
+  c_f25_1_t:'Revenue mix (FY2025)', c_f25_1_s:'Asset management / Fleet rental / Insurance',
+  c_f25_2_t:'P&L snapshot (FY2025)', c_f25_2_s:'Revenue · EBITDA · NP cons. · NP parent (IDR bn)',
+  c_f25_3_t:'Balance sheet (31 Dec 2025)', c_f25_3_s:'Assets · Liabilities · Equity (IDR bn)',
+  c_f25_4_t:'Cash bridge (2025)', c_f25_4_s:'Opening + net change = closing cash (IDR bn)',
+  c_f26_1_t:'1H26 vs 1H25 revenue', c_f26_1_s:'Total by segment, IDR bn',
+  c_f26_2_t:'Segment mix (latest)', c_f26_2_s:'Asset management / Fleet rental / Insurance, IDR bn',
+  c_f26_3_t:'Net debt position (30 Jun 2026)', c_f26_3_s:'Cash · Total debt · Net debt (IDR bn)',
+  ev24_t:'2024 key events', rk24_t:'2024 risk indicators',
+  note24:'Overall: segment diversification progressing; watch points are asset inflows, fleet utilization and insurance underwriting margin.',
+  ev25_t:'2025 key events', rk25_t:'2025 risk indicators',
+  note25:'Overall: three operating subsidiaries contributing recurring fee, rental and premium income; watch points are AUM retention and underwriting discipline.',
+  ev26_t:'2026 key events (to Sep)', rk26_t:'2026 risk indicators',
+  note26:'Overall: interim results reflect the holding group mix; watch points are segment margins and balance-sheet strength.',
+  rkall_h:'Risk indicator overview', rkall_d:'Based on annual reports and interim data; levels are relative judgments, bar length shows the current level.',
+  dec_h:'Decision metrics: 1H2026 vs FY2025 vs FY2024',
+  dec_d:'Key metrics across three periods.',
+  dir_h:'Development direction', tl_h:'Decade milestones',
+  hld_h:'Holding Structure', hld_d:'Group structure and subsidiaries per the latest Annual Report; assets are consolidated totals in IDR bn.',
+  hld_own_h:'Shareholders', hld_group_h:'Group structure by business pillar', hld_table_h:'Consolidated subsidiaries',
+  hld_note:'n/a = not separately disclosed.',
+  org_h:'Organization & Governance', org_d:'Governance and organization per the latest Annual Report.',
+  org_facts_h:'Corporate facts', org_gov_h:'Boards & committees', org_chart_h:'Organization structure', org_mgmt_h:'Key people',
+  org_mgmt_note:'Functions shown as published in the organization chart.',
+  tbl_entity:'Entity', tbl_biz:'Principal activity', tbl_via:'Via', tbl_own:'Ownership', tbl_assets:'Assets (IDR bn)', tbl_status:'Status', tbl_name:'Name', tbl_func:'Function',
+  debt_h:'Debt details & solvency', debt_d:'Debt by lender, maturity profile and debt-servicing analysis per the latest reports.',
+  c_d1_t:'Debt by lender', c_d1_s:'Total interest-bearing debt, IDR bn; average cost of debt',
+  c_d2_t:'Debt maturity profile', c_d2_s:'Principal due by year, IDR bn',
+  c_d3_t:'Solvency trend', c_d3_s:'EBITDA/interest; net debt/EBITDA',
+  c_d4_t:'Cash vs total debt', c_d4_s:'Cash & equivalents vs total debt, IDR bn',
+  debt_table_h:'Debt details by lender', debt_rate_h:'Credit ratings', debt_refi_h:'Refinancing recap', debt_refi_note:'Refinancing and funding mix per disclosures.',
+  debt_risk_t:'Solvency risk indicators', debt_note:'Overall: solvency indicators per latest reports; watch points are funding cost and maturity profile.',
+  lb_h:'Segments & Assets', lb_d:'Operating subsidiaries and their key operating metrics: BPAM (asset management), BPTR (fleet rental) and MTWI (insurance).',
+  c_lb1_t:'Segment revenue trend', c_lb1_s:'Asset management / Fleet rental / Insurance, IDR bn',
+  c_lb2_t:'Segment revenue (latest year)', c_lb2_s:'Three operating subsidiaries, IDR bn',
+  lb_table_h:'Subsidiary operating metrics', lb_note_h:'Notes & sources', lb_note:'BPAM (Batavia Prosperindo Aset Manajemen): AUM 49 trillion IDR, 107 funds, 37 sales agents. BPTR (Batavia Prosperindo Trans Tbk): fleet of 6,928 vehicles. MTWI (Malacca Trust Wuwungan Insurance Tbk): gross premium 1,695.8 bn IDR. Figures per company disclosures.',
+  val_h:'Valuation & share price', val_d:'Valuation metrics and share price history from IDX and market data providers. Market data delayed.',
+  c_v1_t:'Share price — last 12 months (IDR)', c_v1_s:'Monthly close; market data delayed.',
+  c_v2_t:'Price-to-book & price-to-sales comparison', c_v2_s:'BPII vs peer, multiples',
+  val_stats_t:'Valuation & trading snapshot', val_peers_t:'Peer comparison', val_peers_note:'Peer comparison per market data providers.',
+  val_analysts_t:'Analyst views & ratings', val_events_t:'Price & trading milestones (12 months)',
+  ft_src:'Annual reports & disclosures: <a href="https://www.idx.co.id" target="_blank" rel="noopener">IDX</a> · <a href="https://www.idx.co.id" target="_blank" rel="noopener">Company IR page</a> · <a href="https://www.idx.co.id" target="_blank" rel="noopener">IDX announcements</a>',
+  ft_note:'This dashboard is for information only and does not constitute investment advice. Interim figures are unaudited; historical figures may differ slightly from older disclosures due to annual-report restatements.',
+  g24_t:'FY2024 drivers & highlights',
+  g24:'FY2024 results reflect the three-subsidiary holding mix: asset management fees, fleet rental income and insurance premiums. Detailed figures are consolidated in the structured data below.',
+  g25_t:'FY2025 drivers & highlights',
+  g25:'FY2025 results reflect recurring fee, rental and premium income across BPAM, BPTR and MTWI. Detailed figures are consolidated in the structured data below.',
+  g26_t:'1H2026 drivers & highlights',
+  g26:'1H2026 interim results reflect the holding group mix across the three operating subsidiaries. Detailed figures are consolidated in the structured data below.',
+  ft_log_t:'Changelog',
+  ft_log_1:'BPII dashboard adapted from the financial-dashboard playbook.',
+  ft_log_2:'Segment model: Asset Management · Fleet · Insurance.',
+  ft_log_3:'Data overridden at runtime from data.json.',
+  seg_kpi_aum:'BPAM AUM', seg_kpi_aum_d:'asset under management',
+  seg_kpi_funds:'BPAM funds', seg_kpi_funds_d:'mutual funds',
+  seg_kpi_agents:'BPAM sales agents', seg_kpi_agents_d:'distribution',
+  seg_kpi_fleet:'BPTR fleet', seg_kpi_fleet_d:'vehicles',
+  seg_kpi_premium:'MTWI gross premium', seg_kpi_premium_d:'FY2025',
+  seg_kpi_uw:'MTWI underwriting profit', seg_kpi_uw_d:'FY2025',
+  seg_unit_tn:'IDR tn', seg_unit_funds:'funds', seg_unit_agents:'agents', seg_unit_vehicles:'vehicles', seg_unit_bn:'IDR bn',
+  seg_col_metric:'Key metric', seg_col_value:'Value', seg_col_unit:'Unit',
+  sub_biz_am:'Asset management / mutual funds', sub_biz_lease:'Car rental & fleet management', sub_biz_ins:'General & life insurance',
+  seg_metric_aum:'AUM', seg_metric_fleet:'Fleet size', seg_metric_premium:'Gross premium'
+},
+id: {
+  app_title:'Dasbor Keuangan & Operasional BPII',
+  app_sub:'PT Batavia Prosperindo Internasional Tbk (IDX: BPII) · Grup Usaha Keuangan · Manajemen Investasi · Sewa Kendaraan · Asuransi',
+  meta_src:'Sumber: laporan tahunan perusahaan, laporan keuangan interim, rilis investor & pengumuman IDX',
+  meta_asof:'Data per 2026-09-21 · Satuan: miliar rupiah (IDR bn), kecuali dinyatakan lain',
+  t_overview:'Ringkasan', t_fy2024:'FY2024', t_fy2025:'FY2025', t_fy2026:'1H2026', t_debt:'Utang & Solvabilitas', t_landbank:'Segmen & Aset', t_valuation:'Valuasi', t_vali:'Ilustrasi Valuasi', t_risk:'Risiko & Arah', t_holding:'Struktur Kepemilikan', t_org:'Organisasi',
+  wc_h:'Modal kerja & kualitas piutang',
+  c_wc1_t:'Piutang usaha & DSO',
+  c_wc1_s:'Batang piutang usaha bersih vs DSO (hari, sumbu kanan). Kualitas piutang & penagihan antar anak usaha.',
+  wch_item:'Pos (Rp miliar)', wch_26:'1H2026', wch_25:'2025', wch_24:'2024',
+  wcr_gross:'Piutang usaha, kotor (pihak ketiga)', wcr_net:'Piutang usaha, bersih (lancar)',
+  wcr_allow:'Cadangan penurunan nilai', wcr_duen:'Belum jatuh tempo', wcr_over6:'Lebih dari 6 bulan',
+  wcr_dso:'Hari piutang (DSO)', wcr_ap:'Utang usaha', wcr_dep:'Uang jaminan pelanggan',
+  wcr_woff:'Piutang dihapus buku tahun berjalan',
+  wc_note:'Sumber: laporan keuangan audit. Kualitas piutang & DSO mencerminkan bauran manajemen investasi, sewa armada dan premi asuransi.',
+  t_prof:'Profitabilitas',
+  prof_h:'Analisis profitabilitas (2015-2025)',
+  prof_d:'Tangga profitabilitas grup usaha keuangan: margin kotor, EBITDA, bersih; imbal hasil ekuitas/aset; dan konversi kas lintas manajemen investasi, sewa armada dan asuransi.',
+  c_p1_t:'Tren margin (2015-2025)',
+  c_p1_s:'Margin kotor / EBITDA / bersih, %.',
+  c_p2_t:'ROE vs ROA',
+  c_p2_s:'Imbal hasil ekuitas vs aset, %.',
+  c_p3_t:'EBITDA vs laba bersih',
+  c_p3_s:'Batang EBITDA dan garis laba bersih konsolidasi, Rp miliar.',
+  c_p4_t:'Pendapatan vs margin kotor',
+  c_p4_s:'Batang pendapatan dengan overlay margin kotor (sumbu ganda).',
+  seg_h:'Laba-rugi per segmen usaha (FY2024 vs FY2025)',
+  seg_note:'<span style="color:#666;font-size:12px">Catatan: hasil segmen ditampilkan sebelum eliminasi; antar segmen dieliminasi saat konsolidasi. Grup menjalankan tiga anak usaha: BPAM (manajemen investasi), BPTR (sewa armada) dan MTWI (asuransi).</span>',
+  seg_s:'',
+  ph1:'Fase <b>scale-up</b>: AUM manajemen investasi tumbuh',
+  ph2:'Fase <b>bangun portofolio</b>: armada & asuransi berkembang',
+  ph3:'Fase <b>grup matang</b>: laba tiga mesin terdiversifikasi',
+  ph4:'Fase <b>kini</b>: pendapatan fee & premium berulang',
+  c_o1_t:'Pendapatan (2015–2025)', c_o1_s:'Pendapatan konsolidasi, Rp miliar',
+  c_o2_t:'Laba bersih: konsolidasi vs entitas induk', c_o2_s:'',
+  c_o3_t:'Tren margin & leverage', c_o3_s:'Margin kotor / margin bersih / ROE / Utang÷Ekuitas',
+  c_o4_t:'Pendapatan segmen: Manajemen Investasi · Sewa Kendaraan · Asuransi', c_o4_s:'2021–2025, Rp miliar; tiga anak usaha',
+  c_o5_t:'Penjualan Pemasaran', c_o5_s:'3 segments',
+  c_o6_t:'EBITDA (2015–2025)', c_o6_s:'Tren EBITDA, Rp miliar',
+  c_f24_1_t:'Komposisi pendapatan (FY2024)', c_f24_1_s:'Manajemen investasi / Sewa armada / Asuransi',
+  c_f24_2_t:'Ringkasan L/R (FY2024)', c_f24_2_s:'Pendapatan · EBITDA · Laba kons. · Laba induk (Rp miliar)',
+  c_f24_3_t:'Neraca (31 Des 2024)', c_f24_3_s:'Aset · Liabilitas · Ekuitas (Rp miliar)',
+  c_f24_4_t:'Rekonsiliasi kas (2024)', c_f24_4_s:'Kas awal + perubahan bersih = kas akhir (Rp miliar)',
+  c_f25_1_t:'Komposisi pendapatan (FY2025)', c_f25_1_s:'Manajemen investasi / Sewa armada / Asuransi',
+  c_f25_2_t:'Ringkasan L/R (FY2025)', c_f25_2_s:'Pendapatan · EBITDA · Laba kons. · Laba induk (Rp miliar)',
+  c_f25_3_t:'Neraca (31 Des 2025)', c_f25_3_s:'Aset · Liabilitas · Ekuitas (Rp miliar)',
+  c_f25_4_t:'Rekonsiliasi kas (2025)', c_f25_4_s:'Kas awal + perubahan bersih = kas akhir (Rp miliar)',
+  c_f26_1_t:'Pendapatan 1H26 vs 1H25', c_f26_1_s:'Total per segmen, Rp miliar',
+  c_f26_2_t:'Bauran segmen (terkini)', c_f26_2_s:'Manajemen investasi / Sewa armada / Asuransi, Rp miliar',
+  c_f26_3_t:'Posisi utang bersih (30 Jun 2026)', c_f26_3_s:'Kas · Total utang · Utang bersih (Rp miliar)',
+  ev24_t:'Peristiwa penting 2024', rk24_t:'Indikator risiko 2024',
+  note24:'Penilaian: diversifikasi segmen berjalan; titik perhatian arus masuk aset, utilisasi armada dan margin underwriting asuransi.',
+  ev25_t:'Peristiwa penting 2025', rk25_t:'Indikator risiko 2025',
+  note25:'Penilaian: tiga anak usaha memberi pendapatan fee, sewa dan premium berulang; titik perhatian retensi AUM dan disiplin underwriting.',
+  ev26_t:'Peristiwa penting 2026 (s/d Sep)', rk26_t:'Indikator risiko 2026',
+  note26:'Penilaian: hasil interim mencerminkan bauran grup; titik perhatian margin segmen dan kekuatan neraca.',
+  rkall_h:'Ringkasan indikator risiko', rkall_d:'Berdasarkan laporan tahunan & data interim; tingkat bersifat penilaian relatif, panjang bar menunjukkan level saat ini.',
+  dec_h:'Metrik keputusan: 1H2026 vs FY2025 vs FY2024',
+  dec_d:'Metrik kunci tiga periode.',
+  dir_h:'Arah pengembangan', tl_h:'Tonggak sejarah',
+  hld_h:'Struktur Kepemilikan', hld_d:'Struktur grup dan anak usaha berdasarkan Laporan Tahunan terbaru; aset adalah total konsolidasi dalam Rp miliar.',
+  hld_own_h:'Pemegang saham', hld_group_h:'Struktur grup menurut pilar bisnis', hld_table_h:'Anak usaha konsolidasian',
+  hld_note:'n/a = tidak diungkapkan terpisah.',
+  org_h:'Organisasi & Tata Kelola', org_d:'Tata kelola dan organisasi berdasarkan Laporan Tahunan terbaru.',
+  org_facts_h:'Fakta korporasi', org_gov_h:'Dewan & komite', org_chart_h:'Struktur organisasi', org_mgmt_h:'Nama-nama kunci',
+  org_mgmt_note:'Fungsi ditampilkan sebagaimana dipublikasikan pada bagan organisasi.',
+  tbl_entity:'Entitas', tbl_biz:'Kegiatan utama', tbl_via:'Melalui', tbl_own:'Kepemilikan', tbl_assets:'Aset (Rp miliar)', tbl_status:'Status', tbl_name:'Nama', tbl_func:'Fungsi',
+  debt_h:'Rincian utang & solvabilitas', debt_d:'Utang per kreditur, profil jatuh tempo dan analisis pelayanan utang per laporan terbaru.',
+  c_d1_t:'Utang per kreditur', c_d1_s:'Total utang berbunga, Rp miliar; biaya utang rata-rata',
+  c_d2_t:'Profil jatuh tempo utang', c_d2_s:'Pokok jatuh tempo per tahun, Rp miliar',
+  c_d3_t:'Tren solvabilitas', c_d3_s:'EBITDA/bunga; utang bersih/EBITDA',
+  c_d4_t:'Kas vs total utang', c_d4_s:'Kas & setara kas vs total utang, Rp miliar',
+  debt_table_h:'Rincian utang per kreditur', debt_rate_h:'Peringkat kredit', debt_refi_h:'Rekap refinancing', debt_refi_note:'Refinancing & bauran pendanaan per disclosures.',
+  debt_risk_t:'Indikator risiko solvabilitas', debt_note:'Penilaian: indikator solvabilitas per laporan terbaru; titik perhatian biaya dana dan profil jatuh tempo.',
+  lb_h:'Segmen & Aset', lb_d:'Anak usaha operasional dan meteri operasional kuncinya: BPAM (manajemen investasi), BPTR (sewa armada) dan MTWI (asuransi).',
+  c_lb1_t:'Tren pendapatan segmen', c_lb1_s:'Manajemen investasi / Sewa armada / Asuransi, Rp miliar',
+  c_lb2_t:'Pendapatan segmen (tahun terkini)', c_lb2_s:'Tiga anak usaha operasional, Rp miliar',
+  lb_table_h:'Metrik operasional anak usaha', lb_note_h:'Catatan & sumber', lb_note:'BPAM (Batavia Prosperindo Aset Manajemen): AUM 49 triliun rupiah, 107 reksa dana, 37 agen pemasaran. BPTR (Batavia Prosperindo Trans Tbk): armada 6.928 kendaraan. MTWI (Malacca Trust Wuwungan Insurance Tbk): gross premium 1.695,8 miliar rupiah. Angka per disclosures perusahaan.',
+  val_h:'Valuasi & harga saham', val_d:'Metrik valuasi dan riwayat harga saham dari IDX dan penyedia data pasar. Data pasar tertunda.',
+  c_v1_t:'Harga saham — 12 bulan terakhir (IDR)', c_v1_s:'Penutupan bulanan; data pasar tertunda.',
+  c_v2_t:'Price-to-book & price-to-sales', c_v2_s:'BPII vs peer, kelipatan',
+  val_stats_t:'Ringkasan valuasi & perdagangan', val_peers_t:'Perbandingan peer', val_peers_note:'Perbandingan peer per penyedia data pasar.',
+  val_analysts_t:'Pandangan analis & peringkat', val_events_t:'Tonggak harga & perdagangan (12 bulan)',
+  ft_src:'Laporan tahunan & disclosures: <a href="https://www.idx.co.id" target="_blank" rel="noopener">IDX</a> · <a href="https://www.idx.co.id" target="_blank" rel="noopener">Halaman IR perusahaan</a> · <a href="https://www.idx.co.id" target="_blank" rel="noopener">Pengumuman IDX</a>',
+  ft_note:'Dasbor ini hanya untuk informasi dan bukan merupakan saran investasi. Angka interim belum diaudit; angka historis dapat berbeda sedikit akibat penyesuaian laporan tahunan.',
+  g24_t:'Pendorong & sorotan FY2024',
+  g24:'Hasil FY2024 mencerminkan bauran grup tiga anak usaha: fee manajemen investasi, pendapatan sewa armada dan premi asuransi. Rincian dikonsolidasi pada data terstruktur.',
+  g25_t:'Pendorong & sorotan FY2025',
+  g25:'Hasil FY2025 mencerminkan pendapatan fee, sewa dan premium berulang lintas BPAM, BPTR dan MTWI. Rincian dikonsolidasi pada data terstruktur.',
+  g26_t:'Pendorong & sorotan 1H2026',
+  g26:'Hasil interim 1H2026 mencerminkan bauran grup di tiga anak usaha. Rincian dikonsolidasi pada data terstruktur.',
+  ft_log_t:'Riwayat perubahan',
+  ft_log_1:'Dasbor BPII diadaptasi dari playbook dasbor keuangan.',
+  ft_log_2:'Model segmen: Manajemen Investasi · Sewa Kendaraan · Asuransi.',
+  ft_log_3:'Data ditimpa saat runtime dari data.json.',
+  seg_kpi_aum:'AUM BPAM', seg_kpi_aum_d:'kelolaan',
+  seg_kpi_funds:'Reksadana BPAM', seg_kpi_funds_d:'produk',
+  seg_kpi_agents:'Agen BPAM', seg_kpi_agents_d:'distribusi',
+  seg_kpi_fleet:'Armada BPTR', seg_kpi_fleet_d:'kendaraan',
+  seg_kpi_premium:'Premium kotor MTWI', seg_kpi_premium_d:'FY2025',
+  seg_kpi_uw:'Laba underwriting MTWI', seg_kpi_uw_d:'FY2025',
+  seg_unit_tn:'Rp tn', seg_unit_funds:'reksadana', seg_unit_agents:'agen', seg_unit_vehicles:'kendaraan', seg_unit_bn:'Rp miliar',
+  seg_col_metric:'Metrik kunci', seg_col_value:'Nilai', seg_col_unit:'Satuan',
+  sub_biz_am:'Manajemen investasi / reksa dana', sub_biz_lease:'Sewa mobil & pengelolaan armada', sub_biz_ins:'Asuransi umum & jiwa',
+  seg_metric_aum:'AUM', seg_metric_fleet:'Jumlah armada', seg_metric_premium:'Gross premium'
+},
+zh: {
+  app_title:'BPII 财务与经营 Dashboard',
+  app_sub:'PT Batavia Prosperindo Internasional Tbk（IDX: BPII）· 金融控股集团 · 资产管理 · 车队租赁 · 保险',
+  meta_src:'数据来源：公司年报、中期财务、投资者披露与 IDX 公告',
+  meta_asof:'数据截止：2026-09-21 · 单位：十亿印尼盾（另有注明除外）',
+  t_overview:'总览', t_fy2024:'FY2024', t_fy2025:'FY2025', t_fy2026:'1H2026', t_debt:'债务与偿债', t_landbank:'分部资产', t_valuation:'估值分析', t_vali:'估值测算', t_risk:'风险与方向', t_holding:'股权结构', t_org:'治理与组织',
+  wc_h:'营运资本与应收账款质量',
+  c_wc1_t:'应收账款与周转天数',
+  c_wc1_s:'净应收账款柱 vs DSO（天，右轴）。各子公司应收与回款质量。',
+  wch_item:'项目（十亿盾）', wch_26:'1H2026', wch_25:'FY2025', wch_24:'FY2024',
+  wcr_gross:'应收账款总额（第三方）', wcr_net:'应收账款净额（流动）',
+  wcr_allow:'坏账准备', wcr_duen:'未到期', wcr_over6:'逾期超 6 个月',
+  wcr_dso:'应收周转天数 (DSO)', wcr_ap:'应付账款', wcr_dep:'客户保证金',
+  wcr_woff:'当年核销应收',
+  wc_note:'来源：审计财务报表。应收质量与 DSO 反映资产管理、车队租赁与保险保费的结构。',
+  t_prof:'盈利能力',
+  prof_h:'盈利能力分析 (2015-2025)',
+  prof_d:'金融控股集团的盈利阶梯：毛利、EBITDA、净利率，股东/资产回报率与现金转化，覆盖资产管理、车队租赁与保险。',
+  c_p1_t:'利润率趋势 (2015-2025)',
+  c_p1_s:'毛利 / EBITDA / 净利率，%。',
+  c_p2_t:'ROE 与 ROA',
+  c_p2_s:'净资产收益率 vs 总资产收益率，%。',
+  c_p3_t:'EBITDA 与净利润',
+  c_p3_s:'EBITDA 柱与合并净利润线，十亿盾。',
+  c_p4_t:'营收与毛利率',
+  c_p4_s:'营收柱叠加毛利率（双轴）。',
+  seg_h:'分业务板块损益 (FY2024 vs FY2025)',
+  seg_note:'<span style="color:#666;font-size:12px">注：分部数据为抵销前口径；板块间项目在合并时抵销。集团运营三家子公司：BPAM（资产管理）、BPTR（车队租赁）、MTWI（保险）。</span>',
+  seg_s:'',
+  ph1:'阶段 <b>规模扩张</b>：资产管理 AUM 增长',
+  ph2:'阶段 <b>组合构建</b>：车队与保险放量',
+  ph3:'阶段 <b>控股成熟</b>：三引擎盈利多元化',
+  ph4:'阶段 <b>当前</b>：经常性费用与保费收入',
+  c_o1_t:'营收（2015–2025）', c_o1_s:'合并收入，十亿盾',
+  c_o2_t:'净利润：合并 vs 归母', c_o2_s:'',
+  c_o3_t:'利润率与杠杆趋势', c_o3_s:'毛利率 / 净利率 / ROE / 负债÷权益',
+  c_o4_t:'分部收入：资产管理 · 车队 · 保险', c_o4_s:'2021–2025，十亿盾；三家运营子公司',
+  c_o5_t:'营销销售', c_o5_s:'不适用',
+  c_o6_t:'EBITDA（2015–2025）', c_o6_s:'EBITDA 趋势，十亿盾',
+  c_f24_1_t:'收入构成（FY2024）', c_f24_1_s:'资产管理 / 车队租赁 / 保险',
+  c_f24_2_t:'损益概览（FY2024）', c_f24_2_s:'营收 · EBITDA · 合并净利 · 归母净利（十亿盾）',
+  c_f24_3_t:'资产负债表（2024-12-31）', c_f24_3_s:'总资产 · 总负债 · 总权益（十亿盾）',
+  c_f24_4_t:'现金桥（2024）', c_f24_4_s:'期初 + 净变动 = 期末现金（十亿盾）',
+  c_f25_1_t:'收入构成（FY2025）', c_f25_1_s:'资产管理 / 车队租赁 / 保险',
+  c_f25_2_t:'损益概览（FY2025）', c_f25_2_s:'营收 · EBITDA · 合并净利 · 归母净利（十亿盾）',
+  c_f25_3_t:'资产负债表（2025-12-31）', c_f25_3_s:'总资产 · 总负债 · 总权益（十亿盾）',
+  c_f25_4_t:'现金桥（2025）', c_f25_4_s:'期初 + 净变动 = 期末现金（十亿盾）',
+  c_f26_1_t:'1H26 vs 1H25 收入对比', c_f26_1_s:'分板块合计，十亿盾',
+  c_f26_2_t:'分部结构（最新）', c_f26_2_s:'资产管理 / 车队租赁 / 保险，十亿盾',
+  c_f26_3_t:'净债务头寸（2026-06-30）', c_f26_3_s:'现金 · 总有息债 · 净债务（十亿盾）',
+  ev24_t:'2024 年大事记', rk24_t:'2024 风险指示',
+  note24:'总体判断：板块多元化推进中；关注点为资金流入、车队利用率与保险承保利润率。',
+  ev25_t:'2025 年大事记', rk25_t:'2025 风险指示',
+  note25:'总体判断：三家运营子公司贡献经常性费用、租赁与保费收入；关注点为 AUM 留存与承保纪律。',
+  ev26_t:'2026 年大事记（至 9 月）', rk26_t:'2026 风险指示',
+  note26:'总体判断：中期业绩反映控股集团结构；关注点为板块利润率与资产负债表实力。',
+  rkall_h:'风险指示器总览', rkall_d:'基于年报与中期数据；等级为相对判断，条长表示当前水平。',
+  dec_h:'决策指标：1H2026 vs FY2025 vs FY2024',
+  dec_d:'三期关键指标对比。',
+  dir_h:'发展方向', tl_h:'十年里程碑',
+  hld_h:'股权结构（Holding Structure）', hld_d:'集团结构与子公司依据最新年报；资产为合并口径，十亿盾。',
+  hld_own_h:'股东结构', hld_group_h:'按业务板块的集团结构', hld_table_h:'合并子公司明细',
+  hld_note:'n/a = 未单独披露。',
+  org_h:'治理与组织结构', org_d:'治理层与组织依据最新年报。',
+  org_facts_h:'公司概况', org_gov_h:'董事会与委员会', org_chart_h:'组织结构图', org_mgmt_h:'关键人员',
+  org_mgmt_note:'职能以组织结构图公布口径为准。',
+  tbl_entity:'主体', tbl_biz:'主营业务', tbl_via:'持股路径', tbl_own:'持股', tbl_assets:'资产（十亿盾）', tbl_status:'状态', tbl_name:'姓名', tbl_func:'职能',
+  debt_h:'债务明细与偿债能力', debt_d:'按债权人/期限的债务明细与偿债分析，依据最新报告。',
+  c_d1_t:'债权人构成', c_d1_s:'总有息债务，十亿盾；平均资金成本',
+  c_d2_t:'债务到期结构', c_d2_s:'各年到期本金，十亿盾',
+  c_d3_t:'偿债能力趋势', c_d3_s:'EBITDA/利息；净负债/EBITDA',
+  c_d4_t:'现金 vs 总债务', c_d4_s:'现金及等价物 vs 总债务，十亿盾',
+  debt_table_h:'债务明细（按债权人）', debt_rate_h:'信用评级', debt_refi_h:'再融资回顾', debt_refi_note:'再融资与融资结构，依据披露。',
+  debt_risk_t:'偿债风险指示', debt_note:'总体判断：偿债指标依据最新报告；关注点为资金成本与到期结构。',
+  lb_h:'分部资产', lb_d:'运营子公司及其核心经营指标：BPAM（资产管理）、BPTR（车队租赁）、MTWI（保险）。',
+  c_lb1_t:'分部收入趋势', c_lb1_s:'资产管理 / 车队租赁 / 保险，十亿盾',
+  c_lb2_t:'分部收入（最新年度）', c_lb2_s:'三家运营子公司，十亿盾',
+  lb_table_h:'子公司经营指标', lb_note_h:'口径说明与来源', lb_note:'BPAM（Batavia Prosperindo Aset Manajemen）：AUM 49 万亿盾、107 只基金、37 家销售代理。BPTR（Batavia Prosperindo Trans Tbk）：车队 6,928 辆。MTWI（Malacca Trust Wuwungan Insurance Tbk）：毛保费 1,695.8 十亿盾。数据依据公司披露。',
+  val_h:'估值分析与股价', val_d:'估值指标与股价历史，来自 IDX 及市场数据商。市场数据延迟。',
+  c_v1_t:'股价——过去 12 个月（盾）', c_v1_s:'月收盘价；市场数据延迟。',
+  c_v2_t:'市净率与市销率对比', c_v2_s:'BPII 对比同业，倍数',
+  val_stats_t:'估值与交易快照', val_peers_t:'同业对比', val_peers_note:'同业对比，依据市场数据商。',
+  val_analysts_t:'分析师观点与评级', val_events_t:'股价与交易大事记（12 个月）',
+  ft_src:'年报与披露：<a href="https://www.idx.co.id" target="_blank" rel="noopener">IDX</a> · <a href="https://www.idx.co.id" target="_blank" rel="noopener">公司 IR 页面</a> · <a href="https://www.idx.co.id" target="_blank" rel="noopener">IDX 公告</a>',
+  ft_note:'本 Dashboard 仅供信息参考，不构成投资建议。中期数据未经审计；因年报追溯调整，个别历史数字可能略有差异。',
+  g24_t:'FY2024 驱动与亮点',
+  g24:'FY2024 业绩反映三家子公司的控股结构：资产管理费用、车队租赁收入与保险保费。明细见下方结构化数据。',
+  g25_t:'FY2025 驱动与亮点',
+  g25:'FY2025 业绩反映 BPAM、BPTR、MTWI 的经常性费用、租赁与保费收入。明细见下方结构化数据。',
+  g26_t:'1H2026 驱动与亮点',
+  g26:'1H2026 中期业绩反映三家运营子公司的控股集团结构。明细见下方结构化数据。',
+  ft_log_t:'更新日志',
+  ft_log_1:'BPII Dashboard 由金融 Dashboard 模板改造。',
+  ft_log_2:'分部模型：资产管理 · 车队 · 保险。',
+  ft_log_3:'运行时由 data.json 覆盖数据。',
+  seg_kpi_aum:'BPAM AUM', seg_kpi_aum_d:'管理规模',
+  seg_kpi_funds:'BPAM 基金', seg_kpi_funds_d:'产品数',
+  seg_kpi_agents:'BPAM 销售代理', seg_kpi_agents_d:'分销',
+  seg_kpi_fleet:'BPTR 车队', seg_kpi_fleet_d:'车辆数',
+  seg_kpi_premium:'MTWI 毛保费', seg_kpi_premium_d:'FY2025',
+  seg_kpi_uw:'MTWI 承保利润', seg_kpi_uw_d:'FY2025',
+  seg_unit_tn:'万亿盾', seg_unit_funds:'只', seg_unit_agents:'家', seg_unit_vehicles:'辆', seg_unit_bn:'十亿盾',
+  seg_col_metric:'核心指标', seg_col_value:'数值', seg_col_unit:'单位',
+  sub_biz_am:'资产管理 / 公募基金', sub_biz_lease:'汽车租赁与车队管理', sub_biz_ins:'一般与人身保险',
+  seg_metric_aum:'AUM', seg_metric_fleet:'车队规模', seg_metric_premium:'毛保费'
+}
+};
+
+</script>
+
+
+<script>
+/* ===== 内容数据（由 data.json 生成；在线时页面运行时拉取 data.json 覆盖，离线回退本内嵌副本） ===== */
+var KP = {"ov":{"en":[{"l":"FY2025 Revenue","v":5149.4,"u":"IDR bn","d":"+12% YoY","c":"up"},{"l":"Consolidated net profit","v":857.1,"u":"IDR bn","d":"+11% YoY","c":"up"},{"l":"Attributable to parent","v":423.2,"u":"IDR bn","d":"+16% YoY","c":"up"},{"l":"EBITDA","v":1735.5,"u":"IDR bn","d":"+7% YoY","c":"up"},{"l":"Marketing sales","v":3601,"u":"IDR bn","d":"+13% YoY","c":"up"},{"l":"Cash & equivalents","v":3618.8,"u":"IDR bn","d":"+77% YoY","c":"up"},{"l":"Gross margin","v":39,"u":"%","d":"-4pct (peak 52% in 2022)","c":"dn"},{"l":"Liab/Equity","v":85,"u":"%","d":"-1pct","c":"dn"}],"id":[{"l":"Pendapatan FY2025","v":5149.4,"u":"Rp miliar","d":"+12% YoY","c":"up"},{"l":"Laba bersih konsolidasi","v":857.1,"u":"Rp miliar","d":"+11% YoY","c":"up"},{"l":"Laba entitas induk","v":423.2,"u":"Rp miliar","d":"+16% YoY","c":"up"},{"l":"EBITDA","v":1735.5,"u":"Rp miliar","d":"+7% YoY","c":"up"},{"l":"Penjualan pemasaran","v":3601,"u":"Rp miliar","d":"+13% YoY","c":"up"},{"l":"Kas & setara kas","v":3618.8,"u":"Rp miliar","d":"+77% YoY","c":"up"},{"l":"Margin kotor","v":39,"u":"%","d":"-4pct (puncak 52% tahun 2022)","c":"dn"},{"l":"Kewajiban/Ekuitas","v":85,"u":"%","d":"-1pct","c":"dn"}],"zh":[{"l":"2025 营收","v":5149.4,"u":"十亿盾","d":"+12% 同比","c":"up"},{"l":"合并净利","v":857.1,"u":"十亿盾","d":"+11% 同比","c":"up"},{"l":"归母净利","v":423.2,"u":"十亿盾","d":"+16% 同比","c":"up"},{"l":"EBITDA","v":1735.5,"u":"十亿盾","d":"+7% 同比","c":"up"},{"l":"营销销售","v":3601,"u":"十亿盾","d":"+13% 同比","c":"up"},{"l":"现金及等价物","v":3618.8,"u":"十亿盾","d":"+77% 同比","c":"up"},{"l":"毛利率","v":39,"u":"%","d":"-4pct（2022 峰值 52%）","c":"dn"},{"l":"总负债/权益","v":85,"u":"%","d":"-1pct","c":"dn"}]},"k24":{"en":[{"l":"Revenue","v":4602.6,"u":"IDR bn","d":"+39% YoY","c":"up"},{"l":"Consolidated net profit","v":770.1,"u":"IDR bn","d":"+46% YoY","c":"up"},{"l":"Attributable to parent","v":363.3,"u":"IDR bn","d":"+19% YoY","c":"up"},{"l":"EBITDA","v":1616.8,"u":"IDR bn","d":"+29% YoY","c":"up"},{"l":"Marketing sales","v":3188,"u":"IDR bn","d":"+44%, 28% above target","c":"up"},{"l":"Cash & equivalents","v":2048.5,"u":"IDR bn","d":"+87% YoY","c":"up"}],"id":[{"l":"Pendapatan","v":4602.6,"u":"Rp miliar","d":"+39% YoY","c":"up"},{"l":"Laba bersih konsolidasi","v":770.1,"u":"Rp miliar","d":"+46% YoY","c":"up"},{"l":"Laba entitas induk","v":363.3,"u":"Rp miliar","d":"+19% YoY","c":"up"},{"l":"EBITDA","v":1616.8,"u":"Rp miliar","d":"+29% YoY","c":"up"},{"l":"Penjualan pemasaran","v":3188,"u":"Rp miliar","d":"+44%, 28% di atas target","c":"up"},{"l":"Kas & setara kas","v":2048.5,"u":"Rp miliar","d":"+87% YoY","c":"up"}],"zh":[{"l":"营业收入","v":4602.6,"u":"十亿盾","d":"+39% 同比","c":"up"},{"l":"合并净利","v":770.1,"u":"十亿盾","d":"+46% 同比","c":"up"},{"l":"归母净利","v":363.3,"u":"十亿盾","d":"+19% 同比","c":"up"},{"l":"EBITDA","v":1616.8,"u":"十亿盾","d":"+29% 同比","c":"up"},{"l":"营销销售","v":3188,"u":"十亿盾","d":"+44%，超目标 28%","c":"up"},{"l":"现金及等价物","v":2048.5,"u":"十亿盾","d":"+87% 同比","c":"up"}]},"k25":{"en":[{"l":"Revenue","v":5149.4,"u":"IDR bn","d":"+12% YoY","c":"up"},{"l":"Consolidated net profit","v":857.1,"u":"IDR bn","d":"+11% YoY","c":"up"},{"l":"Attributable to parent","v":423.2,"u":"IDR bn","d":"+16% YoY","c":"up"},{"l":"EBITDA","v":1735.5,"u":"IDR bn","d":"+7% YoY","c":"up"},{"l":"Marketing sales","v":3601,"u":"IDR bn","d":"+13% YoY","c":"up"},{"l":"Cash & equivalents","v":3618.8,"u":"IDR bn","d":"+77%, incl. JVs","c":"up"}],"id":[{"l":"Pendapatan","v":5149.4,"u":"Rp miliar","d":"+12% YoY","c":"up"},{"l":"Laba bersih konsolidasi","v":857.1,"u":"Rp miliar","d":"+11% YoY","c":"up"},{"l":"Laba entitas induk","v":423.2,"u":"Rp miliar","d":"+16% YoY","c":"up"},{"l":"EBITDA","v":1735.5,"u":"Rp miliar","d":"+7% YoY","c":"up"},{"l":"Penjualan pemasaran","v":3601,"u":"Rp miliar","d":"+13% YoY","c":"up"},{"l":"Kas & setara kas","v":3618.8,"u":"Rp miliar","d":"+77%, termasuk JV","c":"up"}],"zh":[{"l":"营业收入","v":5149.4,"u":"十亿盾","d":"+12% 同比","c":"up"},{"l":"合并净利","v":857.1,"u":"十亿盾","d":"+11% 同比","c":"up"},{"l":"归母净利","v":423.2,"u":"十亿盾","d":"+16% 同比","c":"up"},{"l":"EBITDA","v":1735.5,"u":"十亿盾","d":"+7% 同比","c":"up"},{"l":"营销销售","v":3601,"u":"十亿盾","d":"+13% 同比","c":"up"},{"l":"现金及等价物","v":3618.8,"u":"十亿盾","d":"+77%，含 JV","c":"up"}]},"k26":{"en":[{"l":"Revenue","v":2436.5,"u":"IDR bn","d":"1H26 · -11% YoY","c":"dn"},{"l":"Consolidated net profit","v":-6.4,"u":"IDR bn","d":"1H26; one-off refi cost","c":"dn"},{"l":"Attributable to parent","v":-177.9,"u":"IDR bn","d":"parent bears one-off; NCI +171.4","c":"dn"},{"l":"EBITDA","v":747.7,"u":"IDR bn","d":"-25% YoY","c":"dn"},{"l":"Marketing sales","v":1187.6,"u":"IDR bn","d":"32% of 3,750 target","c":"flat"},{"l":"Cash & equivalents","v":3200,"u":"IDR bn","d":"as of 30 Jun 2026","c":"up","p":"~"}],"id":[{"l":"Pendapatan","v":2436.5,"u":"Rp miliar","d":"1H26 · -11% YoY","c":"dn"},{"l":"Laba bersih konsolidasi","v":-6.4,"u":"Rp miliar","d":"1H26; biaya refi satu kali","c":"dn"},{"l":"Laba entitas induk","v":-177.9,"u":"Rp miliar","d":"induk menanggung one-off; NCI +171.4","c":"dn"},{"l":"EBITDA","v":747.7,"u":"Rp miliar","d":"-25% YoY","c":"dn"},{"l":"Penjualan pemasaran","v":1187.6,"u":"Rp miliar","d":"32% dari target 3,750","c":"flat"},{"l":"Kas & setara kas","v":3200,"u":"Rp miliar","d":"per 30 Jun 2026","c":"up","p":"~"}],"zh":[{"l":"营业收入","v":2436.5,"u":"十亿盾","d":"1H26 · -11% 同比","c":"dn"},{"l":"合并净利","v":-6.4,"u":"十亿盾","d":"1H26；一次性再融资成本","c":"dn"},{"l":"归母净利","v":-177.9,"u":"十亿盾","d":"母公司承担一次性；少数股东 +171.4","c":"dn"},{"l":"EBITDA","v":747.7,"u":"十亿盾","d":"-25% 同比","c":"dn"},{"l":"营销销售","v":1187.6,"u":"十亿盾","d":"全年目标 3,750 的 32%","c":"flat"},{"l":"现金及等价物","v":3200,"u":"十亿盾","d":"2026-06-30","c":"up","p":"~"}]},"debt":{"en":[{"l":"Total debt (30 Jun 26)","v":4863,"u":"IDR bn","d":"excl. lease 4.8","c":"flat"},{"l":"Avg cost of debt","v":7.16,"u":"%","d":"30 Jun 2026","c":"flat"},{"l":"Cash & equivalents","v":3200,"u":"IDR bn","d":"30 Jun 2026","c":"up"},{"l":"Net debt","v":1663,"u":"IDR bn","d":"debt − cash","c":"flat"},{"l":"EBITDA / interest (FY25)","v":4.4,"u":"x","d":"FY2024: ~4.0x","c":"up"},{"l":"Net debt / EBITDA (FY25)","v":0.6,"u":"x","d":"FY2024: 1.5x","c":"up"}],"id":[{"l":"Total utang (30 Jun 26)","v":4863,"u":"Rp miliar","d":"di luar sewa 4.8","c":"flat"},{"l":"Biaya utang rata-rata","v":7.16,"u":"%","d":"30 Jun 2026","c":"flat"},{"l":"Kas & setara kas","v":3200,"u":"Rp miliar","d":"30 Jun 2026","c":"up"},{"l":"Utang bersih","v":1663,"u":"Rp miliar","d":"FY2024: 1.5x","c":"flat"},{"l":"EBITDA / bunga (FY25)","v":4.4,"u":"x","d":"FY2024: ~4.0x","c":"up"},{"l":"Utang bersih / EBITDA (FY25)","v":0.6,"u":"x","d":"FY2024: 1.5x","c":"up"}],"zh":[{"l":"总债务（2026-06-30）","v":4863,"u":"十亿盾","d":"不含租赁 4.8","c":"flat"},{"l":"平均资金成本","v":7.16,"u":"%","d":"2026-06-30","c":"flat"},{"l":"现金及等价物","v":3200,"u":"十亿盾","d":"2026-06-30","c":"up"},{"l":"净负债","v":1663,"u":"十亿盾","d":"FY2024: 1.5x","c":"flat"},{"l":"EBITDA / 利息（FY25）","v":4.4,"u":"x","d":"FY2024: ~4.0x","c":"up"},{"l":"净负债 / EBITDA（FY25）","v":0.6,"u":"x","d":"FY2024: 1.5x","c":"up"}]},"lb":{"en":[],"id":[],"zh":[]},"val":{"en":[{"l":"Market cap","v":3.7,"u":"IDR tn","d":"3.76T at 180 (S&P)","c":"flat"},{"l":"Price (18 Sep 2026)","v":180,"u":"IDR","d":"-1.0 (-0.6%) on day","c":"dn"},{"l":"52-week range","v":105,"u":"— 364 IDR","d":"intraday (S&P); monthly low 111 (Digrin)","c":"dn"},{"l":"P/B","v":0.5,"u":"x","d":"0.46x total equity (audited); 0.59x parent","c":"flat"},{"l":"P/E (FY25 EPS 20.55)","v":8.8,"u":"x","d":"audited EPS; TTM n/a (1H26 loss)","c":"flat"},{"l":"Dividend yield","v":1.1,"u":"%","d":"DPS 2.03 (FY25)","c":"flat"}],"id":[{"l":"Kapitalisasi pasar","v":3.7,"u":"Rp tn","d":"3,76T di 180 (S&P)","c":"flat"},{"l":"Harga (18 Sep 2026)","v":180,"u":"IDR","d":"-1,0 (-0,6%) harian","c":"dn"},{"l":"Kisaran 52 minggu","v":105,"u":"— 364 IDR","d":"intraday (S&P); terendah bulanan 111 (Digrin)","c":"dn"},{"l":"P/B","v":0.5,"u":"x","d":"0,46x ekuitas total (audit); 0,59x induk","c":"flat"},{"l":"P/E (EPS FY25 20.55)","v":8.8,"u":"x","d":"EPS audit; TTM n/a (rugi 1H26)","c":"flat"},{"l":"Imbal hasil dividen","v":1.1,"u":"%","d":"DPS 2.03 (FY25)","c":"flat"}],"zh":[{"l":"市值","v":3.7,"u":"万亿盾","d":"3.76T @180（S&P）","c":"flat"},{"l":"股价（2026-09-18）","v":180,"u":"盾","d":"-1.0（-0.6%）","c":"dn"},{"l":"52 周区间","v":105,"u":"— 364 盾","d":"盘中（S&P）；月收盘低点 111（Digrin）","c":"dn"},{"l":"市净率","v":0.5,"u":"x","d":"0.46x 总权益（审计）；0.59x 母公司","c":"flat"},{"l":"市盈率（FY25 EPS 20.55）","v":8.8,"u":"x","d":"审计 EPS；TTM 不可比（1H26 亏损）","c":"flat"},{"l":"股息率","v":1.1,"u":"%","d":"每股 2.03 盾（FY25）","c":"flat"}]},"prof":{"en":[{"l":"Gross margin (FY25)","v":39,"u":"%","d":"down from 43% peak (2022); land-mix pressure","c":"dn"},{"l":"EBITDA margin (FY25)","v":33.7,"u":"%","d":"EBITDA 1,735.5bn / revenue 5,149bn","c":"flat"},{"l":"Net margin (FY25)","v":16.6,"u":"%","d":"consolidated net profit / revenue","c":"up"},{"l":"ROE (FY25)","v":11,"u":"%","d":"avg ~1% in 2018-22 trough; recovering","c":"up"},{"l":"ROA (FY25)","v":5.7,"u":"%","d":"net profit / total assets","c":"up"},{"l":"FCF margin (FY25)","v":33.7,"u":"%","d":"conservative: CFO 2,402 - capex 169 - land 496 = 1,738","c":"up"}],"id":[{"l":"Margin kotor (FY25)","v":39,"u":"%","d":"turun dari puncak 43% (2022)","c":"dn"},{"l":"Margin EBITDA (FY25)","v":33.7,"u":"%","d":"EBITDA 1.735,5miliar / pendapatan 5.149miliar","c":"flat"},{"l":"Margin bersih (FY25)","v":16.6,"u":"%","d":"laba bersih konsolidasi / pendapatan","c":"up"},{"l":"ROE (FY25)","v":11,"u":"%","d":"rata-rata ~1% saat trough 2018-22","c":"up"},{"l":"ROA (FY25)","v":5.7,"u":"%","d":"laba bersih / total aset","c":"up"},{"l":"Margin FCF (FY25)","v":33.7,"u":"%","d":"konservatif: AKO 2.402 - capex 169 - tanah 496 = 1.738","c":"up"}],"zh":[{"l":"毛利率 (FY25)","v":39,"u":"%","d":"较 2022 峰值 43% 回落；土地结构压力","c":"dn"},{"l":"EBITDA 率 (FY25)","v":33.7,"u":"%","d":"EBITDA 1,735.5 亿 / 营收 5,149 亿","c":"flat"},{"l":"净利率 (FY25)","v":16.6,"u":"%","d":"合并净利润 / 营收","c":"up"},{"l":"ROE (FY25)","v":11,"u":"%","d":"2018-22 低谷约 1%，持续回升","c":"up"},{"l":"ROA (FY25)","v":5.7,"u":"%","d":"净利润 / 总资产","c":"up"},{"l":"FCF 率 (FY25)","v":33.7,"u":"%","d":"保守口径：经营现金流 2,402 - 资本开支 169 - 购地 496 = 1,738","c":"up"}]}};
+var EV = {"ev24":{"en":[["2024","Group operates three subsidiaries: BPAM (asset management), BPTR (fleet rental), MTWI (insurance)"],["2024","Three-engine holding model: recurring fee, rental and premium income"]],"id":[["2024","Grup menjalankan tiga anak usaha: BPAM (manajemen investasi), BPTR (sewa armada), MTWI (asuransi)"],["2024","Model tiga mesin: fee, sewa dan premium berulang"]],"zh":[["2024","集团运营三家子公司：BPAM（资管）、BPTR（车队租赁）、MTWI（保险）"],["2024","三引擎控股：经常性费用、租赁与保费收入"]]},"ev25":{"en":[["FY2025","BPAM AUM reaches 49 trillion IDR across 107 funds"],["FY2025","BPTR fleet scales to 6,928 vehicles"],["FY2025","MTWI gross premium reaches 1,695.8 bn IDR"]],"id":[["FY2025","AUM BPAM capai 49 triliun rupiah pada 107 reksa dana"],["FY2025","Armada BPTR tumbuh menjadi 6.928 kendaraan"],["FY2025","Gross premium MTWI mencapai 1.695,8 miliar rupiah"]],"zh":[["FY2025","BPAM AUM 达 49 万亿盾，107 只基金"],["FY2025","BPTR 车队扩至 6,928 辆"],["FY2025","MTWI 毛保费达 1,695.8 十亿盾"]]},"ev26":{"en":[["1H2026","Interim results reflect the three-subsidiary holding mix"],["1H2026","Watch segment margins and balance-sheet strength"]],"id":[["1H2026","Hasil interim mencerminkan bauran tiga anak usaha"],["1H2026","Pantau margin segmen dan kekuatan neraca"]],"zh":[["1H2026","中期业绩反映三家子公司的控股结构"],["1H2026","关注板块利润率与资产负债表实力"]]}};
+var SUBOPS = {"bpam":{"code":"BPAM","name":"PT Batavia Prosperindo Aset Manajemen","activity_en":"Asset management / mutual funds","ownership":99.0,"aum_tn":49,"funds":107,"agents":37},"bptr":{"code":"BPTR","name":"PT Batavia Prosperindo Trans Tbk","activity_en":"Car rental & fleet management","ownership":47.5,"fleet":6928},"mtwi":{"code":"MTWI","name":"PT Malacca Trust Wuwungan Insurance Tbk","activity_en":"General & life insurance","ownership":41.0,"gross_premium":1695.8,"uw_profit":null}};
+var RK = {"rk24":{"en":[["Segment mix","3 subsidiaries",1,55,"asset mgmt / fleet / insurance"],["AUM growth","BPAM AUM expanding",0,30,"fee income driver"],["Fleet utilization","BPTR fleet scale",1,45,"rental income stability"],["Underwriting","MTWI margin watch",1,50,"premium vs claims"],["Funding cost","group leverage",1,50,"moderate"]],"id":[["Bauran segmen","3 anak usaha",1,55,"manajemen investasi / armada / asuransi"],["Pertumbuhan AUM","AUM BPAM bertumbuh",0,30,"pendorong fee"],["Utilisasi armada","skala armada BPTR",1,45,"stabilitas pendapatan sewa"],["Underwriting","margin MTWI",1,50,"premium vs klaim"],["Biaya dana","leverage grup",1,50,"moderat"]],"zh":[["板块结构","3 家子公司",1,55,"资管/车队/保险"],["AUM 增长","BPAM AUM 扩张",0,30,"费用收入驱动"],["车队利用率","BPTR 车队规模",1,45,"租赁收入稳定"],["承保","MTWI 利润率",1,50,"保费 vs 赔付"],["资金成本","集团杠杆",1,50,"中等"]]},"rk25":{"en":[["Segment mix","3 subsidiaries",1,55,"diversified three-engine"],["AUM retention","BPAM AUM",0,30,"fee base"],["Fleet renewal","BPTR fleet 6,928",0,25,"scale advantage"],["Underwriting profit","MTWI watch",1,50,"discipline"],["Cash buffer","group liquidity",0,25,"adequate"]],"id":[["Bauran segmen","3 anak usaha",1,55,"tiga mesin terdiversifikasi"],["Retensi AUM","AUM BPAM",0,30,"basis fee"],["Pembaruan armada","armada BPTR 6.928",0,25,"keunggulan skala"],["Laba underwriting","pantau MTWI",1,50,"disiplin"],["Bantalan kas","likuiditas grup",0,25,"memadai"]],"zh":[["板块结构","3 家子公司",1,55,"三引擎多元化"],["AUM 留存","BPAM AUM",0,30,"费用基础"],["车队更新","BPTR 6,928 辆",0,25,"规模优势"],["承保利润","MTWI 观察",1,50,"承保纪律"],["现金缓冲","集团流动性",0,25,"充足"]]},"rk26":{"en":[["Revenue growth","interim mix",2,60,"watch segment margins"],["One-off items","financing/other",1,50,"non-recurring"],["Premium growth","MTWI gross premium 1,695.8",0,30,"growth"],["Cash buffer","group liquidity",0,25,"covers short-term"],["Funding cost","group leverage",1,50,"watch"]],"id":[["Pertumbuhan pendapatan","bauran interim",2,60,"pantau margin segmen"],["Item satu kali","pembiayaan/lainnya",1,50,"non-recurring"],["Pertumbuhan premium","gross premium MTWI 1.695,8",0,30,"tumbuh"],["Bantalan kas","likuiditas grup",0,25,"menutup jangka pendek"],["Biaya dana","leverage grup",1,50,"pantau"]],"zh":[["收入增长","中期结构",2,60,"关注板块利润率"],["一次性项目","融资/其他",1,50,"非经常"],["保费增长","MTWI 毛保费 1,695.8",0,30,"增长"],["现金缓冲","集团流动性",0,25,"覆盖短期"],["资金成本","集团杠杆",1,50,"关注"]]},"rk-all":{"en":[["Segment diversification","3 subsidiaries",1,45,"asset management / fleet / insurance"],["AUM & fee income","BPAM 49tn AUM",0,30,"recurring fee"],["Fleet scale & utilization","BPTR 6,928 vehicles",0,30,"rental income"],["Insurance underwriting","MTWI 1,695.8bn premium",1,50,"margin watch"],["Leverage & liquidity","group balance sheet",1,40,"moderate"],["Funding cost","market rates",1,45,"watch"],["Regulatory (OJK)","financial holding / insurers",1,50,"compliance"]],"id":[["Diversifikasi segmen","3 anak usaha",1,45,"manajemen investasi / armada / asuransi"],["AUM & fee","AUM BPAM 49tn",0,30,"fee berulang"],["Skala & utilisasi armada","BPTR 6.928 kendaraan",0,30,"pendapatan sewa"],["Underwriting asuransi","premium MTWI 1.695,8bn",1,50,"pantau margin"],["Leverage & likuiditas","neraca grup",1,40,"moderat"],["Biaya dana","suku bunga pasar",1,45,"pantau"],["Regulasi (OJK)","holding keuangan / asuransi",1,50,"kepatuhan"]],"zh":[["板块多元化","3 家子公司",1,45,"资管/车队/保险"],["AUM 与费用","BPAM 49 万亿 AUM",0,30,"经常性费用"],["车队规模与利用","BPTR 6,928 辆",0,30,"租赁收入"],["保险承保","MTWI 1,695.8bn 保费",1,50,"关注利润率"],["杠杆与流动性","集团资产负债表",1,40,"中等"],["资金成本","市场利率",1,45,"关注"],["监管（OJK）","金融控股/保险",1,50,"合规"]]}};
+var DIR = {"en":[["01","Three-engine holding model","Three listed/operating subsidiaries: BPAM (asset management), BPTR (fleet rental) and MTWI (insurance) give recurring fee, rental and premium income."],["02","Grow BPAM AUM","BPAM manages 49 trillion IDR of AUM across 107 funds via 37 sales agents; AUM growth drives recurring fee income."],["03","Scale BPTR fleet","BPTR operates 6,928 vehicles; fleet utilization and renewal drive stable rental income."],["04","Disciplined MTWI underwriting","MTWI gross premium reached 1,695.8 bn IDR; underwriting discipline protects margins."],["05","Consolidated balance sheet","Holding-level leverage and liquidity support subsidiary funding and shareholder returns."],["06","Shareholder returns","Dividend policy and capital allocation across the three segments."]],"id":[["01","Model holding tiga mesin","Tiga anak usaha beroperasi: BPAM (manajemen investasi), BPTR (sewa armada) dan MTWI (asuransi) memberi pendapatan fee, sewa dan premium berulang."],["02","Tumbuhkan AUM BPAM","BPAM mengelola AUM 49 triliun rupiah pada 107 reksa dana via 37 agen; pertumbuhan AUM mendorong fee berulang."],["03","Skalakan armada BPTR","BPTR mengoperasikan 6.928 kendaraan; utilisasi dan pembaruan armada mendorong pendapatan sewa stabil."],["04","Underwriting MTWI disiplin","Gross premium MTWI mencapai 1.695,8 miliar rupiah; disiplin underwriting menjaga margin."],["05","Neraca konsolidasi","Leverage dan likuiditas tingkat holding mendanai anak usaha dan imbal hasil pemegang saham."],["06","Imbal hasil pemegang saham","Kebijakan dividen dan alokasi modal lintas tiga segmen."]],"zh":[["01","三引擎控股模式","三家运营子公司：BPAM（资管）、BPTR（车队租赁）、MTWI（保险），提供经常性费用、租赁与保费收入。"],["02","做大 BPAM AUM","BPAM 管理 49 万亿盾 AUM，107 只基金、37 家销售代理；AUM 增长驱动经常性费用。"],["03","扩大 BPTR 车队","BPTR 运营 6,928 辆；车队利用率与更新驱动稳定租赁收入。"],["04","MTWI 审慎承保","MTWI 毛保费达 1,695.8 十亿盾；承保纪律保护利润率。"],["05","合并资产负债表","控股层面杠杆与流动性支持子公司融资与股东回报。"],["06","股东回报","分红政策与跨三个板块的资本配置。"]]};
+var TL = {"en":[["2024","Group operates three subsidiaries: BPAM, BPTR, MTWI","Segment diversification"],["2025","BPAM AUM reaches 49 trillion IDR; BPTR fleet scales; MTWI gross premium 1,695.8bn","Scale-up across segments"],["2026 (1H)","Interim results reflect the holding-group mix","Watch segment margins"]],"id":[["2024","Grup menjalankan tiga anak usaha: BPAM, BPTR, MTWI","Diversifikasi segmen"],["2025","AUM BPAM capai 49 triliun; armada BPTR berkembang; gross premium MTWI 1.695,8bn","Scale-up antar segmen"],["2026 (1H)","Hasil interim mencerminkan bauran grup","Pantau margin segmen"]],"zh":[["2024","集团运营三家子公司：BPAM、BPTR、MTWI","板块多元化"],["2025","BPAM AUM 达 49 万亿盾；BPTR 车队扩张；MTWI 毛保费 1,695.8bn","各板块规模扩张"],["2026（H1）","中期业绩反映控股集团结构","关注板块利润率"]]};
+var OWN = {"en":[["Mu’min Ali Gunawan",21.1,0],["Islamic Development Bank",11.5,1],["Treasury shares",0.1,2],["Public",67.3,0]],"id":[["Mu’min Ali Gunawan",21.1,0],["Islamic Development Bank",11.5,1],["Saham treasuri",0.1,2],["Masyarakat",67.3,0]],"zh":[["Mu’min Ali Gunawan",21.1,0],["Islamic Development Bank",11.5,1],["库存股",0.1,2],["公众",67.3,0]]};
+var SUBS = [["BPAM","PT Batavia Prosperindo Aset Manajemen","d",99.0,null,"am",1,0],["BPTR","PT Batavia Prosperindo Trans Tbk","d",47.5,null,"lease",1,0],["MTWI","PT Malacca Trust Wuwungan Insurance Tbk","d",41.0,null,"ins",1,0]];
+var BIZ = {"en":{"am":"Asset management & mutual funds","lease":"Car rental & fleet management","ins":"General & life insurance"},"id":{"am":"Manajemen investasi & reksa dana","lease":"Sewa mobil & pengelolaan armada","ins":"Asuransi umum & jiwa"},"zh":{"am":"资产管理与公募基金","lease":"汽车租赁与车队管理","ins":"一般与人身保险"}};
+var VIA = {"en":{"d":"direct"},"id":{"d":"langsung"},"zh":{"d":"直接持股"}};
+var PILLAR = {"en":[["Asset Management","am",1],["Fleet Rental","lease",2],["Insurance","ins",3]],"id":[["Manajemen Investasi","am",1],["Sewa Armada","lease",2],["Asuransi","ins",3]],"zh":[["资产管理","am",1],["车队租赁","lease",2],["保险","ins",3]]};
+var PILLAR_MAP = {"am":["BPAM"],"lease":["BPTR"],"ins":["MTWI"]};
+var ORG = {"facts":{"en":[["Holding group","Financial holding","IDX: BPII"],["Segments","3 subsidiaries","BPAM / BPTR / MTWI"],["AUM (BPAM)","49","IDR trillions"],["Fleet (BPTR)","6,928","vehicles"],["Gross premium (MTWI)","1,695.8","IDR bn"]],"id":[["Grup holding","Holding keuangan","IDX: BPII"],["Segmen","3 anak usaha","BPAM / BPTR / MTWI"],["AUM (BPAM)","49","Rp triliun"],["Armada (BPTR)","6.928","kendaraan"],["Gross premium (MTWI)","1.695,8","Rp miliar"]],"zh":[["控股集团","金融控股","IDX: BPII"],["板块","3 家子公司","BPAM / BPTR / MTWI"],["AUM（BPAM）","49","万亿盾"],["车队（BPTR）","6,928","辆"],["毛保费（MTWI）","1,695.8","十亿盾"]]},"boc":{"en":["Board of Commissioners","President Commissioner / Independent","Independent Commissioner"],"id":["Dewan Komisaris","Komisaris Utama / Independen","Komisaris Independen"],"zh":["监事会","监事长 / 独立监事","独立监事"]},"bod":{"en":["Board of Directors","President Director","Director"],"id":["Direksi","Direktur Utama","Direktur"],"zh":["董事会","董事长","董事"]},"aud":{"en":["Audit Committee","Chairman","Member"],"id":["Komite Audit","Ketua","Anggota"],"zh":["审计委员会","主席","成员"]},"roles":null,"bocm":[["(Commissioner)",0],["(Commissioner)",1],["(Commissioner)",1]],"bodm":[["(Director)",0],["(Director)",1],["(Director)",2]],"audm":[["(Audit Committee)",0],["(Audit Committee)",1]],"chart":{"en":["General Meeting of Shareholders","Board of Commissioners","Board of Directors","Audit Committee","Asset Management (BPAM)","Fleet Rental (BPTR)","Insurance (MTWI)","Support functions"],"id":["RUPS","Dewan Komisaris","Direksi","Komite Audit","Manajemen Investasi (BPAM)","Sewa Armada (BPTR)","Asuransi (MTWI)","Fungsi pendukung"],"zh":["股东大会","监事会","董事会","审计委员会","资产管理（BPAM）","车队租赁（BPTR）","保险（MTWI）","支持职能"]},"mgmt":{"en":[["(Key executive)","Corporate finance"],["(Key executive)","Asset management"],["(Key executive)","Fleet & insurance"]],"id":[["(Eksekutif kunci)","Korporasi"],["(Eksekutif kunci)","Manajemen investasi"],["(Eksekutif kunci)","Armada & asuransi"]],"zh":[["(关键高管)","企业财务"],["(关键高管)","资产管理"],["(关键高管)","车队与保险"]]}};
+var DEBT = {"kpi26":[{"l":"Total debt (30 Jun 26)","v":4863,"u":"IDR bn","d":"excl. lease 4.7bn","c":"flat"},{"l":"Avg cost of debt","v":7.16,"u":"%","d":"30 Jun 2026","c":"flat"},{"l":"Cash & equivalents","v":3200,"u":"IDR bn","d":"30 Jun 2026","c":"up"},{"l":"Net debt","v":1663,"u":"IDR bn","d":"debt − cash","c":"flat"},{"l":"EBITDA / interest (FY25)","v":4.4,"u":"x","d":"FY2024: ~4.0x","c":"up"},{"l":"Net debt / EBITDA (FY25)","v":0.6,"u":"x","d":"FY2024: 1.5x","c":"up"}],"lenders26":[{"n":"Bank Mandiri","v":4634,"c":1},{"n":"Bank INA Perdana","v":191,"c":2},{"n":"Bank OCBC NISP","v":33,"c":3},{"n":"Lease liabilities","v":4.8,"c":4}],"maturityYears":["2H26","2027","2028","2029","2030"],"maturityMandiri":[79.7,191.3,192.1,193,197.2],"maturityINA":[2.4,55.5,13.9,29.8,36.1],"maturityOCBC":[2.1,5.1,5.1,5.1,5.1],"maturityTot":[84.2,251.9,211.1,227.9,238.4],"cashDebt":{"years":["FY2023","FY2024","FY2025","1H26"],"cash":[1094.7,2048.5,3618.8,3200],"debt":[4477.7,4498.2,4606.5,4863]},"table":[{"n":"Guaranteed Senior Notes 2027","d25":3119,"d26":0,"r":"7.0–9.0% fixed","m":"Dec 2027 · prepaid 2Q26","c":"Corporate collateral; repaid with IDR Mandiri loan","st":"repaid"},{"n":"Bank Mandiri (IDR term loans)","d25":1335.5,"d26":4634,"r":"7.0–7.5%","m":"15-yr · to ~2041","c":"Corporate collateral + operating assets","st":"current"},{"n":"Bank INA Perdana","d25":null,"d26":191,"r":"7.75%","m":"Project & demand loan + SBLC","c":"Corporate (JV)","st":"current"},{"n":"China Construction Bank (CCB)","d25":143.5,"d26":null,"r":"n/a","m":"settled in 1H26","c":"Settled during refinancing","st":"repaid"},{"n":"Bank OCBC NISP","d25":35.4,"d26":33,"r":"7.75%","m":"Term loan","c":"Corporate purposes","st":"current"},{"n":"Lease liabilities","d25":4.8,"d26":4.8,"r":"n/a","m":"2–10 yr leases","c":"Operating leases","st":"current"}],"tableNote":"31 Dec 2025 balance-sheet total IDR 4,606.5bn (net of unamortized issuance cost IDR 31.8bn); table shows principal. Total at 30 Jun 2026: IDR 4,863bn (excl. lease IDR 4.8bn).","ratings":[["Fitch","B-","Stable","Oct 2025 affirmed"],["Moody’s","B3","Stable","12 Jan 2026 · first rating"],["S&P Global","Withdrawn","—","22 Jan 2026 · at company request"]],"refi":[["2Q26","Senior Notes USD185.9m (7–9%, due Dec 2027) fully repaid with new 15-yr IDR Mandiri facility"],["2Q26","USD100m call-spread hedges (16,000–18,500 strikes) unwound"],["1H26","One-off costs ≈ IDR 460bn: FX loss 280.7bn · derivative termination 154.6bn · accelerated amortization 24.9bn"],["Result","100% IDR funding; FX risk eliminated; maturity extended 15 years; done 18 months early"],["30 Jun 26","Total debt IDR 4,863bn; average cost 7.16%"]],"riskRows":[{"n":"EBITDA / interest","v":"4.4x (FY25)","lv":0},{"n":"Net debt / EBITDA","v":"0.6x (FY25)","lv":0},{"n":"Cash / total debt","v":"66% (1H26)","lv":0},{"n":"Interest cost (new IDR debt)","v":"7.0–7.5% vs old USD 5.5–6.0%","lv":1},{"n":"Back-loaded Mandiri amortisation","v":"~IDR 3,780bn due 2031–2041","lv":1},{"n":"Corporate collateral pledged","v":"Corporate collateral","lv":1},{"n":"Credit rating","v":"B- / B3 (speculative grade)","lv":1},{"n":"USD exposure","v":"eliminated (100% IDR)","lv":0}]};
+var WC = {"years":["2021","2022","2023","2024","2025"],"ar":[415.5,400.1,566.3,775.1,521.2],"arLT":[null,113.2,111.1,93.5,11.3],"ap":[149.9,191.9,169.5,143.4,151.7],"deposits":[null,null,null,230.0,316.2],"revenue":[2490,2747,3300,4602.6,5149.4]};
+var LAND = {"kpi":[],"rows":[],"total":{"ha":0,"dev":0,"book":0}};
+var VAL = {"kpi":[{"l":"Price (18 Sep 2026)","v":180,"u":"IDR","d":"-1.0 (-0.6%) on day","c":"dn"},{"l":"52-week range","v":105,"u":"— 364 IDR","d":"intraday (S&P); monthly low 111 (Digrin)","c":"dn"},{"l":"Market cap","v":3.7,"u":"IDR tn","d":"3.76T at 180 (S&P)","c":"flat"},{"l":"P/B","v":0.5,"u":"x","d":"0.46x total equity (audited); 0.59x parent","c":"flat"},{"l":"P/E (FY25 EPS 20.55)","v":8.8,"u":"x","d":"audited EPS; TTM n/a (1H26 loss)","c":"flat"},{"l":"Dividend yield","v":1.1,"u":"%","d":"DPS 2.03 (FY25)","c":"flat"}],"months":["Sep-25","Oct-25","Nov-25","Dec-25","Jan-26","Feb-26","Mar-26","Apr-26","May-26","Jun-26","Jul-26","Aug-26","Sep-26"],"close":[187,191,180,210,228,206,174,180,124,112,130,216,197],"events":[["Sep–Dec 2025","Range 180–210; Dec-25 closes 210, market cap ~4.37tn (FY25 annual report)"],["Jan 2026","Spike: +62% in a week (Katadata), 52-wk high 364 intraday; Sucor projection up to 550"],["Mar–Jun 2026","Retrace: 174 → 112 (Jun) as 1H26 refinancing one-offs became known; low 111"],["18 Aug 2026","+34.96% to 166 after Sucor reiterated Buy (TP 250, SOTP)"],["Jul–Sep 2026","Rebound: 130 → 216 (Aug) → 197 monthly; current 180; avg volume (20d) 859.5M shares"],["17 Sep 2026","Daily turnover ≈ 48.8B / 269M shares (Pluang); RSI 47.4; 200-DMA 180.9"]],"stats":[["Price / date","180.0 IDR · 18 Sep 2026 (stockanalysis)"],["Shares outstanding","20.59 bn weighted avg (audited) · 20.80 bn (S&P)"],["FY25 EPS (audited)","20.55 IDR · diluted = basic"],["FY25 BVPS","304.1 IDR parent · 395.6 total equity"],["Free float","67.3% (public)"],["Beta (5Y) / RSI","0.25 / 47.4"],["50-DMA / 200-DMA","157.0 / 180.9"],["Avg daily volume (20d)","859.5M shares"],["Daily turnover (17 Sep)","≈ 48.8B IDR · 268.9M shares (Pluang)"],["Next earnings","30 Oct 2026 (est.)"],["Ex-dividend / payment","17 Jun 2026 · paid 9 Jul 2026 (IDR2.03)"]],"peers":{"rows":[["P/B (x)","0.46–0.60","1.35"],["P/E (FY25 EPS 20.55)","8.8","6.06"],["P/S (x)","0.75","3.78"],["Dividend yield","~1.1%","8.42%"],["1H26 net profit","-6.4bn (one-off 460bn)","+175% → 1.19tn"],["YTD 2026 price","-14% (210 → 180)","+56.6%"]]},"analysts":[["Sucor Sekuritas","Buy","250","18 Aug 2026","SOTP; +39% vs 180"],["Sucor Sekuritas (earlier)","Buy","up to 550","Jan 2026","during Jan-26 spike (Katadata)"],["Morningstar","Fair value locked","—","12 Sep 2026","quote page restricted"],["Moody’s / Fitch","B3 / B- (credit)","—","Jan / Oct 2026","credit ratings, not price targets"]],"vol":[1102.4,1856.6,415.3,5330.1,10869.6,2606.3,1973.1,2875.9,1505.5,1266.4,2182.3,15431.0,4454.0],"range":[[184,200],[177,194],[179,194],[167,262],[200,364],[181,240],[160,204],[168,220],[118,184],[105,126],[110,146],[119,228],[170,220]]};
+var DTXT = {"en":{"h":["Lender","31 Dec 2025 (IDR bn)","30 Jun 2026 (IDR bn)","Rate","Maturity","Collateral / purpose","Status"],"tbl":[["Guaranteed Senior Notes 2027","Dec 2027 · prepaid 2Q26","Corporate collateral; repaid with IDR Mandiri loan","Repaid"],["Bank Mandiri (IDR term loans)","15-yr · to ~2041","Corporate collateral + operating assets","Current"],["Bank INA Perdana","Project & demand loan + SBLC","Corporate (JV)","Current"],["China Construction Bank (CCB)","Settled in 1H26","Settled during refinancing","Repaid"],["Bank OCBC NISP","Term loan","Corporate purposes","Current"],["Lease liabilities","2–10 yr leases","Operating leases","Current"]],"total":["Total (principal)","4,638.2*","4,863.0","avg 7.2%","—","—","—"],"note":"31 Dec 2025 balance-sheet total 4,606.5 (net of unamortized issuance cost 31.8); table shows principal. Total at 30 Jun 2026: 4,863 (excl. lease 4.8).","ratings":[["Agency","Rating","Outlook","Date"],["Fitch","B-","Stable","Oct 2025 affirmed"],["Moody’s","B3","Stable","12 Jan 2026 · first rating"],["S&P Global","Withdrawn","—","22 Jan 2026 · at company request"]],"refi":[["2Q26","Senior Notes USD185.9m (7–9%, due Dec 2027) fully repaid with new 15-yr IDR Mandiri facility"],["2Q26","USD100m call-spread hedges (16,000–18,500 strikes) unwound"],["1H26","One-off costs ≈ IDR 460bn: FX loss 280.7bn · derivative termination 154.6bn · accelerated amortization 24.9bn"],["Result","100% IDR funding; FX risk eliminated; maturity extended 15 years; done 18 months early"],["30 Jun 26","Total debt IDR 4,863bn; average cost 7.16%"]],"risk":[["EBITDA / interest","4.4x (FY25)",0],["Net debt / EBITDA","0.6x (FY25)",0],["Cash / total debt","66% (1H26)",0],["Interest cost (new IDR debt)","7.0–7.5% vs old USD 5.5–6.0%",1],["Back-loaded Mandiri amortisation","~IDR 3,780bn due 2031–2041",1],["Corporate collateral pledged","Corporate collateral",1],["Credit rating","B- / B3 (speculative grade)",1],["USD exposure","eliminated (100% IDR)",0]]},"id":{"h":["Kreditur","31 Des 2025 (Rp miliar)","30 Jun 2026 (Rp miliar)","Bunga","Jatuh tempo","Agunan / tujuan","Status"],"tbl":[["Guaranteed Senior Notes 2027","Des 2027 · dilunasi 2Q26","Agunan korporasi; dilunasi dengan pinjaman Mandiri IDR","Lunas"],["Bank Mandiri (pinjaman IDR)","15 tahun · s/d ~2041","Agunan korporasi + aset operasional","Berjalan"],["Bank INA Perdana","Pinjaman proyek & demand + SBLC","Corporate (JV)","Berjalan"],["China Construction Bank (CCB)","Diselesaikan 1H26","Diselesaikan saat refinancing","Lunas"],["Bank OCBC NISP","Pinjaman berjangka","Tujuan korporasi","Berjalan"],["Sewa pembiayaan","Sewa 2–10 tahun","Sewa operasional","Berjalan"]],"total":["Total (pokok)","4.638,2*","4.863,0","rata-rata 7,2%","—","—","—"],"note":"Total neraca 31 Des 2025 4.606,5 (neto biaya penerbitan belum diamortisasi 31,8); tabel menampilkan pokok. Total 30 Jun 2026: 4.863 (di luar sewa 4,8).","ratings":[["Lembaga","Peringkat","Prospek","Tanggal"],["Fitch","B-","Stabil","Okt 2025 ditegaskan"],["Moody’s","B3","Stabil","12 Jan 2026 · peringkat awal"],["S&P Global","Dicabut","—","22 Jan 2026 · atas permintaan perusahaan"]],"refi":[["2Q26","Senior Notes USD185,9 juta (7–9%, jatuh tempo Des 2027) dilunasi penuh dengan fasilitas Mandiri IDR 15 tahun"],["2Q26","Hedging call-spread USD100 juta (strike 16.000–18.500) dihentikan"],["1H26","Biaya satu kali ≈ 460: rugi kurs 280,7 · penghentian derivatif 154,6 · amortisasi dipercepat 24,9"],["Hasil","Pendanaan 100% IDR; risiko kurs hilang; jatuh tempo diperpanjang 15 tahun; selesai 18 bulan lebih cepat"],["30 Jun 26","Total utang 4.863; biaya rata-rata 7,16%"]],"risk":[["EBITDA / bunga","4,4x (FY25)",0],["Utang bersih / EBITDA","0,6x (FY25)",0],["Kas / total utang","66% (1H26)",0],["Biaya utang IDR baru","7,0–7,5% vs USD lama 5,5–6,0%",1],["Amortisasi Mandiri menumpuk","~3.780 jatuh tempo 2031–2041",1],["Agunan korporasi dijaminkan","Agunan korporasi",1],["Peringkat kredit","B- / B3 (grade spekulatif)",1],["Eksposur USD","hilang (100% IDR)",0]]},"zh":{"h":["债权人","2025-12-31（十亿盾）","2026-06-30（十亿盾）","利率","期限","抵押物 / 用途","状态"],"tbl":[["2027 年高级票据","2027-12 到期 · 2026Q2 提前偿还","公司抵押；以 Mandiri 印尼盾贷款偿还","已偿还"],["Bank Mandiri（印尼盾定期贷款）","15 年期 · 至约 2041 年","公司抵押 + 经营资产","存续"],["Bank INA Perdana","项目及周转贷款 + SBLC","公司（JV）","存续"],["中国建设银行（CCB）","2026H1 结清","再融资时结清","已偿还"],["Bank OCBC NISP","定期贷款","公司用途","存续"],["租赁负债","2–10 年租约","经营租赁","存续"]],"total":["合计（本金）","4,638.2*","4,863.0","均值 7.2%","—","—","—"],"note":"2025-12-31 资产负债表口径 4,606.5（扣除未摊销发行成本 31.8）；本表列示本金。2026-06-30 合计 4,863（不含租赁 4.8）。","ratings":[["机构","评级","展望","日期"],["Fitch","B-","稳定","2025-10 确认"],["Moody’s","B3","稳定","2026-01-12 首评"],["S&P Global","撤销","—","2026-01-22 应公司要求"]],"refi":[["2026Q2","以 15 年期 Mandiri 印尼盾贷款全额偿还 1.859 亿美元高级票据（票息 7–9%，2027-12 到期）"],["2026Q2","终止 1 亿美元看涨价差对冲（行权价 16,000–18,500）"],["2026H1","一次性成本约 460：汇兑损失 280.7 · 衍生品终止 154.6 · 加速摊销 24.9"],["结果","100% 印尼盾融资；汇兑风险消除；期限延长 15 年；提前 18 个月完成"],["2026-06-30","总债务 4,863；平均成本 7.16%"]],"risk":[["EBITDA / 利息","4.4x（FY25）",0],["净负债 / EBITDA","0.6x（FY25）",0],["现金 / 总债务","66%（1H26）",0],["新印尼盾债务利率","7.0–7.5% vs 旧美元债 5.5–6.0%",1],["Mandiri 本金后置","约 3,780B 于 2031–2041 到期",1],["公司抵押","公司抵押",1],["信用评级","B- / B3（投机级）",1],["美元敞口","已消除（100% 印尼盾）",0]]}};
+var LTXT = {"en":{"h":[],"loc":[],"total":[]},"id":{"h":[],"loc":[],"total":[]},"zh":{"h":[],"loc":[],"total":[]}};
+var VTXT = {"en":{"statsH":["Metric","Value"],"stats":[["Price / date","180.0 IDR · 18 Sep 2026 (stockanalysis)"],["Shares outstanding","20.59 bn weighted avg (audited) · 20.80 bn (S&P)"],["FY25 EPS (audited)","20.55 IDR · diluted = basic"],["FY25 BVPS","304.1 IDR parent · 395.6 total equity"],["Free float","67.3% (public)"],["Beta (5Y) / RSI","0.25 / 47.4"],["50-DMA / 200-DMA","157.0 / 180.9"],["Avg daily volume (20d)","859.5M shares"],["Daily turnover (17 Sep)","≈ 48.8B IDR · 268.9M shares (Pluang)"],["Next earnings","30 Oct 2026 (est.)"],["Ex-dividend / payment","17 Jun 2026 · paid 9 Jul 2026 (IDR2.03)"]],"peersH":["Metric","BPII","Peer"],"peers":[["P/B (x)","0.46–0.60","1.35"],["P/E (FY25 EPS 20.55)","8.8","6.06"],["P/S (x)","0.75","3.78"],["Dividend yield","~1.1%","8.42%"],["1H26 net profit","-6.4bn (one-off 460bn)","+175% → 1.19tn"],["YTD 2026 price","-14% (210 → 180)","+56.6%"]],"analystsH":["Source","Recommendation","Target","Date","Note"],"analysts":[["Sucor Sekuritas","Buy","250","18 Aug 2026","SOTP; +39% vs 180"],["Sucor Sekuritas (earlier)","Buy","up to 550","Jan 2026","during Jan-26 spike (Katadata)"],["Morningstar","Fair value locked","—","12 Sep 2026","quote page restricted"],["Moody’s / Fitch","B3 / B- (credit)","—","Jan / Oct 2026","credit ratings, not price targets"]],"events":[["Sep–Dec 2025","Range 180–210; Dec-25 closes 210, market cap ~4.37tn (FY25 annual report)"],["Jan 2026","Spike: +62% in a week (Katadata), 52-wk high 364 intraday; Sucor projection up to 550"],["Mar–Jun 2026","Retrace: 174 → 112 (Jun) as 1H26 refinancing one-offs became known; low 111"],["18 Aug 2026","+34.96% to 166 after Sucor reiterated Buy (TP 250, SOTP)"],["Jul–Sep 2026","Rebound: 130 → 216 (Aug) → 197 monthly; current 180; avg volume (20d) 859.5M shares"],["17 Sep 2026","Daily turnover ≈ 48.8B / 269M shares (Pluang); RSI 47.4; 200-DMA 180.9"]]},"id":{"statsH":["Metrik","Nilai"],"stats":[["Harga / tanggal","180,0 IDR · 18 Sep 2026 (stockanalysis)"],["Saham beredar","20,59 miliar rata-rata tertimbang (audit) · 20,80 miliar (S&P)"],["EPS FY25 (audit)","20,55 IDR · diluted = basic"],["BVPS FY25","304,1 IDR induk · 395,6 ekuitas total"],["Free float","67,3% (publik)"],["Beta (5Y) / RSI","0,25 / 47,4"],["50-DMA / 200-DMA","157,0 / 180,9"],["Volume harian rata-rata (20d)","859,5 juta saham"],["Nilai transaksi (17 Sep)","≈ 48,8B IDR · 268,9 juta saham (Pluang)"],["Laporan keuangan berikutnya","30 Okt 2026 (est.)"],["Ex-dividen / pembayaran","17 Jun 2026 · dibayar 9 Jul 2026 (IDR2,03)"]],"peersH":["Metrik","BPII","Peer"],"peers":[["P/B (x)","0,46–0,60","1,35"],["P/E (EPS FY25 20,55)","8,8","6,06"],["P/S (x)","0,75","3,78"],["Imbal hasil dividen","~1,1%","8,42%"],["Laba bersih 1H26","-6,4 (satu kali 460)","+175% → 1,19T"],["Perubahan harga YTD 2026","-14% (210 → 180)","+56,6%"]],"analystsH":["Sumber","Rekomendasi","Target","Tanggal","Catatan"],"analysts":[["Sucor Sekuritas","Buy","250","18 Agu 2026","SOTP; +39% vs 180"],["Sucor Sekuritas (lebih awal)","Buy","hingga 550","Jan 2026","saat lonjakan Jan-26 (Katadata)"],["Morningstar","Nilai wajar terkunci","—","12 Sep 2026","halaman quote dibatasi"],["Moody’s / Fitch","B3 / B- (kredit)","—","Jan / Okt 2026","peringkat kredit, bukan target harga"]],"events":[["Sep–Des 2025","Kisaran 180–210; Des-25 tutup 210, kapitalisasi ~4,37tn (laporan tahunan FY25)"],["Jan 2026","Lonjakan: +62% sepekan (Katadata), tertinggi 52 minggu 364 intraday; proyeksi Sucor hingga 550"],["Mar–Jun 2026","Koreksi: 174 → 112 (Jun) setelah biaya satu kali refinancing 1H26 diketahui; terendah 111"],["18 Agu 2026","+34,96% ke 166 setelah Sucor menegaskan Buy (TP 250, SOTP)"],["Jul–Sep 2026","Pemulihan: 130 → 216 (Agu) → 197 bulanan; harga kini 180; volume rata-rata (20d) 859,5 juta saham"],["17 Sep 2026","Nilai transaksi harian ≈ 48,8B / 269 juta saham (Pluang); RSI 47,4; 200-DMA 180,9"]]},"zh":{"statsH":["指标","数值"],"stats":[["股价 / 日期","180.0 盾 · 2026-09-18（stockanalysis）"],["总股本","20.59B 加权平均（审计）· 20.80B（S&P）"],["FY25 EPS（审计）","20.55 盾 · 稀释=基本"],["FY25 每股净资产","304.1 盾（母公司）· 395.6 盾（总权益）"],["流通比例","67.3%（公众）"],["Beta（5Y）/ RSI","0.25 / 47.4"],["50 日均线 / 200 日均线","157.0 / 180.9"],["20 日均成交量","8.595 亿股"],["单日成交额（09-17）","约 48.8B 盾 · 2.689 亿股（Pluang）"],["下一财报日","2026-10-30（预计）"],["除息日 / 派息日","2026-06-17 · 2026-07-09 支付（每股 2.03 盾）"]],"peersH":["指标","BPII","同业"],"peers":[["市净率（x）","0.46–0.60","1.35"],["市盈率（FY25 EPS 20.55）","8.8","6.06"],["市销率（x）","0.75","3.78"],["股息率","约 1.1%","8.42%"],["1H26 净利润","-6.4（一次性 460）","+175% → 1.19T"],["2026 年至今股价","-14%（210 → 180）","+56.6%"]],"analystsH":["来源","建议","目标价","日期","备注"],"analysts":[["Sucor Sekuritas","买入","250","2026-08-18","SOTP；较 180 有 +39% 空间"],["Sucor Sekuritas（早期）","买入","最高 550","2026-01","2026 年 1 月行情期间（Katadata）"],["Morningstar","公允价值被锁","—","2026-09-12","报价页受限"],["Moody’s / Fitch","B3 / B-（信用）","—","2026-01 / 10","信用评级，非目标价"]],"events":[["2025-09 至 12 月","区间 180–210；2025-12 收于 210，市值约 4.37T（FY25 年报）"],["2026-01","异动：单周 +62%（Katadata），52 周高点盘中 364；Sucor 当时预测最高 550"],["2026-03 至 06 月","回调：174 → 112（6 月），1H26 一次性再融资成本披露后走低；低点 111"],["2026-08-18","Sucor 重申买入（目标 250，SOTP）后单日 +34.96% 至 166"],["2026-07 至 09 月","反弹：130 → 216（8 月）→ 197（月度）；现价 180；20 日均量 8.595 亿股"],["2026-09-17","单日成交约 48.8B 盾 / 2.69 亿股（Pluang）；RSI 47.4；200 日均线 180.9"]]}};
+var NXT = {"en":{"book":"Book value","mlo":"Market low","mhi":"Market high","cash":"Cash & equivalents","totD":"Total debt","sched":"Scheduled principal","bpii":"BPII","peer":"Peer","mandiri":"Bank Mandiri","ina":"Bank INA Perdana","ocbc":"Bank OCBC NISP"},"id":{"book":"Nilai buku","mlo":"Pasar rendah","mhi":"Pasar tinggi","cash":"Kas & setara kas","totD":"Total utang","sched":"Pokok terjadwal","bpii":"BPII","peer":"Peer","mandiri":"Bank Mandiri","ina":"Bank INA Perdana","ocbc":"Bank OCBC NISP"},"zh":{"book":"账面价值","mlo":"市场低位","mhi":"市场高位","cash":"现金及等价物","totD":"总债务","sched":"计划本金","bpii":"BPII","peer":"同业","mandiri":"Bank Mandiri","ina":"Bank INA Perdana","ocbc":"Bank OCBC NISP"}};
+var VALI = {"en":{"h":"Valuation Illustration","sub":"DCF · P/E · P/B · SOTP vs. market price — illustrative only, not investment advice","disc":"Based on audited FY2025 results and the 18 Sep 2026 close of 180.0 IDR. Weighted shares 20.59 bn; parent BVPS 304.1; EPS 20.55; EBITDA 1,735.5 bn; net debt (1H26) 1,663 bn (debt 4,863 − cash 3,200). DCF net-debt basis is the more conservative 1H26 figure.","inputsH":"Inputs (audited FY2025 unless noted)","inputs":[["Price (18 Sep 2026)","180.0 IDR"],["Shares (weighted avg)","20.59 bn"],["FY25 EPS","20.55 IDR"],["FY25 BVPS (parent equity 6,263.6)","304.1 IDR"],["FY25 EBITDA","1,735.5 bn"],["Net debt (1H26)","1,663 bn"],["Market cap @ 180","≈ 3,706B"]],"methodH":"Methods & assumptions (low / base / high)","methods":[["P/E (6x / 8x / 10x)","FY25 EPS 20.55 × sector-consistent multiples; base 8x","123.3","164.4","205.5"],["P/B (0.5x / 0.6x / 0.8x)","Audited parent BVPS 304.1; 0.6x matches current level","152.1","182.5","243.3"],["DCF (two-stage)","EBITDA 1,735.5; 6% growth; WACC 10%; 55% parent share; net debt 1,663","277.2","452.4","799.5"],["SOTP","Sum-of-the-parts (Sucor Sekuritas, Aug 2026)","250.0","250.0","250.0"]],"weightNote":"Weighted fair value = 35% P/E + 25% P/B + 30% DCF + 10% SOTP. Liquidation value is shown separately as an asset-backing reference.","compH":"Comparison with market price (180.0)","comp":[["P/E (base 8x)","164.4","-8.7%","-9.5%","Market slightly above multiple"],["P/B (base 0.6x)","182.5","+1.4%","1.4%","Trades near book value"],["DCF (base)","452.4","+151.3%","60.2%","Segment earnings upside largely unpriced"],["SOTP (Sucor)","250.0","+38.9%","28.0%","Broker buy target"],["Weighted (base)","263.9","+46.6%","31.8%","Illustrative fair value"]],"impliedH":"Implied multiples at 180.0","implied":[["Implied P/E (FY25 EPS 20.55)","8.8x"],["Implied P/B (parent BVPS 304.1)","0.59x"],["Implied P/B (total equity BVPS 395.6)","0.46x"],["EV/EBITDA (FY25): (3,706 + 988) / 1,735.5","~2.7x"]],"keyH":"Key sensitivities & caveats","key":["Segment mix and timing drive revenue recognition and earnings volatility.","Segment mix compresses margins; profitability depends on subsidiary performance.","After refinancing, interest cost rose to ~7.2%; DCF uses a 10% WACC and 55% parent share of FCF.","Fair-value range is an illustration, not a recommendation; credit rating remains speculative grade (B- / B3)."]},"id":{"h":"Ilustrasi Valuasi","sub":"DCF · P/E · P/B · SOTP dibanding harga pasar — hanya ilustrasi, bukan saran investasi","disc":"Berdasarkan hasil audit FY2025 dan harga penutupan 18 Sep 2026 sebesar 180,0 IDR. Saham tertimbang 20,59 miliar; BVPS induk 304,1; EPS 20,55; EBITDA 1.735,5 miliar; utang bersih (1H26) 1.663 miliar (utang 4.863 − kas 3.200). Basis utang bersih DCF memakai angka 1H26 yang lebih konservatif.","inputsH":"Masukan (audit FY2025 kecuali disebut)","inputs":[["Harga (18 Sep 2026)","180,0 IDR"],["Saham (rata-rata tertimbang)","20,59 miliar"],["EPS FY25","20,55 IDR"],["BVPS FY25 (ekuitas induk 6.263,6)","304,1 IDR"],["EBITDA FY25","1.735,5 miliar"],["Utang bersih (1H26)","1.663 miliar"],["Kapitalisasi pasar @ 180","≈ 3.706 miliar"]],"methodH":"Metode & asumsi (rendah / dasar / tinggi)","methods":[["P/E (6x / 8x / 10x)","EPS FY25 20,55 × kelipatan sektor; dasar 8x","123,3","164,4","205,5"],["P/B (0,5x / 0,6x / 0,8x)","BVPS induk audit 304,1; 0,6x sesuai level saat ini","152,1","182,5","243,3"],["DCF (dua tahap)","EBITDA 1.735,5; pertumbuhan 6%; WACC 10%; porsi induk 55%; utang bersih 1.663","277,2","452,4","799,5"],["SOTP","Penjumlahan nilai bagian (Sucor Sekuritas, Agu 2026)","250,0","250,0","250,0"]],"weightNote":"Nilai wajar tertimbang = 35% P/E + 25% P/B + 30% DCF + 10% SOTP. Nilai likuidasi ditampilkan terpisah sebagai referensi aset-penopang.","compH":"Perbandingan dengan harga pasar (180,0)","comp":[["P/E (base 8x)","164.4","-8.7%","-9.5%","Market slightly above multiple"],["P/B (base 0.6x)","182.5","+1.4%","1.4%","Trades near book value"],["DCF (base)","452.4","+151.3%","60.2%","Segment earnings upside largely unpriced"],["SOTP (Sucor)","250.0","+38.9%","28.0%","Broker buy target"],["Weighted (base)","263.9","+46.6%","31.8%","Illustrative fair value"]],"impliedH":"Kelipatan tersirat pada 180,0","implied":[["P/E tersirat (EPS FY25 20,55)","8,8x"],["P/B tersirat (BVPS induk 304,1)","0,60x"],["P/B tersirat (BVPS ekuitas total 395,6)","0,46x"],["EV/EBITDA (FY25): (3.727 + 988) / 1.735,5","sekitar 2,7x"]],"keyH":"Sensitivitas & catatan utama","key":["Bauran segmen dan timing menggerakkan pengakuan pendapatan dan volatilitas laba.","Bauran segmen menekan margin; profitabilitas bergantung pada kinerja anak usaha.","Setelah refinancing, beban bunga naik ke sekitar 7,2%; DCF memakai WACC 10% dan porsi induk 55% dari FCF.","Rentang nilai wajar adalah ilustrasi, bukan rekomendasi; peringkat kredit tetap grade spekulatif (B- / B3)."]},"zh":{"h":"估值测算","sub":"DCF · P/E · P/B · SOTP 与现价对比 —— 仅作说明性估算，不构成投资建议","disc":"基于 FY2025 审计业绩与 2026-09-18 收盘价 180.0 盾。加权股本 20.59B；母公司每股净资产 304.1；EPS 20.55；EBITDA 1,735.5B；净负债（1H26）1,663B（债务 4,863 − 现金 3,200）。DCF 采用更保守的 1H26 净负债口径。","inputsH":"输入（FY2025 审计口径，另有注明除外）","inputs":[["现价（2026-09-18）","180.0 盾"],["加权股本","20.59B"],["FY25 EPS","20.55 盾"],["FY25 每股净资产（母公司权益 6,263.6）","304.1 盾"],["FY25 EBITDA","1,735.5B"],["净负债（1H26）","1,663B"],["市值 @180","≈ 3,706B"]],"methodH":"方法与假设（低 / 基准 / 高）","methods":[["P/E（6x / 8x / 10x）","FY25 EPS 20.55 × 行业一致倍数；基准 8x","123.3","164.4","205.5"],["P/B（0.5x / 0.6x / 0.8x）","审计母公司每股净资产 304.1；0.6x 与现水平一致","152.1","182.5","243.3"],["DCF（两阶段）","EBITDA 1,735.5；增速 6%；WACC 10%；归母 55%；净负债 1,663","277.2","452.4","799.5"],["SOTP","分部加总（Sucor Sekuritas，2026-08）","250.0","250.0","250.0"]],"weightNote":"加权公允价值 = 35% P/E + 25% P/B + 30% DCF + 10% SOTP。清算价值单列，作为资产托底参照。","compH":"与现价（180.0）对比","comp":[["P/E (base 8x)","164.4","-8.7%","-9.5%","Market slightly above multiple"],["P/B (base 0.6x)","182.5","+1.4%","1.4%","Trades near book value"],["DCF (base)","452.4","+151.3%","60.2%","Segment earnings upside largely unpriced"],["SOTP (Sucor)","250.0","+38.9%","28.0%","Broker buy target"],["Weighted (base)","263.9","+46.6%","31.8%","Illustrative fair value"]],"impliedH":"180.0 处隐含倍数","implied":[["隐含市盈率（FY25 EPS 20.55）","8.8x"],["隐含市净率（母公司 304.1）","0.60x"],["隐含市净率（总权益 395.6）","0.46x"],["EV/EBITDA（FY25）：（3,727 + 988）/ 1,735.5","约 2.7x"]],"keyH":"关键敏感性与提示","key":["土地销售时点主导收入确认与 EPS 波动（1H26 -11%）。","板块结构压缩利润率；盈利取决于各子公司表现。","再融资后利息成本升至约 7.2%；DCF 采用 10% WACC、归母自由现金流占比 55%。","公允价值区间仅为示意、非推荐；信用评级仍为投机级（B- / B3）。"]}};
+var LIQ = {};
+var KEYP = {"en":{"h":"Key parameters (Bloomberg-standard fields)","sub":"Delayed public market data as of 18 Sep 2026; TTM includes 1H26 one-off costs — audited FY25 shown where materially different","hd":["Parameter","Value","Source / basis"],"rows":[["Delayed price","180.0 IDR (-0.5%); prev close 181.0","IDX close 18 Sep; stockanalysis"],["Market capitalization","3.71 tn IDR @ 180","stockanalysis; 3.76 tn @ 180 (S&P)"],["Shares outstanding","20.80 bn (implied)","Yahoo; weighted avg 20.59 bn (audited)"],["Beta (5Y monthly)","0.25","Yahoo & S&P agree"],["EPS (TTM)","-3.22 (1H26 loss drags)","Yahoo; FY25 audited 20.55"],["Forward EPS / P/E","25.0 / 7.4x","Yahoo estimates"],["Book value / share","291.1","Yahoo; audited 304.1 parent, 395.6 total"],["P/E (FY25 audited)","8.8x","180 / 20.55; TTM n/a (loss)"],["Price / book","0.64x","Yahoo @291.1; 0.59x parent (audited)"],["Price / sales (TTM)","0.79x","Yahoo; 0.75x (S&P)"],["EV / EV-EBITDA (TTM)","7.13 tn / 5.9x","Yahoo; FY25 EBITDA basis ~2.7x"],["Dividend","2.03 IDR; yield 1.1%; payout 8.3%","Yahoo; ex-div 17 Jun 2026"],["ROE / ROA (TTM)","2.9% / 4.3%","Yahoo; FY25 ROE ~11%"],["Profit / gross margin (TTM)","-1.4% / 36.0%","Yahoo; 1H26 one-off drags"],["52-week range","105–364 IDR","Yahoo & S&P; all-time high 405.5"],["52-week change / YTD 2026","n/a / -14.3%","Yahoo; YTD = 210 → 180"],["Avg daily volume","295.1m (10d) / 349.3m (3m)","Yahoo; 859.5m (20d, S&P)"],["Current / quick ratio","5.6 / 2.0","Yahoo (30 Jun 2026)"],["Cash / total debt (1H26)","3.21 tn / 4.86 tn","Yahoo; incl. lease 4.8"],["Interest-bearing D/E","62.6%","Yahoo; total Liab/Equity 85% (audited)"],["Free cash flow / OCF (TTM)","570.7 bn / 1.52 tn","Yahoo"]]},"id":{"h":"Parameter Kunci (bidang standar Bloomberg)","sub":"Data pasar publik tertunda per 18 Sep 2026; TTM termasuk biaya one-off 1H26 — FY25 audit ditampilkan bila berbeda material","hd":["Parameter","Nilai","Sumber / basis"],"rows":[["Harga tertunda","180,0 IDR (-0,5%); penutupan sebelumnya 181,0","IDX tutup 18 Sep; stockanalysis"],["Kapitalisasi pasar","3,71 tn Rp @ 180","stockanalysis; 3,76 tn @ 180 (S&P)"],["Saham beredar","20,80 miliar (implied)","Yahoo; rata-rata tertimbang 20,59 miliar (audit)"],["Beta (5Y bulanan)","0,25","Yahoo & S&P sepakat"],["EPS (TTM)","-3,22 (tertekan rugi 1H26)","Yahoo; FY25 audit 20,55"],["Forward EPS / P/E","25,0 / 7,4x","Estimasi Yahoo"],["Nilai buku per saham","291,1","Yahoo; audit 304,1 induk, 395,6 total"],["P/E (FY25 audit)","8,8x","180 / 20,55; TTM n/a (rugi)"],["Harga / buku","0,64x","Yahoo @291,1; 0,59x induk (audit)"],["Harga / penjualan (TTM)","0,79x","Yahoo; 0,75x (S&P)"],["EV / EV-EBITDA (TTM)","7,13 triliun / 5,9x","Yahoo; basis EBITDA FY25 sekitar 2,7x"],["Dividen","2,03 IDR; imbal hasil 1,1%; payout 8,3%","Yahoo; ex-div 17 Jun 2026"],["ROE / ROA (TTM)","2,9% / 4,3%","Yahoo; FY25 ROE sekitar 11%"],["Margin laba / kotor (TTM)","-1,4% / 36,0%","Yahoo; one-off 1H26 menekan"],["Kisaran 52 minggu","105–364 IDR","Yahoo & S&P; tertinggi sepanjang masa 405,5"],["Perubahan 52-minggu / YTD 2026","n/a / -14,3%","Yahoo; YTD = 210 → 180"],["Volume harian rata-rata","295,1 juta (10h) / 349,3 juta (3b)","Yahoo; 859,5 juta (20h, S&P)"],["Rasio lancar / cepat","5,6 / 2,0","Yahoo (30 Jun 2026)"],["Kas / total utang (1H26)","3,21 triliun / 4,86 triliun","Yahoo; termasuk sewa 4,8"],["Utang berbunga / ekuitas","62,6%","Yahoo; total Liab/Ekuitas 85% (audit)"],["Arus kas bebas / OCF (TTM)","570,7 miliar / 1,52 triliun","Yahoo"]]},"zh":{"h":"关键参数（Bloomberg 标准字段）","sub":"公开延迟行情，截至 2026-09-18；TTM 含 1H26 一次性成本 —— 与审计 FY25 差异显著时并列列示","hd":["参数","数值","来源 / 口径"],"rows":[["延迟价","180.0 盾（-0.5%）；昨收 181.0","IDX 9月18日收盘；stockanalysis"],["市值","3.71 万亿盾 @180","stockanalysis；3.76 万亿 @180（S&P）"],["流通股本","20.80B（隐含）","Yahoo；加权平均 20.59B（审计）"],["Beta（5 年月度）","0.25","Yahoo 与 S&P 一致"],["EPS（TTM）","-3.22（受 1H26 亏损拖累）","Yahoo；FY25 审计 20.55"],["前瞻 EPS / 市盈率","25.0 / 7.4x","Yahoo 预估"],["每股净资产","291.1","Yahoo；审计母公司 304.1、总权益 395.6"],["市盈率（FY25 审计）","8.8x","180 / 20.55；TTM 因亏损不适用"],["市净率","0.64x","Yahoo @291.1；0.59x 母公司（审计）"],["市销率（TTM）","0.79x","Yahoo；0.75x（S&P）"],["EV / EV-EBITDA（TTM）","7.13 万亿 / 5.9x","Yahoo；FY25 EBITDA 口径约 2.7x"],["股息","每股 2.03 盾；股息率 1.1%；派息率 8.3%","Yahoo；除息日 2026-06-17"],["ROE / ROA（TTM）","2.9% / 4.3%","Yahoo；FY25 ROE 约 11%"],["净利率 / 毛利率（TTM）","-1.4% / 36.0%","Yahoo；受 1H26 一次性成本拖累"],["52 周区间","105–364 盾","Yahoo 与 S&P；历史最高 405.5"],["52周涨跌 / 2026 年内","n/a / -14.3%","Yahoo；YTD = 210 → 180"],["日均成交量","2.95 亿（10 日）/ 3.49 亿（3 月）","Yahoo；8.60 亿（20 日，S&P）"],["流动 / 速动比率","5.6 / 2.0","Yahoo（2026-06-30）"],["现金 / 总债务（1H26）","3.21 万亿 / 4.86 万亿","Yahoo；含租赁 4.8"],["有息负债 / 权益","62.6%","Yahoo；总负债/权益 85%（审计）"],["自由现金流 / 经营现金流（TTM）","570.7B / 1.52 万亿","Yahoo"]]}};
+var AN = {"years":["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],"revenue":[3140,2931,2995,2712,2254,2396,2490,2747,3291.9,4602.6,5149.4],"niCons":[331,427,150,67,141,45,88,41,529,770.1,857.1],"niParent":[338.6,426.1,84.9,112.5,118.8,-47.8,-5,-64,306,363.3,423.2],"assets":[9741,10734,11266,11784,12185,12200,12292,13110,12947,14017.4,15056.2],"liab":[4763,5096,5366,5731,5878,5940,5920,6605,6015.6,6478.5,6911.800000000001],"equity":[4978,5638,5900,6053,6307,6260,6372,6505,6931.4,7538.9,8144.4],"gpm":[44.2,42,38,43,37,43,44,52,46,43,39],"npm":[11,15,5,2,6,2,4,1,16,17,17],"roe":[6.6,7.6,2.5,1.1,2.2,0.7,1.4,0.6,7.6,10.2,10.5],"de":[96.0,90.0,91.0,95.0,93.0,95.0,93.0,102.0,87.0,86.0,85.0],"ebitda":[1194.7,1025,914,950,672,802,817,1087,1253,1616.8,1735.5],"msales":[null,null,null,null,null,null,null,null,null,null,null],"segAM":[null,null,null,null,null,null,null,null,null,null,null],"segLease":[null,null,null,null,null,null,null,null,null,null,null],"segIns":[null,null,null,null,null,null,null,null,null,null,null],"ebitdaMargin":[38.0,35.0,30.5,35.0,29.8,33.5,32.8,39.6,38.0,35.1,33.7],"roa":[3.4,4.0,1.3,0.6,1.2,0.4,0.7,0.3,4.1,5.5,5.7],"cfo":[338.8,543.7,629.7,132.9,371.1,446.8,334.6,654.7,564.2,1870.0,2402.4],"capex":[73.0,148.1,183.1,62.9,108.6,37.9,54.0,261.5,127.8,180.5,168.5],"fcf":[265.8,395.6,446.6,70.0,262.5,408.9,280.6,393.2,436.4,1689.5,2233.9],"fcfMargin":[8.5,13.5,14.9,2.6,11.6,17.1,11.3,14.3,13.3,36.7,43.4],"landAcq":[null,null,null,null,null,null,null,null,null,null,null],"fcfCons":[-225.5,-203.4,-203.5,-22.9,176.5,284.3,93.4,279.8,209.9,1515.0,1737.7],"fcfConsMargin":[-7.2,-6.9,-6.8,-0.8,7.8,11.9,3.8,10.2,6.4,32.9,33.7]};
+var CHT = {"en":{"unit":"IDR bn","cons":"Consolidated net profit","parent":"Attributable to parent","gM":"Gross margin","nM":"Net margin","roe":"ROE","de":"Debt/Equity","amSeg":"Asset management","leaseSeg":"Fleet rental","insSeg":"Insurance","cash":"Cash & equivalents","other":"Other assets","ebitdaI":"EBITDA / interest","nd":"Net debt / EBITDA","openC":"Opening cash","consS":"Net change in cash","closeC":"Closing cash","totR":"Total revenue","done":"1H26 achieved","recurr":"Recurring fee/rental/premium","fx":"FX loss","deriv":"Derivative termination","amort":"Accelerated amortization","sn":"Senior notes","amPie":"Asset management","leasePie":"Fleet rental","insPie":"Insurance","ta":"Total assets","tl":"Total liabilities","te":"Total equity","op":"Operating","no":"Non-operating","revL":"Revenue","ebitdaL":"EBITDA","npL":"Net profit","npPL":"Attributable to parent","assetsL":"Total assets","liabL":"Total liabilities","equityL":"Total equity","cashL":"Cash & equivalents","debtL":"Total borrowings","netDebtL":"Net debt","openC24":"Opening cash (end-2023)","consS24":"Consolidated surplus 2024","closeC24":"Closing cash (end-2024)","openC25":"Opening cash (end-2024)","consS25":"Consolidated surplus 2025","closeC25":"Closing cash (end-2025)"},"id":{"unit":"Rp miliar","cons":"Laba bersih konsolidasi","parent":"Diatribusikan ke pemilik","gM":"Margin kotor","nM":"Margin bersih","roe":"ROE","de":"Utang/Ekuitas","amSeg":"Manajemen investasi","leaseSeg":"Sewa armada","insSeg":"Asuransi","cash":"Kas & setara kas","other":"Aset lainnya","ebitdaI":"EBITDA / bunga","nd":"Utang bersih / EBITDA","openC":"Kas awal","consS":"Perubahan kas bersih","closeC":"Kas akhir","totR":"Total pendapatan","done":"1H26 terealisasi","recurr":"Fee/sewa/premium berulang","fx":"Rugi selisih kurs","deriv":"Penghentian derivatif","amort":"Amortisasi dipercepat","sn":"Senior notes","amPie":"Manajemen investasi","leasePie":"Sewa armada","insPie":"Asuransi","ta":"Total aset","tl":"Total liabilitas","te":"Total ekuitas","op":"Beroperasi","no":"Non-operasi","revL":"Pendapatan","ebitdaL":"EBITDA","npL":"Laba bersih","npPL":"Diatribusikan ke pemilik","assetsL":"Total aset","liabL":"Total liabilitas","equityL":"Total ekuitas","cashL":"Kas & setara kas","debtL":"Total pinjaman","netDebtL":"Utang bersih","openC24":"Kas awal (akhir 2023)","consS24":"Surplus konsolidasi 2024","closeC24":"Kas akhir (akhir 2024)","openC25":"Kas awal (akhir 2024)","consS25":"Surplus konsolidasi 2025","closeC25":"Kas akhir (akhir 2025)"},"zh":{"unit":"十亿盾","cons":"合并净利","parent":"归母净利","gM":"毛利率","nM":"净利率","roe":"ROE","de":"负债/权益","amSeg":"资产管理","leaseSeg":"车队租赁","insSeg":"保险","cash":"现金及等价物","other":"其他资产","ebitdaI":"EBITDA / 利息","nd":"净负债 / EBITDA","openC":"期初现金","consS":"现金净变动","closeC":"期末现金","totR":"总收入","done":"1H26 已实现","recurr":"经常性费用/租赁/保费","fx":"汇兑损失","deriv":"衍生品终止","amort":"加速摊销","sn":"高级票据","amPie":"资产管理","leasePie":"车队租赁","insPie":"保险","ta":"总资产","tl":"总负债","te":"总权益","op":"运营中","no":"非经营","revL":"营业收入","ebitdaL":"EBITDA","npL":"净利润","npPL":"归属于母公司股东","assetsL":"总资产","liabL":"总负债","equityL":"总权益","cashL":"现金及等价物","debtL":"总有息借款","netDebtL":"净负债","openC24":"期初现金（2023 末）","consS24":"合并盈余 2024","closeC24":"期末现金（2024 末）","openC25":"期初现金（2024 末）","consS25":"合并盈余 2025","closeC25":"期末现金（2025 末）"}};
+var FY = {"segStack":{"am":[null,null,null,null,null],"lease":[null,null,null,null,null],"ins":[null,null,null,null,null]},"msales":[null,null,null,null],"seg24":[["amPie",0],["leasePie",0],["insPie",0]],"seg24b":[["amPie",0],["leasePie",0],["insPie",0]],"seg25":[["amPie",0],["leasePie",0],["insPie",0]],"cf24":{"open":0,"surplus":0,"close":0},"pl24":{"rev":0,"ebitda":0,"np":0,"npP":0},"pl25":{"rev":0,"ebitda":0,"np":0,"npP":0},"bs24":{"assets":0,"liab":0,"equity":0},"bs25":{"assets":0,"liab":0,"equity":0},"bs26":{"cash":0,"debt":0,"netDebt":0},"ni3":{"cons":[0,0,0],"parent":[0,0,0]},"debt25":{"sn":0,"mandiri":0,"ccb":0,"ocbc":0},"cashStack":{"cash":[0,0,0],"other":[0,0,0]},"cov":{"icr":[0,0,0],"nd":[0,0,0]},"cf":{"open":0,"surplus":0,"close":0},"h26rev":{"h25":[0,0,0,0],"h26":[0,0,0,0]},"msDone":0,"msTarget":0,"mix":{"h25":[0,0],"h26":[0,0]},"oneoff":[0,0,0],"sched5y":0,"totD26":0,"cash26":0,"refPrice":0,"vjan":{"m":"Jan-26","c":0,"hi":0},"vjun":{"m":"Jun-26","c":0,"hi":0},"bpiiPBPS":[0,0],"peerPBPS":[0,0]};
+var LBV = {};
+var GLOS = {"terms":[{"p":"pre-elimination","x":"Segment totals before inter-segment elimination; internal items are removed in consolidation."},{"p":"EV/EBITDA","x":"Enterprise Value / EBITDA — a valuation multiple comparing total business value (market cap + debt - cash) to operating earnings."},{"p":"EBITDA","x":"Earnings Before Interest, Taxes, Depreciation and Amortisation — core operating profitability."},{"p":"BVPS","x":"Book Value Per Share — shareholders' equity per share."},{"p":"SOTP","x":"Sum-of-the-Parts — valuing a holding group by valuing each subsidiary separately and adding them up."},{"p":"WACC","x":"Weighted Average Cost of Capital — blended required return of debt and equity holders; the discount rate in DCF."},{"p":"P/E","x":"Price-to-Earnings ratio — share price divided by earnings per share."},{"p":"P/B","x":"Price-to-Book ratio — share price divided by book value per share; below 1 means the stock trades below net asset value."},{"p":"P/S","x":"Price-to-Sales ratio — market cap divided by annual revenue."},{"p":"EPS","x":"Earnings Per Share — profit attributable to shareholders divided by shares outstanding."},{"p":"ROE","x":"Return on Equity — net profit divided by shareholders' equity."},{"p":"ROA","x":"Return on Assets — net profit divided by total assets."},{"p":"NCI","x":"Non-Controlling Interest — the portion of a subsidiary's equity not owned by the parent."},{"p":"DCF","x":"Discounted Cash Flow — forecasting future cash flows and discounting them to present value."},{"p":"EV","x":"Enterprise Value — market cap plus total debt minus cash."},{"p":"ICR","x":"Interest Coverage Ratio — EBITDA divided by interest expense."},{"p":"OCF","x":"Operating Cash Flow — cash from core business operations."},{"p":"FCF","x":"Free Cash Flow — operating cash flow minus capital expenditure."},{"p":"YoY","x":"Year over Year — comparing a figure with the same period one year earlier."},{"p":"TTM","x":"Trailing Twelve Months — the latest rolling 12 months of data."},{"p":"D/E","x":"Debt-to-Equity ratio — total debt divided by shareholders' equity."},{"p":"AUM","x":"Assets Under Management — total market value of assets an investment manager (e.g. BPAM) manages on behalf of clients."},{"p":"mutual fund","x":"Mutual fund — a pooled investment vehicle (reksa dana) managed by an asset management company."},{"p":"underwriting","x":"Underwriting — the process of selecting, pricing and insuring risks; underwriting profit = premium earned minus claims and acquisition cost."},{"p":"gross premium","x":"Gross premium — total premiums written by an insurer before reinsurance and commissions."},{"p":"fleet","x":"Fleet — the total pool of vehicles managed by a rental/fleet company (e.g. BPTR)."},{"p":"fee-based income","x":"Fee-based income — recurring revenue from AUM-based management fees, as opposed to spread or transaction income."},{"p":"JV","x":"Joint Venture — a business arrangement in which two or more parties combine resources while remaining separate companies."},{"p":"IDX","x":"Indonesia Stock Exchange (Bursa Efek Indonesia) — the stock exchange where BPII is listed."},{"p":"OJK","x":"Otoritas Jasa Keuangan — Indonesia's Financial Services Authority, regulator of capital markets and financial services."},{"p":"FX","x":"Foreign Exchange — currency conversion; an FX loss/gain arises from translating or settling foreign-currency items."},{"p":"RSI","x":"Relative Strength Index — a momentum oscillator on a 0-100 scale; above 70 overbought, below 30 oversold."},{"p":"DPS","x":"Dividend Per Share — the dividend paid out per share."},{"p":"SBLC","x":"Standby Letter of Credit — a bank guarantee to pay a beneficiary if the applicant fails to meet an obligation."},{"p":"AGM","x":"Annual General Meeting — the yearly shareholders' meeting."},{"p":"GMS","x":"General Meeting of Shareholders — the shareholders' meeting (RUPS in Indonesia)."},{"p":"KPI","x":"Key Performance Indicator — a metric used to measure business performance."},{"p":"Beta","x":"Beta — a measure of a stock's volatility relative to the market; below 1 means less volatile."},{"p":"YTD","x":"Year to Date — the period from the start of the year to the current date."},{"p":"1H(?=\\d)\\d*","x":"First half of the fiscal year (January-June); 1H26 = the interim period ended 30 Jun 2026."},{"p":"H1(?![A-Za-z])","x":"First half of the year (January-June)."},{"p":"FY(?![a-z])\\d*","x":"Fiscal Year — the annual reporting period; FY2025 = year ended 31 Dec 2025."},{"p":"AR(?=\\d)\\d*","x":"Annual Report — the audited annual disclosure to shareholders."},{"p":"Q[1-4](?![A-Za-z])","x":"Quarter — a three-month reporting period."},{"p":"PT(?![A-Za-z])","x":"Perseroan Terbatas — Indonesian limited liability company; 'Tbk' means publicly listed on the IDX."},{"p":"Tbk","x":"Terbuka — designation for a publicly listed Indonesian company."},{"p":"RUPS","x":"Rapat Umum Pemegang Saham — the annual shareholders' meeting."},{"p":"Dewan Komisaris","x":"Board of Commissioners — the supervisory board overseeing the board of directors."},{"p":"Direksi","x":"Board of Directors — the executive board running daily operations."},{"p":"归母净利","x":"归母净利 = profit attributable to parent shareholders, after deducting NCI."},{"p":"少数股东权益","x":"Non-controlling interest (NCI) — the parent's share of a subsidiary's equity not held."},{"p":"毛利率","x":"Gross margin = (revenue - COGS) / revenue."},{"p":"净利率","x":"Net margin = net profit / revenue."},{"p":"净债务","x":"Net debt = total interest-bearing debt minus cash and equivalents."},{"p":"市值","x":"Market capitalisation = share price x shares outstanding."},{"p":"净债务","x":"Net debt = total interest-bearing debt minus cash and equivalents."},{"p":"CFO","x":"Operating cash flow — net cash generated by the core business in a year."},{"p":"capex","x":"Capital expenditure — cash spent on property, plant and equipment."},{"p":"Depreciation","x":"Systematic write-off of fixed-asset cost over its useful life; non-cash, added back in EBITDA."},{"p":"Amortization","x":"Write-off of intangible-asset cost over its useful life; non-cash, added back in EBITDA."},{"p":"EBIT","x":"Earnings before interest and tax = operating profit."},{"p":"cash conversion","x":"How much accounting profit turns into actual cash; CFO divided by net profit."}]};
+var TOP3 = {"en":{"h":"Top 3 priorities (data-derived)","sub":"Each tied to a measurable lever across the three subsidiaries.","items":[["1. Grow BPAM AUM and fee base","AUM 49tn across 107 funds; expanding AUM and fund variety lifts recurring fee income.","Lever: widen distribution (37 sales agents) and launch products to lift fee margin."],["2. Improve BPTR fleet utilization","Fleet of 6,928 vehicles; utilization and renewal drive rental income.","Lever: optimize fleet mix and retention to lift rental yield."],["3. Keep MTWI underwriting disciplined","Gross premium 1,695.8bn; claims ratio and cost discipline protect underwriting profit.","Lever: prudent pricing and reinsurance to protect margin."]]},"id":{"h":"3 prioritas utama (berbasis data)","sub":"Tiap poin terkait tuas terukur lintas tiga anak usaha.","items":[["1. Tumbuhkan AUM & fee BPAM","AUM 49tn pada 107 reksa dana; memperluas AUM & produk menaikkan fee berulang.","Tuas: lebarkan distribusi (37 agen) & luncurkan produk."],["2. Tingkatkan utilisasi armada BPTR","Armada 6.928 kendaraan; utilisasi & pembaruan menggerakkan pendapatan sewa.","Tuas: optimalkan bauran armada & retensi."],["3. Jaga disiplin underwriting MTWI","Gross premium 1.695,8bn; rasio klaim & disiplin biaya melindungi laba underwriting.","Tuas: harga hati-hati & reasuransi."]]},"zh":{"h":"三大优先项（基于数据）","sub":"每项对应三家子公司的可量化杠杆。","items":[["1. 做大 BPAM AUM 与费用基础","AUM 49 万亿、107 只基金；扩大 AUM 与产品提升经常性费用。","杠杆：拓宽分销（37 家代理）、丰富产品。"],["2. 提升 BPTR 车队利用率","车队 6,928 辆；利用率与更新驱动租赁收入。","杠杆：优化车队结构与留存，提升租赁收益。"],["3. 保持 MTWI 承保纪律","毛保费 1,695.8bn；赔付率与成本纪律保护承保利润。","杠杆：审慎定价与再保。"]]}};
+var OPP = {"en":{"h":"Market opportunities (2026)","sub":"Based on BPII's three-subsidiary financial holding model.","items":[["Asset management (BPAM)","Deepening mutual-fund penetration and AUM growth lifts recurring fee income."],["Fleet rental (BPTR)","Commercial fleet and corporate mobility demand supports fleet utilization."],["Insurance (MTWI)","Premium growth and underwriting discipline expand insurance earnings."],["Holding synergies","Cross-subsidiary distribution and balance-sheet strength support group returns."]]},"id":{"h":"Peluang pasar (2026)","sub":"Berdasarkan model holding keuangan tiga anak usaha BPII.","items":[["Manajemen investasi (BPAM)","Memperdalam penetrasi reksa dana & pertumbuhan AUM menaikkan fee berulang."],["Sewa armada (BPTR)","Permintaan armada komersial & mobilitas korporasi mendukung utilisasi."],["Asuransi (MTWI)","Pertumbuhan premium & disiplin underwriting memperluas laba asuransi."],["Sinergi holding","Distribusi lintas anak usaha & kekuatan neraca mendukung imbal hasil grup."]]},"zh":{"h":"市场机会（2026）","sub":"基于 BPII 三家子公司的金融控股模型。","items":[["资产管理（BPAM）","深化公募基金渗透与 AUM 增长，提升经常性费用。"],["车队租赁（BPTR）","商用车队与企业出行需求支撑车队利用率。"],["保险（MTWI）","保费增长与承保纪律扩大保险盈利。"],["控股协同","跨子公司分销与资产负债表实力支撑集团回报。"]]}};
+</script>
+<script>
+/* ================= 工具 ================= */
+var LANG = 'en';
+try { var _s = localStorage.getItem('bpii_lang'); if (_s === 'en' || _s === 'id' || _s === 'zh') { LANG = _s; } } catch (e) {}
+function T(k){ return (I18N[LANG] && I18N[LANG][k]) || k; }
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function fmtN(v){
+  if (v === null || v === undefined || v === '') { return ''; }
+  var n = Number(v);
+  if (isNaN(n)) { return String(v); }
+  var s = n.toFixed(1);
+  if (s.charAt(s.length - 2) === '.' && s.charAt(s.length - 1) === '0') { s = s.slice(0, -2); }
+  var parts = s.split('.');
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return parts.join('.');
+}
+var C = {green:'#1F5E40', green2:'#4A8B66', teal:'#3E7D6B', amber:'#C07A2D', clay:'#B04A2E', soft:'#C7D0C8', blue:'#2E6FB0', purple:'#7A5BA6', red:'#C0392B', gold:'#D9A53A'};
+var AX = {color:'#5C6B61', fontSize:11};
+var SPLIT = {lineStyle:{color:'#E3E8E1'}};
+
+/* ================= 年度数据与图表文案（AN / CHT / FY 由 data.json 注入；在线时运行时拉取覆盖） ================= */
+function CT(k){ return CHT[LANG][k] || k; }
+function N(k){ return NXT[LANG][k] || k; }
+
+/* ================= 图表构建（按当前语言） ================= */
+function baseTooltip(){ return {trigger:'axis', confine:true}; }
+function baseGrid(){ return {left:48, right:18, top:34, bottom:30}; }
+function baseX(cats){ return {type:'category', data:cats, axisLabel:{color:AX.color, fontSize:11}, axisLine:{lineStyle:{color:'#B9C4BB'}}}; }
+function baseY(name){ return {type:'value', name:name, nameTextStyle:{color:AX.color, fontSize:11}, axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT}; }
+function lblFmt(){ return function(p){ return fmtN(p.value); }; }
+function legendT(){ return {top:2, right:6, textStyle:{color:AX.color, fontSize:11}, itemWidth:14}; }
+
+function num(s){ var n = Number(String(s).replace(/,/g, '.')); return isNaN(n) ? 0 : n; }
+function buildOpt(id){
+  var U = CT('unit');
+  if (id === 'o1') {
+    var d = AN.revenue;
+    var tt = {trigger:'axis', confine:true, formatter:function(ps){
+      var i = ps[0].dataIndex, s = '<b>' + AN.years[i] + '</b><br/>';
+      s += CT('rev') + ': ' + fmtN(d[i]) + ' ' + U;
+      if (i > 0 && d[i-1]) { var y = (d[i]/d[i-1]-1)*100; s += '<br/>YoY: ' + (y>=0?'+':'') + y.toFixed(1) + '%'; }
+      return s;
+    }};
+    return {tooltip:tt, grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY(U),
+      series:[{type:'bar', data:d, itemStyle:{color:C.green, borderRadius:[3,3,0,0]}, label:{show:true, position:'top', fontSize:10, color:'#5C6B61', formatter:lblFmt()}, barMaxWidth:26}]};
+  }
+  if (id === 'o2') {
+    var nc = AN.niCons, np = AN.niParent;
+    var tt2 = {trigger:'axis', confine:true, formatter:function(ps){
+      var i = ps[0].dataIndex, s = '<b>' + AN.years[i] + '</b>';
+      for (var q=0; q<ps.length; q++){
+        var ser = ps[q].seriesIndex === 0 ? nc : np, prev = ser[i-1];
+        s += '<br/>' + ps[q].marker + ps[q].seriesName + ': ' + fmtN(ps[q].value) + ' ' + U;
+      }
+      return s;
+    }};
+    return {
+      tooltip: tt2,
+      legend: legendT(),
+      grid: baseGrid(),
+      xAxis: baseX(AN.years),
+      yAxis: baseY(U),
+      series: [
+        {
+          name: CT('cons'), type: 'line', data: nc,
+          smooth: true, symbolSize: 7,
+          lineStyle: { width: 2.5, color: C.green },
+          itemStyle: { color: C.green }
+        },
+        {
+          name: CT('parent'), type: 'line', data: np,
+          smooth: false, symbolSize: 12, showSymbol: true,
+          lineStyle: { width: 4, color: '#D9A53A', type: 'solid' },
+          itemStyle: { color: '#D9A53A', borderColor: '#fff', borderWidth: 2 },
+          label: { show: true, interval: 0, fontSize: 10, fontWeight: 'bold', color: '#B8860B',
+            formatter: function(p){ return p.value; },
+            position: function(p){ return p.value < 0 ? 'bottom' : 'top'; }
+          },
+          labelLayout: { hideOverlap: false }
+        }
+      ]
+    };
+  }
+  if (id === 'o3') {
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY('%'),
+      series:[
+        {name:CT('gM'), type:'line', data:AN.gpm, smooth:true, symbolSize:5, lineStyle:{width:2, color:C.green}, itemStyle:{color:C.green}},
+        {name:CT('nM'), type:'line', data:AN.npm, smooth:true, symbolSize:5, lineStyle:{width:2, color:C.blue}, itemStyle:{color:C.blue}},
+        {name:CT('roe'), type:'line', data:AN.roe, smooth:true, symbolSize:5, lineStyle:{width:2, color:C.amber}, itemStyle:{color:C.amber}},
+        {name:CT('de'), type:'line', data:AN.de, smooth:true, symbolSize:5, lineStyle:{width:2, color:C.red}, itemStyle:{color:C.red}}]};
+  }
+  if (id === 'o4') {
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years.slice(-5)), yAxis:baseY(U),
+      series:[
+        {name:CT('amSeg'), type:'bar', stack:'s', data:FY.segStack.am, itemStyle:{color:C.green}, barMaxWidth:40},
+        {name:CT('leaseSeg'), type:'bar', stack:'s', data:FY.segStack.lease, itemStyle:{color:C.blue}, barMaxWidth:40},
+        {name:CT('insSeg'), type:'bar', stack:'s', data:FY.segStack.ins, itemStyle:{color:C.amber}, barMaxWidth:40}]};
+  }
+  if (id === 'o6') {
+    var cats = [], vals = [], d3 = AN.ebitda;
+    for (var k = 0; k < d3.length; k++) { if (d3[k] !== null) { cats.push(AN.years[k]); vals.push(d3[k]); } }
+    return {tooltip:baseTooltip(), grid:baseGrid(), xAxis:baseX(cats), yAxis:baseY(U),
+      series:[{type:'bar', data:vals, itemStyle:{color:C.green2, borderRadius:[3,3,0,0]}, label:{show:true, position:'top', fontSize:10, color:'#5C6B61', formatter:lblFmt()}, barMaxWidth:40}]};
+  }
+  if (id === 'p-1') {
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY('%'),
+      series:[
+        {name:CT('gM'), type:'line', data:AN.gpm, smooth:true, symbolSize:5, lineStyle:{width:2.5,color:C.green}, itemStyle:{color:C.green}},
+        {name:'EBITDA margin', type:'line', data:AN.ebitdaMargin, smooth:true, symbolSize:5, lineStyle:{width:2,color:C.blue}, itemStyle:{color:C.blue}},
+        {name:CT('nM'), type:'line', data:AN.npm, smooth:true, symbolSize:5, lineStyle:{width:2,color:C.amber}, itemStyle:{color:C.amber}}]};
+  }
+  if (id === 'p-2') {
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY('%'),
+      series:[
+        {name:'ROE', type:'line', data:AN.roe, smooth:true, symbolSize:6, lineStyle:{width:2.5,color:C.green}, itemStyle:{color:C.green}},
+        {name:'ROA', type:'line', data:AN.roa, smooth:true, symbolSize:6, lineStyle:{width:2,color:C.blue}, type2:'x', itemStyle:{color:C.blue}}]};
+  }
+  if (id === 'p-3') {
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY(U),
+      series:[
+        {name:'EBITDA', type:'bar', data:AN.ebitda, itemStyle:{color:C.green2,barMaxWidth:24}, barMaxWidth:24},
+        {name:CT('cons'), type:'line', data:AN.niCons, smooth:true, symbolSize:5, lineStyle:{width:2.5,color:C.clay}, itemStyle:{color:C.clay}}]};
+  }
+  if (id === 'p-4') {
+    var yr=[], rev=[], gpmL=[];
+    for(var pi=0; pi<AN.years.length; pi++){ yr.push(AN.years[pi]); }
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:[baseY(U), baseY('%')],
+      series:[
+        {name:'Revenue', type:'bar', data:AN.revenue, itemStyle:{color:C.soft}, barMaxWidth:26},
+        {name:CT('gM'), type:'line', yAxisIndex:1, data:AN.gpm, smooth:true, symbolSize:5, lineStyle:{width:2.5,color:C.green}, itemStyle:{color:C.green}}]};
+  }
+  if (id === 'd-5') {
+    var ar=WC.ar, rev=WC.revenue, dso=[];
+    for(var wi=0; wi<ar.length; wi++){ dso.push(ar[wi]/rev[wi]*365); }
+    return {tooltip:baseTooltip(),
+      legend:{bottom:0, textStyle:{color:AX.color, fontSize:11}, itemWidth:12},
+      grid:{left:48, right:48, top:30, bottom:44}, xAxis:baseX(WC.years),
+      yAxis:[baseY(U), baseY('days')],
+      series:[
+        {name:'Trade receivables (net)', type:'bar', data:ar, itemStyle:{color:C.blue}, barMaxWidth:34},
+        {name:'DSO', type:'line', yAxisIndex:1, data:dso.map(function(x){return Math.round(x);}), smooth:true, symbolSize:6, lineStyle:{width:2.5,color:C.amber}, itemStyle:{color:C.amber}}]};
+  }
+  if (id === 'f24-1') {
+    var s = FY.seg24b, arr = [];
+    for (var i = 0; i < s.length; i++) arr.push({name: CT(s[i][0]), value: s[i][1]});
+    return {tooltip:{trigger:'item', confine:true, formatter:function(p){ return p.name + ': ' + fmtN(p.value) + ' ' + U + ' (' + p.percent + '%)'; }},
+      legend:{bottom:2, textStyle:{color:AX.color, fontSize:11}, itemWidth:12},
+      series:[{type:'pie', radius:['36%','68%'], center:['50%','46%'], data:arr, itemStyle:{borderColor:'#fff', borderWidth:2},
+        label:{show:true, fontSize:11, color:'#16241C', formatter:function(p){ return p.name + '\n' + p.percent + '%'; }},
+        labelLine:{length:12, length2:8}, color:[C.green, C.blue, C.amber]}]};
+  }
+  if (id === 'f24-2') {
+    var d = FY.pl24;
+    return {tooltip:baseTooltip(), grid:{left:130, right:50, top:10, bottom:26},
+      xAxis:{type:'value', axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT},
+      yAxis:{type:'category', data:[CT('npPL'), CT('npL'), CT('ebitdaL'), CT('revL')], axisLabel:{color:'#16241C', fontSize:11}},
+      series:[{type:'bar', data:[
+        {value:d.npP, itemStyle:{color:C.purple}},
+        {value:d.np, itemStyle:{color:C.amber}},
+        {value:d.ebitda, itemStyle:{color:C.blue}},
+        {value:d.rev, itemStyle:{color:C.green}}
+      ], label:{show:true, position:'right', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:22}]};
+  }
+  if (id === 'f24-3') {
+    var b = FY.bs24;
+    return {tooltip:baseTooltip(), grid:{left:130, right:50, top:10, bottom:26},
+      xAxis:{type:'value', axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT},
+      yAxis:{type:'category', data:[CT('equityL'), CT('liabL'), CT('assetsL')], axisLabel:{color:'#16241C', fontSize:11}},
+      series:[{type:'bar', data:[
+        {value:b.equity, itemStyle:{color:C.blue}},
+        {value:b.liab, itemStyle:{color:C.red}},
+        {value:b.assets, itemStyle:{color:C.green}}
+      ], label:{show:true, position:'right', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:26}]};
+  }
+  if (id === 'f24-4') {
+    var cf = FY.cf24;
+    return {tooltip:baseTooltip(), grid:baseGrid(), xAxis:baseX([CT('openC24'), CT('consS24'), CT('closeC24')]), yAxis:baseY(U),
+      series:[{type:'bar', data:[
+        {value:cf.open, itemStyle:{color:C.green2}},
+        {value:cf.surplus, itemStyle:{color:C.amber}},
+        {value:cf.close, itemStyle:{color:C.green}}
+      ], label:{show:true, position:'top', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:56}]};
+  }
+  if (id === 'f25-1') {
+    var s25 = FY.seg25, a25 = [];
+    for (var i25 = 0; i25 < s25.length; i25++) a25.push({name: CT(s25[i25][0]), value: s25[i25][1]});
+    return {tooltip:{trigger:'item', confine:true, formatter:function(p){ return p.name + ': ' + fmtN(p.value) + ' ' + U + ' (' + p.percent + '%)'; }},
+      legend:{bottom:2, textStyle:{color:AX.color, fontSize:11}, itemWidth:12},
+      series:[{type:'pie', radius:['36%','68%'], center:['50%','46%'], data:a25, itemStyle:{borderColor:'#fff', borderWidth:2},
+        label:{show:true, fontSize:11, color:'#16241C', formatter:function(p){ return p.name + '\n' + p.percent + '%'; }},
+        labelLine:{length:12, length2:8}, color:[C.green, C.blue, C.amber]}]};
+  }
+  if (id === 'f25-2') {
+    var d25 = FY.pl25;
+    return {tooltip:baseTooltip(), grid:{left:130, right:50, top:10, bottom:26},
+      xAxis:{type:'value', axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT},
+      yAxis:{type:'category', data:[CT('npPL'), CT('npL'), CT('ebitdaL'), CT('revL')], axisLabel:{color:'#16241C', fontSize:11}},
+      series:[{type:'bar', data:[
+        {value:d25.npP, itemStyle:{color:C.purple}},
+        {value:d25.np, itemStyle:{color:C.amber}},
+        {value:d25.ebitda, itemStyle:{color:C.blue}},
+        {value:d25.rev, itemStyle:{color:C.green}}
+      ], label:{show:true, position:'right', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:22}]};
+  }
+  if (id === 'f25-3') {
+    var b25 = FY.bs25;
+    return {tooltip:baseTooltip(), grid:{left:130, right:50, top:10, bottom:26},
+      xAxis:{type:'value', axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT},
+      yAxis:{type:'category', data:[CT('equityL'), CT('liabL'), CT('assetsL')], axisLabel:{color:'#16241C', fontSize:11}},
+      series:[{type:'bar', data:[
+        {value:b25.equity, itemStyle:{color:C.blue}},
+        {value:b25.liab, itemStyle:{color:C.red}},
+        {value:b25.assets, itemStyle:{color:C.green}}
+      ], label:{show:true, position:'right', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:26}]};
+  }
+  if (id === 'f25-4') {
+    var cf25 = FY.cf;
+    return {tooltip:baseTooltip(), grid:baseGrid(), xAxis:baseX([CT('openC25'), CT('consS25'), CT('closeC25')]), yAxis:baseY(U),
+      series:[{type:'bar', data:[
+        {value:cf25.open, itemStyle:{color:C.green2}},
+        {value:cf25.surplus, itemStyle:{color:C.amber}},
+        {value:cf25.close, itemStyle:{color:C.green}}
+      ], label:{show:true, position:'top', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:56}]};
+  }
+  if (id === 'f26-1') {
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX([CT('totR'), CT('amSeg'), CT('leaseSeg'), CT('insSeg')]), yAxis:baseY(U),
+      series:[
+        {name:'1H25', type:'bar', data:FY.h26rev.h25, itemStyle:{color:C.soft}, barMaxWidth:30},
+        {name:'1H26', type:'bar', data:FY.h26rev.h26, itemStyle:{color:C.green}, barMaxWidth:30}]};
+  }
+  if (id === 'f26-2') {
+    var li = (AN.segIns && AN.segIns.length) ? AN.segIns[AN.segIns.length-1] : 0;
+    var la = (AN.segLease && AN.segLease.length) ? AN.segLease[AN.segLease.length-1] : 0;
+    var am = (AN.segAM && AN.segAM.length) ? AN.segAM[AN.segAM.length-1] : 0;
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX([CT('amSeg'), CT('leaseSeg'), CT('insSeg')]), yAxis:baseY(U),
+      series:[{type:'bar', data:[
+        {value:am, itemStyle:{color:C.green}},
+        {value:la, itemStyle:{color:C.blue}},
+        {value:li, itemStyle:{color:C.amber}}
+      ], label:{show:true, position:'top', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:54}]};
+  }
+  if (id === 'f26-3') {
+    var bd = FY.bs26;
+    return {tooltip:baseTooltip(), grid:baseGrid(), xAxis:baseX([CT('cashL'), CT('debtL'), CT('netDebtL')]), yAxis:baseY(U),
+      series:[{type:'bar', data:[
+        {value:bd.cash, itemStyle:{color:C.green}},
+        {value:bd.debt, itemStyle:{color:C.red}},
+        {value:bd.netDebt, itemStyle:{color:C.amber}}
+      ], label:{show:true, position:'top', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:56}]};
+  }
+  if (id === 'd-1') {
+    var dl = DEBT.lenders26, dc = [], dv = [], dcol = [C.green, C.amber, C.blue, C.purple, C.soft];
+    for (var di = 0; di < dl.length; di++) { dc.push(N(dl[di].n)); dv.push({value:dl[di].v, itemStyle:{color:dcol[dl[di].c - 1]}}); }
+    return {tooltip:baseTooltip(), grid:{left:132, right:70, top:8, bottom:24},
+      xAxis:{type:'value', axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT},
+      yAxis:{type:'category', data:dc, axisLabel:{color:'#16241C', fontSize:11}},
+      series:[{type:'bar', data:dv, label:{show:true, position:'right', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:22}]};
+  }
+  if (id === 'd-2') {
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(DEBT.maturityYears), yAxis:baseY(U),
+      series:[
+        {name:N('mandiri'), type:'bar', stack:'m', data:DEBT.maturityMandiri, itemStyle:{color:C.green}, barMaxWidth:34},
+        {name:N('ina'), type:'bar', stack:'m', data:DEBT.maturityINA, itemStyle:{color:C.amber}, barMaxWidth:34},
+        {name:N('ocbc'), type:'bar', stack:'m', data:DEBT.maturityOCBC, itemStyle:{color:C.blue}, barMaxWidth:34,
+          label:{show:true, position:'top', fontSize:10, color:'#5C6B61', formatter:function(p){ return fmtN(DEBT.maturityTot[p.dataIndex]); }}}]};
+  }
+  if (id === 'd-3') {
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(['2023','2024','2025']), yAxis:baseY('x'),
+      series:[
+        {name:CT('ebitdaI'), type:'line', data:FY.cov.icr, smooth:true, symbolSize:6, lineStyle:{width:2, color:C.green}, itemStyle:{color:C.green}},
+        {name:CT('nd'), type:'line', data:FY.cov.nd, smooth:true, symbolSize:6, lineStyle:{width:2, color:C.red}, itemStyle:{color:C.red}}]};
+  }
+  if (id === 'd-4') {
+    return {tooltip:baseTooltip(), grid:baseGrid(), xAxis:baseX([N('sched'), N('totD')]), yAxis:baseY(U),
+      series:[{type:'bar', data:[
+        {value:FY.sched5y, itemStyle:{color:C.teal}},
+        {value:FY.totD26, itemStyle:{color:C.amber}}
+      ], label:{show:true, position:'top', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:64,
+        markLine:{silent:true, symbol:'none', lineStyle:{color:C.green, width:2}, data:[{yAxis:FY.cash26, label:{formatter:N('cash') + ' ' + fmtN(FY.cash26), fontSize:11, color:C.green, position:'insideEndTop'}}]}}]};
+  }
+  /* ---- 分部与资产页 ---- */
+  if (id === 'seg-1') {
+    var s1yrs = AN.years.slice(-5);
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(s1yrs), yAxis:baseY(U),
+      series:[
+        {name:CT('amSeg'), type:'bar', data:AN.segAM, itemStyle:{color:C.green}, barMaxWidth:16},
+        {name:CT('leaseSeg'), type:'bar', data:AN.segLease, itemStyle:{color:C.blue}, barMaxWidth:16},
+        {name:CT('insSeg'), type:'bar', data:AN.segIns, itemStyle:{color:C.amber}, barMaxWidth:16}]};
+  }
+  if (id === 'seg-2') {
+    var li2 = (AN.segIns && AN.segIns.length) ? AN.segIns[AN.segIns.length-1] : 0;
+    var la2 = (AN.segLease && AN.segLease.length) ? AN.segLease[AN.segLease.length-1] : 0;
+    var am2 = (AN.segAM && AN.segAM.length) ? AN.segAM[AN.segAM.length-1] : 0;
+    return {tooltip:baseTooltip(), legend:legendT(), grid:{left:120, right:70, top:10, bottom:26},
+      xAxis:{type:'value', axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT},
+      yAxis:{type:'category', data:[CT('insSeg'), CT('leaseSeg'), CT('amSeg')], axisLabel:{color:'#16241C', fontSize:11}},
+      series:[{type:'bar', data:[
+        {value:li2, itemStyle:{color:C.amber}},
+        {value:la2, itemStyle:{color:C.blue}},
+        {value:am2, itemStyle:{color:C.green}}
+      ], label:{show:true, position:'right', fontSize:11, color:'#16241C', formatter:lblFmt()}, barMaxWidth:24}]};
+  }
+  /* ---- 估值页 ---- */
+  if (id === 'v-1') {
+    var volArr = VAL.vol || [];
+    return {
+      tooltip:{trigger:'axis', confine:true,
+        formatter:function(params){
+          var i = params[0].dataIndex;
+          var m = VAL.months[i], c = VAL.close[i], v = volArr[i] || 0;
+          var rg = (VAL.range && VAL.range[i]) ? VAL.range[i] : null;
+          var to = v * c / 1000;
+          var s = '<b>' + m + '</b><br/>';
+          if (rg) { s += 'Price range: ' + fmtN(rg[0]) + '–' + fmtN(rg[1]) + ' IDR<br/>'; }
+          s += 'Volume: ' + fmtN(v) + 'M shares<br/>';
+          s += 'Turnover: ~' + fmtN(to) + ' IDR bn<br/>';
+          s += 'Turnover rate: ~' + (v / 20800 * 100).toFixed(1) + '%';
+          return s;
+        }},
+      grid:[{left:48, right:18, top:36, height:'56%'},
+            {left:48, right:18, top:'74%', height:'16%'}],
+      xAxis:[{type:'category', data:VAL.months, gridIndex:0, axisLabel:{show:false}, axisLine:{lineStyle:{color:'#B9C4BB'}}},
+             {type:'category', data:VAL.months, gridIndex:1, axisLabel:{color:AX.color, fontSize:11}, axisLine:{lineStyle:{color:'#B9C4BB'}}}],
+      yAxis:[{type:'value', gridIndex:0, name:'IDR', nameTextStyle:{color:AX.color, fontSize:11}, axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT},
+             {type:'value', gridIndex:1, name:'M sh', nameTextStyle:{color:AX.color, fontSize:10}, axisLabel:{color:AX.color, fontSize:10}, splitLine:{show:false}}],
+      series:[
+        {name:'BPII', type:'line', xAxisIndex:0, yAxisIndex:0, data:VAL.close, smooth:true, symbolSize:6, lineStyle:{width:2, color:C.green}, itemStyle:{color:C.green},
+          markLine:{silent:true, symbol:'none', lineStyle:{color:C.red, type:'dashed', width:1.5}, data:[{yAxis:FY.refPrice, label:{formatter:fmtN(FY.refPrice) + ' (18 Sep)', fontSize:10, color:C.red, position:'insideEndTop'}}]},
+          markPoint:{symbol:'circle', symbolSize:9, label:{fontSize:10, color:'#fff', position:'top'}, data:[
+            {coord:[FY.vjan.m, FY.vjan.c], value:String(FY.vjan.hi), itemStyle:{color:C.amber}},
+            {coord:[FY.vjun.m, FY.vjun.c], value:String(FY.vjun.hi), itemStyle:{color:C.clay}}
+          ]}},
+        {name:'Volume', type:'bar', xAxisIndex:1, yAxisIndex:1, data:volArr, barMaxWidth:18, itemStyle:{color:C.blue, opacity:0.55}}
+      ]
+    };
+  }
+  if (id === 'v-2') {
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(['P/B (x)','P/S (x)']), yAxis:baseY('x'),
+      series:[
+        {name:N('bpii'), type:'bar', data:FY.bpiiPBPS, itemStyle:{color:C.green}, barMaxWidth:30, label:{show:true, position:'top', fontSize:11, color:'#1F5E40', formatter:lblFmt()}},
+        {name:N('peer'), type:'bar', data:FY.peerPBPS, itemStyle:{color:C.blue}, barMaxWidth:30, label:{show:true, position:'top', fontSize:11, color:'#2E6FB0', formatter:lblFmt()}}]};
+  }
+  /* ---- 估值测算页 ---- */
+  if (id === 'vi-1') {
+    var vm = VALI[LANG].methods, cat = ['P/E','P/B','DCF','SOTP'];
+    var lo = [], ba = [], hi = [];
+    for (var vj = 0; vj < vm.length; vj++) { lo.push(num(vm[vj][2])); ba.push(num(vm[vj][3])); hi.push(num(vm[vj][4])); }
+    return {tooltip:baseTooltip(), legend:legendT(), grid:{left:64, right:70, top:34, bottom:26},
+      xAxis:{type:'value', axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT},
+      yAxis:{type:'category', data:cat, axisLabel:{color:'#16241C', fontSize:11}},
+      series:[
+        {name:VLL[LANG][0], type:'bar', data:lo, itemStyle:{color:C.soft}, barMaxWidth:13},
+        {name:VLL[LANG][1], type:'bar', data:ba, itemStyle:{color:C.green}, barMaxWidth:13},
+        {name:VLL[LANG][2], type:'bar', data:hi, itemStyle:{color:C.blue}, barMaxWidth:13,
+          label:{show:true, position:'right', fontSize:10, color:'#5C6B61', formatter:lblFmt()}},
+        {name:VLL[LANG][6], type:'line', data:[FY.refPrice,FY.refPrice,FY.refPrice,FY.refPrice], symbol:'none', lineStyle:{width:2, color:C.red, type:'dashed'}, tooltip:{show:false}, label:{show:false}}]};
+  }
+  return {};
+}
+
+/* ================= 渲染：静态文案 + 动态内容 ================= */
+function renderPhases(){
+  var arr = ['ph1','ph2','ph3','ph4'], h = '';
+  for (var i = 0; i < arr.length; i++) { h += '<span class="chip">' + T(arr[i]) + '</span>'; }
+  document.getElementById('phases').innerHTML = h;
+}
+function kpiHtml(items){
+  var h = '';
+  for (var i = 0; i < items.length; i++) {
+    var it = items[i];
+    h += '<div class="kpi"><div class="lbl">' + esc(it.l) + '</div><div class="val">' + (it.p || '') + fmtN(it.v) + '<small> ' + esc(it.u) + '</small></div><div class="del ' + it.c + '">' + esc(it.d) + '</div></div>';
+  }
+  return h;
+}
+function eventsHtml(list){
+  var h = '';
+  for (var i = 0; i < list.length; i++) { h += '<li><span class="d">' + esc(list[i][0]) + '</span><span>' + esc(list[i][1]) + '</span></li>'; }
+  return h;
+}
+var LV = ['lv-low','lv-mid','lv-high'];
+var LVTXT = {en:['Low','Medium','High'], id:['Rendah','Sedang','Tinggi'], zh:['低','中','高']};
+var VLL = {en:['Low','Base','High',['Method','Assumptions','Low','Base','High'],['Approach','Base value','vs price 180','Safety margin','Reading'],['Metric','Value'],'Price 180'],
+  id:['Rendah','Dasar','Tinggi',['Metode','Asumsi','Rendah','Dasar','Tinggi'],['Pendekatan','Nilai dasar','vs harga 180','Margin keamanan','Makna'],['Metrik','Nilai'],'Harga 180'],
+  zh:['低位','基准','高位',['方法','假设','低','基准','高'],['方法','基准值','较 180','安全边际','含义'],['指标','数值'],'现价 180']};
+function riskHtml(rows){
+  var h = '';
+  for (var i = 0; i < rows.length; i++) {
+    var r = rows[i], w = Math.max(4, Math.min(100, r[3]));
+    var col = r[2] === 0 ? C.green2 : (r[2] === 1 ? C.amber : C.clay);
+    h += '<div class="risk-row"><span class="nm">' + esc(r[0]) + '</span><span class="vv">' + esc(r[1]) + '</span><span class="bar"><i style="width:' + w + '%;background:' + col + '"></i></span><span class="badge ' + LV[r[2]] + '">' + LVTXT[LANG][r[2]] + '</span></div>';
+  }
+  return h;
+}
+function dirsHtml(){
+  var rows = DIR[LANG], h = '';
+  for (var i = 0; i < rows.length; i++) {
+    h += '<div class="dir"><div class="n">' + esc(rows[i][0]) + '</div><h4>' + esc(rows[i][1]) + '</h4><p>' + esc(rows[i][2]) + '</p></div>';
+  }
+  return h;
+}
+function tlHtml(){
+  var rows = TL[LANG], h = '';
+  for (var i = 0; i < rows.length; i++) {
+    h += '<div class="yr">' + esc(rows[i][0]) + '</div><div class="dot"></div><div class="ev"><b>' + esc(rows[i][1]) + '</b><div class="m">' + esc(rows[i][2]) + '</div></div>';
+  }
+  return h;
+}
+function ownHtml(){
+  var rows = OWN[LANG], h = '', max = 67.3, cols = ['', 'hl', 'hl2'];
+  for (var i = 0; i < rows.length; i++) {
+    var w = Math.round(rows[i][1] / max * 100);
+    h += '<div class="own-row"><span class="nm">' + esc(rows[i][0]) + '</span><span class="bar"><i class="' + cols[rows[i][2]] + '" style="width:' + w + '%"></i></span><span class="vv">' + fmtN(rows[i][1]) + '%</span></div>';
+  }
+  return h;
+}
+function hldEntityHtml(s, full){
+  var via = VIA[LANG][s[2]] || '', biz = BIZ[LANG][s[5]] || '';
+  var cls = s[7] === 1 ? 'hld-ent jv' : 'hld-ent';
+  return '<div class="' + cls + '"><div><span class="nm">' + esc(s[0]) + '</span>' + (full ? '<span class="sub">' + esc(s[1]) + '</span>' : '') + '<span class="sub">' + esc(biz) + (via ? ' · ' + esc(via) : '') + '</span></div><span class="p">' + fmtN(s[3]) + '%</span></div>';
+}
+function hldDiagramHtml(){
+  var h = '<div class="hld-top"><b>PT Batavia Prosperindo Internasional Tbk</b><span>BPII · IDX</span></div><div class="hld-line"></div><div class="hld-pillars">';
+  var pillars = PILLAR[LANG];
+  for (var p = 0; p < pillars.length; p++) {
+    var codes = PILLAR_MAP[pillars[p][1]], ents = [];
+    for (var i = 0; i < codes.length; i++) {
+      for (var j = 0; j < SUBS.length; j++) { if (SUBS[j][0] === codes[i]) { ents.push(SUBS[j]); } }
+    }
+    ents.sort(function(a, b){ return b[4] - a[4]; });
+    h += '<div class="hld-pillar"><h4>' + esc(pillars[p][0]) + '</h4><div class="hld-ents">';
+    var show = ents.length > 4 ? 4 : ents.length;
+    for (var k = 0; k < show; k++) { h += hldEntityHtml(ents[k], false); }
+    if (ents.length > show) { h += '<div class="hld-more">+ ' + (ents.length - show) + ' more</div>'; }
+    h += '</div></div>';
+  }
+  h += '</div>';
+  return h;
+}
+function hldTableHtml(){
+  var h = '<div class="g-table-wrap"><table class="g-table"><colgroup><col style="width:26%"><col style="width:27%"><col style="width:13%"><col style="width:9%"><col style="width:14%"><col style="width:11%"></colgroup><thead><tr><th>' + esc(T('tbl_entity')) + '</th><th>' + esc(T('tbl_biz')) + '</th><th>' + esc(T('tbl_via')) + '</th><th>' + esc(T('tbl_own')) + '</th><th>' + esc(T('tbl_assets')) + '</th><th>' + esc(T('tbl_status')) + '</th></tr></thead><tbody>';
+  var pillars = PILLAR[LANG], first = true;
+  for (var p = 0; p < pillars.length; p++) {
+    var codes = PILLAR_MAP[pillars[p][1]];
+    h += '<tr><td colspan="6" class="gname">' + esc(pillars[p][0]) + '</td></tr>';
+    for (var i = 0; i < codes.length; i++) {
+      for (var j = 0; j < SUBS.length; j++) {
+        if (SUBS[j][0] !== codes[i]) { continue; }
+        var s = SUBS[j];
+        h += '<tr><td class="b">' + esc(s[0]) + '<br><span style="font-weight:400;color:#5C6B61">' + esc(s[1]) + '</span></td><td>' + esc(BIZ[LANG][s[5]]) + '</td><td>' + esc(VIA[LANG][s[2]]) + '</td><td class="' + (s[7] === 1 ? 'amber' : 'p') + '">' + fmtN(s[3]) + '%</td><td class="p">' + fmtN(s[4]) + '</td><td>' + (s[6] === 1 ? esc(CT('op')) : esc(CT('no'))) + '</td></tr>';
+      }
+    }
+  }
+  h += '</tbody></table></div><div class="risk-note">' + esc(T('hld_note')) + '</div>';
+  return h;
+}
+function memberLines(members, roles){
+  var h = '';
+  for (var i = 0; i < members.length; i++) {
+    h += '<span style="display:block;margin-top:3px;font-size:11.5px;line-height:1.35">' + esc(members[i][0]) + ' · ' + esc(roles[members[i][1] + 1]) + '</span>';
+  }
+  return h;
+}
+function memberNames(members){
+  var a = [];
+  for (var i = 0; i < members.length; i++) { a.push(members[i][0]); }
+  return a.join(', ');
+}
+function orgGovHtml(){
+  var o = ORG;
+  return '<div class="org">'
+    + '<div class="org-box dark"><b>' + esc(o.chart[LANG][0]) + '</b><span>GMS · RUPS</span></div>'
+    + '<div class="org-line"></div>'
+    + '<div class="org-row">'
+    + '<div class="org-col">'
+    + '<div class="org-box green"><b>' + esc(o.boc[LANG][0]) + '</b>' + memberLines(o.bocm, o.boc[LANG]) + '</div>'
+    + '<div class="vline"></div>'
+    + '<div class="org-box"><b>' + esc(o.aud[LANG][0]) + '</b>' + memberLines(o.audm, o.aud[LANG]) + '</div>'
+    + '</div>'
+    + '<div class="org-col"><div class="org-box green"><b>' + esc(o.bod[LANG][0]) + '</b>' + memberLines(o.bodm, o.bod[LANG]) + '</div></div>'
+    + '</div></div>';
+}
+function orgChartHtml(){
+  var o = ORG, ch = o.chart[LANG];
+  return '<div class="org">'
+    + '<div class="org-box green"><b>' + esc(ch[2]) + '</b><span>' + esc(memberNames(o.bodm)) + '</span></div>'
+    + '<div class="org-line"></div>'
+    + '<div class="org-row">'
+    + '<div class="org-box"><b>' + esc(ch[4]) + '</b></div>'
+    + '<div class="org-box"><b>' + esc(ch[5]) + '</b><span>Heronimus Hendricus Harlan</span></div>'
+    + '<div class="org-box"><b>' + esc(ch[6]) + '</b><span>' + esc(ch[7]) + ' · ' + esc(ch[8]) + ' · ' + esc(ch[9]) + '</span></div>'
+    + '<div class="org-box"><b>' + esc(ch[10]) + '</b><span>' + esc(ch[11]) + ' · ' + esc(ch[12]) + ' · ' + esc(ch[13]) + '</span></div>'
+    + '</div></div>';
+}
+function orgFactsHtml(){
+  var rows = ORG.facts[LANG], h = '';
+  for (var i = 0; i < rows.length; i++) {
+    h += '<div class="fact"><div class="lbl">' + esc(rows[i][0]) + '</div><div class="val">' + esc(rows[i][1]) + '<small> ' + esc(rows[i][2]) + '</small></div></div>';
+  }
+  return h;
+}
+/* ---- 第 5 轮：债务 / 土地 / 估值 渲染 ---- */
+function th(c){ return '<th>' + c + '</th>'; }
+function td(c, cls){ return '<td class="' + (cls || '') + '">' + c + '</td>'; }
+function debtTableHtml(){
+  var t = DTXT[LANG], rows = DEBT.table;
+  var h = '<div class="g-table-wrap"><table class="g-table"><colgroup><col style="width:17%"><col style="width:12%"><col style="width:12%"><col style="width:10%"><col style="width:12%"><col style="width:29%"><col style="width:8%"></colgroup><thead><tr>';
+  for (var i = 0; i < t.h.length; i++) { h += th(esc(t.h[i])); }
+  h += '</tr></thead><tbody>';
+  for (var r = 0; r < rows.length; r++) {
+    var row = rows[r], tt = t.tbl[r];
+    var st = row.st === 'repaid' ? '<span class="badge lv-low">' + esc(tt[3]) + '</span>' : '<span class="badge lv-mid">' + esc(tt[3]) + '</span>';
+    h += '<tr>' + td(esc(tt[0]), 'b') + td(row.d25 === null ? 'n/a' : fmtN(row.d25), 'p') + td(row.d26 === null ? '\u2014' : fmtN(row.d26), 'p')
+      + td(esc(row.r)) + td(esc(tt[1])) + td(esc(tt[2])) + td(st) + '</tr>';
+  }
+  h += '<tr class="trow">' + td(esc(t.total[0]), 'b') + td(esc(t.total[1]), 'p') + td(esc(t.total[2]), 'p') + td(esc(t.total[3])) + td(esc(t.total[4])) + td(esc(t.total[5])) + td(esc(t.total[6])) + '</tr>';
+  h += '</tbody></table></div><div class="risk-note">' + esc(t.note) + '</div>';
+  return h;
+}
+function debtRateHtml(){
+  var rows = DTXT[LANG].ratings, h = '<table class="g-table"><colgroup><col style="width:26%"><col style="width:18%"><col style="width:16%"><col style="width:40%"></colgroup><thead><tr>';
+  for (var i = 0; i < rows[0].length; i++) { h += th(esc(rows[0][i])); }
+  h += '</tr></thead><tbody>';
+  for (var r = 1; r < rows.length; r++) { h += '<tr>' + td(esc(rows[r][0]), 'b') + td(esc(rows[r][1])) + td(esc(rows[r][2])) + td(esc(rows[r][3])) + '</tr>'; }
+  h += '</tbody></table>';
+  return h;
+}
+function debtRiskHtml(){
+  var rows = DTXT[LANG].risk, arr = [], w = [25, 55, 80];
+  for (var i = 0; i < rows.length; i++) { arr.push([rows[i][0], rows[i][1], rows[i][2], w[rows[i][2]]]); }
+  return riskHtml(arr);
+}
+function segKpisHtml(){
+  function card(l,v,u,d){ return '<div class="kpi"><div class="lbl">'+esc(l)+'</div><div class="val">'+fmtN(v)+'<small> '+esc(u)+'</small></div><div class="del flat">'+esc(d)+'</div></div>'; }
+  var h = '';
+  if (typeof SUBOPS !== 'undefined' && SUBOPS.bpam) {
+    h += card(T('seg_kpi_aum'), SUBOPS.bpam.aum_tn || 0, T('seg_unit_tn'), T('seg_kpi_aum_d'));
+    h += card(T('seg_kpi_funds'), SUBOPS.bpam.funds || 0, T('seg_unit_funds'), T('seg_kpi_funds_d'));
+    h += card(T('seg_kpi_agents'), SUBOPS.bpam.agents || 0, T('seg_unit_agents'), T('seg_kpi_agents_d'));
+    h += card(T('seg_kpi_fleet'), SUBOPS.bptr.fleet || 0, T('seg_unit_vehicles'), T('seg_kpi_fleet_d'));
+    h += card(T('seg_kpi_premium'), SUBOPS.mtwi.gross_premium || 0, T('seg_unit_bn'), T('seg_kpi_premium_d'));
+    h += card(T('seg_kpi_uw'), (SUBOPS.mtwi.uw_profit == null ? 0 : SUBOPS.mtwi.uw_profit), T('seg_unit_bn'), T('seg_kpi_uw_d'));
+  }
+  return h;
+}
+function subopsTableHtml(){
+  function row(code,name,act,own,metric,val,unit){
+    var ownTxt = (own == null) ? 'n/a' : fmtN(own) + '%';
+    var valTxt = (val == null) ? 'n/a' : fmtN(val);
+    return '<tr><td class="b">'+esc(code)+'<br><span style="font-weight:400;color:#5C6B61">'+esc(name)+'</span></td><td>'+esc(act)+'</td><td class="p">'+ownTxt+'</td><td>'+esc(metric)+'</td><td class="p">'+valTxt+'</td><td>'+esc(unit)+'</td></tr>';
+  }
+  var h = '<div class="g-table-wrap"><table class="g-table"><colgroup><col style="width:20%"><col style="width:26%"><col style="width:10%"><col style="width:18%"><col style="width:14%"><col style="width:12%"></colgroup><thead><tr>'
+    + '<th>'+esc(T('tbl_entity'))+'</th><th>'+esc(T('tbl_biz'))+'</th><th>'+esc(T('tbl_own'))+'</th><th>'+esc(T('seg_col_metric'))+'</th><th>'+esc(T('seg_col_value'))+'</th><th>'+esc(T('seg_col_unit'))+'</th></tr></thead><tbody>';
+  if (typeof SUBOPS !== 'undefined' && SUBOPS.bpam) {
+    h += row('BPAM', 'PT Batavia Prosperindo Aset Manajemen', T('sub_biz_am'), SUBOPS.bpam.ownership, T('seg_metric_aum'), SUBOPS.bpam.aum_tn, T('seg_unit_tn'));
+    h += row('BPTR', 'PT Batavia Prosperindo Trans Tbk', T('sub_biz_lease'), SUBOPS.bptr.ownership, T('seg_metric_fleet'), SUBOPS.bptr.fleet, T('seg_unit_vehicles'));
+    h += row('MTWI', 'PT Malacca Trust Wuwungan Insurance Tbk', T('sub_biz_ins'), SUBOPS.mtwi.ownership, T('seg_metric_premium'), SUBOPS.mtwi.gross_premium, T('seg_unit_bn'));
+  }
+  h += '</tbody></table></div>';
+  return h;
+}
+function valStatsHtml(){
+  var t = VTXT[LANG], rows = t.stats, h = '<table class="g-table"><colgroup><col style="width:42%"><col style="width:58%"></colgroup><thead><tr><th>' + esc(t.statsH[0]) + '</th><th>' + esc(t.statsH[1]) + '</th></tr></thead><tbody>';
+  for (var i = 0; i < rows.length; i++) { h += '<tr>' + td(esc(rows[i][0]), 'b') + td(esc(rows[i][1])) + '</tr>'; }
+  h += '</tbody></table>';
+  return h;
+}
+function valPeersHtml(){
+  var t = VTXT[LANG], rows = t.peers, h = '<table class="g-table"><colgroup><col style="width:34%"><col style="width:33%"><col style="width:33%"></colgroup><thead><tr>';
+  for (var i = 0; i < t.peersH.length; i++) { h += th(esc(t.peersH[i])); }
+  h += '</tr></thead><tbody>';
+  for (var r = 0; r < rows.length; r++) { h += '<tr>' + td(esc(rows[r][0]), 'b') + td(esc(rows[r][1])) + td(esc(rows[r][2])) + '</tr>'; }
+  h += '</tbody></table>';
+  return h;
+}
+function valAnalystsHtml(){
+  var t = VTXT[LANG], rows = t.analysts, h = '<table class="g-table"><colgroup><col style="width:20%"><col style="width:18%"><col style="width:10%"><col style="width:14%"><col style="width:38%"></colgroup><thead><tr>';
+  for (var i = 0; i < t.analystsH.length; i++) { h += th(esc(t.analystsH[i])); }
+  h += '</tr></thead><tbody>';
+  for (var r = 0; r < rows.length; r++) {
+    h += '<tr>' + td(esc(rows[r][0]), 'b') + td(esc(rows[r][1])) + td(esc(rows[r][2])) + td(esc(rows[r][3])) + td(esc(rows[r][4])) + '</tr>';
+  }
+  h += '</tbody></table>';
+  return h;
+}
+function kvTable(title, rows, widths, headers){
+  var h = '<h3 class="block-h">' + esc(title) + '</h3><div class="g-table-wrap"><table class="g-table"><colgroup>';
+  for (var i = 0; i < widths.length; i++) { h += '<col style="width:' + widths[i] + '">'; }
+  h += '</colgroup><thead><tr>';
+  for (var j = 0; j < headers.length; j++) { h += th(esc(headers[j])); }
+  h += '</tr></thead><tbody>';
+  for (var r = 0; r < rows.length; r++) {
+    h += '<tr>';
+    for (var c = 0; c < rows[r].length; c++) { h += td(esc(rows[r][c]), c === 0 ? 'b' : ''); }
+    h += '</tr>';
+  }
+  h += '</tbody></table></div>';
+  return h;
+}
+function wcTableHtml(){
+  var rows = [
+    [T('wcr_gross'), '746.6', '548.8'],
+    [T('wcr_net'), '721.7', '521.2'],
+    [T('wcr_allow'), '16.3', '16.3'],
+    [T('wcr_duen'), 'n/a', '468.5'],
+    [T('wcr_over6'), '28.9', '20.9'],
+    [T('wcr_dso'), '54 d', '37 d'],
+    [T('wcr_ap'), '133.0', '151.7'],
+    [T('wcr_dep'), '317.0', '316.2'],
+    [T('wcr_woff'), '0.0', '0.0']
+  ];
+  var h = '<div class="g-table-wrap"><table class="g-table"><colgroup><col style="width:52%"><col style="width:24%"><col style="width:24%"></colgroup><thead><tr><th>'+T('wch_item')+'</th><th>'+T('wch_26')+'</th><th>'+T('wch_25')+'</th></tr></thead><tbody>';
+  for(var i=0;i<rows.length;i++){ h += '<tr><td class="b">'+rows[i][0]+'</td><td>'+rows[i][1]+'</td><td>'+rows[i][2]+'</td></tr>'; }
+  h += '</tbody></table></div><div class="risk-note">'+T('wc_note')+'</div>';
+  return h;
+}
+function decTableHtml(){
+  if (typeof DEC === 'undefined' || !DEC) return '';
+  var rows = DEC[LANG];
+  var h = '<div class="g-table-wrap"><table class="g-table"><colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>';
+  h += '<thead><tr><th>Metric</th><th>1H2026</th><th>FY2025</th><th>FY2024</th></tr></thead><tbody>';
+  for (var i=0;i<rows.length;i++){
+    h += '<tr><td class="b">' + rows[i][0] + '</td><td class="p">' + rows[i][1] + '</td><td class="p">' + rows[i][2] + '</td><td class="p">' + rows[i][3] + '</td></tr>';
+  }
+  h += '</tbody></table></div>';
+  return h;
+}
+
+function decTableHtml(){
+  if (typeof DEC === 'undefined' || !DEC) return '';
+  var rows = DEC[LANG];
+  var h = '<table class="dt"><colgroup><col style="width:22%"><col style="width:12%"><col style="width:12%"><col style="width:12%"><col style="width:42%"></colgroup>';
+  h += '<thead><tr><th>Metric</th><th>1H2026</th><th>FY2025</th><th>FY2024</th><th>What it tells you</th></tr></thead><tbody>';
+  for (var i=0;i<rows.length;i++){
+    h += '<tr><td>' + rows[i][0] + '</td><td>' + rows[i][1] + '</td><td>' + rows[i][2] + '</td><td>' + rows[i][3] + '</td><td>' + rows[i][4] + '</td></tr>';
+  }
+  h += '</tbody></table>';
+  return h;
+}
+
+function fmtInt(x){ return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+function fmtInt(x){ return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+function fmtInt(x){ return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+function fmtInt(x){ return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+function fmtInt(x){ return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+function segTableHtml(){
+  if (typeof SEG === 'undefined' || !SEG) return '';
+  var lbl = SEG.labels[LANG];
+  var h = '<div class="g-table-wrap"><table class="g-table"><colgroup><col style="width:26%"><col style="width:7%"><col style="width:11%"><col style="width:11%"><col style="width:9%"><col style="width:11%"><col style="width:11%"><col style="width:9%"></colgroup>';
+  h += '<thead><tr><th>Segment</th><th>Own %</th>'
+     + '<th>Net Profit 2025 (IDR bn)</th><th>Revenue 2025 (IDR bn)</th><th>GPM 2025 (%)</th>'
+     + '<th>Net Profit 2024 (IDR bn)</th><th>Revenue 2024 (IDR bn)</th><th>GPM 2024</th></tr></thead><tbody>';
+  for (var i=0;i<SEG.rows.length;i++){
+    var r = SEG.rows[i];
+    var nc = r.net[1] < 0 ? ' style="color:var(--clay);font-weight:600"' : '';
+    h += '<tr><td class="b">' + (lbl[r.key]||r.key) + '</td>'
+       + '<td class="p">' + r.ownpct + '%</td>'
+       + '<td class="p"' + nc + '>' + fmtInt(r.net[1]) + '</td>'
+       + '<td class="p">' + fmtInt(r.rev[1]) + '</td>'
+       + '<td class="p">' + r.gpm[1].toFixed(1) + '%</td>'
+       + '<td class="p">' + fmtInt(r.net[0]) + '</td>'
+       + '<td class="p">' + fmtInt(r.rev[0]) + '</td>'
+       + '<td class="p">' + r.gpm[0].toFixed(1) + '%</td></tr>';
+  }
+  if (SEG.total){
+    var t = SEG.total;
+    h += '<tr style="background:#EFF2EC;font-weight:700"><td>Segment total (pre-elimination)</td><td></td>'
+       + '<td class="p">' + fmtInt(t.net[1]) + '</td><td class="p">' + fmtInt(t.rev[1]) + '</td><td class="p">' + t.gpm[1].toFixed(1) + '%</td>'
+       + '<td class="p">' + fmtInt(t.net[0]) + '</td><td class="p">' + fmtInt(t.rev[0]) + '</td><td class="p">' + t.gpm[0].toFixed(1) + '%</td></tr>';
+  }
+  h += '</tbody></table></div>';
+  return h;
+}
+
+function renderStatics(){
+  var els = document.querySelectorAll('[data-i18n]');
+  for (var i = 0; i < els.length; i++) { els[i].innerHTML = T(els[i].getAttribute('data-i18n')); }
+  var els2 = document.querySelectorAll('[data-i18n-html]');
+  for (var j = 0; j < els2.length; j++) { els2[j].innerHTML = T(els2[j].getAttribute('data-i18n-html')); }
+  renderPhases();
+  document.getElementById('ov-kpis').innerHTML = kpiHtml(KP.ov[LANG]);
+  document.getElementById('k24').innerHTML = kpiHtml(KP.k24[LANG]);
+  document.getElementById('k25').innerHTML = kpiHtml(KP.k25[LANG]);
+  document.getElementById('k26').innerHTML = kpiHtml(KP.k26[LANG]);
+  document.getElementById('k-prof').innerHTML = kpiHtml(KP.prof[LANG]);
+  document.getElementById('ev24').innerHTML = eventsHtml(EV.ev24[LANG]);
+  document.getElementById('ev25').innerHTML = eventsHtml(EV.ev25[LANG]);
+  document.getElementById('ev26').innerHTML = eventsHtml(EV.ev26[LANG]);
+  document.getElementById('rk24').innerHTML = riskHtml(RK.rk24[LANG]);
+  document.getElementById('rk25').innerHTML = riskHtml(RK.rk25[LANG]);
+  document.getElementById('rk26').innerHTML = riskHtml(RK.rk26[LANG]);
+  document.getElementById('rk-all').innerHTML = riskHtml(RK['rk-all'][LANG]);
+  (function(){
+    var t3 = TOP3[LANG]||TOP3.en, op = OPP[LANG]||OPP.en;
+    document.getElementById('top3-h').textContent = t3.h;
+    document.getElementById('top3-sub').textContent = t3.sub;
+    document.getElementById('opp-h').textContent = op.h;
+    document.getElementById('opp-sub').textContent = op.sub;
+    var h3 = '';
+    t3.items.forEach(function(it){
+      h3 += '<div class="risk-row" style="align-items:flex-start;gap:12px">'
+        + '<span class="nm" style="min-width:230px;font-weight:600;color:var(--ink)">'+esc(it[0])+'</span>'
+        + '<span style="flex:1"><div style="color:var(--ink);margin-bottom:4px">'+esc(it[1])+'</div>'
+        + '<div style="color:var(--muted);font-size:12px">'+esc(it[2])+'</div></span></div>';
+    });
+    document.getElementById('top3').innerHTML = h3;
+    var ho = '<div class="kv-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">';
+    op.items.forEach(function(it){
+      ho += '<div style="background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:12px">'
+        + '<div style="font-weight:600;color:var(--green);margin-bottom:6px">'+esc(it[0])+'</div>'
+        + '<div style="color:var(--muted);font-size:12px;line-height:1.5">'+esc(it[1])+'</div></div>';
+    });
+    ho += '</div>';
+    document.getElementById('opp').innerHTML = ho;
+
+
+
+  })();
+  document.getElementById('dirs').innerHTML = dirsHtml();
+  document.getElementById('tl').innerHTML = tlHtml();
+  document.getElementById('own-bars').innerHTML = ownHtml();
+  document.getElementById('hld').innerHTML = hldDiagramHtml();
+  document.getElementById('hld-table').innerHTML = hldTableHtml();
+  document.getElementById('org-facts').innerHTML = orgFactsHtml();
+  document.getElementById('org-gov').innerHTML = orgGovHtml();
+  document.getElementById('org-chart').innerHTML = orgChartHtml();
+  var mgmt = ORG.mgmt[LANG], mh = '<table class="g-table"><colgroup><col style="width:40%"><col style="width:60%"></colgroup><thead><tr><th>' + esc(T('tbl_name')) + '</th><th>' + esc(T('tbl_func')) + '</th></tr></thead><tbody>';
+  for (var m = 0; m < mgmt.length; m++) { mh += '<tr><td class="b">' + esc(mgmt[m][0]) + '</td><td>' + esc(mgmt[m][1]) + '</td></tr>'; }
+  mh += '</tbody></table><div class="risk-note">' + esc(T('org_mgmt_note')) + '</div>';
+  document.getElementById('org-mgmt').innerHTML = mh;
+  document.getElementById('k-debt').innerHTML = kpiHtml(KP.debt[LANG]);
+  document.getElementById('debt-table').innerHTML = debtTableHtml();
+  document.getElementById('wc-table').innerHTML = wcTableHtml();
+  document.getElementById('debt-rate').innerHTML = debtRateHtml();
+  document.getElementById('debt-refi').innerHTML = eventsHtml(DTXT[LANG].refi);
+  document.getElementById('debt-risk').innerHTML = debtRiskHtml();
+  document.getElementById('k-seg').innerHTML = segKpisHtml();
+  document.getElementById('seg-sub-table').innerHTML = subopsTableHtml();
+  document.getElementById('seg-tbl').innerHTML = segTableHtml();
+  document.getElementById('k-val').innerHTML = kpiHtml(KP.val[LANG]);
+  document.getElementById('val-stats').innerHTML = valStatsHtml();
+  document.getElementById('val-peers').innerHTML = valPeersHtml();
+  document.getElementById('val-analysts').innerHTML = valAnalystsHtml();
+  document.getElementById('val-events').innerHTML = eventsHtml(VTXT[LANG].events);
+  var VI = VALI[LANG];
+  document.getElementById('vali-sub').innerHTML = esc(VI.sub);
+  document.getElementById('vali-disc').innerHTML = esc(VI.disc);
+  document.getElementById('vali-chart-h').innerHTML = esc(VI.methodH);
+  document.getElementById('vali-chart-s').innerHTML = esc(VI.weightNote);
+  document.getElementById('vali-inputs').innerHTML = kvTable(VI.inputsH, VI.inputs, ['42%','58%'], VLL[LANG][5]);
+  document.getElementById('vali-methods').innerHTML = kvTable(VI.methodH, VI.methods, ['21%','30%','15%','16%','18%'], VLL[LANG][3]);
+  document.getElementById('vali-comp').innerHTML = kvTable(VI.compH, VI.comp, ['17%','15%','14%','15%','39%'], VLL[LANG][4]);
+  document.getElementById('vali-implied').innerHTML = kvTable(VI.impliedH, VI.implied, ['56%','44%'], VLL[LANG][5]);
+  var VKP = KEYP[LANG];
+  document.getElementById('vali-keyp').innerHTML = '<p class="page-d">' + esc(VKP.sub) + '</p>' + kvTable(VKP.h, VKP.rows, ['26%','38%','36%'], VKP.hd);
+  var vk = '<ul class="events">';
+  for (var vki = 0; vki < VI.key.length; vki++) { vk += '<li>' + esc(VI.key[vki]) + '</li>'; }
+  vk += '</ul>';
+  document.getElementById('vali-key').innerHTML = '<h3 class="block-h">' + esc(VI.keyH) + '</h3>' + vk;
+  var btns = document.querySelectorAll('.langs button');
+  for (var x = 0; x < btns.length; x++) { btns[x].classList.toggle('active', btns[x].getAttribute('data-lang') === LANG); }
+  for (var k in CH) { if (CH.hasOwnProperty(k)) { CH[k].setOption(buildOpt(k), true); } }
+  annotateTerms();
+}
+
+/* ================= 路由与图表生命周期 ================= */
+var CH = {};
+var PAGE_CHARTS = {overview:['o1','o2','o3','o4','o6'], fy2024:['f24-1','f24-2','f24-3','f24-4'], fy2025:['f25-1','f25-2','f25-3','f25-4'], fy2026:['f26-1','f26-2','f26-3'], debt:['d-1','d-2','d-3','d-4','d-5'], segments:['seg-1','seg-2'], valuation:['v-1','v-2'], profit:['p-1','p-2','p-3','p-4'], vali:['vi-1'], risk:[], holding:[], org:[]};
+
+function exportCSV(){
+  var page = document.querySelector('.page.active');
+  if(!page){ return; }
+  var tables = page.querySelectorAll('table');
+  var rows = [], title = '';
+  for(var t=0; t<tables.length; t++){
+    var trs = tables[t].querySelectorAll('tr');
+    if(t>0){ rows.push([]); }
+    for(var r=0; r<trs.length; r++){
+      var cells = trs[r].querySelectorAll('th,td');
+      var line = [];
+      for(var c=0; c<cells.length; c++){ line.push('"'+(cells[c].innerText||'').replace(/"/g,'""')+'"'); }
+      rows.push(line);
+    }
+  }
+  var csv = rows.map(function(r){return r.join(',');}).join('\r\n');
+  var blob = new Blob(["\uFEFF"+csv], {type:'text/csv;charset=utf-8;'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'BPII_'+(currentPage())+'_'+new Date().toISOString().slice(0,10)+'.csv';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+function initCSVButton(){
+  if(document.getElementById('csvBtn')){ return; }
+  var btn = document.createElement('button');
+  btn.id = 'csvBtn'; btn.textContent = 'CSV'; btn.title = 'Download tables on this page as CSV';
+  btn.setAttribute('aria-label','Download tables as CSV');
+  btn.addEventListener('click', exportCSV);
+  document.body.appendChild(btn);
+}
+function renderPage(id){
+  if (!window.echarts) { return; }
+  var ids = PAGE_CHARTS[id] || [];
+  for (var i = 0; i < ids.length; i++) {
+    if (CH[ids[i]]) { continue; }
+    var el = document.getElementById(ids[i]);
+    if (!el) { continue; }
+    var c = echarts.init(el);
+    c.setOption(buildOpt(ids[i]));
+    c.setOption({toolbox:{right:4,bottom:2,iconSize:9,feature:{saveAsImage:{title:'PNG',background:'#ffffff',pixelRatio:2, iconSize:9}}}});
+    CH[ids[i]] = c;
+  }
+  for (var k in CH) { if (CH.hasOwnProperty(k)) { CH[k].resize(); } }
+}
+function showPage(id){
+  var pages = document.querySelectorAll('.page'), i;
+  for (i = 0; i < pages.length; i++) { pages[i].classList.toggle('active', pages[i].id === id); }
+  var tabs = document.querySelectorAll('.tab');
+  for (i = 0; i < tabs.length; i++) { tabs[i].classList.toggle('active', tabs[i].getAttribute('data-page') === id); }
+  renderPage(id);
+}
+
+function currentPage(){
+  var h = location.hash.replace('#', ''), pages = document.querySelectorAll('.page');
+  for (var i = 0; i < pages.length; i++) { if (pages[i].id === h) { return h; } }
+  return 'overview';
+}
+window.addEventListener('hashchange', function(){ showPage(currentPage()); });
+window.addEventListener('resize', function(){ for (var k in CH) { if (CH.hasOwnProperty(k)) { CH[k].resize(); } } });
+var langBtns = document.querySelectorAll('.langs button');
+for (var lb = 0; lb < langBtns.length; lb++) {
+  (function(btn){
+    btn.addEventListener('click', function(){
+      LANG = btn.getAttribute('data-lang');
+      try { localStorage.setItem('bpii_lang', LANG); } catch (e) {}
+      renderStatics();
+    });
+  })(langBtns[lb]);
+}
+initCSVButton();
+function loadECharts(cb){
+  if (window.echarts) { cb(); return; }
+  var s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js';
+  s.onload = cb;
+  s.onerror = function(){
+    var s2 = document.createElement('script');
+    s2.src = 'https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js';
+    s2.onload = cb;
+    s2.onerror = function(){
+      var charts = document.querySelectorAll('.chart');
+      for (var i = 0; i < charts.length; i++) { charts[i].innerHTML = '<div style="padding:20px;color:#8F3520;font-size:13px">Chart library failed to load: please go online and refresh (jsDelivr / cdnjs required).</div>'; }
+    };
+    document.head.appendChild(s2);
+  };
+  document.head.appendChild(s);
+}
+/* ================= 术语悬停解释（GLOS）================= */
+var GTERM_OB = null;
+function buildGtermRegex(){
+  if (GTERM_OB) { return GTERM_OB; }
+  var list = [];
+  for (var gi = 0; gi < GLOS.terms.length; gi++) {
+    list.push({p: GLOS.terms[gi].p, x: GLOS.terms[gi].x, r: GLOS.terms[gi].p.length});
+  }
+  list.sort(function(a, b){ return b.r - a.r; });
+  var src = [];
+  for (var j = 0; j < list.length; j++) { src.push('(' + list[j].p + ')'); }
+  GTERM_OB = {re: new RegExp(src.join('|'), 'g'), list: list};
+  return GTERM_OB;
+}
+function annotateTerms(root){
+  var G = buildGtermRegex();
+  var rootEl = root || document.body;
+  var walker = document.createTreeWalker(rootEl, NodeFilter.SHOW_TEXT, null, false);
+  var nodes = [];
+  while (walker.nextNode()) { nodes.push(walker.currentNode); }
+  var wrapped = 0;
+  var seen = {};
+  for (var n = 0; n < nodes.length; n++) {
+    var node = nodes[n];
+    if (!node.nodeValue) { continue; }
+    var p = node.parentNode;
+    if (!p || p.nodeType !== 1) { continue; }
+    if (p.getAttribute('data-gterm')) { continue; }
+    if (p.closest && p.closest('.gterm')) { continue; }
+    var t = node.nodeValue;
+    G.re.lastIndex = 0;
+    var m = G.re.exec(t);
+    if (!m) { continue; }
+    G.re.lastIndex = 0;
+    var parts = [];
+    var last = 0;
+    var mm;
+    while ((mm = G.re.exec(t)) !== null) {
+      if (mm.index > last) { parts.push(t.slice(last, mm.index)); }
+      var gidx = 1;
+      while (gidx < mm.length && mm[gidx] === undefined) { gidx++; }
+      var full = mm[0];
+      var entry = G.list[gidx - 1];
+      var key = (entry.p || full).toLowerCase();
+      if (seen[key]) {
+        parts.push(esc(full));
+      } else {
+        seen[key] = 1;
+        parts.push('<span class="gterm' + (full.length > 10 ? ' gterm-long' : '') + '" data-gterm="1" data-tip="' + esc(entry.x) + '">' + esc(full) + '<sup class="gterm-q">?</sup></span>');
+      }
+      last = mm.index + full.length;
+      if (G.re.lastIndex === mm.index) { G.re.lastIndex = mm.index + full.length; }
+    }
+    if (last < t.length) { parts.push(t.slice(last)); }
+    if (parts.length > 1) {
+      var span = document.createElement('span');
+      span.className = 'gterm-rt';
+      span.innerHTML = parts.join('');
+      p.replaceChild(span, node);
+      wrapped++;
+    }
+  }
+  return wrapped;
+}
+function gtermTarget(node){
+  while (node && node.nodeType === 1) {
+    if (node.getAttribute && node.getAttribute('data-gterm')) { return node; }
+    node = node.parentNode;
+  }
+  return null;
+}
+function showTip(term){
+  var tip = document.getElementById('gterm-tip');
+  if (!tip) {
+    tip = document.createElement('div');
+    tip.id = 'gterm-tip';
+    tip.className = 'gterm-tip';
+    tip.setAttribute('role', 'tooltip');
+    document.body.appendChild(tip);
+  }
+  tip.innerHTML = esc(term.getAttribute('data-tip') || '');
+  tip.style.display = 'block';
+  var r = term.getBoundingClientRect();
+  var tw = tip.offsetWidth;
+  var th = tip.offsetHeight;
+  var x = r.left + r.width / 2 - tw / 2;
+  if (x < 8) { x = 8; }
+  if (x + tw > window.innerWidth - 8) { x = window.innerWidth - tw - 8; }
+  var y = r.top - th - 10;
+  if (y < 8) { y = r.bottom + 10; }
+  tip.style.left = x + 'px';
+  tip.style.top = y + 'px';
+  tip._t = term;
+}
+function hideTip(){ var tip = document.getElementById('gterm-tip'); if (tip) { tip.style.display = 'none'; } }
+document.addEventListener('mouseover', function(ev){
+  var target = gtermTarget(ev.target);
+  if (target) { showTip(target); } else { hideTip(); }
+});
+document.addEventListener('mouseout', function(ev){
+  var t = gtermTarget(ev.target);
+  if (t) { var rel = ev.relatedTarget; if (!rel || !gtermTarget(rel)) { hideTip(); } }
+});
+document.addEventListener('click', function(ev){
+  var t = gtermTarget(ev.target);
+  if (!t) { return; }
+  var tip = document.getElementById('gterm-tip');
+  if (tip && tip.style.display === 'block' && tip._t === t) { hideTip(); } else { showTip(t); }
+});
+window.addEventListener('scroll', hideTip, true);
+window.addEventListener('resize', hideTip);
+
+/* ================= 数据加载：优先在线拉取 data.json，失败回退内嵌副本 ================= */
+var DATA_KEYS = ["KP","EV","RK","DIR","TL","OWN","SUBS","BIZ","VIA","PILLAR","PILLAR_MAP","ORG","DEBT","LAND","VAL","DTXT","LTXT","VTXT","NXT","VALI","LIQ","KEYP","AN","CHT","FY","LBV","GLOS","TOP3","OPP","DEC","SEG","SUBOPS"];
+function applyData(d){
+  if (!d) { return; }
+  for (var i = 0; i < DATA_KEYS.length; i++) {
+    var k = DATA_KEYS[i];
+    if (d[k] !== undefined) { window[k] = d[k]; }
+  }
+}
+function loadData(cb){
+  var done = false;
+  function fin(){ if (!done) { done = true; cb(); } }
+  if (location.protocol !== 'http:' && location.protocol !== 'https:') { fin(); return; }
+  try {
+    var r = new XMLHttpRequest();
+    r.open('GET', 'data.json?v=' + Date.now(), true);
+    r.onreadystatechange = function(){
+      if (r.readyState === 4) {
+        if (r.status === 200) {
+          try { applyData(JSON.parse(r.responseText)); } catch (e) {}
+        }
+        fin();
+      }
+    };
+    r.onerror = fin;
+    r.send(null);
+    setTimeout(fin, 5000);
+  } catch (e) { fin(); }
+}
+function boot(){
+  renderStatics();
+  showPage(currentPage());
+  loadECharts(function(){ renderPage(currentPage()); });
+}
+loadData(boot);
+</script>
+</body>
+</html>
