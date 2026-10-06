@@ -365,6 +365,7 @@ footer a{color:var(--green)}
 <section class="page" id="holding">
   <h2 class="page-h" data-i18n="hld_h"></h2>
   <p class="page-d" data-i18n="hld_d"></p>
+  <div id="hld-facts"></div>
   <h3 class="block-h" data-i18n="hld_own_h"></h3>
   <div class="own-bars" id="own-bars"></div>
   <h3 class="block-h" data-i18n="hld_group_h"></h3>
@@ -463,11 +464,11 @@ en: {
   dir_h:'Development direction', tl_h:'Decade milestones',
   hld_h:'Holding Structure', hld_d:'Group structure and subsidiaries per the latest Annual Report; assets are consolidated totals in IDR bn.',
   hld_own_h:'Shareholders', hld_group_h:'Group structure by business pillar', hld_table_h:'Consolidated subsidiaries',
-  hld_note:'n/a = not separately disclosed.',
+  hld_note:'Ownership & assets per FY2025 AR (Note 1c, p153); net profit per p3 summary. n/a = not separately disclosed.',
   org_h:'Organization & Governance', org_d:'Governance and organization per the latest Annual Report.',
   org_facts_h:'Corporate facts', org_gov_h:'Boards & committees', org_chart_h:'Organization structure', org_mgmt_h:'Key people',
   org_mgmt_note:'Functions shown as published in the organization chart.',
-  tbl_entity:'Entity', tbl_biz:'Principal activity', tbl_via:'Via', tbl_own:'Ownership', tbl_assets:'Assets (IDR bn)', tbl_status:'Status', tbl_name:'Name', tbl_func:'Function',
+  tbl_entity:'Entity', tbl_biz:'Principal activity', tbl_via:'Via', tbl_own:'Ownership', tbl_assets:'Assets (IDR bn)', tbl_np25:'Net profit 2025', tbl_status:'Status', tbl_name:'Name', tbl_func:'Function',
   debt_h:'Debt details & solvency', debt_d:'Debt by lender, maturity profile and debt-servicing analysis per the latest reports.',
   c_d1_t:'Debt by lender — 1H2026 (30 Jun)', c_d1_s:'Interest-bearing debt only, IDR bn; excludes insurance reserves ~3,109bn',
   c_d2_t:'Debt maturity profile', c_d2_s:'Principal due by year, IDR bn',
@@ -569,11 +570,11 @@ id: {
   dir_h:'Arah pengembangan', tl_h:'Tonggak sejarah',
   hld_h:'Struktur Kepemilikan', hld_d:'Struktur grup dan anak usaha berdasarkan Laporan Tahunan terbaru; aset adalah total konsolidasi dalam Rp miliar.',
   hld_own_h:'Pemegang saham', hld_group_h:'Struktur grup menurut pilar bisnis', hld_table_h:'Anak usaha konsolidasian',
-  hld_note:'n/a = tidak diungkapkan terpisah.',
+  hld_note:'Kepemilikan & aset per Laporan Tahunan FY2025 (Catatan 1c, p153); laba bersih per ringkasan p3. n/a = tidak diungkapkan terpisah.',
   org_h:'Organisasi & Tata Kelola', org_d:'Tata kelola dan organisasi berdasarkan Laporan Tahunan terbaru.',
   org_facts_h:'Fakta korporasi', org_gov_h:'Dewan & komite', org_chart_h:'Struktur organisasi', org_mgmt_h:'Nama-nama kunci',
   org_mgmt_note:'Fungsi ditampilkan sebagaimana dipublikasikan pada bagan organisasi.',
-  tbl_entity:'Entitas', tbl_biz:'Kegiatan utama', tbl_via:'Melalui', tbl_own:'Kepemilikan', tbl_assets:'Aset (Rp miliar)', tbl_status:'Status', tbl_name:'Nama', tbl_func:'Fungsi',
+  tbl_entity:'Entitas', tbl_biz:'Kegiatan utama', tbl_via:'Melalui', tbl_own:'Kepemilikan', tbl_assets:'Aset (Rp miliar)', tbl_np25:'Laba bersih 2025', tbl_status:'Status', tbl_name:'Nama', tbl_func:'Fungsi',
   debt_h:'Rincian utang & solvabilitas', debt_d:'Utang per kreditur, profil jatuh tempo dan analisis pelayanan utang per laporan terbaru.',
   c_d1_t:'Utang per kreditur — 1H2026 (30 Jun)', c_d1_s:'Hanya utang berbunga, Rp miliar; tidak termasuk cadangan asuransi ~3.109 miliar',
   c_d2_t:'Profil jatuh tempo utang', c_d2_s:'Pokok jatuh tempo per tahun, Rp miliar',
@@ -675,11 +676,11 @@ zh: {
   dir_h:'发展方向', tl_h:'十年里程碑',
   hld_h:'股权结构（Holding Structure）', hld_d:'集团结构与子公司依据最新年报；资产为合并口径，十亿盾。',
   hld_own_h:'股东结构', hld_group_h:'按业务板块的集团结构', hld_table_h:'合并子公司明细',
-  hld_note:'n/a = 未单独披露。',
+  hld_note:'持股与资产依据 FY2025 年报（附注 1c，p153）；净利依据 p3 摘要。n/a = 未单独披露。',
   org_h:'治理与组织结构', org_d:'治理层与组织依据最新年报。',
   org_facts_h:'公司概况', org_gov_h:'董事会与委员会', org_chart_h:'组织结构图', org_mgmt_h:'关键人员',
   org_mgmt_note:'职能以组织结构图公布口径为准。',
-  tbl_entity:'主体', tbl_biz:'主营业务', tbl_via:'持股路径', tbl_own:'持股', tbl_assets:'资产（十亿盾）', tbl_status:'状态', tbl_name:'姓名', tbl_func:'职能',
+  tbl_entity:'主体', tbl_biz:'主营业务', tbl_via:'持股路径', tbl_own:'持股', tbl_assets:'资产（十亿盾）', tbl_np25:'2025 净利', tbl_status:'状态', tbl_name:'姓名', tbl_func:'职能',
   debt_h:'债务明细与偿债能力', debt_d:'按债权人/期限的债务明细与偿债分析，依据最新报告。',
   c_d1_t:'债权人构成 — 1H2026（6/30）', c_d1_s:'仅有息负债，十亿盾；不含保险准备金约 3,109',
   c_d2_t:'债务到期结构', c_d2_s:'各年到期本金，十亿盾',
@@ -733,9 +734,10 @@ var RK = {"rk24":{"en":[["Segment mix","3 subsidiaries",1,55,"asset mgmt / fleet
 var DIR = {"en":[["01","Three-engine holding model","Three listed/operating subsidiaries: BPAM (asset management), BPTR (fleet rental) and MTWI (insurance) give recurring fee, rental and premium income."],["02","Grow BPAM AUM","BPAM manages 49 trillion IDR of AUM across 107 funds via 37 sales agents; AUM growth drives recurring fee income."],["03","Scale BPTR fleet","BPTR operates 6,928 vehicles; fleet utilization and renewal drive stable rental income."],["04","Disciplined MTWI underwriting","MTWI gross premium reached 1,695.8 bn IDR; underwriting discipline protects margins."],["05","Consolidated balance sheet","Holding-level leverage and liquidity support subsidiary funding and shareholder returns."],["06","Shareholder returns","Dividend policy and capital allocation across the three segments."]],"id":[["01","Model holding tiga mesin","Tiga anak usaha beroperasi: BPAM (manajemen investasi), BPTR (sewa armada) dan MTWI (asuransi) memberi pendapatan fee, sewa dan premium berulang."],["02","Tumbuhkan AUM BPAM","BPAM mengelola AUM 49 triliun rupiah pada 107 reksa dana via 37 agen; pertumbuhan AUM mendorong fee berulang."],["03","Skalakan armada BPTR","BPTR mengoperasikan 6.928 kendaraan; utilisasi dan pembaruan armada mendorong pendapatan sewa stabil."],["04","Underwriting MTWI disiplin","Gross premium MTWI mencapai 1.695,8 miliar rupiah; disiplin underwriting menjaga margin."],["05","Neraca konsolidasi","Leverage dan likuiditas tingkat holding mendanai anak usaha dan imbal hasil pemegang saham."],["06","Imbal hasil pemegang saham","Kebijakan dividen dan alokasi modal lintas tiga segmen."]],"zh":[["01","三引擎控股模式","三家运营子公司：BPAM（资管）、BPTR（车队租赁）、MTWI（保险），提供经常性费用、租赁与保费收入。"],["02","做大 BPAM AUM","BPAM 管理 49 万亿盾 AUM，107 只基金、37 家销售代理；AUM 增长驱动经常性费用。"],["03","扩大 BPTR 车队","BPTR 运营 6,928 辆；车队利用率与更新驱动稳定租赁收入。"],["04","MTWI 审慎承保","MTWI 毛保费达 1,695.8 十亿盾；承保纪律保护利润率。"],["05","合并资产负债表","控股层面杠杆与流动性支持子公司融资与股东回报。"],["06","股东回报","分红政策与跨三个板块的资本配置。"]]};
 var TL = {"en":[["2024","Group operates three subsidiaries: BPAM, BPTR, MTWI","Segment diversification"],["2025","BPAM AUM reaches 49 trillion IDR; BPTR fleet scales; MTWI gross premium 1,695.8bn","Scale-up across segments"],["2026 (1H)","Interim results reflect the holding-group mix","Watch segment margins"]],"id":[["2024","Grup menjalankan tiga anak usaha: BPAM, BPTR, MTWI","Diversifikasi segmen"],["2025","AUM BPAM capai 49 triliun; armada BPTR berkembang; gross premium MTWI 1.695,8bn","Scale-up antar segmen"],["2026 (1H)","Hasil interim mencerminkan bauran grup","Pantau margin segmen"]],"zh":[["2024","集团运营三家子公司：BPAM、BPTR、MTWI","板块多元化"],["2025","BPAM AUM 达 49 万亿盾；BPTR 车队扩张；MTWI 毛保费 1,695.8bn","各板块规模扩张"],["2026（H1）","中期业绩反映控股集团结构","关注板块利润率"]]};
 var OWN = {"en":[["Malacca Trust Pte Ltd",86.15,1],["Public (free float)",9.72,0],["Treasury shares",4.13,2]],"id":[["Malacca Trust Pte Ltd",86.15,1],["Masyarakat (free float)",9.72,0],["Saham treasury",4.13,2]],"zh":[["Malacca Trust Pte Ltd",86.15,1],["公众（流通股）",9.72,0],["库存股",4.13,2]]};
-var SUBS = [["BPAM","PT Batavia Prosperindo Aset Manajemen","d",82.08,202.4,"am",1,0],["BPTR","PT Batavia Prosperindo Trans Tbk","d",67.40,2260.9,"lease",1,0],["MTWI","PT Malacca Trust Wuwungan Insurance Tbk","d",85.90,3603.0,"ins",1,0]];
-var BIZ = {"en":{"am":"Asset management & mutual funds","lease":"Car rental & fleet management","ins":"General & life insurance"},"id":{"am":"Manajemen investasi & reksa dana","lease":"Sewa mobil & pengelolaan armada","ins":"Asuransi umum & jiwa"},"zh":{"am":"资产管理与公募基金","lease":"汽车租赁与车队管理","ins":"一般与人身保险"}};
+var SUBS = [["BPAM","PT Batavia Prosperindo Aset Manajemen","d",82.08,202.4,"am",1,0,78.0,1996,null],["BPTR","PT Batavia Prosperindo Trans Tbk","d",67.40,2260.9,"lease",1,0,35.8,2015,"BBLI"],["MTWI","PT Malacca Trust Wuwungan Insurance Tbk","d",85.90,3603.0,"ins",1,0,71.3,1953,"MTWI"]];
+var BIZ = {"en":{"am":"Asset management & mutual funds (est. 1996)","lease":"Car rental & fleet management (est. 2015)","ins":"General insurance (est. 1953)"},"id":{"am":"Manajemen investasi & reksa dana (est. 1996)","lease":"Sewa mobil & pengelolaan armada (est. 2015)","ins":"Asuransi umum (est. 1953)"},"zh":{"am":"资产管理与公募基金（1996 年成立）","lease":"汽车租赁与车队管理（2015 年成立）","ins":"一般保险（1953 年成立）"}};
 var VIA = {"en":{"d":"direct"},"id":{"d":"langsung"},"zh":{"d":"直接持股"}};
+var HLD = {"en":[["Established","12 Nov 1998 (Akta No. 78)"],["Listed","8 Jul 2014 · IDX: BPII"],["Domicile","Jakarta, Indonesia"],["Industry","Financial holding — asset mgmt · fleet · insurance"]],"id":[["Didirikan","12 Nov 1998 (Akta No. 78)"],["Listing","8 Jul 2014 · BEI: BPII"],["Domisili","Jakarta, Indonesia"],["Industri","Holding keuangan — manajemen investasi · armada · asuransi"]],"zh":[["成立","1998-11-12（Akta No. 78）"],["上市","2014-07-08 · IDX: BPII"],["注册地","印尼雅加达"],["行业","金融控股 — 资管 · 车队 · 保险"]]};
 var PILLAR = {"en":[["Asset Management","am",1],["Fleet Rental","lease",2],["Insurance","ins",3]],"id":[["Manajemen Investasi","am",1],["Sewa Armada","lease",2],["Asuransi","ins",3]],"zh":[["资产管理","am",1],["车队租赁","lease",2],["保险","ins",3]]};
 var PILLAR_MAP = {"am":["BPAM"],"lease":["BPTR"],"ins":["MTWI"]};
 var ORG = {"facts":{"en":[["Holding group","Financial holding","IDX: BPII"],["Segments","3 subsidiaries","BPAM / BPTR / MTWI"],["AUM (BPAM)","49","IDR trillions"],["Fleet (BPTR)","6,928","vehicles"],["Gross premium (MTWI)","1,695.8","IDR bn"]],"id":[["Grup holding","Holding keuangan","IDX: BPII"],["Segmen","3 anak usaha","BPAM / BPTR / MTWI"],["AUM (BPAM)","49","Rp triliun"],["Armada (BPTR)","6.928","kendaraan"],["Gross premium (MTWI)","1.695,8","Rp miliar"]],"zh":[["控股集团","金融控股","IDX: BPII"],["板块","3 家子公司","BPAM / BPTR / MTWI"],["AUM（BPAM）","49","万亿盾"],["车队（BPTR）","6,928","辆"],["毛保费（MTWI）","1,695.8","十亿盾"]]},"boc":{"en":["Board of Commissioners","President Commissioner / Independent","Independent Commissioner"],"id":["Dewan Komisaris","Komisaris Utama / Independen","Komisaris Independen"],"zh":["监事会","监事长 / 独立监事","独立监事"]},"bod":{"en":["Board of Directors","President Director","Director"],"id":["Direksi","Direktur Utama","Direktur"],"zh":["董事会","董事长","董事"]},"aud":{"en":["Audit Committee","Chairman","Member"],"id":["Komite Audit","Ketua","Anggota"],"zh":["审计委员会","主席","成员"]},"roles":null,"bocm":[["Irena Istary Iskandar",0],["Paulin Angeline",1],["Rudy Johansen",1]],"bodm":[["Rudi Setiadi Tjahjono",0],["Luo Xude",1]],"audm":[["Paulin Angeline",0],["M. Nur Alam",1],["Yenni",1]],"chart":{"en":["General Meeting of Shareholders","Board of Commissioners","Board of Directors","Audit Committee","Asset Management (BPAM)","Fleet Rental (BPTR)","Insurance (MTWI)","Support functions"],"id":["RUPS","Dewan Komisaris","Direksi","Komite Audit","Manajemen Investasi (BPAM)","Sewa Armada (BPTR)","Asuransi (MTWI)","Fungsi pendukung"],"zh":["股东大会","监事会","董事会","审计委员会","资产管理（BPAM）","车队租赁（BPTR）","保险（MTWI）","支持职能"]},"mgmt":{"en":[["Rudi Setiadi Tjahjono","President Director"],["Luo Xude","Director"],["Jenny Sutio","Corporate Secretary"]],"id":[["Rudi Setiadi Tjahjono","Direktur Utama"],["Luo Xude","Direktur"],["Jenny Sutio","Sekretaris Perusahaan"]],"zh":[["Rudi Setiadi Tjahjono","总裁"],["Luo Xude","董事"],["Jenny Sutio","公司秘书"]]}};
@@ -1262,17 +1264,26 @@ function hldDiagramHtml(){
   h += '</div>';
   return h;
 }
+function hldFactsHtml(){
+  var rows = HLD[LANG], h = '<div class="kv-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0">';
+  for (var i = 0; i < rows.length; i++) {
+    h += '<div style="background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:12px"><div style="font-weight:600;color:var(--green);margin-bottom:6px">' + esc(rows[i][0]) + '</div><div style="color:var(--ink);font-size:13px;line-height:1.5">' + esc(rows[i][1]) + '</div></div>';
+  }
+  h += '</div>';
+  return h;
+}
 function hldTableHtml(){
-  var h = '<div class="g-table-wrap"><table class="g-table"><colgroup><col style="width:26%"><col style="width:27%"><col style="width:13%"><col style="width:9%"><col style="width:14%"><col style="width:11%"></colgroup><thead><tr><th>' + esc(T('tbl_entity')) + '</th><th>' + esc(T('tbl_biz')) + '</th><th>' + esc(T('tbl_via')) + '</th><th>' + esc(T('tbl_own')) + '</th><th>' + esc(T('tbl_assets')) + '</th><th>' + esc(T('tbl_status')) + '</th></tr></thead><tbody>';
-  var pillars = PILLAR[LANG], first = true;
+  var h = '<div class="g-table-wrap"><table class="g-table"><colgroup><col style="width:22%"><col style="width:24%"><col style="width:13%"><col style="width:9%"><col style="width:12%"><col style="width:10%"><col style="width:10%"></colgroup><thead><tr><th>' + esc(T('tbl_entity')) + '</th><th>' + esc(T('tbl_biz')) + '</th><th>' + esc(T('tbl_via')) + '</th><th>' + esc(T('tbl_own')) + '</th><th>' + esc(T('tbl_assets')) + '</th><th>' + esc(T('tbl_np25')) + '</th><th>' + esc(T('tbl_status')) + '</th></tr></thead><tbody>';
+  var pillars = PILLAR[LANG];
   for (var p = 0; p < pillars.length; p++) {
     var codes = PILLAR_MAP[pillars[p][1]];
-    h += '<tr><td colspan="6" class="gname">' + esc(pillars[p][0]) + '</td></tr>';
+    h += '<tr><td colspan="7" class="gname">' + esc(pillars[p][0]) + '</td></tr>';
     for (var i = 0; i < codes.length; i++) {
       for (var j = 0; j < SUBS.length; j++) {
         if (SUBS[j][0] !== codes[i]) { continue; }
         var s = SUBS[j];
-        h += '<tr><td class="b">' + esc(s[0]) + '<br><span style="font-weight:400;color:#5C6B61">' + esc(s[1]) + '</span></td><td>' + esc(BIZ[LANG][s[5]]) + '</td><td>' + esc(VIA[LANG][s[2]]) + '</td><td class="' + (s[7] === 1 ? 'amber' : 'p') + '">' + fmtN(s[3]) + '%</td><td class="p">' + fmtN(s[4]) + '</td><td>' + (s[6] === 1 ? esc(CT('op')) : esc(CT('no'))) + '</td></tr>';
+        var tick = s[10] ? ' · IDX: ' + esc(s[10]) : '';
+        h += '<tr><td class="b">' + esc(s[0]) + '<br><span style="font-weight:400;color:#5C6B61">' + esc(s[1]) + tick + '</span></td><td>' + esc(BIZ[LANG][s[5]]) + '</td><td>' + esc(VIA[LANG][s[2]]) + '</td><td class="' + (s[7] === 1 ? 'amber' : 'p') + '">' + fmtN(s[3]) + '%</td><td class="p">' + fmtN(s[4]) + '</td><td class="p">' + fmtN(s[8]) + '</td><td>' + (s[6] === 1 ? esc(CT('op')) : esc(CT('no'))) + '</td></tr>';
       }
     }
   }
@@ -1469,6 +1480,7 @@ function renderStatics(){
   })();
   document.getElementById('dirs').innerHTML = dirsHtml();
   document.getElementById('tl').innerHTML = tlHtml();
+  document.getElementById('hld-facts').innerHTML = hldFactsHtml();
   document.getElementById('own-bars').innerHTML = ownHtml();
   document.getElementById('hld').innerHTML = hldDiagramHtml();
   document.getElementById('hld-table').innerHTML = hldTableHtml();

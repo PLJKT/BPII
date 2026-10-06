@@ -1870,7 +1870,10 @@
       202.4,
       "am",
       1,
-      0
+      0,
+      78.0,
+      1996,
+      null
     ],
     [
       "BPTR",
@@ -1880,7 +1883,10 @@
       2260.9,
       "lease",
       1,
-      0
+      0,
+      35.8,
+      2015,
+      "BBLI"
     ],
     [
       "MTWI",
@@ -1890,7 +1896,10 @@
       3603.0,
       "ins",
       1,
-      0
+      0,
+      71.3,
+      1953,
+      "MTWI"
     ]
   ],
   "ORG": {
@@ -2767,21 +2776,21 @@
     ]
   },
   "BIZ": {
-    "en": [
-      "Asset Management (BPAM)",
-      "Car Rental & Fleet (BPTR)",
-      "General Insurance (MTWI)"
-    ],
-    "id": [
-      "Manajemen Investasi (BPAM)",
-      "Sewa Mobil & Armada (BPTR)",
-      "Asuransi Umum (MTWI)"
-    ],
-    "zh": [
-      "资产管理（BPAM）",
-      "汽车租赁与车队（BPTR）",
-      "一般保险（MTWI）"
-    ]
+    "en": {
+      "am": "Asset management & mutual funds (est. 1996)",
+      "lease": "Car rental & fleet management (est. 2015)",
+      "ins": "General insurance (est. 1953)"
+    },
+    "id": {
+      "am": "Manajemen investasi & reksa dana (est. 1996)",
+      "lease": "Sewa mobil & pengelolaan armada (est. 2015)",
+      "ins": "Asuransi umum (est. 1953)"
+    },
+    "zh": {
+      "am": "资产管理与公募基金（1996 年成立）",
+      "lease": "汽车租赁与车队管理（2015 年成立）",
+      "ins": "一般保险（1953 年成立）"
+    }
   },
   "EV": {
     "ev24": {
@@ -2918,21 +2927,15 @@
     }
   },
   "VIA": {
-    "en": [
-      "Direct subsidiary",
-      "Listed subsidiary (IDX: BPTR)",
-      "Listed subsidiary (IDX: MTWI)"
-    ],
-    "id": [
-      "Anak usaha langsung",
-      "Anak usaha tervisitasi (BEI: BPTR)",
-      "Anak usaha tervisitasi (BEI: MTWI)"
-    ],
-    "zh": [
-      "直接子公司",
-      "上市子公司（IDX: BPTR）",
-      "上市子公司（IDX: MTWI）"
-    ]
+    "en": {
+      "d": "Direct subsidiary"
+    },
+    "id": {
+      "d": "Anak usaha langsung"
+    },
+    "zh": {
+      "d": "直接持股"
+    }
   },
   "PILLAR": {
     "en": [
