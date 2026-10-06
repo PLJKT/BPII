@@ -1917,7 +1917,7 @@
         ],
         [
           "Market cap (FY25)",
-          "5.26",
+          "4.83",
           "IDR tn"
         ],
         [
@@ -1938,28 +1938,28 @@
       ],
       "id": [
         [
-          "Tercatat (IDX)",
+          "Listing (BEI)",
           "2014",
           "8 Jul"
         ],
         [
           "Karyawan",
-          "1,223",
+          "1.223",
           "orang"
         ],
         [
           "Kapitalisasi pasar (FY25)",
-          "5.26",
-          "Rp tn"
+          "4,83",
+          "Rp triliun"
         ],
         [
           "Saham beredar",
-          "10.31",
+          "10,31",
           "miliar"
         ],
         [
           "Armada BPTR (2025)",
-          "6,928",
+          "6.928",
           "unit"
         ],
         [
@@ -1972,7 +1972,7 @@
         [
           "上市（IDX）",
           "2014",
-          "7 月 8 日"
+          "7月8日"
         ],
         [
           "员工",
@@ -1981,13 +1981,13 @@
         ],
         [
           "市值（FY25）",
-          "5.26",
+          "4.83",
           "万亿盾"
         ],
         [
           "总股本",
-          "103.1",
-          "亿股"
+          "10.31",
+          "bn"
         ],
         [
           "BPTR 车队（2025）",
@@ -1995,62 +1995,62 @@
           "辆"
         ],
         [
-          "BPAM 管理规模（2025）",
+          "BPAM AUM（2025）",
           "49",
           "万亿盾"
         ]
       ]
     },
     "boc": {
-      "en": {
-        "0": "Board of Commissioners",
-        "Irena Istary Iskandar": "President Commissioner",
-        "Rudy Johansen": "Commissioner",
-        "Paulin Angeline": "Independent Commissioner"
-      },
-      "id": {
-        "0": "Dewan Komisaris",
-        "Irena Istary Iskandar": "Presiden Komisaris",
-        "Rudy Johansen": "Komisaris",
-        "Paulin Angeline": "Komisaris Independen"
-      },
-      "zh": {
-        "0": "董事会",
-        "Irena Istary Iskandar": "董事长",
-        "Rudy Johansen": "董事",
-        "Paulin Angeline": "独立董事"
-      }
+      "en": [
+        "Board of Commissioners",
+        "President Commissioner",
+        "Commissioner"
+      ],
+      "id": [
+        "Dewan Komisaris",
+        "Komisaris Utama",
+        "Komisaris"
+      ],
+      "zh": [
+        "监事会",
+        "监事长",
+        "监事"
+      ]
     },
     "bod": {
-      "en": {
-        "0": "Board of Directors",
-        "Rudi Setiadi Tjahjono": "President Director",
-        "Luo Xude": "Independent Director"
-      },
-      "id": {
-        "0": "Dewan Direksi",
-        "Rudi Setiadi Tjahjono": "Direktur Utama",
-        "Luo Xude": "Direktur Independen"
-      },
-      "zh": {
-        "0": "董事会",
-        "Rudi Setiadi Tjahjono": "总裁",
-        "Luo Xude": "独立董事"
-      }
+      "en": [
+        "Board of Directors",
+        "President Director",
+        "Director"
+      ],
+      "id": [
+        "Direksi",
+        "Direktur Utama",
+        "Direktur"
+      ],
+      "zh": [
+        "董事会",
+        "董事长",
+        "董事"
+      ]
     },
     "aud": {
-      "en": {
-        "0": "Audit Committee",
-        "Paulin Angeline": "Chairperson"
-      },
-      "id": {
-        "0": "Komite Audit",
-        "Paulin Angeline": "Ketua"
-      },
-      "zh": {
-        "0": "审计委员会",
-        "Paulin Angeline": "主席"
-      }
+      "en": [
+        "Audit Committee",
+        "Chairman",
+        "Member"
+      ],
+      "id": [
+        "Komite Audit",
+        "Ketua",
+        "Anggota"
+      ],
+      "zh": [
+        "审计委员会",
+        "主席",
+        "成员"
+      ]
     },
     "bocm": [
       [
@@ -2090,6 +2090,35 @@
         1
       ]
     ],
+    "members": {
+      "en": {
+        "Irena Istary Iskandar": "Indonesian · since 2014",
+        "Paulin Angeline": "Indonesian · since 2024",
+        "Rudy Johansen": "Singaporean · since 2022",
+        "Rudi Setiadi Tjahjono": "Indonesian · since 2014",
+        "Luo Xude": "Chinese (PRC) · since 2014",
+        "M. Nur Alam": "External · 2024–2029",
+        "Yenni": "External · 2024–2029"
+      },
+      "id": {
+        "Irena Istary Iskandar": "WNI · sejak 2014",
+        "Paulin Angeline": "WNI · sejak 2024",
+        "Rudy Johansen": "Singapura · sejak 2022",
+        "Rudi Setiadi Tjahjono": "WNI · sejak 2014",
+        "Luo Xude": "Tiongkok (PRC) · sejak 2014",
+        "M. Nur Alam": "Eksternal · 2024–2029",
+        "Yenni": "Eksternal · 2024–2029"
+      },
+      "zh": {
+        "Irena Istary Iskandar": "印尼籍 · 2014 年起",
+        "Paulin Angeline": "印尼籍 · 2024 年起",
+        "Rudy Johansen": "新加坡籍 · 2022 年起",
+        "Rudi Setiadi Tjahjono": "印尼籍 · 2014 年起",
+        "Luo Xude": "中国籍 · 2014 年起",
+        "M. Nur Alam": "外聘 · 2024–2029",
+        "Yenni": "外聘 · 2024–2029"
+      }
+    },
     "chart": {
       "en": [
         "Shareholders (RUPS)",
@@ -2099,11 +2128,11 @@
         "BPTR",
         "MTWI",
         "BPAM",
-        "Mutual funds",
+        "AUM IDR 49tn · 107 funds",
         "",
         "",
         "Holding",
-        "IDX: BPII",
+        "Financial holding · IDX: BPII",
         "",
         ""
       ],
@@ -2115,27 +2144,27 @@
         "BPTR",
         "MTWI",
         "BPAM",
-        "Reksa dana",
+        "AUM Rp49tn · 107 reksa dana",
         "",
         "",
         "Induk",
-        "BEI: BPII",
+        "Holding keuangan · BEI: BPII",
         "",
         ""
       ],
       "zh": [
         "股东大会 (RUPS)",
-        "董事会",
+        "监事会",
         "董事会",
         "Rudi Setiadi Tjahjono, Luo Xude",
         "BPTR",
         "MTWI",
         "BPAM",
-        "公募基金",
+        "AUM 49万亿盾 · 107 只基金",
         "",
         "",
         "控股",
-        "印尼交易所: BPII",
+        "金融控股 · IDX: BPII",
         "",
         ""
       ]
@@ -2151,7 +2180,7 @@
           "Director"
         ],
         [
-          "Jenny Sutio",
+          "Kamal",
           "Corporate Secretary"
         ]
       ],
@@ -2165,7 +2194,7 @@
           "Direktur"
         ],
         [
-          "Jenny Sutio",
+          "Kamal",
           "Sekretaris Perusahaan"
         ]
       ],
@@ -2179,7 +2208,7 @@
           "董事"
         ],
         [
-          "Jenny Sutio",
+          "Kamal",
           "公司秘书"
         ]
       ]
