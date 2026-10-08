@@ -111,13 +111,28 @@ This produces a full-page screenshot and reports console errors in JSON.
 
 ### Market Data (stock price, valuation)
 
-Market data is in `data.json` → `VAL`. Key fields:
-- `VAL.kpi` — valuation snapshot cards
-- `VAL.months` / `VAL.close` / `VAL.vol` / `VAL.range` — 12-month price chart
-- `VAL.peers` — peer comparison table
-- `VAL.stats` — detailed statistics
+**Field mapping (critical — do not get this wrong)**: the Valuation page renders from THREE separate data blocks, not just `VAL`:
 
-Sources: Yahoo Finance (BPII.JK), stockanalysis.com, IDX official.
+| What renders | Source field |
+|---|---|
+| KPI cards (top row: Price / Market cap / P/B / P/E / Dividend) | `KP.val.en/id/zh` (array of `{l,v,u,d,c}`) |
+| Snapshot table ("Valuation & trading snapshot") | `VTXT.en/id/zh.stats` (array of `[label, value]`) |
+| Peer comparison table | `VTXT.en/id/zh.peers` (array of `[name, pb, pe, dy]`) |
+| 12-month price line + volume bars | `VAL.months / close / vol / range` |
+| Red dashed markLine (latest price) | `FY.refPrice` |
+| P/B vs P/S peer bar chart | `FY.bpiiPBPS = [pb, ps]`, `FY.peerPBPS = [pb, ps]` |
+
+> ⚠️ `VAL.kpi` and `VAL.stats` in data.json are **dead fields** — the render function reads `KP.val` and `VTXT.stats` instead. Editing `VAL.kpi` has no visible effect. This has caused multiple "why didn't it update" rounds.
+
+**Current market snapshot (7 Oct 2026)**:
+- Price **IDR 452**, market cap **IDR 4.66tn** (10.31bn shares)
+- **P/B = 3.2x** on **parent equity** (BVPS 140.1 = parent equity IDR 1,444.2bn / 10.31bn shares; NCI IDR 376.0bn excluded)
+- **P/E = 34.6x FY25** (EPS 13.08) and **52.3x TTM** (TTM EPS 8.64 = TTM net profit 89.1bn = FY25 144.1 − 1H25 108.0 + 1H26 53.0)
+- **Dividend yield 1.4%** (TTM DPS 6.32 IDR; FY25 DPS 11.4)
+- 52-week range 396–696 IDR
+- 12-month chart window: **Nov-25 → Oct-26** (roll forward monthly; drop oldest, append newest)
+
+Sources: IDX, Xurve, stockanalysis.com, Yahoo Finance (BPII.JK).
 
 ### Auto Stock Price Update
 
@@ -186,6 +201,31 @@ Interest expense is **not** added back (BPII's "Keuangan" is treated as operatin
 
 Interest-bearing debt = bank loans + consumer finance payables + lease liabilities. **Insurance contract liabilities are excluded** (they are not debt).
 
+**Reported net debt/EBITDA = 4.1x** (FY2025: (1,618.3 − 247.5) / 334.1). This deducts **cash only**. If marketable securities (IDR 647.7bn third-party + 150.1bn related-party = 1,045.3bn total cash + securities) are also netted, net debt falls to ~335bn and net debt/EBITDA ≈ **1.0x**. The 4.1x figure is the conservative headline; the ~1.0x figure is disclosed in the footnotes.
+
+### Interest Coverage — Two Bases
+
+- **EBITDA / interest = 2.8x** (FY2025: 334.1 / 121.5) — operating cash-flow basis
+- **EBIT (PBT) / interest = 1.6x** (FY2025: PBT 192.4 / 121.5) — pre-tax basis
+
+Both are shown; EBIT/interest is the stricter measure.
+
+### Free Cash Flow
+
+`FCF = CFO − Capex` (no land acquisition adjustment — financial holding has no land bank).
+
+**FCF has been negative since 2023 exit, negative in 2024–2025**:
+- 2023: +336.6bn (MTWI consolidation boosted CFO)
+- 2024: **−639.9bn**
+- 2025: **−455.8bn**
+- 1H26: **−451.2bn**
+
+Driven by BPTR fleet capex and MTWI investment-asset outflows exceeding operating cash flow; financed by debt. Flagged as a High-severity risk on the Risk page.
+
+### Balance Sheet Format
+
+BPII (insurer-format) balance sheet does **not** split current / non-current lines — so a standard current ratio cannot be computed. This is stated rather than estimated.
+
 ### Consolidation Timeline
 
 | Subsidiary | Consolidated from |
@@ -201,6 +241,8 @@ Interest-bearing debt = bank loans + consumer finance payables + lease liabiliti
 - **MTWI FY2025 RBC (solvency)**: not extracted from standalone report.
 - **2016/2017 D&A**: estimated values (PDF fixed-asset roll-forward tables had different format).
 - **BPTR customer concentration / capex detail**: in BPTR standalone MD&A, not in BPII consolidated notes.
+- **Current ratio**: not computable — insurer balance sheet format has no current/non-current split.
+- **Monthly close for thin-trading months**: some month-end closes are approximated from EODHD/investing.com snapshots rather than exact month-end prints.
 
 ---
 
@@ -210,8 +252,9 @@ All commits use the prefix `R<nn>:` where `<nn>` is a sequential revision number
 
 ```
 R67: fix annual pages - FY2024 crash (seg24b), pl24/bs24 data, 1H26 net revenue
-R68: fix Organization memberLines - remove '· level' suffix
 R69: cleanup dead code + DEVELOPMENT.md
+R74: apply Xurve insights - parent-equity P/B 3.2x, TTM P/E 52.3x, actual DPS, FCF risk
+R75: update share price chart to Oct 2026 (Sep close 460, Oct latest 452)
 ```
 
 ---
