@@ -1707,11 +1707,11 @@
   "VAL": {
     "kpi": [
       {
-        "l": "Price (2026-10-07)",
-        "v": 452,
+        "l": "Price (2026-10-08)",
+        "v": 444,
         "u": "IDR",
-        "d": "latest close · Xurve/IDX",
-        "c": "flat"
+        "d": "-8 (-1.8%) on day",
+        "c": "dn"
       },
       {
         "l": "52-week range",
@@ -1722,23 +1722,23 @@
       },
       {
         "l": "Market cap",
-        "v": 4.66,
+        "v": 4.6,
         "u": "IDR tn",
-        "d": "4660bn at 452",
+        "d": "4.58T at 444",
         "c": "flat"
       },
       {
         "l": "P/B (parent equity)",
-        "v": 3.2,
+        "v": 2.5,
         "u": "x",
-        "d": "3.2x · BVPS 140.1 (归母 1,444bn)",
+        "d": "2.52x parent BVPS 176.5",
         "c": "flat"
       },
       {
         "l": "P/E FY25",
-        "v": 34.6,
+        "v": 31.7,
         "u": "x",
-        "d": "34.6x · EPS 13.08",
+        "d": "31.7x on FY25 EPS 14.0",
         "c": "flat"
       },
       {
@@ -1782,7 +1782,7 @@
       510,
       515,
       460,
-      452
+      444
     ],
     "range": [
       [
@@ -1872,7 +1872,7 @@
     "stats": [
       [
         "Price / date",
-        "452 IDR · 2026-10-07 (Xurve/IDX)"
+        "444.0 IDR · 2026-10-08 (Yahoo Finance)"
       ],
       [
         "Shares outstanding",
@@ -2644,7 +2644,7 @@
         2.7
       ]
     },
-    "refPrice": 452,
+    "refPrice": 444,
     "h26rev": {
       "h25": [
         617.4,
