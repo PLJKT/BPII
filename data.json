@@ -1707,10 +1707,10 @@
   "VAL": {
     "kpi": [
       {
-        "l": "Price (2026-10-14)",
-        "v": 426,
+        "l": "Price (2026-10-15)",
+        "v": 420,
         "u": "IDR",
-        "d": "-16 (-3.6%) on day",
+        "d": "-6 (-1.4%) on day",
         "c": "dn"
       },
       {
@@ -1722,23 +1722,23 @@
       },
       {
         "l": "Market cap",
-        "v": 4.4,
+        "v": 4.3,
         "u": "IDR tn",
-        "d": "4.39T at 426",
+        "d": "4.33T at 420",
         "c": "flat"
       },
       {
         "l": "P/B (parent equity)",
         "v": 2.4,
         "u": "x",
-        "d": "2.41x parent BVPS 176.5",
+        "d": "2.38x parent BVPS 176.5",
         "c": "flat"
       },
       {
         "l": "P/E FY25",
-        "v": 30.4,
+        "v": 30.0,
         "u": "x",
-        "d": "30.4x on FY25 EPS 14.0",
+        "d": "30.0x on FY25 EPS 14.0",
         "c": "flat"
       },
       {
@@ -1782,7 +1782,7 @@
       510,
       515,
       460,
-      426
+      420
     ],
     "range": [
       [
@@ -1872,7 +1872,7 @@
     "stats": [
       [
         "Price / date",
-        "426.0 IDR · 2026-10-14 (Yahoo Finance)"
+        "420.0 IDR · 2026-10-15 (Yahoo Finance)"
       ],
       [
         "Shares outstanding",
@@ -2644,7 +2644,7 @@
         2.7
       ]
     },
-    "refPrice": 426,
+    "refPrice": 420,
     "h26rev": {
       "h25": [
         617.4,
