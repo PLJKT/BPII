@@ -1707,11 +1707,11 @@
   "VAL": {
     "kpi": [
       {
-        "l": "Price (2026-11-02)",
+        "l": "Price (2026-11-03)",
         "v": 404,
         "u": "IDR",
-        "d": "-6 (-1.5%) on day",
-        "c": "dn"
+        "d": "+0 (+0.0%) on day",
+        "c": "up"
       },
       {
         "l": "52-week range",
@@ -1872,7 +1872,7 @@
     "stats": [
       [
         "Price / date",
-        "404.0 IDR · 2026-11-02 (Yahoo Finance)"
+        "404.0 IDR · 2026-11-03 (Yahoo Finance)"
       ],
       [
         "Shares outstanding",
