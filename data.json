@@ -1221,30 +1221,30 @@
         },
         {
           "l": "Market cap",
-          "v": 4.66,
+          "v": 4.47,
           "u": "IDR tn",
-          "d": "10.31bn shares × 452",
+          "d": "9.88bn shares × 452 (treasury cancelled)",
           "c": "flat"
         },
         {
           "l": "P/B (parent equity)",
-          "v": 3.2,
+          "v": 3.1,
           "u": "x",
-          "d": "BVPS 140.1 · NCI 376bn excluded",
+          "d": "BVPS 146.1 · NCI 376bn excluded",
           "c": "flat"
         },
         {
           "l": "P/E FY25",
-          "v": 34.6,
+          "v": 33.1,
           "u": "x",
-          "d": "FY25 EPS 13.08",
+          "d": "FY25 EPS 13.64",
           "c": "flat"
         },
         {
           "l": "P/E TTM",
-          "v": 52.3,
+          "v": 44.8,
           "u": "x",
-          "d": "TTM EPS 8.64 · NP 89.1bn",
+          "d": "TTM EPS 10.09 · NP attr. 99.7bn",
           "c": "flat"
         },
         {
@@ -1265,30 +1265,30 @@
         },
         {
           "l": "Kapitalisasi pasar",
-          "v": 4.66,
+          "v": 4.47,
           "u": "Rp triliun",
-          "d": "10,31 miliar saham × 452",
+          "d": "9,88 miliar saham × 452 (saham treasury dibatalkan)",
           "c": "flat"
         },
         {
           "l": "P/B (ekuitas induk)",
-          "v": 3.2,
+          "v": 3.1,
           "u": "x",
-          "d": "BVPS 140,1 · NCI 376 miliar dikecualikan",
+          "d": "BVPS 146,1 · NCI 376 miliar dikecualikan",
           "c": "flat"
         },
         {
           "l": "P/E FY25",
-          "v": 34.6,
+          "v": 33.1,
           "u": "x",
-          "d": "EPS FY25 13,08",
+          "d": "EPS FY25 13,64",
           "c": "flat"
         },
         {
           "l": "P/E TTM",
-          "v": 52.3,
+          "v": 44.8,
           "u": "x",
-          "d": "EPS TTM 8,64 · Laba 89,1 miliar",
+          "d": "EPS TTM 10,09 · laba pemilik induk 99,7 miliar",
           "c": "flat"
         },
         {
@@ -1309,30 +1309,30 @@
         },
         {
           "l": "市值",
-          "v": 4.66,
+          "v": 4.47,
           "u": "万亿盾",
-          "d": "10.31bn 股 × 452",
+          "d": "9.88bn 股 × 452（库存股已注销）",
           "c": "flat"
         },
         {
           "l": "P/B（归母净资产）",
-          "v": 3.2,
+          "v": 3.1,
           "u": "x",
-          "d": "BVPS 140.1 · 扣除 NCI 376bn",
+          "d": "BVPS 146.1 · 扣除 NCI 376bn",
           "c": "flat"
         },
         {
           "l": "P/E FY25",
-          "v": 34.6,
+          "v": 33.1,
           "u": "x",
-          "d": "FY25 EPS 13.08",
+          "d": "FY25 EPS 13.64",
           "c": "flat"
         },
         {
           "l": "P/E TTM",
-          "v": 52.3,
+          "v": 44.8,
           "u": "x",
-          "d": "TTM EPS 8.64 · 净利 89.1bn",
+          "d": "TTM EPS 10.09 · 归母净利 99.7bn",
           "c": "flat"
         },
         {
@@ -1935,6 +1935,19 @@
       71.3,
       1953,
       "MTWI"
+    ],
+    [
+      "BPD",
+      "Batavia Prosperindo Pte Ltd",
+      "d",
+      100,
+      452.0,
+      "other",
+      1,
+      0,
+      null,
+      2023,
+      "SGP"
     ]
   ],
   "ORG": {
@@ -1951,13 +1964,13 @@
           "people"
         ],
         [
-          "Market cap (FY25)",
-          "4.83",
+          "Market cap (7 Oct 2026)",
+          "4.47",
           "IDR tn"
         ],
         [
           "Shares outstanding",
-          "10.31",
+          "9.88",
           "bn"
         ],
         [
@@ -1983,13 +1996,13 @@
           "orang"
         ],
         [
-          "Kapitalisasi pasar (FY25)",
-          "4,83",
+          "Kapitalisasi pasar (7 Okt 2026)",
+          "4,47",
           "Rp triliun"
         ],
         [
           "Saham beredar",
-          "10,31",
+          "9,88",
           "miliar"
         ],
         [
@@ -2015,13 +2028,13 @@
           "人"
         ],
         [
-          "市值（FY25）",
-          "4.83",
+          "市值（2026.10.7）",
+          "4.47",
           "万亿盾"
         ],
         [
           "总股本",
-          "10.31",
+          "9.88",
           "bn"
         ],
         [
@@ -2163,7 +2176,7 @@
         "Operational & Finance",
         "Legal & Personnel",
         "Corporate Secretary",
-        "Kamal",
+        "Bernadeta Dwi Novernia",
         "Accounting",
         "",
         "Internal Audit",
@@ -2179,7 +2192,7 @@
         "Operasional & Keuangan",
         "Legal & Personalia",
         "Sekretaris Perusahaan",
-        "Kamal",
+        "Bernadeta Dwi Novernia",
         "Akuntansi",
         "",
         "Audit Internal",
@@ -2195,7 +2208,7 @@
         "运营与财务",
         "法务与人事",
         "公司秘书",
-        "Kamal",
+        "Bernadeta Dwi Novernia",
         "会计",
         "",
         "内部审计",
@@ -2215,7 +2228,7 @@
           "Director"
         ],
         [
-          "Kamal",
+          "Bernadeta Dwi Novernia",
           "Corporate Secretary"
         ]
       ],
@@ -2229,7 +2242,7 @@
           "Direktur"
         ],
         [
-          "Kamal",
+          "Bernadeta Dwi Novernia",
           "Sekretaris Perusahaan"
         ]
       ],
@@ -2243,7 +2256,7 @@
           "董事"
         ],
         [
-          "Kamal",
+          "Bernadeta Dwi Novernia",
           "公司秘书"
         ]
       ]
@@ -2389,52 +2402,37 @@
     "en": [
       [
         "Malacca Trust Pte Ltd",
-        86.15,
+        89.86,
         1
       ],
       [
         "Public (free float)",
-        9.72,
+        10.12,
         0
-      ],
-      [
-        "Treasury shares",
-        4.13,
-        2
       ]
     ],
     "id": [
       [
         "Malacca Trust Pte Ltd",
-        86.15,
+        89.86,
         1
       ],
       [
         "Masyarakat (free float)",
-        9.72,
+        10.12,
         0
-      ],
-      [
-        "Saham treasury",
-        4.13,
-        2
       ]
     ],
     "zh": [
       [
         "Malacca Trust Pte Ltd",
-        86.15,
+        89.86,
         1
       ],
       [
         "公众（流通股）",
-        9.72,
+        10.12,
         0
-      ],
-      [
-        "库存股",
-        4.13,
-        2
       ]
     ]
   },
@@ -2797,7 +2795,7 @@
       ]
     },
     "bpiiPBPS": [
-      3.2,
+      3.1,
       0.39
     ],
     "peerPBPS": [
@@ -3903,11 +3901,11 @@
         ],
         [
           "Market cap",
-          "IDR 4.66tn"
+          "IDR 4.47tn"
         ],
         [
           "Shares outstanding",
-          "10.31bn"
+          "9.88bn (treasury 425.8m cancelled)"
         ],
         [
           "52-week range",
@@ -3915,19 +3913,19 @@
         ],
         [
           "P/B (parent equity)",
-          "3.2x (BVPS 140.1; NCI 376bn excluded)"
+          "3.1x (BVPS 146.1; NCI 376bn excluded)"
         ],
         [
           "P/E",
-          "FY25 34.6x (EPS 13.08); TTM 52.3x (EPS 8.64)"
+          "FY25 33.1x (EPS 13.64); TTM 44.8x (EPS 10.09)"
         ],
         [
           "Dividend yield",
           "1.4% (TTM DPS 6.32; FY25 DPS 11.4)"
         ],
         [
-          "TTM net profit",
-          "IDR 89.1bn (FY25 144.1 − 1H25 108.0 + 1H26 53.0)"
+          "TTM net profit (attributable)",
+          "IDR 99.7bn (FY25 134.8 − 1H25 77.9 + 1H26 42.8)"
         ]
       ],
       "peersH": [
@@ -3939,8 +3937,8 @@
       "peers": [
         [
           "BPII (holding)",
-          "3.2x",
-          "34.6x",
+          "3.1x",
+          "33.1x",
           "1.4%"
         ],
         [
@@ -3984,11 +3982,11 @@
         ],
         [
           "Kapitalisasi pasar",
-          "IDR 4,66 triliun"
+          "IDR 4,47 triliun"
         ],
         [
           "Saham beredar",
-          "10,31 miliar"
+          "9,88 miliar (saham treasury 425,8m dibatalkan)"
         ],
         [
           "Rentang 52-minggu",
@@ -3996,19 +3994,19 @@
         ],
         [
           "P/B (ekuitas induk)",
-          "3,2x (BVPS 140,1; NCI 376 miliar dikecualikan)"
+          "3,1x (BVPS 146,1; NCI 376 miliar dikecualikan)"
         ],
         [
           "P/E",
-          "FY25 34,6x (EPS 13,08); TTM 52,3x (EPS 8,64)"
+          "FY25 33,1x (EPS 13,64); TTM 44,8x (EPS 10,09)"
         ],
         [
           "Hasil dividen",
           "1,4% (DPS TTM 6,32; DPS FY25 11,4)"
         ],
         [
-          "Laba TTM",
-          "IDR 89,1 miliar (FY25 144,1 − 1H25 108,0 + 1H26 53,0)"
+          "Laba TTM (pemilik induk)",
+          "IDR 99,7 miliar (FY25 134,8 − 1H25 77,9 + 1H26 42,8)"
         ]
       ],
       "peersH": [
@@ -4020,8 +4018,8 @@
       "peers": [
         [
           "BPII (holding)",
-          "3,2x",
-          "34,6x",
+          "3,1x",
+          "33,1x",
           "1,4%"
         ],
         [
@@ -4065,11 +4063,11 @@
         ],
         [
           "市值",
-          "IDR 4.66万亿盾"
+          "IDR 4.47万亿盾"
         ],
         [
           "总股本",
-          "10.31bn"
+          "9.88bn（库存股 4.258 亿股已注销）"
         ],
         [
           "52周区间",
@@ -4077,19 +4075,19 @@
         ],
         [
           "P/B（归母净资产）",
-          "3.2x（BVPS 140.1；扣除 NCI 376bn）"
+          "3.1x（BVPS 146.1；扣除 NCI 376bn）"
         ],
         [
           "P/E",
-          "FY25 34.6x（EPS 13.08）；TTM 52.3x（EPS 8.64）"
+          "FY25 33.1x（EPS 13.64）；TTM 44.8x（EPS 10.09）"
         ],
         [
           "股息率",
           "1.4%（TTM DPS 6.32；FY25 DPS 11.4）"
         ],
         [
-          "TTM 净利",
-          "IDR 89.1bn（FY25 144.1 − 1H25 108.0 + 1H26 53.0）"
+          "TTM 归母净利",
+          "IDR 99.7bn（FY25 134.8 − 1H25 77.9 + 1H26 42.8）"
         ]
       ],
       "peersH": [
@@ -4101,8 +4099,8 @@
       "peers": [
         [
           "BPII（控股）",
-          "3.2x",
-          "34.6x",
+          "3.1x",
+          "33.1x",
           "1.4%"
         ],
         [
