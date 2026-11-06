@@ -1707,7 +1707,7 @@
   "VAL": {
     "kpi": [
       {
-        "l": "Price (2026-11-04)",
+        "l": "Price (2026-11-06)",
         "v": 400,
         "u": "IDR",
         "d": "-4 (-1.0%) on day",
@@ -1872,7 +1872,7 @@
     "stats": [
       [
         "Price / date",
-        "400.0 IDR · 2026-11-04 (Yahoo Finance)"
+        "400.0 IDR · 2026-11-06 (Yahoo Finance)"
       ],
       [
         "Shares outstanding",
