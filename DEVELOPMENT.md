@@ -7,7 +7,7 @@ Static financial dashboard for **PT Batavia Prosperindo Internasional Tbk (IDX: 
 - **BPTR** — Fleet rental (6,928 vehicles, listed as BBLI.JK)
 - **MTWI** — General insurance (GWP IDR 1,695.8bn, listed on IDX)
 
-The dashboard covers FY2014–FY2025 plus 1H2026 interim data, with 10 pages: Overview, Profitability, Debt & Solvency, Valuation, Risk & Direction, Holding Structure, Organization, 1H2026, FY2025, FY2024.
+The dashboard covers FY2014–FY2025 plus 1H2026 and 9M2026 interim data, with 10 pages: Overview, Profitability, Debt & Solvency, Valuation, Risk & Direction, Holding Structure, Organization, 9M2026, FY2025, FY2024.
 
 **Live site**: https://pljkt.github.io/BPII/
 
@@ -58,14 +58,14 @@ var DATA_KEYS = ["KP","EV","DIR","TL","OWN","SUBS","BIZ","VIA","PILLAR",
 
 | Field | Purpose |
 |---|---|
-| `AN` | 13-year annual arrays (2014–2025+1H26): revenue, niCons, ebitda, margins, FCF, segment revenue, etc. |
+| `AN` | 14-element arrays (2014–2025, 1H26, 9M26): revenue, niCons, ebitda, margins, FCF, segment revenue, etc. Interim-specific nulls left where the interim note does not disclose them. |
 | `KP` | KPI card data per page (ov, k24, k25, k26, prof, debt, val) |
 | `DEBT` | Debt page: liability breakdown, lenders, solvency ratios, trade receivables (WC) |
 | `VAL` | Valuation: price, market cap, P/E, P/B, share price history, peers |
 | `FY` | Annual page-specific: seg24/seg25 pie data, pl24/pl25 P&L, bs24/bs25/bs26 balance sheet, cf cash bridge, h26rev segment comparison |
 | `ORG` | Organization: board/commission/audit members, corporate facts, management |
-| `OWN` | Shareholder structure (Malacca Trust 86.15%, Public 9.72%, Treasury 4.13%) |
-| `SUBS` / `SUBOPS` | Subsidiary ownership, assets, operating metrics |
+| `OWN` | Shareholder structure (Malacca Trust 89.86%, Public 10.12%, treasury shares cancelled) |
+| `SUBS` / `SUBOPS` | Subsidiary ownership, assets, operating metrics. Four entities: BPAM (am), BPTR (lease), MTWI (ins), BP Pte. Ltd. (other/Singapore, 100%, no IDX ticker); `PILLAR`/`PILLAR_MAP` group them into the four pillars. |
 | `EV` | Key events per year (ev24, ev25, ev26) |
 | `RK` | Risk factors (inline only, NOT in DATA_KEYS) |
 | `CHT` | Chart labels (trilingual: en/id/zh) |
@@ -73,10 +73,10 @@ var DATA_KEYS = ["KP","EV","DIR","TL","OWN","SUBS","BIZ","VIA","PILLAR",
 
 ### AN Array Convention
 
-All `AN.*` arrays have **13 elements** corresponding to:
-`[2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 1H26]`
+All `AN.*` arrays have **14 elements** corresponding to:
+`[2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 1H26, 9M26]`
 
-Use `null` for years before a subsidiary was consolidated (e.g., BPTR from 2019H1, MTWI from 2020H2, BPF until 2021).
+Use `null` for years before a subsidiary was consolidated (e.g., BPTR from 2019H1, MTWI from 2020H2, BPF until 2021). Interim elements are `null` wherever the interim note does not disclose the line (e.g., 9M net segment revenue, EBITDA/D&A, annualized ROE/ROA). Annual-only arrays (`msales`, `landAcq`, `fcfCons`, `fcfConsMargin`) keep their 12 annual elements and do not carry interim points.
 
 ---
 
@@ -124,13 +124,13 @@ This produces a full-page screenshot and reports console errors in JSON.
 
 > ⚠️ `VAL.kpi` and `VAL.stats` in data.json are **dead fields** — the render function reads `KP.val` and `VTXT.stats` instead. Editing `VAL.kpi` has no visible effect. This has caused multiple "why didn't it update" rounds.
 
-**Current market snapshot (7 Oct 2026)**:
-- Price **IDR 452**, market cap **IDR 4.66tn** (10.31bn shares)
-- **P/B = 3.2x** on **parent equity** (BVPS 140.1 = parent equity IDR 1,444.2bn / 10.31bn shares; NCI IDR 376.0bn excluded)
-- **P/E = 34.6x FY25** (EPS 13.08) and **52.3x TTM** (TTM EPS 8.64 = TTM net profit 89.1bn = FY25 144.1 − 1H25 108.0 + 1H26 53.0)
-- **Dividend yield 1.4%** (TTM DPS 6.32 IDR; FY25 DPS 11.4)
+**Current market snapshot (18 Nov 2026)**:
+- Price **IDR 400**, market cap **IDR 3.95tn** (9.884bn shares = 9,884,153,240; treasury 425.8m cancelled)
+- **P/B = 2.72x** on **parent equity** (BVPS 147.3 = parent equity IDR 1,456.2bn / 9.884bn shares; NCI IDR 376.6bn excluded)
+- **P/E = 29.3x FY25** (EPS 13.64) and **45.7x TTM** (TTM EPS 8.74 = TTM net profit 86.4bn = FY25 134.8 − 9M25 110.9 + 9M26 62.6)
+- **Dividend yield 1.6%** (TTM DPS 6.32 IDR; FY25 DPS 11.4)
 - 52-week range 396–696 IDR
-- 12-month chart window: **Nov-25 → Oct-26** (roll forward monthly; drop oldest, append newest)
+- 12-month chart window: **Dec-25 → Nov-26** (roll forward monthly; drop oldest, append newest)
 
 Sources: IDX, Xurve, stockanalysis.com, Yahoo Finance (BPII.JK).
 
@@ -175,13 +175,14 @@ Dead code for these pages (render functions, chart configs, translation strings,
 ### Revenue Basis
 
 - **1H2026 revenue = IDR 653.7bn (net basis)**, NOT gross (1,556.3bn). The net basis deducts insurance claims and reinsurance.
+- **9M2026 gross sales & revenue = IDR 2,218.2bn (+10.8% YoY, PSAK117 gross top line)**; the interim note does **not** break out net insurance service revenue, so the 9M net-revenue and segment split are left `null` rather than estimated. Gross top line must not be mixed with the net service-revenue series.
 - **Insurance segment revenue** uses **net underwriting result** (hasil underwriting neto), not gross premium. This makes segment totals reconcile with consolidated P&L revenue.
 - **2021–2022 as-reported basis**: includes BPF (consumer finance) which was divested after 2021. 2022 onward is continuing operations.
 
 ### Insurance (MTWI / PSAK 117)
 
 - MTWI adopted **PSAK 117** (insurance contracts standard) from 2023.
-- **Insurance contract liabilities = IDR 3,109.6bn** (62% of total liabilities): RC (remaining coverage) 2,000.8 + ICL (incurred claims) 1,108.8.
+- **Insurance contract liabilities = IDR 2,109.8bn** at 30 Sep 2026 (31 Dec 2025: 3,109.7bn). These are policyholder obligations under PSAK 117, not debt.
 - These are NOT debt — they correspond to insurance investment assets on the asset side.
 - **Gross premium (1,695.8bn)** ≠ consolidated revenue. Only net insurance service revenue (130.5bn) enters the P&L revenue line.
 
@@ -201,7 +202,7 @@ Interest expense is **not** added back (BPII's "Keuangan" is treated as operatin
 
 Interest-bearing debt = bank loans + consumer finance payables + lease liabilities. **Insurance contract liabilities are excluded** (they are not debt).
 
-**Reported net debt/EBITDA = 4.1x** (FY2025: (1,618.3 − 247.5) / 334.1). This deducts **cash only**. If marketable securities (IDR 647.7bn third-party + 150.1bn related-party = 1,045.3bn total cash + securities) are also netted, net debt falls to ~335bn and net debt/EBITDA ≈ **1.0x**. The 4.1x figure is the conservative headline; the ~1.0x figure is disclosed in the footnotes.
+**Net debt (30 Sep 2026)**: interest-bearing debt IDR 1,576.8bn (bank loans 1,477.8 + consumer financing 90.2 + leases 8.8) less cash IDR 247.3bn = **net debt IDR 1,329.5bn**; net debt / parent equity **91.3%**. Marketable securities are not netted in the headline. **Net debt/EBITDA is not recomputed for the interim** because 9M26 EBITDA/D&A is not disclosed; the FY2025 anchor remains net debt/EBITDA ≈ 4.1x on cash-only netting (≈1.0x if securities are also netted). Insurance reserves are excluded from interest-bearing debt in every basis.
 
 ### Interest Coverage — Two Bases
 
@@ -214,11 +215,12 @@ Both are shown; EBIT/interest is the stricter measure.
 
 `FCF = CFO − Capex` (no land acquisition adjustment — financial holding has no land bank).
 
-**FCF has been negative since 2023 exit, negative in 2024–2025**:
+**FCF has been negative since 2023 exit, negative in 2024–2025 and both 2026 interims**:
 - 2023: +336.6bn (MTWI consolidation boosted CFO)
 - 2024: **−639.9bn**
 - 2025: **−455.8bn**
-- 1H26: **−451.2bn**
+- 1H26: **−91.7bn** (official: CFO 33.4 − PP&E capex 125.1; an earlier build wrongly treated operating supplier/employee payments as capex, showing −451.2bn)
+- 9M26: **−396.5bn** (CFO −68.9 − PP&E capex 327.6)
 
 Driven by BPTR fleet capex and MTWI investment-asset outflows exceeding operating cash flow; financed by debt. Flagged as a High-severity risk on the Risk page.
 
@@ -242,6 +244,7 @@ BPII (insurer-format) balance sheet does **not** split current / non-current lin
 - **2016/2017 D&A**: estimated values (PDF fixed-asset roll-forward tables had different format).
 - **BPTR customer concentration / capex detail**: in BPTR standalone MD&A, not in BPII consolidated notes.
 - **Current ratio**: not computable — insurer balance sheet format has no current/non-current split.
+- **9M26 net segment revenue split, EBITDA/D&A, annualized ROE/ROA**: not disclosed in the interim note; left `null` for the 9M26 element and to be backfilled from the FY2026 annual report.
 - **Monthly close for thin-trading months**: some month-end closes are approximated from EODHD/investing.com snapshots rather than exact month-end prints.
 
 ---
@@ -255,6 +258,7 @@ R67: fix annual pages - FY2024 crash (seg24b), pl24/bs24 data, 1H26 net revenue
 R69: cleanup dead code + DEVELOPMENT.md
 R74: apply Xurve insights - parent-equity P/B 3.2x, TTM P/E 52.3x, actual DPS, FCF risk
 R75: update share price chart to Oct 2026 (Sep close 460, Oct latest 452)
+R78: apply 9M2026 unaudited consolidated data; refresh valuation to 400 IDR / 2.72x / 29.3x FY25 / 45.7x TTM; fix 1H26 capex/FCF to official PP&E basis
 ```
 
 ---
