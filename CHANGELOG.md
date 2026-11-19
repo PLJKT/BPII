@@ -57,3 +57,14 @@
 - Inline `AN`/`DEBT`/`WC`/`VAL`/`VTXT`/`FY` fallbacks re-synced to `data.json`; `node --check` passes, JSON parses with BOM preserved, anchor ratios recomputed: D/E 4,097.369/1,832.807 = 2.236, FCF −68.937 − 327.567 = −396.504, parent NP 62.572, NCI 12.388.
 - **Retained as historical trace** (not current-period data): the `FINAL BPI KONSOL JUNI 2026.pdf` entry in `SOURCES`, prior CHANGELOG/R-development-guide entries, `EV.ev24/ev25`, the monthly share-price labels (Jan-26…Nov-26), and RK FY2025 subsidiary anchors (fleet 6,928, GWP 1,695.8, UW +130.9, AUM 49tn).
 - Left null pending FY2026 annual report: 9M consolidated net service revenue and net segment split, EBITDA/D&A, BPAM 9M revenue/profit, annualized ROE/ROA, current ratio, 9M segment AR split/aging, 9M segment pie/stack (BPAM missing).
+
+## R83 — 2026-11-19
+- Profitability page re-checked against the 9M2026 interim filing. **ROE / ROA 9M26 cumulative (not annualized) points added** to `AN.roe` / `AN.roa` (data.json + inline fallback), same basis as the annual series: ROE = consolidated NP / period-end total equity; ROA = consolidated NP / period-end total assets (not average capital, not parent-attributable).
+  - ROE = 74.960 / 1,832.807 = 4.09% → **4.1**; ROA = 74.960 / 5,930.176 = 1.26% → **1.3** (one decimal, matching annual precision). These are 9-month cumulative profit over end-period capital, not annualized; the level is naturally below full-year values and the labels say so.
+  - The ROE point now also appears on the Overview o3 leverage line; ROA renders on p-2 only (o3 has no ROA series).
+- **Kept null for 9M26** (no comparable disclosed basis, not reconstructed): p-1 gross / EBITDA / net margin; p-3 EBITDA bar (D&A not reconstructible from the direct-method cash flow and empty cost notes); p-4 net revenue bar and gross-margin line. The PSAK117 gross top line 2,218.2bn is not divided by anything to derive a margin; no PP&E/ROU/intangible depreciation fragments are assembled into EBITDA.
+- Trilingual EN/ID/ZH subtitles (`c_p1_s`, `c_p2_s`, `c_p3_s`, `c_p4_s`) updated: p-2 states the 9M26 ROE/ROA are cumulative interim, not annualized, not directly comparable to full-year levels; p-1/p-3/p-4 state the missing 9M margins/EBITDA/revenue are n/a because net revenue and D&A are not disclosed, not a rendering gap.
+- `KP.prof` cards remain the FY2025 annual snapshot (net margin 11.6%, EBITDA margin 27.0%, ROE 7.9%, ROA 2.1%, FCF margin −36.8%); no FY25 figure was relabeled as 9M26.
+- Inline `AN` fallback re-synced to `data.json`; JSON parses with BOM preserved, `node --check` passes, anchor ratios recomputed.
+- Left null pending FY2026 annual report: 9M consolidated net service revenue and net segment split, EBITDA/D&A, BPAM 9M revenue/profit, gross/net margin, current ratio, 9M segment AR split/aging, 9M segment pie/stack. (ROE/ROA now shown on a cumulative interim basis; annualized interim ratios still deferred to the annual report.)
+

@@ -76,7 +76,7 @@ var DATA_KEYS = ["KP","EV","DIR","TL","OWN","SUBS","BIZ","VIA","PILLAR",
 All `AN.*` arrays have **13 elements** corresponding to:
 `[2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 9M26]`
 
-Use `null` for years before a subsidiary was consolidated (e.g., BPTR from 2019H1, MTWI from 2020H2, BPF until 2021). The 9M26 element is `null` wherever the interim note does not disclose the line (e.g., 9M net segment revenue, EBITDA/D&A, annualized ROE/ROA). Annual-only arrays (`msales`, `landAcq`, `fcfCons`, `fcfConsMargin`) keep their 12 annual elements and do not carry interim points. The former 1H26 checkpoint slot was removed in R82; undisclosed 9M lines are left `null`, not back-filled with the 1H26 value.
+Use `null` for years before a subsidiary was consolidated (e.g., BPTR from 2019H1, MTWI from 2020H2, BPF until 2021). The 9M26 element is `null` wherever the interim note does not disclose the line (e.g., 9M net segment revenue, EBITDA/D&A, gross/net margin). ROE/ROA carry a **cumulative, not annualized** 9M26 point (R83); an annualized interim ratio is still deferred to the annual report. Annual-only arrays (`msales`, `landAcq`, `fcfCons`, `fcfConsMargin`) keep their 12 annual elements and do not carry interim points. The former 1H26 checkpoint slot was removed in R82; undisclosed 9M lines are left `null`, not back-filled with the 1H26 value.
 
 ### Overview Chart Period Handling (R80–R82)
 
@@ -86,7 +86,7 @@ Partial periods (9M26) are **not comparable in height** to full-year bars. The c
 - **Line charts** (`o2` net profit, `o3` margins/leverage) keep the 9M26 interim point as a trend marker; a partial-period point on a line does not imply a full-year level.
 - **Axis labels (R81)**: `baseX(cats, keepLast)` on AN.years line/mixed charts keeps the last interim category (`9M26`) visible; otherwise echarts auto-thins the category axis and drops the `9M26` label even though the point is plotted. Bar charts pass the default (sparse) label interval.
 - `o6` EBITDA bars already filter `null`, so only disclosed full-year EBITDA values plot.
-- 9M26 lines left `null` (not estimated): consolidated net service revenue, EBITDA/D&A, gross/net margin, annualized ROE/ROA, the BPAM and consumer-finance segment split. The PSAK117 gross top line (2,218.2bn) must not be entered into the net service-revenue series.
+- 9M26 lines left `null` (not estimated): consolidated net service revenue, EBITDA/D&A, gross/net margin, the BPAM and consumer-finance segment split. ROE/ROA are shown on a cumulative interim basis (R83, not annualized); an annualized interim ROE/ROA is not computed. The PSAK117 gross top line (2,218.2bn) must not be entered into the net service-revenue series.
 - **9M26 subsidiary segment points (R81)**: BPTR and MTWI 9M2026 figures were taken from their own IDX/IR interim filings and recorded in the segment series (`segStack` lease/ins and npLease/npIns). BPAM is unlisted and has no interim disclosure; the consumer-finance segment has no 9M split — both remain `null`.
 - **R82 retirement**: the 1H26 checkpoint was removed from every current-period series (AN, segStack, cashDebt, WC, VAL/VTXT events, RK FCF row). The 1H26-vs-1H25 half comparison (`f26-1`/`f26-2`, `h26rev`) and the 1H26 WC column were retired; the WC table now ends at FY2025 and the 9M segment pie shows FY2025 with an explicit "split incomplete" note. The 1H26 source PDF remains in `SOURCES` as an archived reference only.
 
@@ -279,7 +279,7 @@ BPII (insurer-format) balance sheet does **not** split current / non-current lin
 - **2016/2017 D&A**: estimated values (PDF fixed-asset roll-forward tables had different format).
 - **BPTR customer concentration / capex detail**: in BPTR standalone MD&A, not in BPII consolidated notes.
 - **Current ratio**: not computable — insurer balance sheet format has no current/non-current split.
-- **9M26 net segment revenue split, EBITDA/D&A, annualized ROE/ROA**: not disclosed in the interim note; left `null` for the 9M26 element and to be backfilled from the FY2026 annual report.
+- **9M26 net segment revenue split, EBITDA/D&A, gross/net margin, annualized interim ROE/ROA**: not disclosed in the interim note; left `null` for the 9M26 element and to be backfilled from the FY2026 annual report. ROE/ROA are shown on a cumulative interim basis (R83: 4.1% / 1.3%, not annualized).
 - **Monthly close for thin-trading months**: some month-end closes are approximated from EODHD/investing.com snapshots rather than exact month-end prints.
 
 ---
@@ -298,6 +298,7 @@ R79: full 9M2026 snapshot calibration; remove retired foreign-model inline valua
 R80: Overview charts to 9M2026 basis; bar charts full-year only, interim points kept on lines; correct trilingual half-period labels; retain undisclosed 9M segment/EBITDA/margin nulls
 R81: source BPTR/MTWI 9M2026 interim filings; record full-entity segment revenue/NP points (BPTR 524.9/35.5, MTWI 51.7/8.5); reconcile ownership/NCI; correct BPTR ticker to BPTR; retain nulls for undisclosed BPAM 9M, consolidated net revenue, EBITDA/D&A, annualized ratios
 R82: remove the 1H26 checkpoint from every current-period series; AN/segStack 13 elements ending 9M26; retire the 1H26-vs-1H25 comparison charts and 1H26 WC column; undisclosed 9M lines stay null (not back-filled with 1H26); sync inline fallbacks and trilingual labels
+R83: add cumulative (not annualized) 9M26 ROE 4.1% / ROA 1.3% to AN; keep 9M margins/EBITDA/net revenue null (net revenue and D&A undisclosed); annotate p-1…p-4 trilingual subtitles with n/a reasons and interim non-annualized basis
 ```
 
 ---
