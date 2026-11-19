@@ -25,7 +25,6 @@
    "2023",
    "2024",
    "2025",
-   "1H26",
    "9M26"
   ],
   "revenue": [
@@ -41,7 +40,6 @@
    971.2,
    1146.0,
    1239.6,
-   653.7,
    null
   ],
   "niCons": [
@@ -57,7 +55,6 @@
    139.0,
    174.0,
    144.1,
-   53.0,
    75.0
   ],
   "niParent": [
@@ -73,7 +70,6 @@
    113.8,
    145.3,
    134.8,
-   42.8,
    62.6
   ],
   "assets": [
@@ -89,7 +85,6 @@
    4162.3,
    5629.0,
    6821.4,
-   5832.7,
    5930.2
   ],
   "liab": [
@@ -105,7 +100,6 @@
    2511.8,
    3881.0,
    5001.1,
-   3980.2,
    4097.4
   ],
   "equity": [
@@ -121,7 +115,6 @@
    1650.5,
    1749.0,
    1820.3,
-   1852.5,
    1832.8
   ],
   "gpm": [
@@ -137,7 +130,6 @@
    19.1,
    19.7,
    15.5,
-   null,
    null
   ],
   "npm": [
@@ -153,7 +145,6 @@
    14.3,
    15.2,
    11.6,
-   8.1,
    null
   ],
   "roe": [
@@ -169,7 +160,6 @@
    8.4,
    9.9,
    7.9,
-   null,
    null
   ],
   "roa": [
@@ -185,7 +175,6 @@
    3.3,
    3.1,
    2.1,
-   null,
    null
   ],
   "de": [
@@ -201,7 +190,6 @@
    1.52,
    2.22,
    2.75,
-   2.15,
    2.24
   ],
   "ebitda": [
@@ -217,7 +205,6 @@
    288.0,
    331.5,
    334.1,
-   null,
    null
   ],
   "ebitdaMargin": [
@@ -233,7 +220,6 @@
    29.7,
    28.9,
    27.0,
-   null,
    null
   ],
   "cfo": [
@@ -249,7 +235,6 @@
    883.9,
    330.0,
    281.8,
-   33.4,
    -68.9
   ],
   "capex": [
@@ -265,7 +250,6 @@
    547.3,
    969.9,
    737.6,
-   125.1,
    327.6
   ],
   "fcf": [
@@ -281,7 +265,6 @@
    336.6,
    -639.9,
    -455.8,
-   -91.7,
    -396.5
   ],
   "fcfMargin": [
@@ -297,7 +280,6 @@
    34.7,
    -55.8,
    -36.8,
-   -14.0,
    null
   ],
   "segAM": [
@@ -313,7 +295,6 @@
    421.1,
    409.7,
    400.2,
-   219.2,
    null
   ],
   "segLease": [
@@ -329,7 +310,6 @@
    438.5,
    538.5,
    616.3,
-   346.0,
    524.9
   ],
   "segIns": [
@@ -345,7 +325,6 @@
    37.8,
    117.3,
    130.5,
-   33.7,
    51.7
   ],
   "msales": [
@@ -1462,21 +1441,18 @@
     "FY2023",
     "FY2024",
     "FY2025",
-    "1H26",
     "9M26"
    ],
    "cash": [
     361.4,
     221.1,
     247.5,
-    242.5,
     247.3
    ],
    "debt": [
     503.8,
     1071.3,
     1380.5,
-    1351.1,
     1576.8
    ]
   },
@@ -1887,10 +1863,6 @@
    [
     "2025",
     "Record revenue IDR 1,240bn; fleet 6,928 units; MTWI GWP IDR 1,696bn"
-   ],
-   [
-    "1H2026",
-    "Net revenue IDR 653.7bn; net profit IDR 53.0bn; attributable IDR 42.8bn"
    ],
    [
     "9M2026",
@@ -2543,19 +2515,19 @@
    "segPie": [
     {
      "n": "BPAM (AM)",
-     "v": 219.2
+     "v": 400.2
     },
     {
      "n": "BPTR (Fleet)",
-     "v": 346.0
+     "v": 616.3
     },
     {
      "n": "MTWI (Insurance)",
-     "v": 33.7
+     "v": 130.5
     },
     {
      "n": "Other/corp",
-     "v": 54.8
+     "v": 92.5
     }
    ],
    "pl": {
@@ -2573,7 +2545,7 @@
     "openCash": 247.5,
     "netChange": -0.1,
     "closeCash": 247.3,
-    "note": "9M2026 unaudited (30 Sep 2026): CFO −68.9bn; PP&E capex 327.6bn; CFI +90.0bn; CFF −35.1bn; FX +14.0bn. BPTR fleet revenue 524.9bn and MTWI net insurance service result 51.7bn (9M26, subsidiary filings) are recorded in the segment series; BPAM 9M revenue/profit is not disclosed, so this pie retains the 1H26 split. Gross PSAK117 revenue 2,218.2bn is not comparable to net service revenue."
+    "note": "9M2026 unaudited (30 Sep 2026): CFO −68.9bn; PP&E capex 327.6bn; CFI +90.0bn; CFF −35.1bn; FX +14.0bn. BPTR fleet revenue 524.9bn and MTWI net insurance service result 51.7bn (9M26, subsidiary filings) are recorded in the segment series; BPAM 9M revenue/profit is not disclosed, so the segment pie shows FY2025 and the 9M segment split remains incomplete. Gross PSAK117 revenue 2,218.2bn is not comparable to net service revenue."
    }
   },
   "seg24": [
@@ -2671,20 +2643,6 @@
    ]
   },
   "refPrice": 400,
-  "h26rev": {
-   "h25": [
-    617.4,
-    198.4,
-    288.7,
-    85.3
-   ],
-   "h26": [
-    653.7,
-    219.2,
-    346.0,
-    33.7
-   ]
-  },
   "segStack": {
    "am": [
     115.5,
@@ -2699,7 +2657,6 @@
     421.1,
     409.7,
     400.2,
-    219.2,
     null
    ],
    "lease": [
@@ -2715,7 +2672,6 @@
     438.5,
     538.5,
     616.3,
-    346.0,
     524.9
    ],
    "ins": [
@@ -2731,7 +2687,6 @@
     37.8,
     117.3,
     130.5,
-    33.7,
     51.7
    ],
    "cf": [
@@ -2743,7 +2698,6 @@
     238.0,
     196.5,
     159.0,
-    null,
     null,
     null,
     null,
@@ -2763,7 +2717,6 @@
     93,
     77,
     78,
-    36.9,
     null
    ],
    "npLease": [
@@ -2779,7 +2732,6 @@
     27.2,
     40.6,
     35.8,
-    28.1,
     35.5
    ],
    "npIns": [
@@ -2795,7 +2747,6 @@
     10.3,
     70.0,
     71.3,
-    11.1,
     8.5
    ],
    "npCf": [
@@ -2807,7 +2758,6 @@
     74.9,
     41.3,
     45.9,
-    null,
     null,
     null,
     null,
@@ -2827,7 +2777,6 @@
     787.2,
     1441.2,
     1695.8,
-    936.3,
     null
    ]
   },
@@ -3196,7 +3145,7 @@
    },
    {
     "kpi": "Free cash flow (negative 2024–2026)",
-    "val": "FCF = −639.9bn (2024), −455.8bn (2025), −91.7bn (1H26), −396.5bn (9M26): fleet capex (BPTR vehicle purchases) + MTWI investment-asset outflows exceed operating cash flow. Financed by debt; watch capex discipline.",
+    "val": "FCF = −639.9bn (2024), −455.8bn (2025), −396.5bn (9M26): fleet capex (BPTR vehicle purchases) + MTWI investment-asset outflows exceed operating cash flow. Financed by debt; watch capex discipline.",
     "flag": "red"
    }
   ]
@@ -4026,10 +3975,6 @@
      "Revenue IDR 1,239.6bn; NI IDR 144.1bn."
     ],
     [
-     "1H26 interim",
-     "Net revenue IDR 653.7bn; NI IDR 53.0bn; attributable IDR 42.8bn."
-    ],
-    [
      "9M26 interim",
      "Gross revenue IDR 2,218.2bn (+10.8% YoY, PSAK117 gross); attributable NP IDR 62.6bn (−43.6%); CFO −68.9bn; FCF −396.5bn."
     ]
@@ -4111,10 +4056,6 @@
      "Pendapatan IDR 1.239,6bn; Laba IDR 144,1bn."
     ],
     [
-     "Interim 1H26",
-     "Pendapatan neto IDR 653,7bn; Laba IDR 53,0bn; laba induk IDR 42,8bn."
-    ],
-    [
      "Interim 9M26",
      "Pendapatan bruto IDR 2.218,2bn (+10,8% YoY, bruto PSAK117); laba induk IDR 62,6bn (−43,6%); AKO −68,9bn; FCF −396,5bn."
     ]
@@ -4194,10 +4135,6 @@
     [
      "FY25 业绩",
      "收入 IDR 1,239.6bn；净利 IDR 144.1bn。"
-    ],
-    [
-     "1H26 中期",
-     "净收入 IDR 653.7bn；净利 IDR 53.0bn；归母 IDR 42.8bn。"
     ],
     [
      "9M26 中期",
@@ -4409,56 +4346,46 @@
   }
  },
  "WC": {
-  "note": "BPII financial holding: receivables mix = operating lease (BPTR) + customer receivables (MTWI) + AM fee receivables. Aging subset below is BPTR lease only (Note 7), does not foot to total net AR. 9M26 trade receivables and segment AR split are not disclosed in the interim note; the 1H26 column is the latest disclosed AR split.",
+  "note": "BPII financial holding: receivables mix = operating lease (BPTR) + customer receivables (MTWI) + AM fee receivables. Aging subset below is BPTR lease only (Note 7), does not foot to total net AR. 9M26 trade receivables and segment AR split are not disclosed in the interim note; the latest disclosed AR split is FY2025.",
   "rows": [
    {
     "item": "Trade receivables, gross (3rd party)",
-    "h26": 746.6,
     "fy25": 548.8
    },
    {
     "item": "Trade receivables, net (current)",
-    "h26": 721.7,
     "fy25": 521.2
    },
    {
     "item": "Allowance for impairment",
-    "h26": 24.9,
     "fy25": 16.3
    },
    {
     "item": "BPTR lease AR - not yet due",
-    "h26": null,
     "fy25": 49.9
    },
    {
     "item": "BPTR lease AR - >90 days past due",
-    "h26": null,
     "fy25": 16.1
    },
    {
     "item": "BPTR lease AR - ECL allowance",
-    "h26": null,
     "fy25": 24.5
    },
    {
     "item": "Receivables days (DSO, net AR/revenue)",
-    "h26": 100,
     "fy25": 153
    },
    {
     "item": "Trade payables",
-    "h26": 133.0,
     "fy25": 151.7
    },
    {
     "item": "Customer security deposits",
-    "h26": 317.0,
     "fy25": 316.2
    },
    {
     "item": "Receivables written off in year",
-    "h26": null,
     "fy25": 0.14
    }
   ],
@@ -4467,32 +4394,28 @@
    "2022",
    "2023",
    "2024",
-   "2025",
-   "1H26"
+   "2025"
   ],
   "arBptr": [
    null,
    null,
    31.4,
    56.7,
-   68.8,
-   73.8
+   68.8
   ],
   "arMtwi": [
    null,
    null,
    36.5,
    39.0,
-   42.6,
-   42.0
+   42.6
   ],
   "arOther": [
    null,
    null,
    22.0,
    73.2,
-   33.1,
-   72.8
+   33.1
   ]
  },
  "SUBOPS": {

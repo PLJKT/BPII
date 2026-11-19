@@ -7,7 +7,7 @@ Static financial dashboard for **PT Batavia Prosperindo Internasional Tbk (IDX: 
 - **BPTR** — Fleet rental (6,928 vehicles, listed on IDX: BPTR)
 - **MTWI** — General insurance (GWP IDR 1,695.8bn, listed on IDX)
 
-The dashboard covers FY2014–FY2025 plus 1H2026 and 9M2026 interim data, with 10 pages: Overview, Profitability, Debt & Solvency, Valuation, Risk & Direction, Holding Structure, Organization, 9M2026, FY2025, FY2024.
+The dashboard covers FY2014–FY2025 plus the 9M2026 interim (unaudited, 30 Sep 2026), with 10 pages: Overview, Profitability, Debt & Solvency, Valuation, Risk & Direction, Holding Structure, Organization, 9M2026, FY2025, FY2024.
 
 **Live site**: https://pljkt.github.io/BPII/
 
@@ -58,11 +58,11 @@ var DATA_KEYS = ["KP","EV","DIR","TL","OWN","SUBS","BIZ","VIA","PILLAR",
 
 | Field | Purpose |
 |---|---|
-| `AN` | 14-element arrays (2014–2025, 1H26, 9M26): revenue, niCons, ebitda, margins, FCF, segment revenue, etc. Interim-specific nulls left where the interim note does not disclose them. |
+| `AN` | 13-element arrays (2014–2025, 9M26): revenue, niCons, ebitda, margins, FCF, segment revenue, etc. The 9M26 element is `null` wherever the interim note does not disclose the line; no 1H26 checkpoint is retained as a current-period value. |
 | `KP` | KPI card data per page (ov, k24, k25, k26, prof, debt, val) |
 | `DEBT` | Debt page: liability breakdown, lenders, solvency ratios, trade receivables (WC) |
 | `VAL` | Valuation: price, market cap, P/E, P/B, share price history, peers |
-| `FY` | Annual page-specific: seg24/seg25 pie data, pl24/pl25 P&L, bs24/bs25/bs26 balance sheet, cf cash bridge, h26rev segment comparison |
+| `FY` | Annual page-specific: seg24/seg25 pie data, pl24/pl25 P&L, bs24/bs25/bs26 balance sheet, cf cash bridge, segStack segment series. The former 1H26-vs-1H25 half comparison (`h26rev`, `f26-1`/`f26-2`) was retired in R82 because the 9M segment split is incomplete. |
 | `ORG` | Organization: board/commission/audit members, corporate facts, management |
 | `OWN` | Shareholder structure (Malacca Trust 89.86%, Public 10.12%, treasury shares cancelled) |
 | `SUBS` / `SUBOPS` | Subsidiary ownership, assets, operating metrics. Four entities: BPAM (am), BPTR (lease), MTWI (ins), BP Pte. Ltd. (other/Singapore, 100%, no IDX ticker); `PILLAR`/`PILLAR_MAP` group them into the four pillars. |
@@ -73,25 +73,26 @@ var DATA_KEYS = ["KP","EV","DIR","TL","OWN","SUBS","BIZ","VIA","PILLAR",
 
 ### AN Array Convention
 
-All `AN.*` arrays have **14 elements** corresponding to:
-`[2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 1H26, 9M26]`
+All `AN.*` arrays have **13 elements** corresponding to:
+`[2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 9M26]`
 
-Use `null` for years before a subsidiary was consolidated (e.g., BPTR from 2019H1, MTWI from 2020H2, BPF until 2021). Interim elements are `null` wherever the interim note does not disclose the line (e.g., 9M net segment revenue, EBITDA/D&A, annualized ROE/ROA). Annual-only arrays (`msales`, `landAcq`, `fcfCons`, `fcfConsMargin`) keep their 12 annual elements and do not carry interim points.
+Use `null` for years before a subsidiary was consolidated (e.g., BPTR from 2019H1, MTWI from 2020H2, BPF until 2021). The 9M26 element is `null` wherever the interim note does not disclose the line (e.g., 9M net segment revenue, EBITDA/D&A, annualized ROE/ROA). Annual-only arrays (`msales`, `landAcq`, `fcfCons`, `fcfConsMargin`) keep their 12 annual elements and do not carry interim points. The former 1H26 checkpoint slot was removed in R82; undisclosed 9M lines are left `null`, not back-filled with the 1H26 value.
 
-### Overview Chart Period Handling (R80)
+### Overview Chart Period Handling (R80–R82)
 
-Half/partial periods (1H26, 9M26) are **not comparable in height** to full-year bars. The chosen rule:
+Partial periods (9M26) are **not comparable in height** to full-year bars. The chosen rule:
 
-- **Bar charts** (`o1` revenue, `o4` segment revenue, `o7` segment net profit) render **full-year periods only (FY2014–2025)**. A `fyIndices()` helper keeps only categories matching `/^\d{4}$/`; the 1H26 half-period bars are dropped rather than styled differently. The 1H26 values remain in the data arrays for the half-vs-half comparison chart (`f26-1`, `h26rev`) and the WC table.
-- **Line charts** (`o2` net profit, `o3` margins/leverage) keep the 1H26 and 9M26 interim points as trend markers; a half-period point on a line does not imply a full-year level.
-- **Axis labels (R81)**: `baseX(cats, keepLast)` on AN.years line/mixed charts keeps the last two interim categories (`1H26`, `9M26`) visible; otherwise echarts auto-thins the category axis and drops the `9M26` label even though the point is plotted. Bar charts pass the default (sparse) label interval.
+- **Bar charts** (`o1` revenue, `o4` segment revenue, `o7` segment net profit) render **full-year periods only (FY2014–2025)**. A `fyIndices()` helper keeps only categories matching `/^\d{4}$/`; the 9M26 partial-period bars are dropped rather than styled differently.
+- **Line charts** (`o2` net profit, `o3` margins/leverage) keep the 9M26 interim point as a trend marker; a partial-period point on a line does not imply a full-year level.
+- **Axis labels (R81)**: `baseX(cats, keepLast)` on AN.years line/mixed charts keeps the last interim category (`9M26`) visible; otherwise echarts auto-thins the category axis and drops the `9M26` label even though the point is plotted. Bar charts pass the default (sparse) label interval.
 - `o6` EBITDA bars already filter `null`, so only disclosed full-year EBITDA values plot.
 - 9M26 lines left `null` (not estimated): consolidated net service revenue, EBITDA/D&A, gross/net margin, annualized ROE/ROA, the BPAM and consumer-finance segment split. The PSAK117 gross top line (2,218.2bn) must not be entered into the net service-revenue series.
 - **9M26 subsidiary segment points (R81)**: BPTR and MTWI 9M2026 figures were taken from their own IDX/IR interim filings and recorded in the segment series (`segStack` lease/ins and npLease/npIns). BPAM is unlisted and has no interim disclosure; the consumer-finance segment has no 9M split — both remain `null`.
+- **R82 retirement**: the 1H26 checkpoint was removed from every current-period series (AN, segStack, cashDebt, WC, VAL/VTXT events, RK FCF row). The 1H26-vs-1H25 half comparison (`f26-1`/`f26-2`, `h26rev`) and the 1H26 WC column were retired; the WC table now ends at FY2025 and the 9M segment pie shows FY2025 with an explicit "split incomplete" note. The 1H26 source PDF remains in `SOURCES` as an archived reference only.
 
 ### Segment Subsidiary Basis (R81)
 
-The segment series (`FY.segStack`, `AN.segLease/segIns/segAM`) are stated on a **100% subsidiary full-entity basis** (not the BPII ownership share), matching the historical 1H26/FY25 points:
+The segment series (`FY.segStack`, `AN.segLease/segIns/segAM`) are stated on a **100% subsidiary full-entity basis** (not the BPII ownership share), matching the FY25 and 9M26 points:
 
 - **lease** = BPTR *Sales and revenue*; **npLease** = BPTR net profit attributable to parent entity.
 - **ins** = MTWI *Net Insurance Service Result* (net underwriting result, not GWP and not gross service revenue); **npIns** = MTWI net profit attributable to owners of parent.
@@ -249,12 +250,12 @@ Both are shown; EBIT/interest is the stricter measure.
 
 `FCF = CFO − Capex` (no land acquisition adjustment — financial holding has no land bank).
 
-**FCF has been negative since 2023 exit, negative in 2024–2025 and both 2026 interims**:
+**FCF has been negative since 2023 exit, negative in 2024–2025 and the 9M2026 interim**:
 - 2023: +336.6bn (MTWI consolidation boosted CFO)
 - 2024: **−639.9bn**
 - 2025: **−455.8bn**
-- 1H26: **−91.7bn** (official: CFO 33.4 − PP&E capex 125.1; an earlier build wrongly treated operating supplier/employee payments as capex, showing −451.2bn)
 - 9M26: **−396.5bn** (CFO −68.9 − PP&E capex 327.6)
+- (Archived 1H26 checkpoint: −91.7bn, CFO 33.4 − PP&E capex 125.1; removed from the current series in R82, retained here only as the R78 basis-correction record.)
 
 Driven by BPTR fleet capex and MTWI investment-asset outflows exceeding operating cash flow; financed by debt. Flagged as a High-severity risk on the Risk page.
 
@@ -295,6 +296,8 @@ R75: update share price chart to Oct 2026 (Sep close 460, Oct latest 452)
 R78: apply 9M2026 unaudited consolidated data; refresh valuation to 400 IDR / 2.72x / 29.3x FY25 / 45.7x TTM; fix 1H26 capex/FCF to official PP&E basis
 R79: full 9M2026 snapshot calibration; remove retired foreign-model inline valuation remnants; align TOP3/RK/DEBT/WC wording and interim nulls
 R80: Overview charts to 9M2026 basis; bar charts full-year only, interim points kept on lines; correct trilingual half-period labels; retain undisclosed 9M segment/EBITDA/margin nulls
+R81: source BPTR/MTWI 9M2026 interim filings; record full-entity segment revenue/NP points (BPTR 524.9/35.5, MTWI 51.7/8.5); reconcile ownership/NCI; correct BPTR ticker to BPTR; retain nulls for undisclosed BPAM 9M, consolidated net revenue, EBITDA/D&A, annualized ratios
+R82: remove the 1H26 checkpoint from every current-period series; AN/segStack 13 elements ending 9M26; retire the 1H26-vs-1H25 comparison charts and 1H26 WC column; undisclosed 9M lines stay null (not back-filled with 1H26); sync inline fallbacks and trilingual labels
 ```
 
 ---
