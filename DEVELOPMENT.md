@@ -4,7 +4,7 @@
 
 Static financial dashboard for **PT Batavia Prosperindo Internasional Tbk (IDX: BPII)**, an Indonesian financial holding group with three operating subsidiaries:
 - **BPAM** — Asset management (AUM ~IDR 49tn, 107 mutual funds)
-- **BPTR** — Fleet rental (6,928 vehicles, listed as BBLI.JK)
+- **BPTR** — Fleet rental (6,928 vehicles, listed on IDX: BPTR)
 - **MTWI** — General insurance (GWP IDR 1,695.8bn, listed on IDX)
 
 The dashboard covers FY2014–FY2025 plus 1H2026 and 9M2026 interim data, with 10 pages: Overview, Profitability, Debt & Solvency, Valuation, Risk & Direction, Holding Structure, Organization, 9M2026, FY2025, FY2024.
@@ -85,7 +85,31 @@ Half/partial periods (1H26, 9M26) are **not comparable in height** to full-year 
 - **Bar charts** (`o1` revenue, `o4` segment revenue, `o7` segment net profit) render **full-year periods only (FY2014–2025)**. A `fyIndices()` helper keeps only categories matching `/^\d{4}$/`; the 1H26 half-period bars are dropped rather than styled differently. The 1H26 values remain in the data arrays for the half-vs-half comparison chart (`f26-1`, `h26rev`) and the WC table.
 - **Line charts** (`o2` net profit, `o3` margins/leverage) keep the 1H26 and 9M26 interim points as trend markers; a half-period point on a line does not imply a full-year level.
 - `o6` EBITDA bars already filter `null`, so only disclosed full-year EBITDA values plot.
-- 9M26 lines left `null` (not estimated): consolidated net service revenue, EBITDA/D&A, gross/net margin, annualized ROE/ROA, segment revenue and segment net-profit split. The PSAK117 gross top line (2,218.2bn) must not be entered into the net service-revenue series.
+- 9M26 lines left `null` (not estimated): consolidated net service revenue, EBITDA/D&A, gross/net margin, annualized ROE/ROA, the BPAM and consumer-finance segment split. The PSAK117 gross top line (2,218.2bn) must not be entered into the net service-revenue series.
+- **9M26 subsidiary segment points (R81)**: BPTR and MTWI 9M2026 figures were taken from their own IDX/IR interim filings and recorded in the segment series (`segStack` lease/ins and npLease/npIns). BPAM is unlisted and has no interim disclosure; the consumer-finance segment has no 9M split — both remain `null`.
+
+### Segment Subsidiary Basis (R81)
+
+The segment series (`FY.segStack`, `AN.segLease/segIns/segAM`) are stated on a **100% subsidiary full-entity basis** (not the BPII ownership share), matching the historical 1H26/FY25 points:
+
+- **lease** = BPTR *Sales and revenue*; **npLease** = BPTR net profit attributable to parent entity.
+- **ins** = MTWI *Net Insurance Service Result* (net underwriting result, not GWP and not gross service revenue); **npIns** = MTWI net profit attributable to owners of parent.
+- 9M2026 (unaudited, 30 Sep 2026): BPTR revenue 524.9bn / parent NI 35.5bn; MTWI net insurance service result 51.7bn / parent NI 8.5bn.
+
+Ownership reconciliation (IDR bn, full-entity basis):
+
+| Subsidiary | Owned by BPII | Full-entity parent NI | BPII share | External NCI |
+|---|---|---|---|---|
+| BPTR | 67.4% | 35.518 | 23.939 | 11.579 |
+| MTWI | 85.9% | 8.534 | 7.331 | 1.203 |
+| **External NCI subtotal** | | | | **12.782** |
+
+Reported consolidated NCI is 12.387bn (diff −0.395, from BPAM's 17.92% external stake, subsidiary-level NCI and consolidation eliminations, not disclosed line-by-line). BPTR+MTWI contribute 31.270bn to reported attributable NP 62.572bn; the residual 31.302bn belongs to BPAM + BPD (Singapore, 100%) + holding/eliminations. Consolidated NI 74.960bn = parent 62.572 + NCI 12.387.
+
+**Sources (9M2026 interim, unaudited)**:
+- BPTR: `https://www.idx.id/StaticData/NewsAndAnnouncement/ANNOUNCEMENTSTOCK/From_EREP/202610/20261028140022-64970-0/FinancialStatement-2026-III-BPTR.pdf` (IDX mirror of idx.co.id; the main domain is behind a Cloudflare challenge).
+- MTWI: `https://assets.mtwi.co.id/company/report/finance-report/mtwi-lkt-september-2026.pdf`.
+- IDX ticker for BPTR is **BPTR** (earlier copy mislabelled it `BBLI`; corrected in R81).
 
 ---
 
@@ -184,7 +208,7 @@ Dead code for these pages (render functions, chart configs, translation strings,
 ### Revenue Basis
 
 - **1H2026 revenue = IDR 653.7bn (net basis)**, NOT gross (1,556.3bn). The net basis deducts insurance claims and reinsurance.
-- **9M2026 gross sales & revenue = IDR 2,218.2bn (+10.8% YoY, PSAK117 gross top line)**; the interim note does **not** break out net insurance service revenue, so the 9M net-revenue and segment split are left `null` rather than estimated. Gross top line must not be mixed with the net service-revenue series.
+- **9M2026 gross sales & revenue = IDR 2,218.2bn (+10.8% YoY, PSAK117 gross top line)**; the consolidated interim note does **not** break out net insurance service revenue, so the 9M consolidated net-revenue series and consolidated segment split are left `null` rather than estimated. The 9M BPTR/MTWI points in the segment series come from the subsidiaries' own filings on a full-entity basis (see *Segment Subsidiary Basis*). Gross top line must not be mixed with the net service-revenue series.
 - **Insurance segment revenue** uses **net underwriting result** (hasil underwriting neto), not gross premium. This makes segment totals reconcile with consolidated P&L revenue.
 - **2021–2022 as-reported basis**: includes BPF (consumer finance) which was divested after 2021. 2022 onward is continuing operations.
 

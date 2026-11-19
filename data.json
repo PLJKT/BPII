@@ -330,7 +330,7 @@
    538.5,
    616.3,
    346.0,
-   null
+   524.9
   ],
   "segIns": [
    null,
@@ -346,7 +346,7 @@
    117.3,
    130.5,
    33.7,
-   null
+   51.7
   ],
   "msales": [
    null,
@@ -1949,7 +1949,7 @@
    0,
    35.8,
    2015,
-   "BBLI"
+   "BPTR"
   ],
   [
    "MTWI",
@@ -2573,7 +2573,7 @@
     "openCash": 247.5,
     "netChange": -0.1,
     "closeCash": 247.3,
-    "note": "9M2026 unaudited (30 Sep 2026): CFO −68.9bn; PP&E capex 327.6bn; CFI +90.0bn; CFF −35.1bn; FX +14.0bn. Segment split (segPie) retained from 1H26; 9M net segment revenue is not disclosed in the interim note. Gross PSAK117 revenue 2,218.2bn is not comparable to net service revenue."
+    "note": "9M2026 unaudited (30 Sep 2026): CFO −68.9bn; PP&E capex 327.6bn; CFI +90.0bn; CFF −35.1bn; FX +14.0bn. BPTR fleet revenue 524.9bn and MTWI net insurance service result 51.7bn (9M26, subsidiary filings) are recorded in the segment series; BPAM 9M revenue/profit is not disclosed, so this pie retains the 1H26 split. Gross PSAK117 revenue 2,218.2bn is not comparable to net service revenue."
    }
   },
   "seg24": [
@@ -2716,7 +2716,7 @@
     538.5,
     616.3,
     346.0,
-    null
+    524.9
    ],
    "ins": [
     null,
@@ -2732,7 +2732,7 @@
     117.3,
     130.5,
     33.7,
-    null
+    51.7
    ],
    "cf": [
     null,
@@ -2780,7 +2780,7 @@
     40.6,
     35.8,
     28.1,
-    null
+    35.5
    ],
    "npIns": [
     null,
@@ -2796,7 +2796,7 @@
     70.0,
     71.3,
     11.1,
-    null
+    8.5
    ],
    "npCf": [
     null,

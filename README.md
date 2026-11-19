@@ -23,9 +23,9 @@ data.json           # single source of truth (loaded at runtime, overrides inlin
 
 ## Data
 
-All figures in IDR billion (bn). Historical range: FY2015 – FY2025, plus 1H2026 interim.
+All figures in IDR billion (bn). Historical range: FY2015 – FY2025, plus 1H2026 and 9M2026 interim.
 
-Sources: audited annual reports (2015–2025), 1H2026 interim consolidated financial statements, IDX, Yahoo Finance. See footer on the live site for the full source list.
+Sources: audited annual reports (2015–2025), 1H2026 and 9M2026 interim consolidated financial statements, listed-subsidiary filings (BPTR, MTWI), IDX, Yahoo Finance. See footer on the live site for the full source list.
 
 ## Disclaimer
 
