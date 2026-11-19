@@ -137,7 +137,7 @@
    19.1,
    19.7,
    15.5,
-   11.2,
+   null,
    null
   ],
   "npm": [
@@ -169,7 +169,7 @@
    8.4,
    9.9,
    7.9,
-   2.9,
+   null,
    null
   ],
   "roa": [
@@ -185,7 +185,7 @@
    3.3,
    3.1,
    2.1,
-   0.9,
+   null,
    null
   ],
   "de": [
@@ -217,7 +217,7 @@
    288.0,
    331.5,
    334.1,
-   144.3,
+   null,
    null
   ],
   "ebitdaMargin": [
@@ -233,7 +233,7 @@
    29.7,
    28.9,
    27.0,
-   22.1,
+   null,
    null
   ],
   "cfo": [
@@ -1444,14 +1444,14 @@
    }
   ],
   "maturityYears": [
-   "1H26",
+   "9M26",
    "2027",
    "2028",
    "2029",
    "2030+"
   ],
   "maturityTot": [
-   1487.9,
+   1576.8,
    0,
    0,
    0,
@@ -1598,74 +1598,74 @@
     "2023",
     "2024",
     "2025",
-    "1H26"
+    "9M26"
    ],
    "rows": {
     "Insurance contract liab (RC+ICL)": [
      1313.0,
      1961.9,
      3109.6,
-     2142.6
+     2109.8
     ],
     "Bank loans": [
      503.8,
      1071.3,
      1380.5,
-     1351.1
+     1477.8
     ],
     "Consumer financing payables": [
      483.2,
      408.3,
      229.4,
-     127.7
+     90.2
     ],
     "Lease liabilities": [
      10.0,
      10.2,
      8.4,
-     9.1
+     8.8
     ],
     "Other payables": [
      67.8,
      132.5,
      120.3,
-     194.1
+     null
     ],
     "Accrued expenses": [
      20.8,
      20.2,
      31.5,
-     34.1
+     null
     ],
     "Taxes payable": [
      15.0,
      20.7,
      19.2,
-     11.0
+     null
     ],
     "Employee benefits": [
      37.4,
      34.0,
      34.4,
-     34.6
+     null
     ],
     "Deferred tax": [
      11.1,
      17.2,
      23.2,
-     26.9
+     null
     ],
     "Other (customer/claims/commission/deposits/contract)": [
      69.9,
      62.2,
      44.4,
-     49.0
+     null
     ],
     "TOTAL LIABILITIES": [
      2532.1,
      3738.5,
      5001.1,
-     3980.2
+     4097.4
     ]
    }
   },
@@ -1676,7 +1676,7 @@
     "2023",
     "2024",
     "2025",
-    "1H26"
+    "9M26"
    ],
    "icr": [
     3.39,
@@ -1684,7 +1684,7 @@
     3.05,
     3.47,
     2.75,
-    2.25
+    null
    ],
    "nd": [
     1.43,
@@ -1692,7 +1692,7 @@
     2.6,
     3.4,
     4.1,
-    8.63
+    null
    ],
    "interest": [
     88.2,
@@ -1700,7 +1700,7 @@
     94.3,
     95.6,
     121.5,
-    64.0
+    96.73
    ],
    "debt": [
     790.0,
@@ -1708,7 +1708,7 @@
     997.0,
     1489.8,
     1618.3,
-    1487.9
+    1576.8
    ],
    "cash": [
     361.4,
@@ -1716,7 +1716,7 @@
     247.5,
     361.4,
     247.5,
-    242.5
+    247.3
    ],
    "ebitda": [
     298.9,
@@ -1724,7 +1724,7 @@
     288.0,
     331.5,
     334.1,
-    144.3
+    null
    ]
   }
  },
@@ -2965,7 +2965,7 @@
     ],
     [
      "2025",
-     "Penutupan Q4 Rp510; kapitalisasi pasar ~Rp5,3 triliun."
+     "Hasil FY25: Pendapatan 1.239,6 miliar; laba bersih 144,1 miliar."
     ]
    ],
    "zh": [
@@ -3122,7 +3122,7 @@
   ]
  },
  "RK": {
-  "note": "Risk indicators per subsidiary, FY2025. Green=healthy, amber=watch, red=elevated.",
+  "note": "Subsidiary KPIs (fleet, revenue, GWP, AUM) are FY2025; the 9M26 interim note does not disclose segment splits. Group leverage and FCF rows are 9M26 (unaudited, as of 30 Sep 2026). Green=healthy, amber=watch, red=elevated.",
   "rows": [
    {
     "kpi": "BPTR fleet / 车队规模",
@@ -3191,12 +3191,12 @@
    },
    {
     "kpi": "BPII group leverage",
-    "val": "D/E 2.7x; interest coverage 2.8x; net debt/EBITDA rising",
+    "val": "D/E 2.24x (30 Sep 2026); interest-bearing debt IDR 1,576.8bn; net debt IDR 1,329.5bn (net debt/parent equity 91.3%). Interest coverage 2.8x and net debt/EBITDA 4.1x are FY25 anchors — interim EBITDA not disclosed, multiples n/a for 9M26.",
     "flag": "amber"
    },
    {
-    "kpi": "Free cash flow (negative 2024–2025)",
-    "val": "FCF = −639.9bn (2024) and −455.8bn (2025): fleet capex (BPTR vehicle purchases) + MTWI investment-asset outflows exceed operating cash flow. Financed by debt; watch capex discipline.",
+    "kpi": "Free cash flow (negative 2024–2026)",
+    "val": "FCF = −639.9bn (2024), −455.8bn (2025), −91.7bn (1H26), −396.5bn (9M26): fleet capex (BPTR vehicle purchases) + MTWI investment-asset outflows exceed operating cash flow. Financed by debt; watch capex discipline.",
     "flag": "red"
    }
   ]
@@ -3424,63 +3424,63 @@
  "TOP3": {
   "en": {
    "h": "Top 3 improvement actions",
-   "sub": "Data-driven priorities for the holding group.",
+   "sub": "Data-driven priorities for the holding group (9M26, unaudited).",
    "items": [
     [
-     "Improve 1H26 earnings quality",
-     "Net profit halved YoY despite revenue growth; investigate cost inflation at MTWI and BPTR margin pressure.",
+     "Improve 9M26 earnings quality",
+     "Parent net profit fell 43.6% YoY (IDR 62.6bn vs 110.9bn) despite gross revenue +10.8%; claims and other expenses (+247.1bn) pressured margins — review MTWI claims experience and BPTR margin.",
      ""
     ],
     [
      "Strengthen capital allocation",
-     "D/E rose to 2.7x; review holding-level debt and dividend payout policy.",
+     "D/E improved to 2.24x (from FY25 2.75x), but holding-level interest-bearing debt IDR 1,576.8bn and the dividend payout need review.",
      ""
     ],
     [
-     "Scale BPAM AUM",
-     "AUM stable at IDR 49tn; expand fund offerings and distribution channels.",
+     "Scale BPAM AUM (FY2025 basis)",
+     "AUM IDR 49tn as of FY2025; 9M26 AUM is not disclosed in the interim. Expand fund offerings and distribution channels.",
      ""
     ]
    ]
   },
   "id": {
-   "h": "3 tindakan prioritas",
-   "sub": "Prioritas berbasis data untuk grup induk.",
+   "h": "3 prioritas perbaikan utama",
+   "sub": "Prioritas berbasis data untuk grup holding (9M26, tidak diaudit).",
    "items": [
     [
-     "Tingkatkan kualitas laba 1H26",
-     "Laba bersih turun separuh meski pendapatan tumbuh; telusuri inflasi biaya di MTWI dan tekanan margin BPTR.",
+     "Tingkatkan kualitas laba 9M26",
+     "Laba entitas induk turun 43,6% YoY (Rp62,6bn vs 110,9bn) meski pendapatan bruto +10,8%; klaim dan beban lain (+247,1bn) menekan margin — tinjau pengalaman klaim MTWI dan margin BPTR.",
      ""
     ],
     [
      "Perkuat alokasi modal",
-     "D/E naik ke 2,7x; tinjau utang induk dan kebijakan dividen.",
+     "D/E membaik ke 2,24x (dari 2,75x FY25), tetapi utang berbunga tingkat holding Rp1.576,8bn dan kebijakan dividen perlu ditinjau.",
      ""
     ],
     [
-     "Skalakan AUM BPAM",
-     "AUM stabil Rp49 triliun; perbanyak produk reksa dana dan saluran distribusi.",
+     "Skalakan AUM BPAM (basis FY2025)",
+     "AUM Rp49 triliun per FY2025; AUM 9M26 tidak diungkap pada interim. Perbanyak produk reksa dana dan saluran distribusi.",
      ""
     ]
    ]
   },
   "zh": {
-   "h": "三大改进重点",
-   "sub": "基于数据的集团优先事项。",
+   "h": "三大优先改进项",
+   "sub": "控股集团数据驱动的优先事项（9M26，未审计）。",
    "items": [
     [
-     "提升1H26盈利质量",
-     "收入增长但净利腰斩；排查MTWI成本上升和BPTR利润率压力。",
+     "提升9M26盈利质量",
+     "归母净利同比−43.6%（62.6bn vs 110.9bn），毛额收入仍+10.8%；赔付与其他费用（+247.1bn）压缩利润率——排查 MTWI 赔付经验与 BPTR 利润率。",
      ""
     ],
     [
      "强化资本配置",
-     "D/E升至2.7x；审视母公司债务和分红政策。",
+     "D/E 降至 2.24x（FY25 为 2.75x），但控股层面有息债务 1,576.8bn 与分红政策仍需审视。",
      ""
     ],
     [
-     "扩大BPAM资管规模",
-     "AUM稳定在49万亿盾；丰富基金产品和分销渠道。",
+     "扩大 BPAM 资管规模（FY2025 口径）",
+     "AUM 49 万亿盾（FY2025 口径）；中期未披露 9M26 AUM。丰富基金产品与分销渠道。",
      ""
     ]
    ]
@@ -4409,7 +4409,7 @@
   }
  },
  "WC": {
-  "note": "BPII financial holding: receivables mix = operating lease (BPTR) + customer receivables (MTWI) + AM fee receivables. Aging subset below is BPTR lease only (Note 7), does not foot to total net AR.",
+  "note": "BPII financial holding: receivables mix = operating lease (BPTR) + customer receivables (MTWI) + AM fee receivables. Aging subset below is BPTR lease only (Note 7), does not foot to total net AR. 9M26 trade receivables and segment AR split are not disclosed in the interim note; the 1H26 column is the latest disclosed AR split.",
   "rows": [
    {
     "item": "Trade receivables, gross (3rd party)",

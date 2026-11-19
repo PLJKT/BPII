@@ -44,7 +44,7 @@ BPII/
 
 ### Runtime Data Override Pattern
 
-`index.html` contains inline fallback variables (all zeros or placeholders). On page load, `data.json` is fetched and the `DATA_KEYS` array determines which top-level keys override the inline values:
+`index.html` contains inline fallback variables mirroring the current BPII values (used only when `data.json` fails to load, e.g. `file://` offline). On page load, `data.json` is fetched and the `DATA_KEYS` array determines which top-level keys override the inline values:
 
 ```javascript
 var DATA_KEYS = ["KP","EV","DIR","TL","OWN","SUBS","BIZ","VIA","PILLAR",
@@ -52,7 +52,7 @@ var DATA_KEYS = ["KP","EV","DIR","TL","OWN","SUBS","BIZ","VIA","PILLAR",
   "CHT","FY","GLOS","TOP3","OPP","DEC","SEG","SUBOPS"];
 ```
 
-**Important**: When updating data, you MUST update `data.json` (the inline fallbacks are never shown in production). If a key's structure in `data.json` is incomplete, remove it from `DATA_KEYS` to use the inline value instead (as done with `RK` — risk data uses inline only).
+**Important**: When updating data, you MUST update `data.json` (the inline fallbacks are never shown in production). If a key's structure in `data.json` is incomplete, remove it from `DATA_KEYS` to use the inline value instead (as done with `RK` and `WC` — risk and working-capital data use inline only).
 
 ### Key data.json Fields
 
@@ -166,7 +166,7 @@ Two pages were removed at user request (R51–R52):
 | **Segments & Assets** | Consolidated into Overview (segment charts) and Holding Structure (subsidiary data) |
 | **Valuation Illustration** | Redundant with Valuation page; contained placeholder DCF/SOTP data |
 
-Dead code for these pages (render functions, chart configs, translation strings, `LAND`/`VALI` data keys) was cleaned up in R69.
+Dead code for these pages (render functions, chart configs, translation strings, `LAND`/`VALI` data keys) was cleaned up in R69. R79 additionally removed the unwired inline `VALI` (DCF/P/E/P/B/SOTP illustration), `KEYP` (Bloomberg-style parameter table), `VLL` (valuation labels) and the stale old-holding `SUBOPS` shareholding copy; inline `DATA_KEYS` fallbacks were re-synced to the current BPII values so an offline load cannot show the retired foreign-model figures.
 
 ---
 
@@ -259,6 +259,7 @@ R69: cleanup dead code + DEVELOPMENT.md
 R74: apply Xurve insights - parent-equity P/B 3.2x, TTM P/E 52.3x, actual DPS, FCF risk
 R75: update share price chart to Oct 2026 (Sep close 460, Oct latest 452)
 R78: apply 9M2026 unaudited consolidated data; refresh valuation to 400 IDR / 2.72x / 29.3x FY25 / 45.7x TTM; fix 1H26 capex/FCF to official PP&E basis
+R79: full 9M2026 snapshot calibration; remove retired foreign-model inline valuation remnants; align TOP3/RK/DEBT/WC wording and interim nulls
 ```
 
 ---
