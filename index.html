@@ -790,7 +790,7 @@ function N(k){ return NXT[LANG][k] || k; }
 /* ================= 图表构建（按当前语言） ================= */
 function baseTooltip(){ return {trigger:'axis', confine:true}; }
 function baseGrid(){ return {left:48, right:18, top:34, bottom:30}; }
-function baseX(cats){ return {type:'category', data:cats, axisLabel:{color:AX.color, fontSize:11}, axisLine:{lineStyle:{color:'#B9C4BB'}}}; }
+function baseX(cats, keepLast){ var lbl={color:AX.color, fontSize:11}; if(keepLast){ lbl.interval=function(i){ return i>=cats.length-2 || i%2===0; }; } return {type:'category', data:cats, axisLabel:lbl, axisLine:{lineStyle:{color:'#B9C4BB'}}}; }
 function baseY(name){ return {type:'value', name:name, nameTextStyle:{color:AX.color, fontSize:11}, axisLabel:{color:AX.color, fontSize:11}, splitLine:SPLIT}; }
 function lblFmt(){ return function(p){ return fmtN(p.value); }; }
 function legendT(){ return {top:2, right:6, textStyle:{color:AX.color, fontSize:11}, itemWidth:14}; }
@@ -827,7 +827,7 @@ function buildOpt(id){
       tooltip: tt2,
       legend: legendT(),
       grid: baseGrid(),
-      xAxis: baseX(AN.years),
+      xAxis: baseX(AN.years, true),
       yAxis: baseY(U),
       series: [
         {
@@ -851,7 +851,7 @@ function buildOpt(id){
     };
   }
   if (id === 'o3') {
-    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY('%'),
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years, true), yAxis:baseY('%'),
       series:[
         {name:CT('gM'), type:'line', data:AN.gpm, smooth:true, symbolSize:5, lineStyle:{width:2, color:C.green}, itemStyle:{color:C.green}},
         {name:CT('nM'), type:'line', data:AN.npm, smooth:true, symbolSize:5, lineStyle:{width:2, color:C.blue}, itemStyle:{color:C.blue}},
@@ -898,20 +898,20 @@ function buildOpt(id){
       ]};
   }
   if (id === 'p-1') {
-    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY('%'),
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years, true), yAxis:baseY('%'),
       series:[
         {name:CT('gM'), type:'line', data:AN.gpm, smooth:true, symbolSize:5, lineStyle:{width:2.5,color:C.green}, itemStyle:{color:C.green}},
         {name:'EBITDA margin', type:'line', data:AN.ebitdaMargin, smooth:true, symbolSize:5, lineStyle:{width:2,color:C.blue}, itemStyle:{color:C.blue}},
         {name:CT('nM'), type:'line', data:AN.npm, smooth:true, symbolSize:5, lineStyle:{width:2,color:C.amber}, itemStyle:{color:C.amber}}]};
   }
   if (id === 'p-2') {
-    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY('%'),
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years, true), yAxis:baseY('%'),
       series:[
         {name:'ROE', type:'line', data:AN.roe, smooth:true, symbolSize:6, lineStyle:{width:2.5,color:C.green}, itemStyle:{color:C.green}},
         {name:'ROA', type:'line', data:AN.roa, smooth:true, symbolSize:6, lineStyle:{width:2,color:C.blue}, type2:'x', itemStyle:{color:C.blue}}]};
   }
   if (id === 'p-3') {
-    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:baseY(U),
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years, true), yAxis:baseY(U),
       series:[
         {name:'EBITDA', type:'bar', data:AN.ebitda, itemStyle:{color:C.green2,barMaxWidth:24}, barMaxWidth:24},
         {name:CT('cons'), type:'line', data:AN.niCons, smooth:true, symbolSize:5, lineStyle:{width:2.5,color:C.clay}, itemStyle:{color:C.clay}}]};
@@ -919,7 +919,7 @@ function buildOpt(id){
   if (id === 'p-4') {
     var yr=[], rev=[], gpmL=[];
     for(var pi=0; pi<AN.years.length; pi++){ yr.push(AN.years[pi]); }
-    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years), yAxis:[baseY(U), baseY('%')],
+    return {tooltip:baseTooltip(), legend:legendT(), grid:baseGrid(), xAxis:baseX(AN.years, true), yAxis:[baseY(U), baseY('%')],
       series:[
         {name:'Revenue', type:'bar', data:AN.revenue, itemStyle:{color:C.soft}, barMaxWidth:26},
         {name:CT('gM'), type:'line', yAxisIndex:1, data:AN.gpm, smooth:true, symbolSize:5, lineStyle:{width:2.5,color:C.green}, itemStyle:{color:C.green}}]};
