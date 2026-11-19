@@ -68,3 +68,9 @@
 - Inline `AN` fallback re-synced to `data.json`; JSON parses with BOM preserved, `node --check` passes, anchor ratios recomputed.
 - Left null pending FY2026 annual report: 9M consolidated net service revenue and net segment split, EBITDA/D&A, BPAM 9M revenue/profit, gross/net margin, current ratio, 9M segment AR split/aging, 9M segment pie/stack. (ROE/ROA now shown on a cumulative interim basis; annualized interim ratios still deferred to the annual report.)
 
+## R84 — 2026-11-20
+- Pure structure/CSS fix on the fy2026 (`#fy2026`, "9M2026") page; **no data or copy changed**. The "9M26 segment split incomplete" panel (`c_f26_seg_t/s`) had been left inside the two-column `.charts` grid when f26-1/f26-2 were retired in R82; with only f26-3 left in that row, default `align-items:stretch` stretched the short text panel to the chart-card height, leaving a large empty area under the 3-line note.
+- Moved the `hl-driver` panel out of `.charts` to above it (after `#k26`, before the grid), matching the g24/g25 driver-panel placement. Added reusable `.chart-card.full{grid-column:1/-1}` and applied it to the f26-3 card so the single remaining chart spans the full row instead of sitting in the left half-column. No JS references the panel by position; it resolves copy only via `data-i18n`. `PAGE_CHARTS.fy2026` stays `['f26-3']`.
+- Verified wide (>900px, two-column) and narrow (≤900px, single-column) layouts: panel sits at natural content height with no internal whitespace; f26-3 renders the Cash 247.3 / Debt 1,576.8 / NetDebt 1,329.5 bars full-width; EN/ID/ZH copy resolves; console zero errors, no undefined/NaN.
+
+

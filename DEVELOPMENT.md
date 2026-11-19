@@ -299,6 +299,7 @@ R80: Overview charts to 9M2026 basis; bar charts full-year only, interim points 
 R81: source BPTR/MTWI 9M2026 interim filings; record full-entity segment revenue/NP points (BPTR 524.9/35.5, MTWI 51.7/8.5); reconcile ownership/NCI; correct BPTR ticker to BPTR; retain nulls for undisclosed BPAM 9M, consolidated net revenue, EBITDA/D&A, annualized ratios
 R82: remove the 1H26 checkpoint from every current-period series; AN/segStack 13 elements ending 9M26; retire the 1H26-vs-1H25 comparison charts and 1H26 WC column; undisclosed 9M lines stay null (not back-filled with 1H26); sync inline fallbacks and trilingual labels
 R83: add cumulative (not annualized) 9M26 ROE 4.1% / ROA 1.3% to AN; keep 9M margins/EBITDA/net revenue null (net revenue and D&A undisclosed); annotate p-1…p-4 trilingual subtitles with n/a reasons and interim non-annualized basis
+R84: move the fy2026 segment-note panel out of the two-column charts grid to above it; add .chart-card.full{grid-column:1/-1} for the single f26-3 card; structure/CSS only, no data or copy change
 ```
 
 ---
