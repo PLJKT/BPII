@@ -78,6 +78,15 @@ All `AN.*` arrays have **14 elements** corresponding to:
 
 Use `null` for years before a subsidiary was consolidated (e.g., BPTR from 2019H1, MTWI from 2020H2, BPF until 2021). Interim elements are `null` wherever the interim note does not disclose the line (e.g., 9M net segment revenue, EBITDA/D&A, annualized ROE/ROA). Annual-only arrays (`msales`, `landAcq`, `fcfCons`, `fcfConsMargin`) keep their 12 annual elements and do not carry interim points.
 
+### Overview Chart Period Handling (R80)
+
+Half/partial periods (1H26, 9M26) are **not comparable in height** to full-year bars. The chosen rule:
+
+- **Bar charts** (`o1` revenue, `o4` segment revenue, `o7` segment net profit) render **full-year periods only (FY2014–2025)**. A `fyIndices()` helper keeps only categories matching `/^\d{4}$/`; the 1H26 half-period bars are dropped rather than styled differently. The 1H26 values remain in the data arrays for the half-vs-half comparison chart (`f26-1`, `h26rev`) and the WC table.
+- **Line charts** (`o2` net profit, `o3` margins/leverage) keep the 1H26 and 9M26 interim points as trend markers; a half-period point on a line does not imply a full-year level.
+- `o6` EBITDA bars already filter `null`, so only disclosed full-year EBITDA values plot.
+- 9M26 lines left `null` (not estimated): consolidated net service revenue, EBITDA/D&A, gross/net margin, annualized ROE/ROA, segment revenue and segment net-profit split. The PSAK117 gross top line (2,218.2bn) must not be entered into the net service-revenue series.
+
 ---
 
 ## How to Run Locally
@@ -260,6 +269,7 @@ R74: apply Xurve insights - parent-equity P/B 3.2x, TTM P/E 52.3x, actual DPS, F
 R75: update share price chart to Oct 2026 (Sep close 460, Oct latest 452)
 R78: apply 9M2026 unaudited consolidated data; refresh valuation to 400 IDR / 2.72x / 29.3x FY25 / 45.7x TTM; fix 1H26 capex/FCF to official PP&E basis
 R79: full 9M2026 snapshot calibration; remove retired foreign-model inline valuation remnants; align TOP3/RK/DEBT/WC wording and interim nulls
+R80: Overview charts to 9M2026 basis; bar charts full-year only, interim points kept on lines; correct trilingual half-period labels; retain undisclosed 9M segment/EBITDA/margin nulls
 ```
 
 ---
