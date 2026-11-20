@@ -62,7 +62,7 @@ var DATA_KEYS = ["KP","EV","DIR","TL","OWN","SUBS","BIZ","VIA","PILLAR",
 | `KP` | KPI card data per page (ov, k24, k25, k26, prof, debt, val) |
 | `DEBT` | Debt page: liability breakdown, lenders, solvency ratios, trade receivables (WC) |
 | `VAL` | Valuation: price, market cap, P/E, P/B, share price history, peers |
-| `FY` | Annual page-specific: seg24/seg25 pie data, pl24/pl25 P&L, bs24/bs25/bs26 balance sheet, cf cash bridge, segStack segment series. The former 1H26-vs-1H25 half comparison (`h26rev`, `f26-1`/`f26-2`) was retired in R82 because the 9M segment split is incomplete. |
+| `FY` | Annual page-specific: seg24/seg25 pie data, pl24/pl25 P&L, bs24/bs25/bs26 balance sheet, cf cash bridge, segStack segment series, and `seg26` (R85) 9M26 segment table rows am/lease/ins/cf with own/rev/np; undisclosed am/cf are `null` and render n/a. The former 1H26-vs-1H25 half comparison (`h26rev`, `f26-1`/`f26-2`) was retired in R82 because the 9M segment split is incomplete. |
 | `ORG` | Organization: board/commission/audit members, corporate facts, management |
 | `OWN` | Shareholder structure (Malacca Trust 89.86%, Public 10.12%, treasury shares cancelled) |
 | `SUBS` / `SUBOPS` | Subsidiary ownership, assets, operating metrics. Four entities: BPAM (am), BPTR (lease), MTWI (ins), BP Pte. Ltd. (other/Singapore, 100%, no IDX ticker); `PILLAR`/`PILLAR_MAP` group them into the four pillars. |
@@ -300,6 +300,7 @@ R81: source BPTR/MTWI 9M2026 interim filings; record full-entity segment revenue
 R82: remove the 1H26 checkpoint from every current-period series; AN/segStack 13 elements ending 9M26; retire the 1H26-vs-1H25 comparison charts and 1H26 WC column; undisclosed 9M lines stay null (not back-filled with 1H26); sync inline fallbacks and trilingual labels
 R83: add cumulative (not annualized) 9M26 ROE 4.1% / ROA 1.3% to AN; keep 9M margins/EBITDA/net revenue null (net revenue and D&A undisclosed); annotate p-1…p-4 trilingual subtitles with n/a reasons and interim non-annualized basis
 R84: move the fy2026 segment-note panel out of the two-column charts grid to above it; add .chart-card.full{grid-column:1/-1} for the single f26-3 card; structure/CSS only, no data or copy change
+R85: add FY.seg26 (am/lease/ins/cf own/rev/np; am/cf null) and a trilingual 9M26 segment table on fy2026; disclosed subsidiaries shown on 100% full basis, undisclosed rows render trilingual n/a; restore the R69-misdeleted profit-page seg-tbl renderer (SEG FY24/FY25, trilingual headers); no segment chart added, no gross revenue pushed into segment revenue, no ownership pro-ration
 ```
 
 ---
