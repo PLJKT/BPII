@@ -171,10 +171,15 @@ Sources: IDX, Xurve, stockanalysis.com, Yahoo Finance (BPII.JK).
 
 ### Auto Stock Price Update
 
-A GitHub Actions workflow can automatically update `VAL.close` (latest price) on a schedule. The user has indicated they will activate this workflow separately. The workflow should:
-1. Fetch latest BPII.JK close price from an API
-2. Update `data.json` → `VAL.months[last]` and `VAL.close[last]`
-3. Commit and push to `main`
+A GitHub Actions workflow (`.github/workflows/update-price.yml`) runs `.github/scripts/update_price.py` on a schedule and can be triggered manually (`workflow_dispatch`). The workflow:
+1. Fetches the latest BPII.JK close from the Yahoo v8 chart endpoint (`range=5d&interval=1d`); the script uses urllib only, no third-party Python package.
+2. Updates `data.json` and commits/pushes to `main` (no-op if the price and month are unchanged).
+
+**Script rules (R86):**
+- **Encoding**: read and write `data.json` with `encoding="utf-8-sig"` (BOM tolerated on read, written on save). Serialization is `json.dump(..., ensure_ascii=False, indent=1)`, LF line endings, no trailing newline. A plain `utf-8` read crashes on the BOM (`Unexpected UTF-8 BOM`) — this was the R86 failure that broke the workflow for five consecutive runs.
+- **Only three live price fields are written**: `VAL.close[-1]`, `VAL.months[-1]` (`%b-%y`, e.g. `Nov-26`), and `FY.refPrice`.
+- **Manual / dead anchors the workflow must NOT recompute**: `KP.val.*`, `VTXT.en/id/zh.stats` (manual snapshot table), the dead blocks `VAL.kpi` / `VAL.stats`, and top-level `VAL.last/mcap/pb/pe/divYield`; no P/B, P/E, market-cap or dividend-yield figure is derived from the daily close. These are hand-set valuation snapshots.
+- On a missing/invalid close or a data.json parse failure the script logs an explicit error and exits non-zero; it must not commit a stale price.
 
 ---
 

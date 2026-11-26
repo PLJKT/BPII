@@ -2612,10 +2612,26 @@
    "netDebt": 1329.5
   },
   "seg26": {
-   "am": {"own": 82.08, "rev": null, "np": null},
-   "lease": {"own": 67.4, "rev": 524.9, "np": 35.5},
-   "ins": {"own": 85.9, "rev": 51.7, "np": 8.5},
-   "cf": {"own": null, "rev": null, "np": null}
+   "am": {
+    "own": 82.08,
+    "rev": null,
+    "np": null
+   },
+   "lease": {
+    "own": 67.4,
+    "rev": 524.9,
+    "np": 35.5
+   },
+   "ins": {
+    "own": 85.9,
+    "rev": 51.7,
+    "np": 8.5
+   },
+   "cf": {
+    "own": null,
+    "rev": null,
+    "np": null
+   }
   },
   "cf24": {
    "open": 361.4,
